@@ -7,3 +7,5 @@ Ein paar Notizen vorbereitet beim Schreiben von Schulungen ...
  - [Datenbanken](databases.md)
  - [PHP](php.md)
  - [UX](ux.md)
+
+Dies ist die grösstenteils automatisch übersetzte Fassung von Peter Goodmans [Training Notes](https://github.com/thegingerbloke/training-notes).
