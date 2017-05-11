@@ -1,17 +1,17 @@
-# JavaScript notes
+# JavaScript Notizen
 
-A few notes prepared while writing training courses...
+Ein paar Notizen vorbereitet beim Schreiben von Schulungen ...
 
-These notes assume a small amount of prior knowledge of programming in general and JavaScript knowledge in particular. At the very least it assumes an understanding of what JavaScript is, why we use it, and how to execute it in a web browser.
+Diese Anmerkungen nehmen eine geringe Menge an Vorkenntnissen der Programmierung im Allgemeinen und insbesondere JavaScript-Kenntnisse an. Zumindest wird davon ausgegangen, dass bekannt ist, was JavaScript ist, warum wir es benutzen und wie man es in einem Webbrowser ausführt.
 
 
-## JavaScript fundamentals
+## JavaScript Grundlagen
 
-### Variables
+### Variablen
 
-An analogy often used to describe a variable is *a container that you can put something in*. 
+Eine Analogie, die oft verwendet wird, um eine Variable zu beschreiben, ist *ein Container, in den man etwas einsetzen kann*.
 
-The name that you give a variable is the label you put on the container, so you know how to find it again later. They can be used to store anything - numbers, text or other types of information:
+Der Name, den Sie einer Variable geben, ist das Etikett, das Sie auf den Container gelegt haben. Sie wissen also, wie man es später wieder findet. Variablen können verwendet werden, um alles zu speichern - Zahlen, Text oder andere Arten von Informationen:
 
 ```
 var nearestStar = "Alpha Centauri";
@@ -20,13 +20,13 @@ var age = 6000000000;
 var isHot = true;
 ```
 
-When you need to reference that information later, refer to it via the variable name:
+Wenn Sie diese Informationen später referenzieren müssen, beziehen Sie sich auf den Variablennamen:
 
 ```
 alert(nearestStar); // "Alpha Centauri"
 ```
 
-Variables can be set using the values from other variables:
+Variablen können mit den Werten aus anderen Variablen gesetzt werden:
 
 ```
 var planets = 8;
@@ -35,7 +35,7 @@ var dwarfPlanets = 5;
 var planetCount = 8 + 5; // 13
 ```
 
-The value of a variable can be changed (that's why it's called a *variable*):
+Der Wert einer Variablen kann geändert werden (deshalb heisst es *Variable*):
 
 ```
 var numberOfPlanets = 9;
@@ -43,16 +43,16 @@ var numberOfPlanets = 9;
 numberOfPlanets = numberOfPlanets - 1; // bye bye Pluto
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar\_and_types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
 
 
 ### Arrays
 
-We can store related lists of information in arrays. This allows us to group them together, and later to easily run code for all items in the array.
+Wir können verwandte Listen von Informationen in Arrays speichern. Dies ermöglicht es uns, sie zusammen zu gruppieren und später einfach Code für alle Elemente im Array auszuführen.
 
-Creating an array:
+Erstellen eines Arrays:
 
 ```
 var planets = [
@@ -67,21 +67,21 @@ var planets = [
 ];
 ```
 
-And to access the array:
+Und auf ein Array zugreifen:
 
 ```
 var len = planets.length; // 8
 var planet = planets[2];  // "Earth"
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 
-### For loops
+### For Schleifen
 
-`for` loops are an easy way to access information stored in an array:
+`for` Schleifen sind eine einfache Möglichkeit, um auf die Informationen in einem Array zuzugreifen:
 
 ```
 for (var counter = 0, planetCount = planets.length; counter < planetCount; counter++) {
@@ -90,9 +90,9 @@ for (var counter = 0, planetCount = planets.length; counter < planetCount; count
 }
 ```
 
-This code uses a variable to cache the array length once, rather than checking it each time we pass through the loop. This is for a (negligible) speed improvement. It's one of a number of small enhancements developers often recommend to speed up JavaScript performance. Others will be discussed where relevant.
+Dieser Code verwendet eine Variable, um die Array-Länge einmal zu cachen, anstatt sie jedes Mal zu überprüfen, wenn wir die Schleife passieren. Dies ist für eine (vernachlässigbare) Geschwindigkeitsverbesserung. Es ist eine von einer Reihe von kleinen Optimierungen, die Entwickler oft empfehlen, um die JavaScript-Leistung zu beschleunigen. Andere werden ggf. diskutiert.
 
-Another way to loop through an array is with `forEach`:
+Ein anderer Weg, um durch ein Array zu durchlaufen ist mit `forEach`:
 
 ```
 function enthuse (planet) {
@@ -102,22 +102,22 @@ function enthuse (planet) {
 planets.forEach(enthuse);
 ```
 
-For the purposes of looping through the array, either `for` or `forEach` can be used to satisfy our requirements.
+Für die Zwecke des Durchschleifens durch das Array kann entweder `for` oder `forEach` verwendet werden, um unsere Anforderungen zu erfüllen.
 
-This choice of options for how to structure code demonstrates the programming principle of *there's more than one way to do it*.
+Diese Wahl der Optionen für die Gestaltung von Code zeigt das Programmierprinzip von *es gibt mehr als eine Möglichkeit, etwas zu tun*.
 
-However, as is often the case, one option may have advantages or disadvantages. In this situation, be aware that `forEach` this isn't as widely supported as a simple `for` loop, at least in older browsers.
+Allerdings kann, wie es oft der Fall ist, eine Option Vor- oder Nachteile haben. In dieser Situation ist man sich bewusst, dass `forEach` dies nicht so weit wie eine einfache `for` Schleife unterstützt wird, zumindest in älteren Browsern.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://stackoverflow.com/a/9329476](http://stackoverflow.com/a/9329476)
  - [https://coderwall.com/p/kvzbpa/don-t-use-array-foreach-use-for-instead](https://coderwall.com/p/kvzbpa/don-t-use-array-foreach-use-for-instead)
  - [https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/](https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/)
 
 
-### Objects
+### Objekte
 
-Objects are useful to group related values together:
+Objekte sind nützlich, um verwandte Werte zu gruppieren:
 
 ```
 var mars = {
@@ -131,14 +131,14 @@ var earth = {
 };
 ```
 
-These values can be accessed in different ways:
+Auf diese Werte kann unterschiedlich zugegriffen werden:
 
 ```
 earth["radius"] // 6371
 earth.radius // 6371
 ```
 
-We can put arrays and objects inside one another. This can be a useful way to organise complex information:
+Wir können Arrays und Objekte ineinander setzen. Dies kann eine nützliche Möglichkeit sein, komplexe Informationen zu organisieren:
 
 ```
 var planets = [
@@ -155,7 +155,7 @@ var planets = [
 ];
 ```
 
-We can then loop through this information and perform functions to extract useful information:
+Wir können dann diese Informationen durchlaufen und Funktionen ausführen, um nützliche Informationen zu extrahieren:
 
 ```
 function describePlanet (planet) {
@@ -165,7 +165,7 @@ function describePlanet (planet) {
 planets.forEach(describePlanet);
 ```
 
-JavaScript objects are the basis for JSON (*JavaScript Object Notation*). The important rule to remember is that to be valid JSON, all keys must be quoted with double quotes:
+JavaScript-Objekte sind die Basis für JSON (*JavaScript Object Notation*). Die wichtige Regel, die man sich erinnern sollte, ist, dass in gültigem JSON alle Schlüssel mit doppelten Anführungszeichen zitiert werden müssen:
 
 ```
 [
@@ -183,19 +183,19 @@ JavaScript objects are the basis for JSON (*JavaScript Object Notation*). The im
 
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working\_with_Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
  - [http://www.sitepoint.com/back-to-basics-javascript-object-syntax/](http://www.sitepoint.com/back-to-basics-javascript-object-syntax/)
 
 
-### Functions
+### Funktionen
 
-Functions are a set of instructions that can be specified (or *defined*) now but used (or *called*) later on. The main advantage of using a function is that you only need to create it once, and then you can re-use it as often as you need.
+Funktionen sind eine Reihe von Anweisungen, die jetzt angegeben (oder *definiert*) werden können, aber später verwendet (oder *genannt*) werden. Der Hauptvorteil der Verwendung einer Funktion ist, dass Sie sie nur einmal erstellen müssen, und dann können Sie sie wieder verwenden, so oft Sie sie benötigen.
 
-Functions can be defined in two ways. There are subtle but important differences.
+Funktionen können auf zwei Arten definiert werden. Es gibt subtile, aber wichtige Unterschiede.
 
-**Function declarations:**
+**Funktions Deklarationen:**
 
 ```
 function enthuse (planet) {
@@ -203,7 +203,7 @@ function enthuse (planet) {
 }
 ```
 
-**Function expressions:**
+**Funktion Ausdrücke:**
 
 ```
 var enthuse = function (planet) {
@@ -211,25 +211,25 @@ var enthuse = function (planet) {
 }
 ```
 
-Either than can be used, with the same code:
+Beides kann auf die gleiche Weise verwendet werden:
 
 ```
 var sentence = enthuse("Mercury"); // "I like the planet Mercury"
 ```
 
-The main difference is that declared functions are *hoisted*, meaning they are moved by the JavaScript interpreter to the top of the block. Therefore they can be referenced before they are declared.
+Der Hauptunterschied besteht darin, dass deklarierte Funktionen *gehisst werden*, d.h. sie werden vom JavaScript-Interpreter an die Spitze des Blocks verschoben. Deshalb können sie referenziert werden, bevor sie deklariert werden.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://stackoverflow.com/a/336868](http://stackoverflow.com/a/336868)
  - [http://www.unicodegirl.com/function-statement-versus-function-expression.html](http://www.unicodegirl.com/function-statement-versus-function-expression.html)
 
 
-### if / else conditionals
+### if / else Konditionen
 
-if/else conditionals allow us to execute certain functionality only when specific conditions have been met.
+if / else-Bedingungen erlauben es uns, bestimmte Funktionalität nur dann auszuführen, wenn bestimmte Bedingungen erfüllt sind.
 
-Their use requires a condition that will be either true or false, upon which we can base our decision:
+Ihre Verwendung erfordert eine Bedingung, die entweder wahr oder falsch sein wird, worauf wir unsere Entscheidung stützen können:
 
 ```
 if (planet === "Earth") {
@@ -243,30 +243,30 @@ if (planet === "Earth") {
 }
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 
 
-## Developer tools
+## Entwickler Tools
 
-Most browsers have useful developer tools built in. Here are some notes on the main tools that are useful for JavaScript development. They are specific to panels in the current version of the Chrome developer tools, although equivalents are generally available in other major browsers.
-
-
-### Console panel
-
-The console panel is the primary place to log messages, spot errors, test code and interact with the current page.
+Die meisten Browser haben nützliche Entwickler-Tools eingebaut. Hier sind einige Notizen zu den wichtigsten Tools, die nützlich für JavaScript-Entwicklung sind. Sie sind spezifisch für Panels in der aktuellen Version der Chrome-Entwickler-Tools, obwohl Äquivalente in der Regel in anderen grossen Browsern zur Verfügung stehen.
 
 
-#### Logging messages
+### Konsolen-Panel
 
-It can be useful to use `console.log();` to view the current value of a variable during development. One or more variables can be passed as *parameters* to this function.
+Das Konsolen-Panel ist der primäre Ort, um Nachrichten zu protokollieren, Fehler zu erkennen, Code zu testen und mit der aktuellen Seite zu interagieren.
+
+
+#### Nachrichten protokollieren
+
+Es kann sinnvoll sein, `console.log();` zu verwenden, um den aktuellen Wert einer Variablen während der Entwicklung anzuzeigen. Eine oder mehrere Variablen können als *Parameter* an diese Funktion übergeben werden.
 
 ```
 console.log(planets, stuff, somethingElse);
 ```
 
-You can apply string formatting and custom styles to different messages, allowing for a differentiation in display of messages logged for different purposes.
+Sie können String-Formatierung und benutzerdefinierte Stile auf verschiedene Nachrichten anwenden, so dass eine Differenzierung in der Anzeige von Nachrichten für verschiedene Zwecke protokolliert werden kann.
 
 ```
 var message = "%c Planet %s has a radius of %d km";
@@ -277,84 +277,84 @@ var radius = 6371;
 console.log(message, styles, planet, radius);
 ```
 
-Other useful `console` options are available, such as `console.group()` for collating related messages into a collapsable group, and `console.table()` for displaying repetitive data in a table.
+Es sind weitere nützliche `console`-Optionen verfügbar, z.B. `console.group()` für die Zusammenstellung verwandter Nachrichten in eine zusammenklappbare Gruppe und `console.table()` für die Anzeige von sich wiederholenden Daten in einer Tabelle.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://developer.chrome.com/devtools/docs/console-api](https://developer.chrome.com/devtools/docs/console-api)
  - [https://developer.chrome.com/devtools/docs/tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks)
 
 
-#### Spotting errors
+#### Fehler erkennen
 
-If you make a mistake in your JavaScript code it will be referenced in the console.
+Wenn Sie einen Fehler in Ihrem JavaScript-Code machen, wird es in der Konsole referenziert.
 
-This should give a filename, line number and (hopefully) an indication of the nature of the error.
+Dies sollte einen Dateinamen, Zeilennummer und (hoffentlich) einen Hinweis auf die Art des Fehlers geben.
 
-If you click on the error it will take you through to the *sources* panel to help debug it.
+Wenn Sie auf den Fehler klicken, führt er Sie zum *source*-Panel, um ihn zu debuggen.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://developer.chrome.com/devtools/docs/console#errors-and-warnings](https://developer.chrome.com/devtools/docs/console#errors-and-warnings)
 
 
-#### Testing code
+#### Code testen
 
-Before writing code it can be helpful to experiment in the console. This can help to see a live preview of your changes, interacting with the current page every time you execute a command. When it's ready, this code can then be copied into an external file.
+Vor dem Schreiben von Code kann es hilfreich sein, in der Konsole zu experimentieren. Dies kann dazu beitragen, eine Live-Vorschau Ihrer Änderungen zu sehen, die mit der aktuellen Seite interagiert, wenn Sie einen Befehl ausführen. Wenn es fertig ist, kann dieser Code dann in eine externe Datei kopiert werden.
 
-Every time you refresh the page, this code will be reset. It will still be available in the console's history (just like a terminal window) so pressing up/down on the keyboard will cycle through previous commands.
-
-
-### Elements panel
-
-The inspector is primarily used for displaying the current HTML and CSS, but it can be useful for JavaScript debugging too.
-
-For example, it can display which elements in the page have *event listeners* attached. These will be discussed later.
-
-Also, on any HTML element you can right-click and select a *'break on...'* option that will allow you to pause and debug JavaScript at the point where the HTML element is manipulated via JavaScript.
+Jedes Mal, wenn Sie die Seite aktualisieren, wird dieser Code zurückgesetzt. Es wird immer noch im Verlauf der Konsole verfügbar sein (genau wie ein Terminal-Fenster), so dass das Drücken von oben / unten auf der Tastatur durch vorherige Befehle durchläuft.
 
 
-### Network panel
+### Elemente Panel
 
-The network panel lists all HTTP requests, which can be useful when debugging AJAX requests - for example it allows you to see the parameters that have been sent to the server, and the data returned (or not) from the server.
+Der Inspektor wird hauptsächlich für die Anzeige des aktuellen HTML und CSS verwendet, aber er kann auch für das JavaScript-Debugging nützlich sein.
 
-***Further reading***
+Zum Beispiel kann er zeigen, welche Elemente auf der Seite *Event-Listener* haben. Diese werden später besprochen.
+
+Sie können auf jedes HTML-Element mit der rechten Maustaste klicken und eine *'break on ...'* Option auswählen, die es Ihnen ermöglicht, JavaScript an der Stelle zu pausieren und zu debuggen, an der das HTML-Element über JavaScript manipuliert wird.
+
+
+### Netzwerk Panel
+
+Das Netzwerk-Panel listet alle HTTP-Anfragen auf, die beim Debuggen von AJAX-Anfragen nützlich sein können - zum Beispiel können Sie die Parameter anzeigen, die an den Server gesendet wurden, und die Daten, die vom Server zurückgegeben wurden (oder nicht).
+
+***Weitere Informationen***
 
  - [https://developer.chrome.com/devtools/docs/network](https://developer.chrome.com/devtools/docs/network)
 
 
-### Sources panel
+### Quellen Panel
 
-The sources panel is where the JavaScript of the current page can be analysed. These debugging tools are powerful and complex.
+Im Quellpanel kann das JavaScript der aktuellen Seite analysiert werden. Diese Debugging-Tools sind leistungsstark und komplex.
 
 
-#### Sources
+#### Quellen
 
-The *sources tab* lists all text-based sources in the page, for example the HTML, CSS and JavaScript files that make up the current page. Clicking on any of these files will display it in the main panel. Right-clicking on any file will bring up a number of further options.
+Die Registerkarte "Quellen" listet alle textbasierten Quellen auf der Seite auf, z.B. die HTML-, CSS- und JavaScript-Dateien, aus denen die aktuelle Seite besteht. Wenn Sie auf eine dieser Dateien klicken, wird diese im Hauptfenster angezeigt. Wenn Sie mit der rechten Maustaste auf eine beliebige Datei klicken, werden weitere Optionen angezeigt.
 
-When viewing a minified file, the 'pretty print' option in the main panel is handy to unminify the code.
+Beim Betrachten einer minifizierten Datei ist die Option "pretty print" im Hauptfenster praktisch, um den Code lesbar zu machen.
 
-If you set up a *workspace*, you can edit files directly in the editor and save your changes to your local files.
+Wenn Sie einen *Arbeitsbereich* einrichten, können Sie Dateien direkt im Editor bearbeiten und Ihre Änderungen an Ihren lokalen Dateien speichern.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://developer.chrome.com/devtools/docs/workspaces](https://developer.chrome.com/devtools/docs/workspaces)
 
 
-#### Content scripts
+#### Content-Skripte
 
-The *content scripts* tab lists all scripts that are loaded into the current browser tab from extensions (and other sources) rather than directly from the website itself. For example this is where the scripts injected into the current page by your browser extensions will be displayed.
+Die Registerkarte *Content-Skripte* listet alle Skripts auf, die im aktuellen Browser-Tab von Erweiterungen (und anderen Quellen) und nicht direkt von der Website selbst geladen werden. Zum Beispiel werden hier die Skripts, die von Ihren Browser-Erweiterungen in die aktuelle Seite eingefügt (injected) werden, angezeigt.
 
 
 #### Snippets
 
-The *snippets* tab allows you to create and save your own custom scripts that you can then run manually on a page.
+Auf der Registerkarte *Snippets* können Sie eigene benutzerdefinierte Skripts erstellen und speichern, die Sie dann manuell auf einer Seite ausführen können.
 
-These are handy if you constantly need to run the same piece of code on a page, but don't want to include the code in 'production' Javascript.
+Diese sind praktisch, wenn Sie ständig das gleiche Stück Code auf einer Seite laufen lassen wollen, aber den Code nicht im produktiven Code haben möchten.
 
-Right-click in the panel to create a new snippet. Enter and save your code. Right-click again to run.
+Klicken Sie mit der rechten Maustaste in das Bedienfeld, um ein neues Snippet zu erstellen. Geben Sie Ihren Code ein und speichern Sie ihn. Klicken Sie mit der rechten Maustaste erneut, um zu starten.
 
-An example piece of code to test snippets with:
+Ein Beispiel für Code zum Testen von Snippets:
 
 ```
 var headings = document.querySelectorAll("h1");
@@ -366,11 +366,11 @@ for (var i = 0; i < headings.length; ++i) {
 
 #### Debugging
 
-Debugging JavaScript is a complex subject, explained thoroughly elsewhere on the web. The following guides are fairly comprehensive.
+Debugging JavaScript ist ein komplexes Thema, das gründlich anderswo im Internet erklärt wird. Die folgenden Anleitungen sind ziemlich umfassend.
 
-The best way to debug issues is to isolate the error and identify how it can be replicated consistently. This will make it easier to eliminate.
+Der beste Weg, um Probleme zu debuggen, besteht darin, den Fehler zu isolieren und zu identifizieren, wie es konsequent repliziert werden kann. Dies macht es leichter, den Fehler zu beseitigen.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://developer.chrome.com/devtools/docs/authoring-development-workflow](https://developer.chrome.com/devtools/docs/authoring-development-workflow)
  - [https://remysharp.com/2012/12/21/my-workflow-never-having-to-leave-devtools](https://remysharp.com/2012/12/21/my-workflow-never-having-to-leave-devtools)
@@ -378,30 +378,30 @@ The best way to debug issues is to isolate the error and identify how it can be 
  - [https://gist.github.com/jedrichards/9942165](https://gist.github.com/jedrichards/9942165)
 
 
-#### Remote debugging
+#### Remote-Debugging
 
-When working with an iOS device you can remotely debug Mobile Safari by plugging the device in to the USB port of a mac and opening the Safari Developer tools.
+Bei der Arbeit mit einem iOS-Gerät können Sie Mobile Safari remote debuggen, indem Sie das Gerät an den USB-Port eines Mac anschliessen und die Safari Developer-Tools öffnen.
 
-When working with an Android device you can remotely debug Mobile Chrome by plugging the device in to the USB port of a computer and following [these instructions](https://developer.chrome.com/devtools/docs/remote-debugging).
+Wenn Sie mit einem Android-Gerät arbeiten, können Sie mit Mobile Chrome debuggen, indem Sie das Gerät an den USB-Port eines Computers anschliessen und diese [Anweisungen](https://developer.chrome.com/devtools/docs/remote-debugging) befolgen.
 
-Third-party tools like [jsconsole.com](http://jsconsole.com/remote-debugging.html) can also help with remote debugging.
-
-
-### Other panels
-
- - The *Timeline* panel is useful for tracking rendering performance: [https://developer.chrome.com/devtools/docs/timeline](https://developer.chrome.com/devtools/docs/timeline)
- - The *Profiles* panel is useful for tracking CPU and memory usage: [https://developer.chrome.com/devtools/docs/profiles](https://developer.chrome.com/devtools/docs/profiles)
- - The *Resources* panel is useful for tracking information stored in cookies and local storage: [https://developer.chrome.com/devtools/docs/resources](https://developer.chrome.com/devtools/docs/resources)
- - The *Audits* panel is useful for testing the performance of a page, and analysing ways to improve it: [https://developer.chrome.com/devtools#audits](https://developer.chrome.com/devtools#audits)
+Drittanbieter Tools wie [jsconsole.com](http://jsconsole.com/remote-debugging.html) können beim Debuggen sehr nützlich sein.
 
 
-## The DOM
+### Andere Panels
 
-In a web browser, JavaScript has two special *global* variables - `window` and `document` - that allow us to interact with the browser and the web page respectively.
+ - Das *Timeline*-Panel ist nützlich, um die Renderleistung zu verfolgen: [https://developer.chrome.com/devtools/docs/timeline](https://developer.chrome.com/devtools/docs/timeline)
+ - Das *Profile* Panel ist nützlich für die Verfolgung von CPU- und Speicherverbrauch: [https://developer.chrome.com/devtools/docs/profiles](https://developer.chrome.com/devtools/docs/profiles)
+ - Das *Resources* Panel ist nützlich für die Verfolgung von Informationen, die in Cookies und der Local Storage gespeichert sind: [https://developer.chrome.com/devtools/docs/resources](https://developer.chrome.com/devtools/docs/resources)
+ - Das *Audits* Panel ist nützlich, um die Leistung einer Seite zu testen und Möglichkeiten zu analysieren, um sie zu verbessern: [https://developer.chrome.com/devtools#audits](https://developer.chrome.com/devtools#audits)
 
-The `window` variable is often used to detect when a page is loaded, when the window is scrolled, and to access its dimensions.
 
-The most common use of `document` is to access HTML elements in a web page by referencing the _Document Object Model_ (DOM), which is the JavaScript representation of the HTML page structure:
+## Die DOM
+
+In einem Webbrowser hat JavaScript zwei spezielle *globale* Variablen - `window` und `document` - das erlaubt uns, mit dem Browser und der Webseite zu interagieren.
+
+Die Variable `window` wird oft verwendet, um zu erkennen, wann eine Seite geladen wird, wenn das Fenster gescrollt wird und auf die Dimensionen zugegriffen wird (z.B. die Fenstergrösse verändern).
+
+Die häufigste Verwendung von `document` besteht darin, auf HTML-Elemente in einer Webseite zuzugreifen, indem auf das _Document Object Model_ (DOM) verwiesen wird, welches die JavaScript-Darstellung der HTML-Seitenstruktur ist:
 
 **HTML**
 
@@ -417,7 +417,7 @@ The most common use of `document` is to access HTML elements in a web page by re
 
 **JS**
 
-Two examples of interacting with this page via JavaScript, using the DOM:
+Zwei Beispiele für die Interaktion mit dieser Seite über JavaScript, mit dem DOM:
 
 ```
 var heading = document.querySelector("h1");
@@ -426,7 +426,7 @@ heading.style.color = "#f90";
 heading.setAttribute("class", "heading-main");
 ```
 
-And another:
+Und eine weitere:
 
 ```
 var planetList = document.querySelector(".js-planets");
@@ -437,43 +437,43 @@ planet.textContent = "Earth";
 planetList.appendChild(planet);
 ```
 
-We can usually do all the DOM manipulation we need with these native JavaScript commands, without having to resort to using an external library. We don't *require* jQuery just to access and manipulate the DOM. But it does make these interactions (and many others) far easier.
+Wir können in der Regel alle DOM-Manipulationen, die wir benötigen, mit diesen nativen JavaScript-Befehlen durchführen, ohne auf eine externe Bibliothek zurückgreifen müssen. Wir *brauchen* JQuery nicht, um auf das DOM zuzugreifen und zu manipulieren. Aber es macht diese Interaktionen (und viele andere) viel einfacher.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://developer.mozilla.org/en-US/docs/Web/API/Document\_Object_Model/Introduction](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
 
-## jQuery
+## JQuery
 
-Shortly after its creation, jQuery quickly became a popular tool for helping to manage the many inconsistencies in how different browsers had (incorrectly) implemented JavaScript.
+Kurz nach seiner Entstehung wurde JQuery schnell zu einem beliebten Werkzeug, um die vielen Inkonsistenzen zu bewältigen, wie bspw. die falsche Implementierung von JavaScript in verschiedenen Browsers.
 
-This is no longer such a concern, as modern browsers generally implement the same set of standards. But jQuery is still useful, and not just for DOM interactions. It also simplifies *Ajax* calls, handling *events* and object/array manipulation amongst others.
+Das ist nicht mehr so relevant, denn moderne Browser setzen in der Regel die gleichen Standards ein. Aber JQuery ist immer noch nützlich, und nicht nur für DOM-Interaktionen. Es vereinfacht auch *Ajax* Anrufe, Handling *Events* und Objekt / Array Manipulation unter anderem.
 
-A big advantage is that *most* front-end developers have some familiarity with jQuery, which helps teams work on a shared codebase.
+Ein grosser Vorteil ist, dass *die meisten* Front-End-Entwickler mit JQuery vertraut sind, und es hilft, die Teams auf einer gemeinsamen Codebasis arbeiten zu lassen.
 
-The presence of jQuery in any website of reasonable size and complexity is almost ubiquitous. As such, it's useful to learn not just how to use it, but also its quirks and deficiencies.
+Die Anwesenheit von JQuery ist in fast jeder Website allgegenwärtig. Als solches ist es sinnvoll, nicht nur zu lernen, wie man es benutzt, sondern auch seine Macken und Mängel.
 
-This guide assumes a basic knowledge of jQuery - how add it to a web page and use it to select and manipulate DOM elements.
+Dieser Leitfaden nimmt ein Grundwissen von JQuery an - wie füge es zu einer Webseite hinzu und verwende es, um DOM-Elemente auszuwählen und zu manipulieren.
 
 
-### jQuery tips
+### JQuery Tipps
 
-#### Don't put everything in *document ready*
+#### Schreiben Sie nicht alle in *document ready*
 
-The most common use of jQuery is to initialise code to start when the DOM of the page has loaded, using:
+Die häufigste Verwendung von JQuery ist die Initialisierung von Code, wenn das DOM der Seite geladen hat, mit:
 
 ```
 $(document).ready(function () { ... });
 ```
 
-*This is sometimes shortened to:*
+*Das wird manchmal abgekürzt:*
 
 ```
 $(function () { ... });
 ```
 
-This often leads to an entire application's code being stored in a single *global.js* file, all referenced within the *ready* function:
+Dies führt oft dazu, dass der Code einer ganzen Anwendung in einer einzigen *global.js* Datei gespeichert ist, und alles in der *ready* Funktion referenziert ist:
 
 ```
 $(document).ready(function () {
@@ -483,15 +483,15 @@ $(document).ready(function () {
 });
 ```
 
-This isn't a good idea, for several reasons.
+Das ist keine gute Idee, aus mehreren Gründen.
 
-If all the website's JS code is stored in a single place it can quickly become difficult to manage.
+Wenn der gesamte JS-Code der Website an einem einzigen Ort gespeichert ist, kann er schnell schwer zu verwalten sein.
 
-Unless you are careful, you might run into trouble with scope, where no two variables can share the same name. This will be discussed in more detail later.
+Sofern Sie nicht vorsichtig sind, können Sie in Schwierigkeiten mit dem Scope kommen, wenn keine zwei Variablen den gleichen Namen teilen können. Dies wird später noch näher erörtert.
 
-Another issue is that it may slow down the initial rendering of the website, as this code will not be parsed until the page is ready to be rendered. There may be parts of the code that could be executed immediately rather than having to wait for the DOM to finish loading.
+Ein weiteres Problem ist, dass es die anfängliche Wiedergabe der Website verlangsamen kann, da dieser Code nicht analysiert wird, bis die Seite bereit ist, gerendert zu werden. Es kann Teile des Codes geben, die sofort ausgeführt werden können, anstatt auf das DOM warten zu müssen.
 
-A solution to this issue is to keep code modular, and only *initialise* the code within the DOM *ready* function.
+Eine Lösung für dieses Problem ist, Code modular zu halten, und nur den Code innerhalb der DOM *ready* Funktion zu *initialisieren*.
 
 ```
 // set up all tab functionality
@@ -514,37 +514,37 @@ function init () {
 $(document).ready(init);
 ```
 
-Note that this is a simplification of a solution to demonstrate the issue. More detailed solutions will be demonstrated later.
+Beachten Sie, dass dies eine Vereinfachung einer Lösung ist, um das Problem zu demonstrieren. Detaillierte Lösungen werden später gezeigt.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://learn.jquery.com/code-organization/concepts/](https://learn.jquery.com/code-organization/concepts/)
  - [http://www.elijahmanor.com/dont-initialize-all-the-things-in-jquery-ready/](http://www.elijahmanor.com/dont-initialize-all-the-things-in-jquery-ready/)
 
 
-#### Consider prefixing jQuery objects with *$*
+#### Erwägen Sie die Präfixierung von JQuery-Objekten mit *$*
 
-A widely used convention that can help to differentiate a variable that references a jQuery object from other types of variable. It is common to prefix these variable names with a `$`:
+Eine weit verbreitete Konvention, die dazu beitragen kann, eine Variable zu unterscheiden, die auf ein JQuery-Objekt von anderen Variablentypen verweist, ist diese Variablennamen mit einem `$` zu präfixieren:
 
 ```
 var $planetsEl = $("#planets .planet");
 var planetCount = $planetsEl.length;
 ```
 
-This helps to show which variables also have access to use jQuery's many functions.
+Dies hilft zu zeigen, welche Variablen auch Zugriff auf JQuerys viele Funktionen haben.
 
-Some developers like this approach, others don't. But it's worth considering and deciding on a convention one way or the other.
+Einige Entwickler mögen diesen Ansatz, andere nicht. Aber es lohnt sich zu überlegen und sich für die eine oder anderen einer Konvention zu entscheiden.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://www.bennadel.com/blog/1778-using-variable-in-jquery-code-is-just-hungarian-notation.htm](http://www.bennadel.com/blog/1778-using-variable-in-jquery-code-is-just-hungarian-notation.htm)
 
 
-#### Cache DOM elements
+#### DOM Elemente cachen
 
-jQuery makes it very easy to quickly interact with the DOM. However, DOM interaction is slow. As such, for speed purposes it is best to interact with the DOM as little as possible.
+JQuery macht es sehr einfach, schnell mit dem DOM zu interagieren. Die DOM-Interaktion ist jedoch langsam. Aus Geschwindigkeitsgründen ist es am besten, mit dem DOM so wenig wie möglich zu interagieren.
 
-When querying the DOM to look for an element, cache the result for future use.
+Beim Abfragen des DOM, um nach einem Element zu suchen, speichern Sie das Ergebnis für die zukünftige Verwendung zwischen.
 
 ```
 var $el = $(".list-item");
@@ -556,17 +556,17 @@ $el.on("click", function (e) {
 });
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://ttmm.io/tech/selector-caching-jquery/](http://ttmm.io/tech/selector-caching-jquery/)
  - [http://james.padolsey.com/javascript/js-adolescence/](http://james.padolsey.com/javascript/js-adolescence/)
 
 
-#### Creating DOM elements
+#### DOM Elemente erstellen
 
-Again, DOM interaction is slow.
+Nochmal, die DOM Interaktion ist langsam.
 
-If you are creating a number of new DOM elements, it is a good approach to generate the new HTML markup and then insert it into the page in a single command:
+Wenn Sie eine Reihe neuer DOM-Elemente erstellen, ist es ein guter Ansatz, um das neue HTML-Markup zu generieren und dann in die Seite in einem einzigen Befehl einzufügen:
 
 ```
 var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
@@ -581,9 +581,9 @@ for (var counter = 0, planetCount = planets.length; counter < planetCount; count
 $planetList.append(planetElements);
 ```
 
-An alternative method is to *detach* the elements from the DOM while they're being manipulated, then reattach them when complete.
+Eine alternative Methode besteht darin, die Elemente aus dem DOM zu *lösen*, während sie manipuliert werden, und sie dann wieder anzuschliessen, wenn sie fertig sind.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://learn.jquery.com/performance/detach-elements-before-work-with-them/](http://learn.jquery.com/performance/detach-elements-before-work-with-them/)
  - [http://24ways.org/2011/your-jquery-now-with-less-suck](http://24ways.org/2011/your-jquery-now-with-less-suck)
@@ -591,7 +591,7 @@ An alternative method is to *detach* the elements from the DOM while they're bei
 
 #### Cache $(this)
 
-Similar to the point about caching DOM elements, if you are referencing `$(this)` multiple times then consider caching the element for improved performance:
+Ähnlich wie der Punkt über das Zwischenspeichern von DOM-Elementen, wenn Sie auf `$(this)` mehrere Male verweisen, überlegen Sie, ob es Sinn macht das Element zwischenzuspeichern, um eine verbesserte Leistung zu erzielen:
 
 ```
 $(".el").click(function (e) {
@@ -603,11 +603,11 @@ $(".el").click(function (e) {
 ```
 
 
-#### Avoid $(this) entirely
+#### Verzichten Sie auf $(this) generell
 
-Sometimes it isn't necessary to wrap an element in a jQuery object at all.
+Manchmal ist es nicht notwendig, ein Element in einem JQuery-Objekt zu umwickeln.
 
-Consider the following example:
+Betrachten Sie das folgende Beispiel:
 
 ```
 $(".el").click(function (e) {
@@ -616,7 +616,7 @@ $(".el").click(function (e) {
 });
 ```
 
-In this instance, if all we're after is the ID of the element then it doesn't need to be wrapped in a jQuery object, as it could easily be accessed directly from the native DOM object:
+In diesem Fall, wenn alles, worauf wir hinaus sind, ist die ID des Elements zu bekommen, dann muss es nicht in ein JQuery-Objekt eingehüllt werden, da es leicht direkt aus dem nativen DOM-Objekt zugegriffen werden kann:
 
 ```
 $(".el").click(function (e) {
@@ -624,12 +624,12 @@ $(".el").click(function (e) {
 });
 ```
 
-Learning native JavaScript methods can be beneficial for knowing when you don't need to use jQuery.
+Das Lernen nativer JavaScript-Methoden kann von Vorteil sein, wenn Sie JQuery nicht benutzen müssen.
 
 
-#### Manipulate classes not styles
+#### Manipulieren Sie Klassen, nicht Stile
 
-When wanting to change the style of an element, don't manipulate its styles directly:
+Wenn Sie den Stil eines Elements ändern möchten, verändern Sie seine Stile nicht direkt:
 
 ```
 // Bad
@@ -638,7 +638,7 @@ $(".planet").css({
     "border-color": "#f90"
 });
 ```
-Instead, define those styles in CSS:
+Stattdessen definieren Sie diese Stile in CSS:
 
 ```
 .planet {
@@ -647,24 +647,24 @@ Instead, define those styles in CSS:
 }
 ```
 
-And then add (or remove) the class with JavaScript:
+Und dann fügen Sie die Klasse mit JavaScript hinzu:
 
 ```
 $(".planets li").addClass("planet");
 ```
 
-This helps maintain the principle of *separation of concerns* - CSS is responsible for styling, JavaScript is used for behaviour.
+Dies hilft bei der Aufrechterhaltung des Grundsatzes der *Trennung von Interessen* - CSS ist verantwortlich für Styling, JavaScript wird für das Verhalten verwendet.
 
-It also allows for easier testing of styles, as it becomes possible to add or remove the class manually to test layout without having to change any JavaScript.
+Es ermöglicht auch eine leichtere Prüfung von Stilen, da es möglich ist, die Klasse manuell hinzuzufügen oder zu entfernen, um das Layout zu testen, ohne JavaScript zu ändern.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://www.smashingmagazine.com/2012/11/19/building-relationship-between-css-javascript/](http://www.smashingmagazine.com/2012/11/19/building-relationship-between-css-javascript/)
 
 
-#### Consider alternative methods of animation
+#### Erwägen Sie alternative Methoden der Animation
 
-If you are creating a simple transition, consider whether it can be done with CSS:
+Wenn Sie einen einfachen Übergang erstellen, überlegen Sie, ob es mit CSS umgesetzt werden kann:
 
 ```
 .planet {
@@ -684,7 +684,7 @@ If you are creating a simple transition, consider whether it can be done with CS
 }
 ```
 
-It may be possible to trigger an animation simply by toggling a class name with JavaScript:
+Es kann möglich sein, eine Animation einfach durch Umschalten eines Klassennamens mit JavaScript auszulösen:
 
 ```
 $(".planet").on("click", function (e) {
@@ -692,22 +692,22 @@ $(".planet").on("click", function (e) {
 });
 ```
 
-It isn't always possible to use CSS for animations. If you are going to use JavaScript, consider trying the [jQuery animate enhanced](https://github.com/benbarnett/jQuery-Animate-Enhanced) plugin (or similar) because it attempts to use hardware-accelerated CSS3 transitions when possible. This will need testing, as it doesn't always work, and can introduce strange rendering issues.
+Es ist nicht immer möglich, CSS für Animationen zu verwenden. Wenn Sie JavaScript verwenden, sollten Sie das [JQuery animate enhanced](https://github.com/benbarnett/JQuery-Animate-Enhanced) Plugin (oder ähnliches) ausprobieren, weil es hardware-beschleunigte CSS3 Übergänge  nutzt, wann immer möglich. Dazu benötigt es Tests, denn es wird nicht immer funktionieren und kann u.U. auch seltsame Fehler produzieren.
 
-A non-jQuery alternative for animations is the [GSAP](http://greensock.com/gsap) library.
+Eine nicht-JQuery-basierte Alternative für Animationen ist die [GSAP](http://greensock.com/gsap) Bibliothek.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://www.smashingmagazine.com/2014/09/04/animating-without-jquery/](http://www.smashingmagazine.com/2014/09/04/animating-without-jquery/)
  - [https://css-tricks.com/myth-busting-css-animations-vs-javascript/](https://css-tricks.com/myth-busting-css-animations-vs-javascript/)
  - [http://davidwalsh.name/css-js-animation](http://davidwalsh.name/css-js-animation)
 
 
-#### Don't loop through a collection unnecessarily
+#### Durchlaufen Sie keine Schleifen unnötig
 
-If you want to apply an action to a collection of elements, you don't necessarily need to loop through them.
+Wenn Sie eine Aktion auf eine Sammlung von Elementen anwenden wollen, müssen Sie sie nicht unbedingt durchschleifen.
 
-For example, you do not need to manually loop through elements in order to apply a class name:
+Zum Beispiel bei der Zuweisung einer Klasse, ist das unnötig:
 
 ```
 $("li").each(function () {
@@ -715,7 +715,7 @@ $("li").each(function () {
 });
 ```
 
-You can just do:
+Stattdessen können Sie einfach folgenden Ausdruck verwenden:
 
 ```
 $("li").addClass("planet");
@@ -724,28 +724,28 @@ $("li").addClass("planet");
 
 #### $el.find();
 
-If you have already used jQuery to find an element:
+Wenn Sie JQuery bereits verwendet haben, um eine Element zu finden:
 
 ```
 var $planetList = $(".planets");
 ```
 
-If you then want to find another element within it (a *descendent*), jQuery offers a number of different ways to search for them, but general consensus (and tests) suggest that the best approach is to use `.find()` to locate these elements.
+Wenn Sie dann ein weiteres Element darin finden wollen, bietet JQuery eine Vielzahl verschiedener Wege an, danach zu suchen. Allerdings ist die einfachste und in der Regel beste Methode `.find()` zu benutzen, um solche Elemente zu finden.
 
 ```
 var $planets = $planetList.find("li");
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://vaughnroyko.com/the-real-scoop-on-jquery-find-performance/](http://vaughnroyko.com/the-real-scoop-on-jquery-find-performance/)
 
 
-#### Chain responsibly
+#### Zuständigkeitskette
 
-Just because you can chain jQuery methods, doesn't mean you always should.
+Gerade weil Sie JQuery Methoden verketten können, bedeutet das nicht, dass Sie es auch immer sollten.
 
-There's no absolute rules here, but consider code legibility when organising logic.
+Es gibt hier zwar keine absoluten Regeln, aber achten Sie auf Lesbarkeit des Codes bei der Organisation von Logik.
 
 ```
 $(this)
@@ -758,24 +758,24 @@ $(this)
     });
 ```
 
-Try to find a way to write logic so it remains succinct but maintains legibility.
+Versuchen Sie einen Weg zu finden, um eine Logik so knapp wie möglich zu schreiben, ohne dabei die Lesbarkeit zu beeinträchtigen.
 
 
-### jQuery pros and cons:
+### JQuery PROs und CONs:
 
-jQuery is great. It's easy to use, well documented, and most developers have at least some experience of using it. It handles a number of strange browser quirks and generally makes a developer's life easier.
+JQuery ist grossartig. Es ist einfach zu bedienen, gut dokumentiert, und die meisten Entwickler haben zumindest einige Erfahrung, es zu benutzen. Es behandelt eine Reihe von seltsamen Browser-Macken und macht in der Regel das Leben eines Entwicklers einfacher.
 
-In addition, there are a lot of plugins available to help implement common functionality requirements without having to write a lot of custom code.
+Darüber hinaus gibt es eine Menge von Plugins zur Verfügung, um die Durchführung von gemeinsamen Funktionalitätsanforderungen, ohne dass man eine Menge von benutzerdefinierten Code schreiben muss.
 
-But jQuery is not always the right choice for every situation.
+Aber JQuery ist nicht immer die richtige Wahl für jede Situation.
 
-People often learn to use jQuery before (or without) learning JavaScript. As such it can be difficult to know how to modify scripts downloaded from the web.
+Menschen lernen JQuery oft, bevor sie JavaScript verwenden lernen. Als solches kann es schwierig sein zu wissen, wie man aus dem Web heruntergeladene Skripte verändert.
 
-jQuery UI in particular is a large library, whereas smaller alternatives exist that could potentially do the same job at a fraction of the file size.
+JQuery UI ist insbesondere eine grosse Bibliothek, während kleinere Alternativen existieren, die möglicherweise den gleichen Job zu einem Bruchteil der Dateigrösse machen könnten.
 
-When deciding on the best solution, consider alternatives, such as using a collection of small libraries.
+Bei der Entscheidung über die beste Lösung, betrachten Sie Alternativen, wie bspw. die Verwendung von kleineren Bibliotheken.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://lea.verou.me/2015/04/jquery-considered-harmful/](http://lea.verou.me/2015/04/jquery-considered-harmful/)
  - [http://youmightnotneedjquery.com/](http://youmightnotneedjquery.com/)
@@ -785,15 +785,15 @@ When deciding on the best solution, consider alternatives, such as using a colle
  - [http://microjs.com/](http://microjs.com/)
 
 
-## JavaScript Tips
+## JavaScript Tipps
 
-Some tips that cover general JavaScript features (and quirks).
+Einige Tipps, die allgemeine JavaScript-Funktionen (und Macken) abdecken.
 
-### Declaring variables
+### Variablen deklarieren
 
-Always declare variables for the first time using the `var` keyword.
+Deklarieren Sie Variablen immer mit dem `var` Schlüsselwort bevor Sie sie zum ersten Mal verwenden.
 
-Although it's not consensus, many developers prefer to define their variables at the top of a code block:
+Obwohl es nicht zwingend ist, bevorzugen viele Entwickler ihre Variablen am Anfang eines Codeblocks zu definieren:
 
 ```
 function flyToMars () {
@@ -807,7 +807,7 @@ function flyToMars () {
 }
 ```
 
-Stay consistent in the usage of `var`, whether it's using it for every declaration or chaining multiple variables with a single `var` declaration:
+Bleiben Sie konsistent in der Verwendung von `var`, egal ob es einzelne Deklarationen oder eine Verkettung mehrerer Variablen ist:
 
 ```
 var home = "Earth";
@@ -815,7 +815,7 @@ var self = this;
 var pi = 3.14;
 ```
 
-*or*
+*oder*
 
 ```
 var home = "Earth",
@@ -823,10 +823,10 @@ var home = "Earth",
     pi = 3.14;
 ```
 
-There are advantages to the first approach as it is easy to accidentally break the second (for example losing a comma or replacing it with a semi-colon).
+Es gibt Vorteile für den ersten Ansatz, da es leicht ist, das zweite Beispiel versehentlich kaputt zu machen (z.B. indem ein Komma ein Semikolon vergessen wird).
 
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://benalman.com/news/2012/05/multiple-var-statements-javascript/](http://benalman.com/news/2012/05/multiple-var-statements-javascript/)
  - [http://danhough.com/blog/single-var-pattern-rant/](http://danhough.com/blog/single-var-pattern-rant/)
@@ -834,20 +834,20 @@ There are advantages to the first approach as it is easy to accidentally break t
  - [http://james.padolsey.com/javascript/js-adolescence/](http://james.padolsey.com/javascript/js-adolescence/)
 
 
-### Naming conventions
+### Nameskonventionen
 
-Pick a naming convention for variables and functions, and stick to it.
+Wählen Sie eine Namenskonvention für Variablen und Funktionen und bleiben Sie dabei.
 
-There are some fairly common naming conventions for JavaScript, such as to use:
+Es gibt einige ziemlich häufige Namenskonventionen für JavaScript:
 
- - `camelCase` for functions, variables and objects.
- - `PascalCase` for constructors and classes.
+  - `camelCase` für Funktionen, Variablen und Objekte.
+  - `PascalCase` für Konstrukteure und Klassen.
 
-If using this naming convention, don't use underscores in variable names.
+Wenn Sie diese Namenskonvention verwenden, verwenden Sie keine Unterstriche in Variablennamen.
 
-Use descriptive names rather than short names where possible - code for future legibility, leave byte-saving to a minifier.
+Verwenden Sie beschreibende Namen anstelle von Kurznamen, wo möglich - schreiben Sie Code, der auch zukünftig noch lesbar ist und überlassen Sie die Optimierung einem Minifier.
 
-When naming functions, use *verbs* to describe the nature of the function:
+Bei der Benennung von Funktionen verwenden Sie *Verben*, um die Art der Funktion zu beschreiben:
 
 ```
 flyRocketShip();
@@ -858,7 +858,7 @@ eatBiscuit();
 
 ### "use strict"
 
-At the top of a function, consider adding a `"use strict"` statement:
+Am Anfang einer Funktion sollten Sie das `"use strict"` Statement hinzufügen:
 
 ```
 function flyToMars () {
@@ -870,29 +870,29 @@ function flyToMars () {
 }
 ```
 
-This puts the JavaScript interpreter into a *strict* context for the duration of that function - the current *scope*.
+Damit wird der JavaScript-Interpreter für die Dauer dieser Funktion (dem aktuellen *Scope*) in einen *strikten* Kontext gestellt.
 
-This changes the nature of some JavaScript errors that would otherwise fail silently - instead they now cause exceptions. This is a good thing, you want to find and fix potential errors rather than allowing them to unnoticed.
+Dies ändert die Natur von einigen JavaScript-Fehlern, die sonst schweigend ausfallen würden - stattdessen verursachen sie jetzt Ausnahmen. Dies ist eine gute Sache, denn Sie wollen potenzielle Fehler finden und beheben, anstatt sie unbemerkt zu lassen.
 
-For example, using strict mode ensures that you have to declare a variable with `var` before you can use it.
+Zum Beispiel, stellt der Strict-Mode sicher, dass Sie eine Variable mit `var` deklarieren müssen, bevor Sie sie verwenden können.
 
-It can also (potentially) make code run (marginally) faster than non-strict mode code.
+Es kann auch dazu führen, dass Code (potenziell) schneller läuft (marginal) als nicht-strikter Code.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
  - [http://www.nczonline.net/blog/2012/03/13/its-time-to-start-using-javascript-strict-mode/](http://www.nczonline.net/blog/2012/03/13/its-time-to-start-using-javascript-strict-mode/)
 
 
-### Primitive types
+### Primitive Typen
 
-Variables can store simple bits of information like text (*strings*) and numbers:
+Variablen können einfache Stücke von Informationen wie Texte (*Strings*) und Zahlen speichern:
 
- - Strings: `"hello"`
- - Booleans: `true`
- - Numbers: `3.14`
+ - String: `"hello"`
+ - Boolean: `true`
+ - Zahlen: `3.14`
 
-When creating a variable that is one of these (primitive) types, the new variable is a ***copy*** of the original. Changing the new variable leaves the original unchanged:
+Beim Erstellen einer Variablen, die einer dieser (primitiven) Typen ist, ist die neue Variable eine ***Kopie*** des Originals. Das Ändern der neuen Variablen belässt das Original unverändert:
 
 ```
 var myPlanet = "Earth";
@@ -903,9 +903,9 @@ yourPlanet = "Venus";
 ```
 
 
-### Object types
+### Objekttypen
 
-Variables can also store more complex information.
+Variablen können auch komplexere Informationen speichern.
 
 **Arrays:**
 
@@ -916,7 +916,7 @@ var planets = [
 ]
 ```
 
-**Objects:**
+**Objekte:**
 
 ```
 var earth = {
@@ -924,7 +924,7 @@ var earth = {
 }
 ```
 
-**Functions:**
+**Funktionen:**
 
 ```
 function flyToVenus () {
@@ -932,7 +932,7 @@ function flyToVenus () {
 }
 ```
 
-When creating a new variable, if you assign its value to an existing variable that is one of these complex types, it will ***reference*** the original variable, *rather than copying it*. Therefore any changes to the new variable will *also* change the original version:
+Wenn Sie eine neue Variable erstellen, indem Sie ihren Wert einer vorhandenen Variablen zuordnen, die einer dieser komplexen Typen ist, wird es ***die ursprüngliche Variable*** referenzieren, anstatt sie zu kopieren. Daher ändert jede Änderung der neuen Variablen *auch* die ursprüngliche Version:
 
 ```
 var myPlanet = {
@@ -947,14 +947,14 @@ yourPlanet["atmosphere"] = "Not air";
 // myPlanet.atmosphere === "Not air"
 ```
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://snook.ca/archives/javascript/javascript_pass](http://snook.ca/archives/javascript/javascript_pass)
 
 
-#### Use named functions, not anonymous functions
+#### Verwenden Sie benannte Funktionen, nicht anonyme Funktionen
 
-Something common to see in JavaScript is an anonymous function. As the name (ironically) suggests, they are functions without names:
+In JavaScript sieht man häufig anonyme Funktionen. Wie der Name (ironisch) vorschlägt, sind sie Funktionen ohne Namen:
 
 ```
 function () {
@@ -962,14 +962,14 @@ function () {
 }
 ```
 
-They are never used on their own, such as in the code block above. Instead, they are used as part of another function. A common occurrence when using jQuery is to use an anonymous function like this:
+Sie werden niemals auf eigene Faust benutzt, wie zum Beispiel im Codeblock. Stattdessen werden sie als Teil einer anderen Funktion verwendet. Ein häufiges Auftreten bei der Verwendung von JQuery ist die Verwendung einer anonymen Funktion wie folgt:
 
 ```
 $("a").click(function () { ... });
 $(document).ready(function () { ... });
 ```
 
-This could easily be rewritten to use a named function:
+Dies könnte leicht umgeschrieben werden, um eine benannte Funktion zu verwenden:
 
 ```
 function doSomethingWhenClicked () { ... }
@@ -979,27 +979,27 @@ function init () { ... }
 $(document).ready(init);
 ```
 
-Anonymous functions are often used when wanting to *encapsulate* some commands to be used for a specific purpose, but this piece of code is unlikely to be re-used elsewhere.
+Anonyme Funktionen werden häufig verwendet, wenn man *einige Befehle, die für einen bestimmten Zweck verwendet werden sollen,* verkapseln kann, aber es unwahrscheinlich ist, dass dieses Stück Code anderweitig wieder verwendet wird.
 
-Anonymous functions are difficult to debug, and can't be reused. A better approach is to never use them, and instead to always declare and name functions before use.
+Anonyme Funktionen sind schwer zu debuggen und können nicht wiederverwendet werden. Ein besserer Ansatz ist, sie niemals zu benutzen und stattdessen immer wieder Funktionen zu nennen und zu benennen.
 
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://toddmotto.com/avoiding-anonymous-javascript-functions/](http://toddmotto.com/avoiding-anonymous-javascript-functions/)
  - [http://learn.jquery.com/code-organization/beware-anonymous-functions/](http://learn.jquery.com/code-organization/beware-anonymous-functions/)
 
 
-### truthy and falsy
+### Wahr und unwahr
 
-Some conditions will return a value that is a *boolean* `true` or `false`
+Einige Bedingungen geben einen Wert zurück, der ein *boolean* `true` oder` false` ist:
 
 ```
 var $firstPlanet = $(".planet").first();
 var isMercury = ($el.text() === "Mercury"); // true
 ```
 
-Others conditions will return a value that is not strictly `true` or `false` but can be treated as *truthy* or *falsy*:
+Andere Bedingungen werden einen Wert zurückgeben, der nicht streng `true` oder `false` ist, sondern als *true* oder *false* behandelt werden kann:
 
 ```
 var $planets = $(".planets");
@@ -1010,9 +1010,9 @@ if ($planets.length) {
 }
 ```
 
-In this scenario, `$planets.length` won't be `true` or `false`, instead it will be a numeric value, `0` or more. If its value is `0`, it is *falsy*, whereas if it is a value above `0` it is treated as *truthy*.
+In diesem Szenario wird `$planets.length` weder `true`, noch `false` sein. Stattdessen hat es den numerischen Wert `0` oder höher. Wenn sein Wert `0` ist, ist das *false*, während wenn der Wert grösser als `0` ist, gilt es als *true*.
 
-Another example, checking whether an input field contains any text:
+Ein weiteres Beispiel, ob ein Eingabefeld einen beliebigen Text enthält:
 
 ```
 var $name = $("input#name");
@@ -1021,9 +1021,9 @@ if (!$name.val()) {
 }
 ```
 
-Notice the `!` before `$name.val()` - this reverses the condition (and turns it into a boolean) to check for a negative value rather than a positive one - whether the text field is empty and therefore *falsy*. In this situation it is useful to use `!` because we only want to add functionality if it is empty, and so saves having to write an empty `if` statement and extra `else` block.
+Beachten Sie das `!` vor `$name.val()` - das kehrt die Bedingung um (und verwandelt es in Boolean), um einen negativen Wert anstatt positiv zu prüfen - ob das Textfeld leer ist und daher *false*. In dieser Situation ist es sinnvoll, `!` zu verwenden, weil wir nur die Funktionalität hinzufügen wollen, wenn es leer ist, und so spart man sich eine leere `if`-Anweisung und einen zusätzlichen `else`-Block zu schreiben.
 
-You may sometimes see `!!` used before a condition. This turns a 'truthy' or 'falsy' value into a real boolean `true` or `false`, but unlike using a single exclamation mark it doesn't reverse its state.
+Manchmal sieht man `!!` vor einer Bedingung. Dies verwandelt einen `true` oder `false` Wert in ein echtes boolesches `true` oder `false`, aber im Gegensatz zu einem einzigen Ausrufezeichen wechselt es nicht umgekehrt seinen Zustand.
 
 ```
 var $name = $("input#name");
@@ -1034,7 +1034,7 @@ if (!!$name.val()) {
 }
 ```
 
-The following will all return a *falsy* value:
+Das folgende wird einen *false* Wert zurückgeben:
 
  - `false`
  - `0`
@@ -1043,37 +1043,37 @@ The following will all return a *falsy* value:
  - `undefined`
  - `NaN`
 
-Everything else will return a *truthy* value.
+Alles andere wird einen *true* Wert zurückgeben.
 
-However, be aware that truthy and falsy values can lead to errors - for example if you are looping through an array the first index will be 0, which is treated as 'falsy'.
+Seien Sie sich jedoch bewusst, dass `true` und `false` Werte zu Fehlern führen können - zum Beispiel, wenn Sie durch ein Array schleifen, wird der erste Index 0 sein, der als *false* behandelt wird.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://www.sitepoint.com/javascript-truthy-falsy/](http://www.sitepoint.com/javascript-truthy-falsy/)
  - [http://james.padolsey.com/javascript/truthy-falsey/](http://james.padolsey.com/javascript/truthy-falsey/)
 
 
-### Strict comparators (===)
+### Strikte Komparatoren (===)
 
-Strict comparators check the *type* of a variable along with its value.
+Strenge Komparatoren überprüfen den * Typ * einer Variablen zusammen mit ihrem Wert.
 
-If you use `==` (or `!=`) you may see issues testing against `null` values, confusing numbers and strings, and confusing `0` with boolean `false`.
+Wenn Sie `==` (oder `!=`) verwenden, können Sie Probleme mit dem testen von `null`-Werten, Verwechselung von Zahlen und Strings sowie Verwechselung von `0` mit dem Boolean `false` feststellen.
 
 ```
-"2" != 2;  // false
 "1" == 1;  // true
+"2" != 2;  // false
 ```
 
-Instead you might need to use `===` (or `!==`) to check both value and type:
+Stattdessen sollten Sie `===` (oder `!==`) benutzen, um sowohl den Wert, als auch den Typ ztu prüfen:
 
 ```
 "1" === 1; // false
 "2" !== 2  // true
 ```
 
-In general it is good practice to always use a strict comparator.
+Im Allgemeinen ist es eine gute Praxis, immer einen strengen Komparator zu benutzen.
 
-Unexpected errors can often occur when testing form inputs against expected values. It may be necessary to convert numbers into strings (or vice versa). An easy way to test is to see what *type* a value is.
+Unerwartete Fehler können oft auftreten, wenn Formulareingaben gegen erwartete Werte getestet werden. Es kann notwendig sein, Zahlen in Strings (oder umgekehrt) umzuwandeln. Eine einfache Möglichkeit das zu testen ist zu schauen, was für einen *Typ* ein Wert hat.
 
 ```
 // assume the user has entered '10' into this text field
@@ -1090,17 +1090,17 @@ age == 10  // true
 age === 10 // true
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
  - [http://www.2ality.com/2011/06/javascript-equality.html](http://www.2ality.com/2011/06/javascript-equality.html)
 
 
-### syntax
+### Syntax
 
-#### curly brackets
+#### Geschweifte Klammern
 
-When writing blocks such as `if` statements and `for` loops, technically it isn't compulsory to add curly brackets, as the following statement can be assumed to be connected:
+Beim Schreiben von Blöcken wie `if`-Anweisungen und `for`-Loops ist es technisch nicht zwingend erforderlich, geschweifte Klammern hinzuzufügen, da folgende Aussage angenommen werden kann:
 
 ```
 // works as expected
@@ -1108,7 +1108,7 @@ if (isEarth)
     landRocket();
 ```
 
-However, it is good practice to always use curly brackets. It's easy to add conditions to an `if` statement at a later date but not notice that there were no curly brackets:
+Allerdings ist es gute Praxis, immer geschweifte Klammern zu verwenden. Es ist einfach, Bedingungen zu einer `if`-Anweisung zu einem späteren Zeitpunkt hinzuzufügen. Aber es ist mitunter nicht so leicht zu merken, dass es keine geschweiften Klammern gab:
 
 ```
 if (isEarth)
@@ -1117,19 +1117,19 @@ if (isEarth)
 ```
 
 
-#### tabs vs spaces
+#### Tabs vs. Leerzeichen
 
-Choose spaces or tabs, don't mix them.
-
-
-#### quotes
-
-Choose single quotes or double quotes, don't mix them.
+Entscheiden Sie sich  für Tabs oder Leerzeichen, aber mischen Sie nicht. Zum schnellen Einrücken empfehlen sich Tabs. Also sollten Sie diese auch möglichst verwenden.
 
 
-#### commas and semi-colons
+#### Anführungszeichen
 
-Decide where to put commas, e.g. at the start or end of a list of items in an array or object.
+Entscheiden Sie sich für einfache Anführungszeichen oder für doppelte, aber mischen Sie nicht. Einfache Anführungszeichen (single quotes) erhöhen die Lesbarkeit, wenn sie häufig verwendet werden.
+
+
+#### Kommas und Semikolons
+
+Entscheiden Sie sich wo Sie Kommas setzen. am Ende eines Items oder am Anfang eines neuen Items.
 
 ```
 var innerPlanets = [
@@ -1140,7 +1140,7 @@ var innerPlanets = [
 ];
 ```
 
-or
+oder
 
 ```
 var outerPlanets = [
@@ -1151,7 +1151,7 @@ var outerPlanets = [
 ];
 ```
 
-Don't use an additional comma at the end of an array/object, as it can cause issues with older browsers:
+Benutzen Sie keine zusätzliches Komma am Ende einer Liste, weil das Fehler in älteren Browsern verursachen kann:
 
 ```
 // Don't do this
@@ -1161,17 +1161,17 @@ var planets = [
 ];
 ```
 
-Decide whether to use semi-colons at the end of a line.
+Entscheiden Sie, ob am Ende der Zeile ein Semikolon notwendig ist.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://benalman.com/news/2013/01/advice-javascript-semicolon-haters/](http://benalman.com/news/2013/01/advice-javascript-semicolon-haters/)
  - [http://www.codecademy.com/blog/78-your-guide-to-semicolons-in-javascript](http://www.codecademy.com/blog/78-your-guide-to-semicolons-in-javascript)
 
 
-### debug message logging
+### Debugmeldungen loggen
 
-Rather than leaving `console.log` messages in an application, or leaving them in for development but manually removing them when code is 'complete', you could use (or create) a simple debugging library that you call instead of `console.log`. This would allow you to leave debug messages in your code and switch them on and off globally with a single configuration option.
+Anstatt `console.log`-Meldungen in einer Anwendung zu hinterlassen oder sie zur Entwicklung da lassen, aber manuell zu entfernen, wenn der Code "vollständig" ist, können Sie eine einfache Debugging-Bibliothek verwenden, die man anstelle von `console.log` anruft. Dies ermöglicht Ihnen, Debug-Nachrichten in Ihrem Code zu lassen, die global mit einer einzigen Konfigurationsoption ein- und ausgeschaltet werden können.
 
 ```
 // log messages like so:
@@ -1182,21 +1182,21 @@ debug.warn("Warning message");
 debug.setLevel(0);
 ```
 
-Catching client-side errors could be fundamental to ensuring the application works as expected, so consider [capturing errors and logging them to a third-party application](http://jslogger.com/).
+Client-seitige Fehler abzufangen kann fundamental sein, um sicherzustellen, dass eine Applikation auch wie erwartet funktioniert. Daher werfen Sie einen Blick auf [JSLogger](http://jslogger.com/).
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://benalman.com/projects/javascript-debug-console-log/](http://benalman.com/projects/javascript-debug-console-log/)
  - [http://jslogger.com/](http://jslogger.com/)
 
 
-### async and defer
+### Async und Defer
 
-By default, when a browser finds a `<script>` tag in an HTML document, it stops parsing the HTML immediately until the *script* file has been downloaded and parsed.
+Wenn ein Browser in einem HTML-Dokument ein `<script>`-Tag findet, hört er standardmässig auf, den HTML-Code zu parsen, bis die *script* -Datei heruntergeladen und analysiert wurde.
 
-Because of this, when inserting `<script>` elements into HTML pages, the convention has been to put them at the bottom of the page, just before the closing `</body>` tag, so they are read after the rest of the HTML has already been parsed.
+Aus diesem Grund war die Konvention, dass `<script>` Elemente in HTML-Seiten am unteren Rand der Seite, kurz vor dem Schliessen `</body>` Tags hinzugefügt werden, so dass sie nach dem Rest gelesen werden, wenn das HTML wurde bereits geparst wurde.
 
-There are ways to change this behaviour, by adding attributes of `async` or `defer` to the script tag.
+Es gibt Möglichkeiten, dieses Verhalten zu ändern, indem Sie dem Skript-Tag Attribute wie `async` oder `defer` geben.
 
 ```
 <script src="venus.js"></script>
@@ -1205,36 +1205,36 @@ There are ways to change this behaviour, by adding attributes of `async` or `def
 ```
 
 
-#### async
+#### Async
 
-Async scripts will not stop the HTML downloading, and will be executed as soon as they are downloaded. While being executed they pause the parsing of the HTML document. They will be executed in whatever order they finish downloading.
-
-
-#### defer
-
-Deferred scripts download alongside the HTML document, but execution is delayed until HTML parsing is complete. They will be executed in the order that they appear in the document.
-
-Older versions of Internet Explorer have poor/no support for defer.
+Asynchrones Skripte halten das Herunterladen des HTML-Dokuments nicht an. Sie werden sobald wie möglich ausgeführt. Während dessen pausieren Sie das Parsen des HTML-Dokuments. Zudem werden sie in der der Reihenfolge ausgeführt, in der das Herunterladen abgeschlossen wurde.
 
 
-***Further reading:***
+#### Defer
+
+Skripte mit Defer-Attribut werden parallel zu dem HTML-Dokument heruntergeladen, aber ihre Ausführung wird verzögert, bis das HTML-Parsing abgeschlossen ist. Sie werden in der Reihenfolge ausgeführt, in der sie im Dokument erscheinen.
+
+Ältere Versionen von Internet Explorer haben schlechte/keine Unterstützung für das Defer-Attribut.
+
+
+***Weitere Informationen:***
 
  - [http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 
 
-### js- classnames for JS hooks
+### js- Klassennamen für JS Hooks
 
-If you have an HTML element that you are going to manipulate via JavaScript, give it a class name (or data attribute) that is prefixed with `js-`. This helps to differentiate classes added for style from those added purely as hooks for JavaScript functionality.
+Wenn Sie ein HTML Element haben, dass Sie mit JavaScript manipulieren wollen, geben Sie ihm einen Klassennamen (oder ein Data-Attribut), der mit `js-` beginnt. Das macht die Unterscheidung zwischen Klassen für Style und Klassen für JavaScript einfacher.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://philipwalton.com/articles/decoupling-html-css-and-javascript/](http://philipwalton.com/articles/decoupling-html-css-and-javascript/)
  - [http://davidwalsh.name/css-do](http://davidwalsh.name/css-do)
 
 
-### Ternary operators
+### Ternäre Operatoren
 
-Ternary operators are quick ways to write an if/else statement that sets a single value:
+Ternäre Operatoren sind ein schneller Weg, um mit einer if/else Anweisung einen einzelnen Wert zu setzen:
 
 ```
 if (planet === "Earth") {
@@ -1244,44 +1244,44 @@ if (planet === "Earth") {
 }
 ```
 
-Can be rewritten as:
+Kann auch so geschrieben werden:
 
 ```
 var dinner = (planet === "Earth") ? "chips" : "salad";
 ```
 
-Consider brevity vs legibility when considering whether to use ternary operators.
+Betrachten Sie die Kürze vs. Lesbarkeit bei der Prüfung, wenn Sie ternäre Operatoren verwenden.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://davidwalsh.name/learning-ternary-operators-tips-tricks](http://davidwalsh.name/learning-ternary-operators-tips-tricks)
 
 
 ### 0.1 + 0.2
 
-Beware one of JavaScript's weird quirks:
+Hüten Sie sich vor JavaScripts sonderbaren Macken:
 
 ```
 0.1 + 0.2 // ...
 0.1 + 0.2 === 0.3 // ...
 ```
 
-This doesn't occur in the wild often, but it can cause issues.
+Dies tritt in der Regel nicht auf, aber es kann Probleme verursachen.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://stackoverflow.com/a/588014](http://stackoverflow.com/a/588014)
 
 
-### Passing objects to functions
+### Übergeben von Objekten an Funktionen
 
-When creating a function, if you are expecting more than a few arguments, consider passing a single object rather than lots of arguments.
+Beim Erstellen einer Funktion, wenn Sie mehr als ein paar Argumente erwarten, überlegen Sie, ein einzelnes Objekt anstatt viele Argumente zu übergeben.
 
-There are a few advantages to this approach:
+Es gibt ein paar Vorteile für diesen Ansatz:
 
- 1. The order of arguments doesn't matter
- 2. The parameters are named, and so easier to reference
- 3. If some of the arguments are optional it saves passing `null` into the function
+  1. Die Reihenfolge der Argumente spielt keine Rolle
+  2. Die Parameter sind benannt und so leichter zu verweisen
+  3. Wenn einige der Argumente optional sind, wird automatisch `null` für solche Argumente in die Funktion übergeben
 
 ```
 // function usage
@@ -1298,47 +1298,47 @@ function modelSolarSystem (data) {
 }
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://rmurphey.com/blog/2011/04/25/objects-as-arguments/](http://rmurphey.com/blog/2011/04/25/objects-as-arguments/)
 
 
-### Enhance with JavaScript, don't rely on it
+### Verbessern Sie mit JavaScript, verlassen Sie sich nicht darauf
 
-Rather than having functionality that doesn't appear if JavaScript isn't present, try to ensure that the initially generated page content is useable for people who don't have JavaScript enabled:
+Anstatt Funktionalität zu haben, die nicht benutzt wird, wenn JavaScript nicht vorhanden ist, versuchen Sie lieber sicherzustellen, dass der ursprünglich generierte Seiteninhalt für Personen, die JavaScript deaktiviert haben, benutzbar ist:
 
 ```
 <p class="js-relative-date">14th June 2015</a>
 ```
 
-Then with JavaScript, for those people who are using a browser that supports it, you can detect these elements and enhance the functionality:
+Dann mit JavaScript können Sie für diejenigen, die es aktiviert haben, diese Elemente erkennen und die Funktionalität verbessern:
 
 ```
 var $relativeDates = $(".js-relative-date");
 makeDatesRelative($relativeDates);
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://www.gov.uk/service-manual/making-software/progressive-enhancement.html](https://www.gov.uk/service-manual/making-software/progressive-enhancement.html)
  - [http://alistapart.com/article/understandingprogressiveenhancement](http://alistapart.com/article/understandingprogressiveenhancement)
 
 
-## JavaScript style guides
+## JavaScript Style-Guide
 
-There are many ways to write JavaScript. Sticking to the rules laid out in a _style guide_ (or _coding standards_ document) means you can write code consistently across a team.
+Es gibt viele Möglichkeiten, JavaScript zu schreiben. Das Festhalten an den Regeln, die in einem _style guide_ (oder _coding standards_ Dokument) angelegt sind, bedeutet, dass Sie Code konsequent über ein Team hinaus schreiben können.
 
-The aim shouldn't just be to get the job done, but to write logical maintainable code.
+Das Ziel sollte nicht nur sein, die Arbeit zu erledigen, sondern logisch wartbaren Code zu schreiben.
 
-(For reference, there are popular [CSS](http://cssguidelin.es/) and [SASS](http://sass-guidelin.es/) equivalents.)
+(Als Referenz gibt es beliebte [CSS] (http://cssguidelin.es/) und [SASS] (http://sass-guidelin.es/) Äquivalente.)
 
-There's not a great deal of point writing your own coding standards when others have done the hard work for you.
+Es gibt keinen Grund, eigene Codierungsstandards zu schreiben, wenn andere die harte Arbeit für Sie bereits getan haben.
 
-A useful summary of why it's worth using a JavaScript style guide:
+Eine nützliche Zusammenfassung, warum es sich lohnt, einen JavaScript-Style-Guide zu verwenden:
 
- - [http://addyosmani.com/blog/javascript-style-guides-and-beautifiers/](http://addyosmani.com/blog/javascript-style-guides-and-beautifiers/)
+  - [http://addyosmani.com/blog/javascript-style-guides-und-beautifiers/](http://addyosmani.com/blog/javascript-style-guides-and-beautifiers/)
 
-Some JavaScript style guides to consider:
+Einige JavaScript-Style-Guides:
 
  - [https://github.com/rwaldron/idiomatic.js](https://github.com/rwaldron/idiomatic.js)
  - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
@@ -1348,32 +1348,32 @@ Some JavaScript style guides to consider:
 
 ## Ajax
 
-Ajax is the term commonly used to describe the technique of performing an _HTTP request_ with JavaScript in order to retrieve content from a server (or other third-party data source) without having to refresh the current page.
+Ajax ist der Begriff, der üblicherweise verwendet wird, um die Technik zum Ausführen eines _HTTP Requests_ mit JavaScript zu beschreiben, um Inhalte von einem Server (oder einer anderen Datenquelle von Drittanbietern) abzurufen, ohne die aktuelle Seite aktualisieren zu müssen.
 
-Many JavaScript libraries such as jQuery provide the ability to make Ajax requests.
+Viele JavaScript-Bibliotheken wie JQuery bieten die Möglichkeit, Ajax-Anfragen zu machen.
 
-Ajax can use the HTTP methods *get* and *post* to interact with servers. Both *get* and *post* can be used to send and receive data, but they have their differences that make each suited for different scenarios.
+Ajax kann die HTTP-Methoden *GET* und *POST* verwenden, um mit Servern zu interagieren. Beide *GET* und *POST* können verwendet werden, um Daten zu senden und zu empfangen, aber sie haben ihre Unterschiede, die jedes für verschiedene Szenarien geeignet machen.
 
 
-### Get requests
+### GET Requests
 
-An Ajax *get* request would generally be used to retrieve information from a server. To give an example with jQuery:
+Ein Ajax *GET*-Request wird im Allgemeinen verwendet, um Informationen von einem Server abzurufen. Um ein Beispiel mit JQuery zu geben:
 
 ```
 $.get("/api/planets/");
 ```
 
-This would request the URL *http://[domain]/api/planets/*
+Dies fragt die URL *http://[domain]/api/planets/* ab.
 
-It is possible to pass parameters to the server via the request URL:
+Es ist möglich, mit dem Request auch Parameter an den Server zu übergeben:
 
 ```
 $.get("/api/planets/", { planet: "Earth"});
 ```
 
-jQuery converts the second parameter into a query string, transforming the requested URL into: *http://[domain]/api/planets/?planet=Earth*
+JQuery konvertiert den zweiten Parameter in einen Abfrage-String und transformiert die angeforderte URL in: *http://[Domain]/api/planets/?planet=Earth*
 
-In the two examples above, the data may have been requested from the server but nothing is happening when that data is received. It is necessary to define what we want to do once data has been returned, or if there was an error.
+In den beiden obigen Beispielen können die Daten vom Server angefordert worden sein, aber es geschieht nichts, wenn diese Daten empfangen werden. Es ist notwendig zu definieren, was getan werden soll, sobald Daten zurückgegeben wurden, oder wenn es einen Fehler gab.
 
 ```
 $.get("/api/planets/", { planet: "Earth"})
@@ -1390,7 +1390,7 @@ $.get("/api/planets/", { planet: "Earth"})
     });
 ```
 
-As has already been discussed, it is possible (and recommended) to define these functions separately rather than using anonymous functions.
+Wie bereits erwähnt, ist es möglich (und empfohlen), diese Funktionen separat zu definieren, anstatt anonyme Funktionen zu verwenden.
 
 ```
 function done () { ... }
@@ -1403,20 +1403,20 @@ $.get("/api/planets/", { planet: "Earth"})
     .always(always);
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
 - [https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
 - [https://api.jquery.com/jquery.get/](https://api.jquery.com/jquery.get/)
 - [http://visionmedia.github.io/superagent/](http://visionmedia.github.io/superagent/)
 
 
-### Post requests
+### POST Requests
 
-When sending information to a server, *post* requests should be used. They don't limit the amount of data that can be sent to the server as with a *get* request, and they can also be used to upload files.
+Beim Senden von Informationen an einen Server sollten *POST*-Requests verwendet werden. Sie beschränken nicht die Datenmenge, die an den Server gesendet werden kann, wie bei einem *GET*-Request, und sie können auch zum Hochladen von Dateien verwendet werden.
 
-With *post* requests, the information being posted to the server often comes from form inputs.
+Mit *POST*-Requests kommt die Information, die an den Server gesendet wird, oft aus Formulareingaben.
 
-Using jQuery, *post* requests are made in a similar manner:
+Mit JQuery können *POST*-Requests in ähnlicher Weise gemacht werden:
 
 ```
 function done () { ... }
@@ -1430,22 +1430,22 @@ $.post("/api/planets/", { planet: "Earth"})
 
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
 - [https://api.jquery.com/jquery.post/](https://api.jquery.com/jquery.post/)
 - [http://www.sitepoint.com/key-differences-post/](http://www.sitepoint.com/key-differences-post/)
 
 
-### Cross-domain requests
+### Cross-domain Requests
 
-The two examples above assume that the server providing the data is the same server that the website lives on. There are two possible ways to interact with a different web server. This is useful when dealing with APIs provided by other services.
+Die beiden obigen Beispiele gehen davon aus, dass der Server, der die Daten bereitstellt, derselbe Server ist, auf dem die Website liegt. Es gibt zwei Möglichkeiten, mit einem anderen Webserver zu interagieren. Dies ist nützlich, wenn es um APIs geht, die von anderen Diensten bereitgestellt werden.
 
 
 #### CORS
 
-When attempting to access another server via JavaScript, a *security policy* error may be displayed in the console unless the host server has *cross-origin resource sharing* (CORS) enabled. Although not difficult to enable, there are security implications that must be understood and accepted before deciding to enable support for CORS.
+Wenn Sie versuchen, auf einen anderen Server über JavaScript zuzugreifen, können aufgrund einer *Sicherheitsrichtlinie* Fehler in der Konsole angezeigt werden, es sei denn, der Host-Server hat *Cross-Origin Ressource Sharing* (CORS) aktiviert. Obwohl es nicht schwer zu aktivieren ist, gibt es Sicherheitsimplikationen, die verstanden und akzeptiert werden müssen, bevor Sie sich für die Unterstützung von CORS entscheiden.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://enable-cors.org/](http://enable-cors.org/)
  - [http://dev.housetrip.com/2014/04/17/unleash-your-ajax-requests-with-cors/](http://dev.housetrip.com/2014/04/17/unleash-your-ajax-requests-with-cors/)
@@ -1453,13 +1453,13 @@ When attempting to access another server via JavaScript, a *security policy* err
 
 #### JSONP
 
-An alternative option is to request *JSONP*, again if the host server provides it.
+Eine alternative Option ist, *JSONP* anzufordern, wenn der Host-Server es bereitstellt.
 
-This gets around the *same-origin* security issue by allowing the host server to return the requested data wrapped in a JavaScript object. This is then embedded into the original web page.
+Dies umgeht das *same-origin* Sicherheitsproblem, indem der Host-Server die angeforderten Daten in ein JavaScript-Objekt eingewickelt. Dies wird dann in die ursprüngliche Webseite eingebettet.
 
-As ever, jQuery provides an easy way to use JSONP, potentially allowing easy interaction with third-party APIs.
+Wie immer bietet JQuery eine einfache Möglichkeit, JSONP zu verwenden, was möglicherweise eine einfache Interaktion mit Drittanbieter-APIs ermöglicht.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://www.sitepoint.com/jsonp-examples/](http://www.sitepoint.com/jsonp-examples/)
  - [http://json-p.org/](http://json-p.org/)
@@ -1468,15 +1468,15 @@ As ever, jQuery provides an easy way to use JSONP, potentially allowing easy int
 
 ## Promises
 
-When creating the Ajax requests above, three functions were defined to accompany it:
+Bei der Erstellung der Ajax-Anfragen wurden drei Funktionen definiert, um sie zu begleiten:
 
- - A `done` function to call when the Ajax request has been successful
- - A `fail` function to call when the Ajax request has been unsuccessful
- - An `always` function to call when the Ajax request has been completed, regardless of the result.
+ - Eine `done` Funktion, die ausgeführt wird, wenn der Ajax-Request erfolgreich war
+ - Eine `fail` Funktion, die ausgeführt wird, wenn der Ajax-Request nicht erfolgreich war
+ - Eine `always` Funktion, die ausgeführt wird, wenn der Ajax-Request abgeschlossen wurde, unabhängig vom Ergebnis
 
-An alternative method of triggering a function when the Ajax request completes is to use a *promise*.
+Eine alternative Methode zum Auslösen einer Funktion, wenn die Ajax-Anforderung abgeschlossen ist, ist ein *Promise* zu verwenden.
 
-Creating a promise is straightforward, with similar syntax to what has already been demonstrated:
+Das Erstellen eines *Promise* ist einfach, mit ähnlicher Syntax zu dem, was bereits gezeigt wurde:
 
 ```
 function done () { ... }
@@ -1490,11 +1490,11 @@ request.fail(fail);
 request.always(always);
 ```
 
-The difference here is that the ajax POST request has been stored in a variable called `request`, which is then used to define what should happen with the result of the ajax request.
+Der Unterschied hierbei ist, dass die Ajax-POST-Anfrage in einer Variablen namens `request` gespeichert wurde, die dann verwendet wird, um zu definieren, was mit dem Ergebnis der Ajax-Anfrage geschehen soll.
 
-The advantage of using *promises* is the ability to chain a number of functions to occur asynchronously, triggering later functions only if earlier functions complete successfully.
+Der Vorteil der Verwendung eines *Promise* ist die Fähigkeit, eine Anzahl von Funktionen zu verknüpfen, die asynchron auftreten, wobei spätere Funktionen ausgelöst werden, sobald frühere Funktionen erfolgreich abgeschlossen sind.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [https://api.jquery.com/promise/](https://api.jquery.com/promise/)
  - [https://www.promisejs.org/](https://www.promisejs.org/)
@@ -1504,9 +1504,9 @@ The advantage of using *promises* is the ability to chain a number of functions 
 
 ## Callbacks
 
-A number of the examples demonstrated above are possible because JavaScript allows functions to be passed as arguments to other functions.
+Eine Anzahl der oben dargestellten Beispiele ist möglich, weil JavaScript Funktionen als Argumente an andere Funktionen übergeben kann.
 
-This is known as a *callback*.
+Dies nennt man *Callback*.
 
 ```
 function init () {
@@ -1517,11 +1517,11 @@ function init () {
 $(document).ready(init);
 ```
 
-Callbacks take advantage of the *asynchronous* nature of JavaScript, which provides the ability to execute commands at the appropriate time. The example above demonstrates the *init* function being called when the DOM has finished loading.
+Callbacks nutzen die *asynchrone* Natur von JavaScript, die die Möglichkeit bietet, Befehle zum richtigen Zeitpunkt auszuführen. Das obige Beispiel zeigt, dass die *init*-Funktion aufgerufen wird, wenn das DOM das Laden beendet hat.
 
-Further examples of callbacks will be demonstrated in the following sections.
+Weitere Beispiele für Rückrufe werden in den folgenden Abschnitten gezeigt.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://gist.github.com/infovore/b6c4bc71a1bffdfd9846](https://gist.github.com/infovore/b6c4bc71a1bffdfd9846)
  - [http://stackoverflow.com/questions/9596276/how-to-explain-callbacks-in-plain-english-how-are-they-different-from-calling-o](http://stackoverflow.com/questions/9596276/how-to-explain-callbacks-in-plain-english-how-are-they-different-from-calling-o)
@@ -1529,9 +1529,9 @@ Further examples of callbacks will be demonstrated in the following sections.
 
 ## Timeouts
 
-One of the most common uses of a callback is to trigger a function after a set period of time, rather than immediately.
+Eine der häufigsten Verwendungen eines Callbacks ist, eine Funktion nach einer festgelegten Zeitspanne auszulösen, anstatt sofort.
 
-Sometimes you don't want to do something now, you want to do it later.
+Manchmal will man jetzt nichts machen, aber später soll etwas passieren.
 
 ```
 function doSomethingInTheFuture () {
@@ -1541,9 +1541,9 @@ function doSomethingInTheFuture () {
 var timeout = setTimeout(doSomethingInTheFuture, 5000); // 5 seconds
 ```
 
-This timeout will execute once, 5 seconds from when the timeout has been set.
+Dieser Timeout wird einmal ausgeführt, 5 Sekunden ab dem Zeitpunkt der Zeitüberschreitung.
 
-It is also possible to trigger a function repeatedly on a set interval:
+Es ist auch möglich, eine Funktion wiederholt in einem eingestellten Intervall auszulösen:
 
 ```
 function doSomethingContinuously () {
@@ -1553,18 +1553,18 @@ function doSomethingContinuously () {
 var interval = setInterval(doSomethingContinuously, 10000); // every 10 seconds
 ```
 
-A real world use for timeouts and intervals could be to perform an Ajax request to check for new content every few seconds.
+Ein praktischer Nutzen für Timeouts und Intervalle könnte sein, eine Ajax-Anfrage durchzuführen, um nach neuen Inhalten alle paar Sekunden zu suchen.
 
-Timeouts and intervals can be cancelled:
+Timeouts und Intervalle können abgebrochen werden:
 
 ```
 clearTimeout(timeout);
 clearInterval(interval);
 ```
 
-Of the two, there are disadvantages to using intervals, specifically when they're running in an inactive browser tab they can queue up, meaning that the callback function may be called a number of times when the user finally switches back to the active tab. For this reason it is usually recommended to use timeouts rather than callbacks.
+Von den beiden gibt es Nachteile bei der Verwendung von Intervallen. Insbesondere wenn sie in einem inaktiven Browser-Tab laufen, kommen sie in die Warteschlange, was bedeutet, dass die Callback-Funktion mehrfach aufgerufen wird (die Warteschlange wird abgearbeitet), wenn der Benutzer endlich wieder den inaktiven Tab aufgerufen hat. Aus diesem Grund wird normalerweise empfohlen, Timeouts anstatt Intervallen zu verwenden.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://ejohn.org/blog/how-javascript-timers-work/](http://ejohn.org/blog/how-javascript-timers-work/)
  - [http://stackoverflow.com/q/6183463](http://stackoverflow.com/q/6183463)
@@ -1572,15 +1572,15 @@ Of the two, there are disadvantages to using intervals, specifically when they'r
 
 ## Events
 
-Another common use of callbacks is with *events*.
+Eine weitere gebräuchliche Anwendung von Callbacks sind *events*.
 
-An event can be thought of in the following way:
+Ein Ereignis kann auf folgende Weise gedacht werden:
 
-> *When this happens, do that*
+> *Wenn dies passiert, mach das*
 
-The most common use of events is listening for interactions with DOM elements, such as a click on a specific link or the submission of a form.
+Die häufigste Verwendung von Events hört auf Interaktionen mit DOM-Elementen, wie z.B. einen Klick auf einen bestimmten Link oder die Einreichung eines Formulars.
 
-The following example demonstrates how to use jQuery to add an *event listener* to a DOM element. It triggers a *callback* function when the link is clicked:
+Das folgende Beispiel veranschaulicht, wie man JQuery verwendet, um einen *Event-Listener* einem DOM-Element hinzuzufügen. Es löst eine *Callback*-Funktion aus, wenn der Link geklickt wird:
 
 ```
 function linkClicked () {
@@ -1590,27 +1590,27 @@ function linkClicked () {
 $(".js-my-link").on("click", linkClicked);
 ```
 
-It is possible to add event listeners without using jQuery, but certain older browsers use slightly different syntax, and so using a library saves us from having to define the same function in two slightly different ways.
+Es ist möglich, Event-Listener ohne Verwendung von JQuery hinzuzufügen, aber bestimmte ältere Browser verwenden etwas unterschiedliche Syntax, und erspart man sich mit einer Bibliothek, dass man die gleiche Funktion auf zwei leicht unterschiedliche Weisen definieren muss.
 
-In the example above, the DOM element has a `class` attribute that starts with `js-` - as has been discussed above, this is a useful convention that allows us to differentiate between CSS classes that are used for styling and those that are used for JavaScript.
+Im obigen Beispiel hat das DOM-Element ein `class`-Attribut, das mit `js-`beginnt - wie oben diskutiert wurde, ist dies eine nützliche Konvention, die es uns ermöglicht, zwischen CSS-Klassen zu unterscheiden, die für das Styling verwendet werden und diejenigen, die sind Für JavaScript verwendet.
 
-Although events can be placed on almost any HTML element, for accessibility purposes it is beneficial to put them on `<a>` elements and form input controls, as this allows for easier keyboard navigation.
+Obwohl Ereignisse auf fast jedem HTML-Element platziert werden können, ist es für Zugänglichkeitszwecke vorteilhaft, sie auf `<a>` Elemente zu setzen und Eingabesteuerungen zu bilden, da dies eine einfachere Tastaturnavigation ermöglicht.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://eloquentjavascript.net/14_event.html](http://eloquentjavascript.net/14_event.html)
  - [http://www.kirupa.com/html5/javascript_events.htm](http://www.kirupa.com/html5/javascript_events.htm)
 
 
-### Prevent default events
+### Standard-Events verhindern
 
-When adding custom events, sometimes we may want to stop the initial link from carrying out its default action.
+Beim Hinzufügen von benutzerdefinierten Ereignissen können wir manchmal den ursprünglichen Link von der Ausführung der Standardaktion abhalten.
 
-For example, we may have a link that we want to trigger a specific piece of functionality, but for users without JavaScript clicking on the same link would refresh the entire page.
+Zum Beispiel können wir einen Link haben, mit dem wir eine bestimmte Funktionalität auslösen wollen, aber für Benutzer ohne JavaScript, die auf denselben Link klicken, würde die gesamte Seite aktualisiert.
 
-By default, when an event has been triggered an `event` object is available to be passed through to the callback function.
+Wenn ein Ereignis ausgelöst wurde, ist standardmässig ein `event`-Objekt verfügbar, das an die Callback-Funktion übergeben werden soll.
 
-The method to prevent this default behaviour is:
+Die Methode, dieses Standardverhalten zu verhindern, ist:
 
 ```
 $(".js-my-link").on("click", function (e) {
@@ -1618,20 +1618,19 @@ $(".js-my-link").on("click", function (e) {
 });
 ```
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://css-tricks.com/return-false-and-prevent-default/](https://css-tricks.com/return-false-and-prevent-default/)
  - [https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
 
 
-## closures
+## Closures
 
-A closure is formed when a *nested* function is made accessible outside of the function in which it was defined, so that it may be executed after the outer function has returned. It maintains access to the local variables, arguments, and inner function declarations of its outer function.
+Ein Closure wird gebildet, wenn eine *verschachtelte* Funktion ausserhalb der Funktion, in der sie definiert wurde, zugänglich gemacht wird, so dass sie ausgeführt werden kann, nachdem die äussere Funktion zurückgegeben wurde. Man behält den Zugriff auf die lokalen Variablen, Argumente und inneren Funktionsdeklarationen seiner äusseren Funktion.
 
 ```
 var myPlanet = (function () {
     var atmosphere = "Air";
-
     return function() {
         // We have access to *atmosphere*
         // because it is defined in the same scope as this function
@@ -1640,18 +1639,18 @@ var myPlanet = (function () {
 })();
 ```
 
-One common example of a closure is the module pattern, demonstrated below. This returns a simple object containing references to methods that are defined within the parent function.
+Ein übliches Beispiel für eine Closure ist das Modulmuster, wie nachstehend gezeigt. Dies gibt ein einfaches Objekt zurück, das Verweise auf Methoden enthält, die in der übergeordneten Funktion definiert sind.
 
-Closures are a useful method of creating complex functionality while protecting scope.
+Closures sind eine nützliche Methode, um komplexe Funktionalität zu schaffen und gleichzeitig den Umfang zu schützen.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/](https://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/)
 
 
-## Object literals
+## Objektliterale
 
-As has been demonstrated above, objects are a useful method of storing related information together in a single variable.
+Wie oben gezeigt wurde, sind Objekte eine nützliche Methode, um verwandte Informationen zusammen in einer einzigen Variablen zu speichern.
 
 ```
 var planet = {
@@ -1662,9 +1661,9 @@ var planet = {
 ```
 
 
-### Functions in objects
+### Funktionen in Objekten
 
-Objects are useful for more than just collecting data, as they can contain functions too.
+Objekte sind für mehr als nur das Sammeln von Daten nützlich, da sie auch Funktionen enthalten können.
 
 ```
 var planet = {
@@ -1680,35 +1679,35 @@ var planet = {
 };
 ```
 
-Functions within objects are often called ***methods***, and variables within objects are often called ***properties***.
+Funktionen innerhalb von Objekten werden oft als ***Methoden*** bezeichnet, und Variablen innerhalb von Objekten werden oft als ***Eigenschaften*** bezeichnet.
 
-To call an object's method, you first reference the initial variable name, followed by the function name:
+Um die Methode eines Objekts aufzurufen, verweisen Sie zuerst auf den ursprünglichen Variablennamen, gefolgt von dem Funktionsnamen:
 
 ```
 var planetName = planet.getName(); // "mars"
 ```
 
-Storing related properties and methods within an object encapsulates these related functions together within a single variable.
+Das Speichern von verwandten Eigenschaften und Methoden innerhalb eines Objekts kapselt diese verwandten Funktionen in einer einzigen Variablen zusammen.
 
-There are possible issues with this approach - mainly that it is possible for other scripts to access (and overwrite) internal parts of an object, for example in the `planet` object defined above:
+Es gibt mögliche Probleme mit diesem Ansatz - vor allem, dass es für andere Skripte möglich ist, auf interne Teile eines Objekts zuzugreifen (und zu überschreiben), zum Beispiel in dem oben definierten `planet`-Objekt:
 
 ```
 planet.name = "earth"; // override previous value
 ```
 
-Using objects as the basis of storing variables and functions is a key feature of writing maintainable JavaScript. More complex methods exist to help protect data in an object from being overridden (whether accidentally or intentionally). These will be discussed in the following sections.
+Die Verwendung von Objekten als Grundlage für die Speicherung von Variablen und Funktionen ist ein wichtiges Merkmal des Schreibens von wartbaren JavaScript. Es sind komplexere Methoden vorhanden, um zu verhindern, dass Daten in einem Objekt überschrieben werden (ob versehentlich oder absichtlich). Diese werden in den folgenden Abschnitten besprochen.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://www.sitepoint.com/back-to-basics-javascript-object-syntax/](http://www.sitepoint.com/back-to-basics-javascript-object-syntax/)
  - [http://rmurphey.com/blog/2009/10/15/using-objects-to-organize-your-code/](http://rmurphey.com/blog/2009/10/15/using-objects-to-organize-your-code/)
 
 
-### *this* keyword
+### *this* Schlüsselwort
 
-In JavaScript, the value of the variable `this` is special. Its value changes depending on where and how it is used.
+In JavaScript ist der Wert der Variablen `this` besonders. Ihr Wert ändert sich je nachdem wo und wie sie verwendet wird.
 
-For example, when referencing other properties or methods within an object literal, use `this` to access (or set) other parts of the object.
+Wenn Sie beispielsweise auf andere Eigenschaften oder Methoden in einem Objektliteral verweisen, verwenden Sie `this`, um auf andere Teile des Objekts zuzugreifen (oder einzustellen).
 
 ```
 var planet = {
@@ -1729,9 +1728,9 @@ var planet = {
 };
 ```
 
-The value of `this` can change when used in different contexts, as will be demonstrated later.
+Der Wert von `this` kann sich ändern, wenn er in verschiedenen Kontexten verwendet wird, wie später gezeigt wird.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://gist.github.com/cjohansen/4135065](https://gist.github.com/cjohansen/4135065)
  - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
@@ -1739,12 +1738,12 @@ The value of `this` can change when used in different contexts, as will be demon
 
 ## Scope
 
-When you create a variable or function, by default it is defined in the *global* scope. This means that it is available anywhere within the code.
+Wenn Sie eine Variable oder eine Funktion erstellen, wird sie standardmässig im *globalen* Scope definiert. Dies bedeutet, dass sie überall im Code verfügbar ist.
 
 
-### Understanding scope
+### Scope verstehen
 
-Variables created in the *global* scope are accessible to functions defined in the same scope:
+Variablen, die im *globalen* Scope erstellt wurden, sind für Funktionen zugänglich, die im gleichen Bereich definiert sind:
 
 ```
 // this variable is defined in the global scope
@@ -1758,7 +1757,7 @@ function enthuse () {
 }
 ```
 
-Variables defined within functions are *local* to that function, and so are not available outside:
+Variablen, die innerhalb der Funktionen definiert sind, sind nur *lokal* in dieser Funktion und nicht ausserhalb verfügbar:
 
 ```
 function enthuse () {
@@ -1768,7 +1767,7 @@ alert("I like the planet " + planet); // ERROR: unknown variable *planet*
 ```
 
 
-Variables within functions take priority over variables defined outside:
+Variablen innerhalb der Funktionen haben Vorrang vor den ausserhalb definierten Variablen:
 
 ```
 var planet = "Earth";
@@ -1782,7 +1781,7 @@ alert("I like the planet " + planet); // "I like the planet Earth"
 ```
 
 
-Variables passed into functions also become part of the *local* scope, therefore overriding the variable of the same name declared in the global scope:
+Variablen, die in Funktionen übergeben werden, werden auch Teil des *lokalen* Gültigkeitsbereichs und überschreiben daher die Variable des gleichen Namens, die im globalen Geltungsbereich deklariert wurde:
 
 ```
 var planet = "Earth";
@@ -1795,7 +1794,7 @@ enthuse(); // no planet passed to function
 alert("I like the planet " + planet); // "I like the planet Earth"
 ```
 
-Also:
+Auch:
 
 ```
 var planet = "Earth";
@@ -1808,45 +1807,45 @@ enthuse("Venus"); // planet passed to function
 alert("I like the planet " + planet); // "I like the planet Earth"
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://stackoverflow.com/a/500459](http://stackoverflow.com/a/500459)
  - [http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/](http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
 
 
-### Issues with scope
+### Probleme mit dem Scope
 
-The flexibility of scope can be handy, but equally it can cause issues, especially when it isn't taken into consideration.
+Die Flexibilität des Scopes kann praktisch sein, aber gleichermassen kann es Probleme verursachen, besonders wenn es nicht berücksichtigt wird.
 
-The main issue with working in the global scope is that it is easy to accidentally override a variable by declaring another with the same name. JavaScript (in a web browser) offers no isolation of scope across files, meaning all code shares the same global scope unless efforts are made to isolate pieces of code into separate local scopes.
+Das Hauptproblem bei der Arbeit im globalen Geltungsbereich ist, dass es einfach ist, versehentlich eine Variable zu überschreiben, indem man eine andere mit demselben Namen deklariert. JavaScript (in einem Webbrowser) bietet keine Isolierung des Scopes über Dateien, d.h. alle Code-Freigaben nutzen den gleichen globalen Bereich, es sei denn, es werden Anstrengungen unternommen, um Stücke des Codes in separate lokale Bereiche zu isolieren.
 
-Many websites use their own JavaScript code along with third party JavaScript, such as that used for tracking or inserting advertising into a website. It is important that this third-party code is handled in isolation so that it doesn't interfere with any other JavaScript.
+Viele Webseiten verwenden ihren eigenen JavaScript-Code zusammen mit Drittanbieter-JavaScript, wie zum Beispiel für das Tracking oder das Einfügen von Werbung in eine Website. Es ist wichtig, dass dieser Drittanbieter-Code isoliert behandelt wird, so dass er kein anderes JavaScript stört.
 
-The best way to avoid issues with scope is to encapsulate all code within individual local scopes, so that few (if any) variables are defined in the global scope, meaning they do not conflict with one another.
+Der beste Weg, um Probleme mit dem Scope zu vermeiden, besteht darin, alle Codes innerhalb einzelner lokaler Bereiche einzukapseln, so dass nur wenige (wenn überhaupt) Variablen im globalen Geltungsbereich definiert sind, was bedeutet, dass sie nicht miteinander in Konflikt stehen.
 
-Methods to do this will be discussed shortly.
+Methoden dazu werden in Kürze erörtert.
 
 
-## Modularity
+## Modularität
 
-When building a large and complex website, a significant amount of JavaScript may be written to control its various pieces of functionality. Although certain aspects may need to interact with one another, generally these pieces of code can be managed separately.
+Beim Aufbau einer grossen und komplexen Website, kann eine erhebliche Menge an JavaScript geschrieben werden, um seine verschiedenen Funktionen der Funktionalität zu kontrollieren. Obwohl bestimmte Aspekte möglicherweise miteinander interagieren müssen, können diese Stücke von Code separat verwaltet werden.
 
-Without attempts to keep this code organised, it can quickly become difficult to manage and maintain each piece of functionality without accidentally affecting other parts.
+Ohne Versuche, diesen Code zu organisieren, kann es schnell schwierig werden, jede Funktionalität zu verwalten und zu pflegen, ohne versehentlich andere Teile zu beeinträchtigen.
 
-By organising code into *modular components*, it means that each part of the code can be kept and maintained separately from all other components.
+Die Organisation von Code in *modulare Komponenten* bedeutet, dass jeder Teil des Codes getrennt von allen anderen Komponenten gehalten werden kann.
 
-Using modular components also helps with managing *scope* - each component can be defined within its own scope rather than the global scope, reducing the potential for any one variable to accidentally override another.
+Die Verwendung von modularen Komponenten hilft auch bei der Verwaltung des *Scopes* - jede Komponente kann in ihrem eigenen Umfang und nicht in dem globalen Geltungsbereich definiert werden, wodurch das Potenzial für eine beliebige Variable reduziert wird, um eine andere versehentlich zu überschreiben.
 
-Splitting JavaScript into separate files is a good start to identify logical components. By itself this doesn't protect against issues with scope.
+Das Aufteilen von JavaScript in separate Dateien ist ein guter Anfang, um logische Komponenten zu identifizieren. Aber das schützt noch nicht das Scope.
 
-There are a number of possible ways to organise JavaScript into modular components, discussed below.
+Es gibt eine Reihe von Möglichkeiten, um JavaScript in modularen Komponenten zu organisieren, wie unten diskutiert.
 
 
 ### Namespaces
 
-One method of creating modular components is to break components into separate objects, and to define a *namespace* within which each object can live.
+Eine Methode, um modulare Komponenten zu erstellen, besteht darin, Komponenten in einzelne Objekte zu unterteilen und einen *Namespace* zu definieren, in dem jedes Objekt existiert.
 
-The following two examples demonstrate how separate pieces of code are isolated from one another within a single namespace.
+Die folgenden zwei Beispiele zeigen, wie solche Codestücke in einem einzigen Namespace voneinander getrennt sind.
 
 File 1 - *earth.js*:
 
@@ -1880,24 +1879,24 @@ PLANETS.mars = {
 };
 ```
 
-The approach above means there is only a single global variable, in this case called `PLANETS`. This is our *namespace*.
+Der oben genannte Ansatz bedeutet, dass es nur eine einzige globale Variable gibt, in diesem Fall `PLANETS` genannt. Dies ist unser *Namespace*.
 
-These two files could be included in any order. The first line of both reference the global variable `PLANETS`. If it has already been created, it won't be overwritten. If this is the first file to reference it, a new empty object will be created.
+Diese beiden Dateien könnten in beliebiger Reihenfolge aufgenommen werden. Die erste Zeile der beiden vewrweist auf die globale Variable `PLANETS`. Wenn es bereits erstellt wurde, wird es nicht überschrieben. Wenn dies die erste Datei ist, wird ein neues leeres Objekt erstellt.
 
-Within the two objects above, all variables are safe and won't overwrite each other.
+Innerhalb der beiden obigen Objekte sind alle Variablen sicher und werden nicht gegenseitig überschrieben.
 
-At a later date another script can reference `PLANETS.mars.init();` or `PLANETS.earth.init();`, or any other method or property defined in the namespace.
+Zu einem späteren Zeitpunkt kann ein anderes Skript auf `PLANETS.mars.init();` oder `PLANETS.earth.init();` oder jede andere Methode oder Eigenschaft, die im Namespace definiert ist, verweisen.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://elegantcode.com/2011/01/26/basic-javascript-part-8-namespaces/](http://elegantcode.com/2011/01/26/basic-javascript-part-8-namespaces/)
 
 
 ### IIFEs
 
-Another method of avoiding the global scope is to surround code in an anonymous function that is run (or *executed*) immediately.
+Eine andere Methode, den globalen Bereich zu vermeiden, besteht darin, Code in eine anonyme Funktion zu schreiben, die sofort ausgeführt wird.
 
-The syntax for doing this is:
+Die Syntax dafür ist:
 
 ```
 (function () {
@@ -1907,34 +1906,29 @@ The syntax for doing this is:
 })();
 ```
 
-This method is known as an *Immediately Invoked Function Expression*. The advantage of using an *IIFE* is that all code is kept within a function, and so creates its own scope rather than putting any variables or functions in the global scope.
+Diese Methode wird als *Immediately Invoked Function Expression* bezeichnet. Der Vorteil der Verwendung eines *IIFE* ist, dass der gesamte Code in einer Funktion gehalten wird, und so seinen eigenen Scope hat, anstatt irgendwelche Variablen oder Funktionen im globalen Bereich.
 
-The syntax of an IIFE can be understood in two parts:
+Die Syntax eines *IIFE* kann in zwei Teilen verstanden werden:
 
- 1. The first part is the definition of a function, surrounded in parentheses, which allows a local scope to be created.
- 2. The second part is the second set of parentheses that immediately follow the first, which calls the function immediately.
+  1. Der erste Teil ist die Definition einer Funktion, die in Klammern umgeben ist, wodurch ein lokaler Bereich erstellt werden kann.
+  2. Der zweite Teil ist der zweite Satz von Klammern, der unmittelbar dem ersten folgt, der die Funktion sofort aufruft.
 
-IIFEs are useful when you have some code that needs to be run immediately (for example on initial page load), but this code doesn't need to reference anything else in the site, or be referenced once set up. Surrounding this code with an anonymous function protects it from the rest of the codebase, while the immediate function ensures that it is initialised as soon as it has been created.
+IIFEs sind nützlich, wenn Sie einen Code haben, der sofort ausgeführt werden muss (z.B. bei der Initialisierung), aber dieser Code muss nicht auf irgendetwas anderes auf der Website verweisen oder nach der Einrichtung referenziert werden. Die anonymen Funktion schützt den Code vor dem Rest der Codebasis, während die sofortige Funktionalität sicherstellt, dass sie initialisiert wird, sobald sie erstellt wurde.
 
 
-#### Exposing IIFEs
+#### IIFEs auslagern
 
-One way in which IIFEs can make variables available to other scripts is to be passed an external variable, or *context*. In the following example, the context is passed through on the final line, as the keyword `this` (which defaults to referencing the `window` object, the global scope). Within the anonymous function, this parameter is referred to by the argument `context`:
+Eine Möglichkeit, in der IIFEs Variablen für andere Skripte zur Verfügung stellen können, ist eine externe Variable oder *Kontext* zu übergeben. Im folgenden Beispiel wird der Kontext in der abschliessenden Zeile als das Schlüsselwort `this` (das standardmässig auf das `window`-Objekt, den globalen Geltungsbereich) verweist, weitergegeben. Innerhalb der anonymen Funktion wird dieser Parameter mit dem Argument `context` bezeichnet:
 
 ```
 (function (context) {
-
     var planet = "Earth";
     var radius = 6371;
-
     function setPlanetName () {
         // do something private
     }
-
     context.myPlanet = {
-
         radius: radius,
-
         getPlanetName: function () {
             return planet;
         }
@@ -1942,26 +1936,26 @@ One way in which IIFEs can make variables available to other scripts is to be pa
 
 })(this);
 ```
-This method adds `window.myPlanet` to the global scope:
+Diese Methode fügt `window.myPlanet` zum globalen Geltungsbereich hinzu:
 
 ```
 window.myPlanet.radius           // 6371
 window.myPlanet.getPlanetName()  // "Earth"
 ```
 
-Using the approach above, anything that hasn't explicitly been set in the `myPlanet` object isn't accessible by an external script.
+Mit dem obigen Ansatz ist alles, was nicht explizit im `myPlanet` Objekt gesetzt wurde, nicht durch ein externes Skript zugänglich.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://benalman.com/news/2010/11/immediately-invoked-function-expression/](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
  - [http://esbueno.noahstokes.com/post/77292606977/self-executing-anonymous-functions-or-how-to-write](http://esbueno.noahstokes.com/post/77292606977/self-executing-anonymous-functions-or-how-to-write)
 
 
-### Module pattern (revealing)
+### Revealing Module Pattern
 
-Another method to access functions and variables created in an IIFE is for it to return a value.
+Eine andere Methode, um auf Funktionen und Variablen zuzugreifen, die in einem IIFE erstellt wurden, ist, dass sie einen Wert zurückgibt.
 
-A popular approach is to use the _revealing module pattern_ to isolate scope with an IIFE, and then `return` an object of publicly accessible parameters (variables) and methods (functions).
+Ein populärer Ansatz ist es, das _Revealing Module Pattern_ zu verwenden, um den Bereich mit einem IIFE zu isolieren und dann ein Objekt von öffentlich zugänglichen Parametern (Variablen) und Methoden (Funktionen) zurückzugeben.
 
 ```
 var myPlanet = (function () {
@@ -1986,26 +1980,26 @@ var myPlanet = (function () {
 })();
 ```
 
-In this example, a single global variable of `myPlanet` has been defined, whereas all the code within the function has its own local scope.
+In diesem Beispiel wurde eine einzige globale Variable von `myPlanet` definiert, während der gesamte Code innerhalb der Funktion seinen eigenen lokalen Bereich hat.
 
-The result is that `myPlanet` has the following publicly accessible values:
+Das Ergebnis ist, dass `myPlanet` die folgenden öffentlich zugänglichen Werte hat:
 
 ```
 myPlanet.radius           // 6371
 myPlanet.getPlanetName()  // "Earth"
 ```
 
-Using the approach above, anything that hasn't explicitly been returned isn't accessible by an external script.
+Mit dem obigen Ansatz ist alles, was nicht explizit zurückgegeben wurde, nicht durch ein externes Skript zugänglich.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://alistapart.com/article/the-design-of-code-organizing-javascript](http://alistapart.com/article/the-design-of-code-organizing-javascript)
  - [http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html)
 
 
-### Combining IIFEs, the module pattern and namespaces
+### IIFEs, Module Pattern und Namespaces verbinden
 
-For large codebases, it is a common approach to combine IIFSs, the module pattern and namespaces to help create a logical structure for your code:
+Für grosse Codebasen ist es ein gemeinsamer Ansatz, IIFSs, Module Pattern und Namespaces zu kombinieren, um eine logische Struktur für Ihren Code zu erstellen:
 
 ```
 var MyApp = MyApp || {};
@@ -2031,22 +2025,22 @@ MyApp.Accordions = (function () {
 })();
 ```
 
-All of the code above is contained within a single *namespace* of `MyApp`, within which each piece of modular code has its own name which returns a set of public parameters and methods.
+Der gesamte Code ist in einem einzigen *Namespace* von `MyApp` enthalten, in dem jedes Stück modularer Code seinen eigenen Namen hat, der einen Satz von öffentlichen Parametern und Methoden zurückgibt.
 
-In the example above, it creates `MyApp.Accordions` within the namespace, so you could call (for example) `MyApp.Accordions.public();`.
+Im obigen Beispiel erstellt es `MyApp.Accordions` im Namespace, also könnte man z.B. `MyApp.Accordions.public()` aufrufen;
 
-This method is used as the basis for many complex codebases.
+Diese Methode wird als Grundlage für viele komplexe Codebasen verwendet.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://addyosmani.com/resources/essentialjsdesignpatterns/book/](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 
-## Constructors and the *new* keyword
+## Constructors und das *new* Schlüsselwort
 
-An alternative way to create modular code is to *construct* new objects that can be used as a *prototype* of other objects.
+Eine alternative Möglichkeit, modularen Code zu erstellen, besteht darin, neue Objekte zu *konstruieren*, die als *Prototyp* anderer Objekte verwendet werden können.
 
-Consider the following example:
+Betrachten Sie das folgende Beispiel:
 
 ```
 function Planet (name, radius) {
@@ -2055,16 +2049,16 @@ function Planet (name, radius) {
 }
 ```
 
-The way to use this object is to create an *instance* of the `Planet` object:
+Der Weg, dieses Objekt zu verwenden, besteht darin, eine *Instanz* des `Planet` Objektes zu erstellen:
 
 ```
 var earth = new Planet("Earth", 6371);
 var mars = new Planet("Mars", 3396);
 ```
 
-Note the use of the keyword `new` before the name of the function. This is vital to ensure that we create an *instance* of the `Planet` object rather than creating a variable that referencing it directly.
+Beachten Sie die Verwendung des Schlüsselwortes `new` vor dem Namen der Funktion. Dies ist entscheidend dafür, dass wir eine *Instanz* des `Planet`-Objekts erstellen, anstatt eine Variable zu erstellen, die direkt auf sie verweist.
 
-To add a function to the `Planet` object that can be referenced by any instances of it, you need to add them to the `prototype`:
+Um dem `Planet`-Objekt eine Funktion hinzuzufügen, die von beliebigen Instanzen referenziert werden kann, musst man sie dem `Prototyp` hinzufügen:
 
 ```
 Planet.prototype.revolve = function () {
@@ -2072,27 +2066,27 @@ Planet.prototype.revolve = function () {
 };
 ```
 
-Creating objects in this manner can have its advantages, especially when creating different types of object that can inherit properties and methods from one another.
+Das Erstellen von Objekten auf diese Weise kann ihre Vorteile haben, insbesondere bei der Erstellung unterschiedlicher Objekttypen, die Eigenschaften und Methoden voneinander erfassen können.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://wildlyinaccurate.com/understanding-javascript-inheritance-and-the-prototype-chain/](http://wildlyinaccurate.com/understanding-javascript-inheritance-and-the-prototype-chain/)
  - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 
 
-## App structure
+## App Struktur
 
-When first learning to use JavaScript, it can be tempting to create a single JavaScript file containing every piece of functionality needed for a website. As has already been demonstrated, this can lead to issues with scope, and can be difficult to maintain. Instead, the application should be broken down into modules that each deal with a specific piece of functionality.
+Wenn Sie zuerst lernen, JavaScript zu benutzen, kann es verlockend sein, eine einzelne JavaScript-Datei zu erstellen, die jede Funktionalität enthält, die für eine Website benötigt wird. Wie bereits gezeigt wurde, kann dies zu Problemen führen und schwer zu pflegen sein. Stattdessen sollte die Anwendung in Module zerlegt werden, die jeweils mit einer bestimmten Funktionalität umgehen.
 
 
-### global init location
+### Global Init Location
 
-When creating modular components, each one could be made responsible for initialising itself and controlling its own behaviour.
+Bei der Erstellung von modularen Komponenten könnte jede für die Initialisierung und die Kontrolle ihres eigenen Verhaltens verantwortlich gemacht werden.
 
-This is an acceptable approach if every module is completely self-contained and no two modules need to communicate with one another.
+Dies ist ein akzeptabler Ansatz, wenn jedes Modul vollständig in sich geschlossen ist und keine zwei Module miteinander kommunizieren müssen.
 
-An alternative approach is to create a global `init` function that is responsible for initialising all other modules:
+Ein alternativer Ansatz ist es, eine globale `init`-Funktion zu schaffen, die für die Initialisierung aller anderen Module verantwortlich ist:
 
 ```
 // create namespace
@@ -2128,18 +2122,18 @@ MyApp.init = function () {
 $(document).ready(MyApp.init);
 ```
 
-The advantage of using a single location to initialise everything is that you can create a *mediator* that knows about the various components of the application and can handle interaction and communication between them, if necessary.
+Der Vorteil der Verwendung eines einzigen Standortes, um alles zu initialisieren ist, dass man einen *Mediator* erstellt, der die verschiedenen Komponenten der Applikation kennt und bei Bedarf Interaktion und Kommunikation verarbeiten kann.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://css-tricks.com/how-do-you-structure-javascript-the-module-pattern-edition/](https://css-tricks.com/how-do-you-structure-javascript-the-module-pattern-edition/)
 
 
-### Communication between modules
+### Kommunikation zwischen Modulen
 
-Communication between modules is possible by directly referencing their public methods from another function.
+Die Kommunikation zwischen den Modulen ist möglich, indem man ihre öffentlichen Methoden direkt aus einer anderen Funktion verweist.
 
-Consider the following simplified example of two modules:
+Betrachten Sie das folgende vereinfachte Beispiel für zwei Module:
 
 ```
 MyApp.tabs = function () {
@@ -2153,18 +2147,18 @@ MyApp.slideshows = function () {
 }
 ```
 
-Two modules communicating directly is known as *tight coupling*, and is not a good idea. In principle, modules should never know about one another or directly call each other. Instead we can use an alternative method to enable this communication - *publishing* and *subscribing* to events. This is often shortened to *pub/sub*.
+Zwei Module, die direkt kommunizieren, sind bekannt als *tight coupling* und keine gute Idee. Grundsätzlich sollten Module niemals einander kennen oder sich direkt anrufen. Stattdessen können wir eine alternative Methode verwenden, um diese Kommunikation  auf Ereignisse - *publishing* und *subscribing* - zu ermöglichen. Dies wird oft zu *pub/sub* verkürzt.
 
-Native events were covered earlier, with an example of detecting when a user clicking on a link (or any other HTML element) and triggering a JavaScript function. Custom events can also be created and triggered in a similar manner.
+Native Events wurden früher behandelt, mit einem Beispiel für die Erkennung, wenn ein Benutzer auf einen Link (oder ein anderes HTML-Element) klickt und eine JavaScript-Funktion auslöst. Auch benutzerdefinierte Events können in ähnlicher Weise erstellt und ausgelöst werden.
 
-When something important happens within a module, it can *publish* an event to announce this.
+Wenn etwas wichtiges in einem Modul passiert, kann es ein Ereignis *veröffentlichen*, um dies zu verkünden.
 
 ```
 // a new row has been added, announce this
 MyApp.pubSub.publish("repeating-row-added");
 ```
 
-Other scripts can *subscribe* to specific events, running specific functions when they occur.
+Andere Skripte können bestimmte Ereignisse *abonnieren* und bestimmte Funktionen ausführen, wenn sie auftreten.
 
 ```
 // listen for new repeating rows being added,
@@ -2172,153 +2166,153 @@ Other scripts can *subscribe* to specific events, running specific functions whe
 MyApp.pubSub.addSubscriber("repeating-row-added", initShowHide);
 ```
 
-There are a number of different *pub/sub* JavaScript libraries that enable this form of communication between modules.
+Es gibt eine Reihe von verschiedenen *pub/sub* JavaScript-Bibliotheken, die diese Form der Kommunikation zwischen den Modulen ermöglichen.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript](http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript)
  - [https://github.com/postaljs/postal.js](https://github.com/postaljs/postal.js)
 
 
-## Plugins and libraries
+## Plugins und Bibliotheken
 
-Many years ago, it was fairly common to have a file full of useful reusable functions that would be copied from project to project. This *library* file could provide some handy shortcuts, saving time recreating the same behaviour across multiple projects.
+Vor vielen Jahren war es ziemlich üblich, eine Datei mit nützlichen wiederverwendbaren Funktionen zu haben, die von Projekt zu Projekt kopiert wurden. Diese *Bibliothek* Datei könnte einige praktische Verknüpfungen liefern und spart Zeit das gleiche Verhalten über mehrere Projekte erneut zu schreiben.
 
-Open-source libraries such as jQuery have reduced the need for bespoke complex libraries to be maintained privately by individuals.
-
-
-### jQuery plugins
-
-jQuery offers a range of useful features, but by itself it doesn't cater for every possible requirement.
-
-jQuery *plugins* offers to extend its core functionality to add features such as slideshows, tabs, accordions, and many other features.
+Open-Source-Bibliotheken wie JQuery haben die Notwendigkeit von massgeschneiderten komplexen Bibliotheken reduziert, um privat von Einzelpersonen gepflegt zu werden.
 
 
-### Standalone libraries
+### JQuery Plugins
 
-Other libraries exist that offer similar benefits of useful functionality, without a dependency on jQuery to function.
+JQuery bietet eine Reihe von nützlichen Features, aber von sich aus ist es nicht für jede mögliche Anforderung zu gebrauchen.
 
-For example, the [moment](http://momentjs.com) JavaScript library is useful when dealing with dates. It offers a range of features such as converting dates from a range of formats, and calculating relative dates.
-
-The [Underscore](http://underscorejs.org) library is useful when dealing with complex data that needs to be processed and manipulated.
-
-The [D3](http://d3js.org) library is useful for drawing interactive infographics.
-
-These are just a few examples of open-source libraries written by other developers that are available and free to use.
-
-There are lots more: [http://microjs.com/](http://microjs.com/)
+JQuery *Plugins* ermöglichen, die Kernfunktionalität zu erweitern, um Features wie Slideshows, Tabs, Akkordeons und viele andere Features hinzuzufügen.
 
 
-### Finding and reviewing plugins and libraries
+### Standalone Bibliotheken
 
-Often the trickiest part of a project is finding relevant jQuery plugins and libraries that can help.
+Andere Bibliotheken existieren, die ähnliche Vorteile von nützlicher Funktionalität bieten, ohne eine Abhängigkeit von JQuery zu haben.
 
-There is no single location to start the search. Often a helpful method is to search in a few places such as [Stack Overflow](http://stackoverflow.com) and [Google](http://google.com) for a solution. If you read a few relevant articles and answers you may find that they converge on the same solution.
+Zum Beispiel ist die [Moment] (http://momentjs.com) JavaScript-Bibliothek nützlich, wenn es um Termine geht. Sie bietet eine Reihe von Features wie die Umwandlung von Daten aus einer Reihe von Formaten und die Berechnung der relativen Daten.
 
-The majority of useful libraries will be stored on [GitHub](https://github.com/). This is a convenient location for developers to store open-source code for free, and allow others to contribute to their development.
+Die Bibliothek [Underscore] (http://underscorejs.org) ist nützlich, wenn es um komplexe Daten geht, die verarbeitet und manipuliert werden müssen.
 
-When reviewing possible options, there are a few helpful pointers that can indicate their merits.
+Die Bibliothek [D3] (http://d3js.org) eignet sich zum Zeichnen von interaktiven Infografiken.
 
- - **Stars:** This indicates how many developers have *bookmarked* the library
- - **Issues:** Looking through the open issues can indicate possible issues developers have had with the library. A high number of open issues may indicate possible issues to consider. Likewise, issues with responses from the library developer(s) can indicate a reasonable level of support. It is also worth looking to see how many closed issues have been resolved successfully.
- - **PRs:** *Pull Requests* are contributions from other developers who are helping to create updates for the library. A number of open pull requests may indicate a library that is no longer under active development.
- - **Documentation and examples:** Learning how to use a new library may be complex at first. The availability of comprehensive documentation and/or code examples can help in the selection of a suitable library.
+Dies sind nur einige Beispiele für Open-Source-Bibliotheken, die von anderen Entwicklern geschrieben und verfügbar sind.
 
-The most important method of all is to review the code itself. This depends on your level of comfort and ability with JavaScript. [Here are some tips for reviewing plugin code](https://remysharp.com/2010/06/03/signs-of-a-poorly-written-jquery-plugin).
+Es gibt noch viel mehr: [http://microjs.com/](http://microjs.com/)
 
 
-***Further reading:***
+### Suchen und Prüfen von Plugins und Bibliotheken
+
+Oft ist der schwierigste Teil eines Projektes, relevante JQuery-Plugins und Bibliotheken, die helfen können, zu finden.
+
+Es gibt keinen einzigen Ort, um die Suche zu starten. Oft ist eine hilfreiche Methode, um an einigen Stellen wie [Stack Overflow] (http://stackoverflow.com) und [Google] (http://google.com) nach einer Lösung zu suchen. Wenn Sie ein paar relevante Artikel und Antworten lesen, können Sie feststellen, dass sie die gleiche Lösung suchen.
+
+Die Mehrheit der nützlichen Bibliotheken wird auf [GitHub] (https://github.com/) gespeichert. Dies ist ein günstiger Standort für Entwickler, um Open-Source-Code kostenlos zu speichern und anderen zu ermöglichen, zu ihrer Entwicklung beizutragen.
+
+Bei der Überprüfung möglicher Optionen gibt es ein paar hilfreiche Hinweise, die ihre Vorzüge zeigen können.
+
+ - **Sterne:** Dies zeigt an, wie viele Entwickler die Bibliothek *gebookmarkt* haben
+ - **Probleme:** Wenn man durch die offenen Fragen schaut, kann man auf mögliche Probleme stossen, die Entwickler mit der Bibliothek hatten. Eine hohe Anzahl offener Fragen kann auf mögliche Schwierigkeiten hindeuten. Ebenso können Fragen mit Antworten aus dem Bibliotheksentwickler ein vernünftiges Mass an Support anzeigen. Es lohnt sich auch zu sehen, wie viele geschlossene Probleme erfolgreich gelöst wurden.
+ - **PRs:** *Pull Requests* sind Beiträge von anderen Entwicklern, die helfen, Updates für die Bibliothek zu erstellen. Eine Anzahl von offenen Pull-Requests kann auf eine Bibliothek hinweisen, die nicht mehr aktiv ist.
+ - **Dokumentation und Beispiele:** Zu lernen, wie man eine neue Bibliothek benutzt, kann zunächst komplex sein. Die Verfügbarkeit von umfangreichen Dokumentations- und/oder Codebeispielen kann bei der Auswahl einer geeigneten Bibliothek helfen.
+
+Die wichtigste Methode von allen ist, den Code selbst zu überprüfen. Das hängt von Ihrem JavaScript Wissen ab. [Hier sind einige Tipps für die Überprüfung von Plugin-Code](https://remysharp.com/2010/06/03/signs-of-a-poorly-written-jquery-plugin).
+
+
+***Weitere Informationen:***
 
  - [http://davidwalsh.name/13-factors-choosing-javascript-charting-library](http://davidwalsh.name/13-factors-choosing-javascript-charting-library)
  - [https://remysharp.com/2010/06/03/signs-of-a-poorly-written-jquery-plugin](https://remysharp.com/2010/06/03/signs-of-a-poorly-written-jquery-plugin)
 
 
-### Creating a plugin or library
+### Ein Plugin oder eine Bibliothek erstellen
 
-A number of comprehensive guides exist for creating jQuery plugins:
+Es gibt eine Reihe von umfassenden Leitfäden für die Erstellung von JQuery-Plugins:
 
  - [https://learn.jquery.com/plugins/basic-plugin-creation/](https://learn.jquery.com/plugins/basic-plugin-creation/)
  - [http://www.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/](http://www.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/)
  - [http://jqueryboilerplate.com/](http://jqueryboilerplate.com/)
 
-There is no standard method for creating a standalone JavaScript library, but it could help to review a few popular ones to see how they are written and documented.
+Es gibt keine Standardmethode für die Erstellung einer eigenständigen JavaScript-Bibliothek, aber es könnte helfen, ein paar beliebte zu überprüfen, um zu sehen, wie sie geschrieben und dokumentiert sind.
 
 
 ## JavaScript Frameworks
 
-As has been discussed above, any website will benefit from a move away from the *code-soup* of a jQuery DOM-ready function. The first step is to separate logic into modules.
+Wie oben diskutiert wurde, wird jede Website davon profitieren, wenn man sich von der *Code-Suppe* einer JQuery DOM-ready-Funktion verabschiedet. Der erste Schritt besteht darin, die Logik in Module zu trennen.
 
-If the JavaScript continues to grow and increase in complexity, it may be time to stop creating a custom code structure and instead consider using a recognised framework.
+Wenn das JavaScript weiterhin wächst und sich die Komplexität erhöht, kann es an der Zeit sein, die Erstellung einer benutzerdefinierten Codestruktur zu stoppen und stattdessen ein anerkanntes Framework zu verwenden.
 
 
-### Issues that frameworks solve
+### Probleme die Frameworks lösen können
 
-The biggest issue with a custom application structure that frameworks attempt to solve is the separation of different types of JavaScript logic. Most JavaScript frameworks enforce a *separation of concerns* - the isolation of code into different functions that are used for different purposes.
+Das grösste Problem mit einer benutzerdefinierten Anwendungsstruktur, die Frameworks zu lösen versuchen, ist die Trennung von verschiedenen Arten von JavaScript-Logik. Die meisten JavaScript-Frameworks erzwingen eine *Trennung von Interessen* - die Isolierung von Code in verschiedene Funktionen, die für verschiedene Zwecke verwendet werden.
 
-The main parts of JavaScript that are traditionally separated are concerned with DOM interaction, data manipulation, templating and event handling.
+Die wichtigsten Teile von JavaScript, die traditionell getrennt sind, betreffen DOM-Interaktion, Datenmanipulation, Templating und Event-Handling.
 
 
 #### MVC
 
-The common pattern that most JavaScript frameworks follow is called *Model View Controller*, often shortened to *MVC*.
+Das gemeinsame Muster, das die meisten JavaScript Frameworks verfolgen, heisst *Model View Controller*, oft verkürzt auf *MVC*.
 
-MVC is a complex pattern that is well documented elsewhere on the web. The following links provide a comprehensive explanation of its logic and how it applies to the context of JavaScript frameworks.
+MVC ist ein komplexes Muster, das an anderer Stelle im Internet gut dokumentiert ist. Die folgenden Links geben eine umfassende Erläuterung ihrer Logik und wie sie für den Kontext von JavaScript-Frameworks gilt.
 
-Following these principles should result in smaller structured modules that make code more maintainable.
+Nach diesen Prinzipien sollte es zu kleineren strukturierten Modulen kommen, die Code besser pflegbar machen.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://alistapart.com/article/javascript-mvc](http://alistapart.com/article/javascript-mvc)
  - [http://www.smashingmagazine.com/2012/07/27/journey-through-the-javascript-mvc-jungle/](http://www.smashingmagazine.com/2012/07/27/journey-through-the-javascript-mvc-jungle/)
  - [http://addyosmani.com/resources/essentialjsdesignpatterns/book/](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 
-### Deciding whether to use a framework
+### Entscheiden, ob ein Framework verwendet werden soll
 
-This is a complex subject with many developers expressing strong opinions for and against the use of frameworks. There are hundreds of articles published on this topic.
+Dies ist ein komplexes Thema, bei dem viele Entwickler entweder dafür oder dagegen sind. Es gibt Hunderte von Artikeln zu diesem Thema.
 
-Ultimately the decision whether to use one is dependent on the context:
+Letztlich ist die Entscheidung, ob man eines benutzt, abhängig vom Kontext:
 
- - How complex is the required functionality?
- - How comfortable are the developers with JavaScript?
- - Do the developers have experience with any JavaScript frameworks?
- - Would the site benefit from being a *single page application*? Should the application logic be stored in the browser, or should the functionality come from the server?
+  - Wie komplex ist die geforderte Funktionalität?
+  - Wie vertraut sind die Entwickler mit JavaScript?
+  - Haben die Entwickler Erfahrung mit JavaScript-Frameworks?
+  - Würde die Seite davon profitieren, eine *Single-Page-Anwendung* zu sein? Soll die Applikationslogik im Browser gespeichert werden oder soll die Funktionalität vom Server kommen?
 
-There are several pros and cons that should be considered when making a decision about whether or not to use a JavaScript framework.
-
-
-#### Pros
-
- - Most established JavaScript frameworks have been thoroughly tested, leaving you to focus on building your application without having to worry about flaws in the architecture.
- - JavaScript frameworks are usually well-documented, with active communities and plenty of useful articles and answers to common issues on websites such as Stack Overflow.
- - If a new developer has experience with a JavaScript framework they should be productive quickly, as they already have an understanding of its logic.
+Es gibt mehrere Vor-und Nachteile, die berücksichtigt werden sollten, wenn eine Entscheidung darüber getroffen wird, ob ein JavaScript-Framework verwendet wird oder nicht.
 
 
-#### Cons
+#### PROs
 
- - The additional file size of a JavaScript framework (and its dependencies) should be considered.
- - The complexity of JavaScript code required when using a framework can be difficult for inexperienced front-end developers.
- - Some JavaScript frameworks suffer from initial performance hits, taking a considerable amount of time to start the first time they are used.
- - JavaScript frameworks don't always help with SEO - at least not when compared with *traditional* websites.
- - The maturity of a JavaScript framework should be evaluated before it is used. New frameworks especially can change significantly, which could lead to large code rewrites.
- - Choosing a JavaScript framework can involve a long-term commitment and significant investment, based on an open source solution.
-
-JavaScript frameworks are not the right choice for every project. If youâ€™re building a website that still relies on the server for most of its logic, and if JavaScript is used primarily to make things a little more interactive, then a complex JavaScript framework may be overkill. 
+  - Die meisten etablierten JavaScript-Frameworks wurden sorgfältig getestet und lassen Sie sich auf den Aufbau Ihrer Anwendung konzentrieren, ohne sich um Fehler in der Architektur zu sorgen.
+  - JavaScript-Frameworks sind in der Regel gut dokumentiert, mit aktiven Communities und vielen nützlichen Artikeln und Antworten auf häufig gestellte Fragen auf Websites wie Stack Overflow.
+  - Wenn ein neuer Entwickler Erfahrung mit einem JavaScript-Framework hat, sollten sie schnell produktiv sein, da sie bereits ein Verständnis von der Logik haben.
 
 
-### Popular Frameworks
+#### CONs
 
-There are no shortage of available JavaScript frameworks, with new ones being created constantly. Here are some of the more popular options:
+ - Die zusätzliche Dateigrösse eines JavaScript-Frameworks (und seiner Abhängigkeiten) sollte berücksichtigt werden.
+ - Die Komplexität des JavaScript-Codes, die bei der Verwendung eines Frameworks erforderlich ist, kann für unerfahrene Front-End-Entwickler schwierig sein.
+ - Einige JavaScript-Frameworks leiden unter anfänglichen Performance-Hits und nehmen eine beträchtliche Zeitspanne ein, um das erste Mal zu starten, wenn sie verwendet werden.
+ - JavaScript Frameworks helfen SEO meist nicht - zumindest nicht im Vergleich zu *traditionellen* Webseiten.
+ - Die Reife eines JavaScript-Frameworks sollte ausgewertet werden, bevor es verwendet wird. Neue Frameworks können sich vor allem deutlich ändern, was zu grossem Code-Rewriten führen könnte.
+ - Die Auswahl eines JavaScript-Frameworks kann ein langfristiges Engagement und eine bedeutende Investition auf der Grundlage einer Open-Source-Lösung beinhalten.
+
+JavaScript-Frameworks sind nicht die richtige Wahl für jedes Projekt. Wenn Sie eine Website bauen, dessen Logik zum Grossteil immer noch auf dem Server stattfindet, und wenn JavaScript in erster Linie verwendet wird, um die Dinge ein wenig interaktiver zu machen, dann kann ein komplexes JavaScript-Framework übertrieben sein. 
+
+
+### Populäre Frameworks
+
+Es gibt keinen Mangel an verfügbaren JavaScript Frameworks, und neue werden ständig erstellt. Hier sind einige der beliebtesten Optionen:
 
  - [Backbone.js](http://backbonejs.org/)
  - [AngularJS](https://angularjs.org/)
  - [React](https://facebook.github.io/react/)
 
-There are lots more: [http://todomvc.com/](http://todomvc.com/)
+Es gibt unzählige mehr: [http://todomvc.com/](http://todomvc.com/)
 
-Consideration for the most appropriate framework should weigh up their relative pros and cons, for which there are plenty of comparison articles online.
+Die Berücksichtigung des am besten geeigneten Rahmens sollte ihre relativen Vor- und Nachteile abwägen, für die es viele Vergleichsartikel gibt.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://davidwalsh.name/6-reasons-to-use-javascript-libraries-frameworks](http://davidwalsh.name/6-reasons-to-use-javascript-libraries-frameworks)
  - [http://bitworking.org/news/2014/05/zero\_framework_manifesto](http://bitworking.org/news/2014/05/zero_framework_manifesto)
@@ -2327,11 +2321,11 @@ Consideration for the most appropriate framework should weigh up their relative 
  - [http://tantek.com/2015/069/t1/js-dr-javascript-required-dead](http://tantek.com/2015/069/t1/js-dr-javascript-required-dead)
 
 
-### Isomorphic JavaScript
+### Isomorphes JavaScript
 
-The future of JavaScript frameworks may lie in a new concept called *Isomorphic JavaScript*. The idea behind this approach is to use the same code to render a web page, whether this is done on the server and in the client.
+Die Zukunft der JavaScript Frameworks mag in einem neuen Konzept namens *Isomorphes JavaScript* liegen. Die Idee dahinter ist, den gleichen Code zum rendern einer Seite zu verwenden, ganz gleich, ob das auf dem Server oder Client geschieht.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://isomorphic.net/javascript](http://isomorphic.net/javascript)
  - [http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/)
@@ -2340,23 +2334,23 @@ The future of JavaScript frameworks may lie in a new concept called *Isomorphic 
  - [http://blog.neutrondrive.com/posts/252697-isomorphic-javascript-is-not-the-answer](http://blog.neutrondrive.com/posts/252697-isomorphic-javascript-is-not-the-answer)
 
 
-## JavaScript module loaders
+## JavaScript Module Loader
 
-Many programming languages provide a native way to define and use modules. JavaScript currently doesn't (although a future version of JavaScript will introduce this ability).
+Viele Programmiersprachen bieten eine native Möglichkeit, Module zu definieren und zu verwenden. JavaScript derzeit nicht (obwohl eine zukünftige Version von JavaScript diese Fähigkeit beinhalten wird).
 
-In the meantime, tools exist to allow developers to use modules now. These *module loader* systems allow complex codebases to be organised in a simple, consistent and well-documented manner.
+Mittlerweile gibt es Werkzeuge, die es Entwicklern ermöglichen, Module jetzt zu verwenden. Diese *Module loader*-Systeme ermöglichen es, komplexe Codebasen in einer einfachen, konsistenten und gut dokumentierten Weise zu organisieren.
 
-There are a few popular module loader tools. There are also two different popular methods for defining modules, known as *AMD* and *Common.js*.
+Es gibt ein paar beliebte Module Loader-Tools. Es gibt auch zwei verschiedene populäre Methoden zur Definition von Modulen, bekannt als *AMD* und *Common.js*.
 
- - [RequireJS](http://requirejs.org/) - One of the first module loaders to become popular, it uses the *AMD* method for declaring modules.
- - [Browserify](http://browserify.org/) - A module loader that uses the *Common.js* module declaration and usage
- - [Webpack](http://webpack.github.io/) - Another module loader that uses *Common.js*
+ - [RequireJS](http://requirejs.org/) - Einer der allerersten populären Module-Loader, der die *AMD* Methode zum Deklarieren von Modulen verwendet.
+ - [Browserify](http://browserify.org/) - Ein Module-Loader der die *Common.js* Moduldeklaration verwendet
+ - [Webpack](http://webpack.github.io/) - Ein weiterer Module-Loader der *Common.js* verwendet
 
-Regardless of the tool and module definition system used, the principle is the same; create numerous files containing small isolated modules with individual purposes, then import them at the relevant point where they are used in the codebase.
+Unabhängig von der verwendeten Werkzeug- und Moduldefinition ist das Prinzip gleich; Erstellen Sie zahlreiche Dateien mit kleinen isolierten Modulen mit individuellen Zwecken, und importieren Sie sie an der entsprechenden Stelle, wo sie in der Codebasis verwendet werden.
 
-Module loaders are often used in combination with a JavaScript framework to provide further code structure and separation.
+Module-Loader werden oft in Kombination mit einem JavaScript-Framework verwendet, um weitere Code-Struktur und Trennung zu bieten.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://web-design-weekly.com/2014/09/24/diving-webpack/](https://web-design-weekly.com/2014/09/24/diving-webpack/)
  - [https://github.com/substack/browserify-handbook](https://github.com/substack/browserify-handbook)
@@ -2365,102 +2359,102 @@ Module loaders are often used in combination with a JavaScript framework to prov
 
 ## Templating
 
-When using JavaScript to create content to populate HTML elements, templating tools can help to separate application logic from template markup.
+Wenn Sie JavaScript verwenden, um Inhalte zu erstellen, um HTML-Elemente zu füllen, können Template-Tools helfen, die Anwendungslogik vom Template-Markup zu trennen.
 
-Using a templating system is advantageous when client-side HTML rendering is required, especially when loading data from a server and rendering a complex HTML structure.
+Die Verwendung eines Templating-Systems ist vorteilhaft, wenn das clientseitige HTML-Rendering erforderlich ist, insbesondere beim Laden von Daten von einem Server und zum Rendern einer komplexen HTML-Struktur.
 
-A number of templating systems are available:
+Es stehen eine Reihe von Template-Systemen zur Verfügung:
 
  - [ejs](http://www.embeddedjs.com/)
  - [Handlebars](http://handlebarsjs.com/)
  - [Mustache](https://github.com/janl/mustache.js)
 
-There are lots more: [http://garann.github.io/template-chooser/](http://garann.github.io/template-chooser/)
+Es gibt unzählige mehr: [http://garann.github.io/template-chooser/](http://garann.github.io/template-chooser/)
 
-Whichever templating language is chosen, they all offer superior functionality (and code separation) compared with creating HTML elements and populating them with jQuery.
+Unabhängig davon, welche Templating-Sprache gewählt wird, bieten sie alle überlegene Funktionalität (und Code-Trennung) im Vergleich zum Erstellen von HTML-Elementen und befüllen mit JQuery.
 
-However, it is worth considering whether rendering in the client is beneficial, as it may be slow and require the duplication of logic already present on the server. Instead, consider rendering partials on the server and returning HTML to be inserted directly into the DOM.
+Allerdings lohnt es sich zu überlegen, ob das Rendering im Client vorteilhaft ist, da es langsam sein kann und die Duplizierung der bereits vorhandenen Logik auf dem Server erfordert. Stattdessen betrachten Sie das Rendern von Teilen auf dem Server und das Zurückgeben von HTML, das direkt in das DOM eingefügt werden soll.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://www.smashingmagazine.com/2012/12/05/client-side-templating/](http://www.smashingmagazine.com/2012/12/05/client-side-templating/)
  - [http://www.sitepoint.com/creating-html-templates-with-mustachejs/](http://www.sitepoint.com/creating-html-templates-with-mustachejs/)
  - [http://nimbupani.com/mustache.html](http://nimbupani.com/mustache.html)
 
 
-## Build tools
+## Build Tools
 
-Regardless of whether a popular JavaScript framework or a custom application structure has been used, chances are that a number of individual JavaScript files have been created to provide a modular codebase.
+Unabhängig davon, ob ein beliebtes JavaScript-Framework oder eine benutzerdefinierte Anwendungsstruktur verwendet wurde, besteht die Chance, dass eine Reihe von individuellen JavaScript-Dateien erstellt wurden, um eine modulare Codebasis bereitzustellen.
 
-This may help manage a codebase, but for a production environment these files could be combined to minimise HTTP requests and speed up the website.
+Dies kann dazu beitragen, eine Codebasis zu verwalten, aber für eine Produktionsumgebung können diese Dateien kombiniert werden, um HTTP-Anfragen zu minimieren und die Website zu beschleunigen.
 
-A *task runner* can help automate the concatenation (and minification) of these files.
+Ein *Task Runner* kann helfen, die Verkettung (und Minifizierung) dieser Dateien zu automatisieren.
 
-These tools can also help with other tasks such as optimising images, running a CSS pre-processor, linting files to check for errors, running tests and deploying code.
+Diese Werkzeuge können auch mit anderen Aufgaben wie der Optimierung von Bildern, dem Ausführen eines CSS-Vorprozessors, das Prüfen auf Fehler, durchführen von Tests und bereitzustellen von Code, helfen.
 
-These tools are built to use of plugins to provide this functionality.
+Diese Tools sind für die Verwendung von Plugins zur Bereitstellung dieser Funktionalität gebaut.
 
-Many of these tools are built and configured using JavaScript.
+Viele dieser Tools werden mit JavaScript erstellt und konfiguriert.
 
- - [Grunt](http://gruntjs.com/) - The most popular task runner
- - [Gulp](http://gulpjs.com/) - Less popular than Grunt, but often quicker and easier to configure
- - [Brocolli](http://broccolijs.com/) - Another popular task runner
+ - [Grunt](http://gruntjs.com/) - Der populärste Task Runner
+ - [Gulp](http://gulpjs.com/) - Weniger populär als Grunt, aber oft schneller und leichter zu konfigurieren
+ - [Brocolli](http://broccolijs.com/) - Ein weiterer populärer Task Runner
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://24ways.org/2013/grunt-is-not-weird-and-hard/](http://24ways.org/2013/grunt-is-not-weird-and-hard/)
  - [http://alistapart.com/blog/post/getting-started-with-gulp](http://alistapart.com/blog/post/getting-started-with-gulp)
 
 
-## Dependency management
+## Abhängigkeiten Management
 
-Most websites rely on third-party libraries and frameworks - jQuery being the most obvious and popular example. 
+Die meisten Webseiten verlassen sich auf Drittanbieter-Bibliotheken und Frameworks - JQuery ist das offensichtlichste und beliebteste Beispiel.
 
-It may be fairly quick to manually download and add these third-party dependencies straight into the codebase, but using a *package manager* can simplify the management, installation and updating of these dependencies - especially handy when working across a team.
+Man kann es ziemlich schnell herunterladen und direkt in die Codebasis einfügen. Jedoch kann man mit einem *Paket-Manager* die Verwaltung, Installation und Aktualisierung dieser Abhängigkeiten vereinfachen - besonders praktisch bei der Arbeit in ein Team.
 
-There are a number of popular package managers, including:
+Es gibt eine Reihe von beliebten Paket-Managern, darunter:
 
  - [bower](http://bower.io/)
  - [npm](https://www.npmjs.com/)
  - [component](https://github.com/componentjs/component)
 
-There are lots more: [https://github.com/wilmoore/frontend-packagers](https://github.com/wilmoore/frontend-packagers) - *Note this list is missing several package managers that have become popular recently...*
+Es gibt noch weitere: [https://github.com/wilmoore/frontend-packagers](https://github.com/wilmoore/frontend-packagers)
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://frontendbabel.info/articles/bower-why-frontend-package-manager/](http://frontendbabel.info/articles/bower-why-frontend-package-manager/)
  - [https://css-tricks.com/whats-great-bower/](https://css-tricks.com/whats-great-bower/)
 
 
-## Testing
+## Testen
 
-Testing JavaScript can be fundamentally important, especially when supporting a large and complex website that undergoes constant development.
+Testen von JavaScript kann grundsätzlich wichtig sein, vor allem bei der Unterstützung einer grossen und komplexen Website, die sich ständig weiterentwickelt.
 
-A number of frameworks exist for testing with JavaScript:
+Es gibt eine Reihe von Frameworks für das Testen mit JavaScript:
 
  - [Jasmine](http://jasmine.github.io/)
  - [Mocha](http://mochajs.org/)
  - [Intern](https://theintern.github.io/)
 
-There are lots more: [http://stackoverflow.com/a/680713](http://stackoverflow.com/a/680713)
+Und noch weitere: [http://stackoverflow.com/a/680713](http://stackoverflow.com/a/680713)
 
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://alistapart.com/article/writing-testable-javascript](http://alistapart.com/article/writing-testable-javascript)
  - [http://www.smashingmagazine.com/2012/06/27/introduction-to-javascript-unit-testing/](http://www.smashingmagazine.com/2012/06/27/introduction-to-javascript-unit-testing/)
  - [http://www.helpscout.net/blog/functional-testing-casperjs/](http://www.helpscout.net/blog/functional-testing-casperjs/)
 
 
-## Code quality
+## Code Qualität
 
-When writing JavaScript, it is easy to make small errors that could potentially lead to issues if they go undetected.
+Beim Schreiben von JavaScript ist es einfach, kleine Fehler zu machen, die möglicherweise zu Problemen führen könnten, wenn sie unentdeckt bleiben.
 
-[JSHint](http://jshint.com/) and [JSCS](http://jscs.info/) are two tools that can help to spot these issues. They can be configured to enforce coding rules across a team, ensuring all code meets a set of agreed standards.
+[JSHint] (http://jshint.com/) und [JSCS] (http://jscs.info/) sind zwei Werkzeuge, die helfen können, diese Probleme zu erkennen. Sie können so konfiguriert werden, dass sie Codierungsregeln über ein Team erzwingen und sicherstellen, dass jeder Code eine Reihe von vereinbarten Standards erfüllt.
 
-JSHint and JSCS can be used at various times. Plugins exist to add them directly into lots of popular code editors, to help spot errors immediately. They can also be added to a *task runner* to identify issues as part of a build process. They could be added to a *pre-commit* stage of version control software, ensuring that the code is not accepted until it passes validation.
+JSHint und JSCS können zu verschiedenen Zeiten verwendet werden. Plugins existieren, um sie direkt in viele populäre Code-Editoren hinzuzufügen, um sofort Fehler zu vermeiden. Sie können auch zu einem *Task Runner* hinzugefügt werden, um Probleme als Teil eines Buildprozesses zu identifizieren. Sie könnten zu einer *Pre-Commit-Phase* der Versionskontrollsoftware hinzugefügt werden, um sicherzustellen, dass der Code nicht akzeptiert wird, bis er die Validierung bestanden hat.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://yannick.cr/posts/enforcing-coding-rules-in-your-team-with-jscs/post](https://yannick.cr/posts/enforcing-coding-rules-in-your-team-with-jscs/post)
  - [http://davetayls.me/blog/2013/07/01/how-will-i-keep-javascript-code-quality-hight-jshint/](http://davetayls.me/blog/2013/07/01/how-will-i-keep-javascript-code-quality-hight-jshint/)
@@ -2469,9 +2463,9 @@ JSHint and JSCS can be used at various times. Plugins exist to add them directly
 
 ## Node.js
 
-[Node.js](https://nodejs.org/) is a platform that allows JavaScript to be run on a server. The asynchronous event-driven nature of JavaScript lends itself to certain types of application, such as real-time communication with *websockets*.
+[Node.js] (https://nodejs.org/) ist eine Plattform, mit der JavaScript auf einem Server ausgeführt werden kann. Die asynchrone ereignisgesteuerte Natur von JavaScript eignet sich für bestimmte Anwendungsarten, wie z.B. die Echtzeitkommunikation mit *websockets*.
 
-***Further reading***
+***Weitere Informationen***
 
  - [http://code.tutsplus.com/tutorials/nodejs-for-beginners--net-26314](http://code.tutsplus.com/tutorials/nodejs-for-beginners--net-26314)
  - [https://github.com/maxogden/art-of-node/#the-art-of-node](https://github.com/maxogden/art-of-node/#the-art-of-node)
@@ -2479,21 +2473,21 @@ JSHint and JSCS can be used at various times. Plugins exist to add them directly
  - [http://stackoverflow.com/a/5511507](http://stackoverflow.com/a/5511507)
 
 
-## Graphics
+## Grafik
 
-There are two quite different methods for generating interactive graphics with JavaScript: *SVG* and *canvas*.
+Es gibt zwei ganz verschiedene Methoden zur Erzeugung von interaktiven Grafiken mit JavaScript: *SVG* und *canvas*.
 
 ### SVG
 
-SVG is an XML-based vector format for drawing images via the DOM. Using SVGs mean resolution-independent graphics at low filesizes.
+SVG ist ein XML-basiertes Vektorformat für das Zeichnen von Bildern über das DOM. Die Verwendung von SVGs bedeutet auflösungsunabhängige Grafiken bei niedrigen Dateigrössen.
 
-Various tools exist to help create and interact with SVGs using JavaScript:
+Es gibt verschiedene Werkzeuge, die dazu beitragen, SVGs mit JavaScript zu arbeiten und zu interagieren:
 
  - [SnapSVG](http://snapsvg.io/)
  - [D3](http://d3js.org/)
  - [Raphael](http://raphaeljs.com/)
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://css-tricks.com/using-svg/](https://css-tricks.com/using-svg/)
  - [http://davidwalsh.name/svg-animation](http://davidwalsh.name/svg-animation)
@@ -2501,37 +2495,37 @@ Various tools exist to help create and interact with SVGs using JavaScript:
 
 ### Canvas
 
-Canvas is an alternative method of using JavaScript to create graphics in a browser. Unlike SVG, it renders bitmap data. The advantage of using canvas is the ability to use WebGL to create hardware-rendered 3d graphics.
+Canvas ist eine alternative Methode, JavaScript zu verwenden, um Grafiken in einem Browser zu erstellen. Im Gegensatz zu SVG macht es Bitmap-Daten. Der Vorteil der Verwendung von Canvas ist die Möglichkeit, WebGL zu verwenden, um Hardware-gerenderten 3D-Grafiken zu erstellen.
 
-A number of tools exist to help use canvas:
+Es gibt eine Reihe von Werkzeugen, um Canvas zu benutzen:
 
  - [EaselJS](http://www.createjs.com/EaselJS)
  - [Paper.js](http://paperjs.org/)
  - [three.js](http://threejs.org/)
 
-There are lots more: [http://www.softr.li/blog/2012/06/20/which-html5-canvas-javascript-library-should-i-use](http://www.softr.li/blog/2012/06/20/which-html5-canvas-javascript-library-should-i-use)
+Es gibt viele weitere: [http://www.softr.li/blog/2012/06/20/which-html5-canvas-javascript-library-should-i-use](http://www.softr.li/blog/2012/06/20/which-html5-canvas-javascript-library-should-i-use)
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
  - [http://diveintohtml5.info/canvas.html](http://diveintohtml5.info/canvas.html)
 
 
-## Future versions of JavaScript
+## Zukünftige Versionen von JavaScript
 
-Future versions of JavaScript - *ES 6/ES 2015* and beyond - will address many of the issues mentioned above. It will provide a true module loading system, methods for managing scope and creating templates amongst many others.
+Zukünftige Versionen von JavaScript - *ES 6 / ES 2015* und darüber hinaus - werden viele der oben genannten Fragen ansprechen. Es wird ein echtes Module-Loader-System, Methoden für die Verwaltung von Scopes und das Erstellen von Templates und vielem mehr geben.
 
-Although it isn't currently implemented across all browsers, tools such as [Traceur](https://github.com/google/traceur-compiler) and [Babel](https://babeljs.io/) allow JavaScript to be written in this way today, and *transpiled* back into the current version of JavaScript that browsers do understand.
+Obwohl es derzeit nicht über alle Browser hinweg implementiert ist, erlauben Tools wie [Traceur] (https://github.com/google/traceur-compiler) und [Babel] (https://babeljs.io/) JavaScript auf diese Weise bereits heute zu schreiben, um dann zurück in die aktuelle Version von JavaScript *verwandelt* zu werden, die Browser versteht.
 
-***Further reading***
+***Weitere Informationen***
 
  - [https://leanpub.com/understandinges6/read](https://leanpub.com/understandinges6/read)
  - [http://24ways.org/2014/javascript-modules-the-es6-way/](http://24ways.org/2014/javascript-modules-the-es6-way/)
  - [https://babeljs.io/docs/learn-es6/](https://babeljs.io/docs/learn-es6/)
 
 
-## Further reading
+## Weitere Informationen
 
-There is an overwhelming number of further links here:
+Eine Vielzahl weiterführender Links findet man hier:
 
  - [https://github.com/dypsilon/frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)

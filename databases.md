@@ -1,76 +1,76 @@
-# Database notes
+# Datenbank Notizen
 
-A few notes prepared while writing training courses...
+Ein paar Notizen vorbereitet beim Schreiben von Schulungen ...
 
-Note that the following examples assume *MySQL* as the chosen database. Other relational databases will tend to use a similar logic, although with slightly different syntax.
-
-
-## Why use a database?
-
-When building web applications, we often use a database to store information
-
-We want to store our application *data* separately from:
-
- - application *logic* (e.g. Ruby, Python)
- - *presentation* (e.g. HTML templates)
+Beachten Sie, dass die folgenden Beispiele *MySQL* als die ausgewählte Datenbank annehmen. Andere relationale Datenbanken werden dazu neigen, eine ähnliche Logik zu verwenden, obwohl mit etwas unterschiedlicher Syntax.
 
 
-### Advantages
+## Warum eine Datenbank benutzen?
 
-There are a number of advantages for separating information from presentation:
+Beim Aufbau von Webanwendungen verwenden wir oft eine Datenbank zum Speichern von Informationen
 
- - Easier to manage content without changing logic
- - Data can be re-used elsewhere
- - Data can be managed via an administrative tool (such as a *content management system*), with little or no technical knowledge required
- - Databases are optimised to store and retrieve data quickly
+Wir möchten unsere Anwendungs-*Daten* trennen von:
 
+  - Anwendung *Logik* (z.B. Ruby, Python)
+  - *Präsentation* (z.B. HTML-Vorlagen)
+  
 
-## Database essentials
+### Vorteile
 
-A database is just a collection of one or more tables of data
+Es gibt eine Reihe von Vorteilen für die Trennung von Information und Präsentation:
 
- - Each table has a number of **columns** (or fields, attributes)
- - Each column has a specific **name**
- - Each column also has a data **type** (e.g. text, number, date/time, etc)
- - Data is stored in a table in **rows**
- - Each individual column within a row is called a **cell**
+  - Inhalte sind einfacher zu verwalten ohne Änderung der Logik
+  - Daten können an anderer Stelle wiederverwendet werden
+  - Die Daten können über ein administratives Tool (z.B. ein *Content Management System*) verwaltet werden, wobei wenig oder kein technisches Wissen erforderlich ist
+  - Datenbanken sind optimiert, um Daten schnell zu speichern und abzurufen
+  
 
-Database field names don't usually contain spaces. Conventions usually suggest making them all lower-case, using underscores to separate words
+## Datenbank Grundlagen
 
-| id | column_1    | column_2 |
+Eine Datenbank ist nur eine Sammlung von einer oder mehreren Tabellen von Daten
+
+  - Jede Tabelle hat eine Anzahl von **Spalten** (oder Felder, Attribute)
+  - Jede Spalte hat einen bestimmten **Namen**
+  - Jede Spalte hat auch einen Daten**typ** (z.B. Text, Nummer, Datum / Uhrzeit usw.)
+  - Die Daten werden in einer Tabelle in **Zeilen gespeichert**
+  - Jede einzelne Spalte innerhalb einer Zeile heißt **Zelle**
+
+Datenbankfeldnamen enthalten normalerweise keine Leerzeichen. In der Regel wird vorschlagen, sie alle in Kleinbuchstaben zu schreiben und mit Unterstrichen Wörter zu trennen
+
+| id | spalte_1    | spalte_2 |
 | ---|-------------|----------|
-| 1  | row 1       | cell     |
-| 2  | row 2       | lorem    |
-| 3  | cell        | ipsum    |
+| 1  | reihe 1     | zelle    |
+| 2  | reihe 2     | lorem    |
+| 3  | zelle       | ipsum    |
 
 
-## An example scenario
+## Ein Beispielszenario
 
-The following notes will be based around designing a database to meet an example scenario:
+Die folgenden Hinweise basieren auf dem Entwerfen einer Datenbank, um ein Beispielszenario zu treffen:
 
-*Design a database for a web application that tweets a daily question and aggregates __@replies__. These tweets will be categorised into one or more categories*
-
-
-## Database design process
-
-We can design our database by following a few simple steps:
-
-1. Decide on what data you want to store
-2. Choose data types for each of these items of information
-3. Normalise the data
-
-These notes will then explain how to:
-
-1. Create your database
-2. Populate your database
-3. Query your database
+*Entwerfen Sie eine Datenbank für eine Webanwendung, die eine tägliche Frage tweetet und die __@replies__ sammelt. Diese Tweets werden in eine oder mehrere Kategorien eingeteilt*
 
 
-## Storing data
+## Datenbank-Design-Prozess
 
-When designing a database, it is important to first decide what data we want to store.
+Wir können unsere Datenbank entwerfen, indem wir ein paar einfachen Schritten folgen:
 
-If we were to imagine our example data in tabular form, we might have something like this:
+1. Entscheiden Sie, welche Daten Sie speichern möchten
+2. Wählen Sie einen Datentypen für jede dieser Informationen aus
+3. Normalisieren Sie die Daten
+
+Diese Notizen werden dann erklären, wie:
+
+1. Erstellen Sie Ihre Datenbank
+2. Füllen Sie Ihre Datenbank
+3. Fragen Sie Ihre Datenbank ab
+
+
+## Daten speichern
+
+Beim Entwerfen einer Datenbank ist es wichtig, zuerst zu entscheiden, welche Daten wir speichern möchten.
+
+Wenn wir uns unsere Beispieldaten in tabellarischer Form vorstellen würden, könnten wir so etwas haben:
 
 | id | name | handle         | question         | answer        | categories     | date_added          |
 |----|------|----------------|------------------|---------------|----------------|---------------------|
@@ -81,57 +81,57 @@ If we were to imagine our example data in tabular form, we might have something 
 
 
 
-## Choosing data types
+## Datentypen auswählen
 
-This step identifies the possible values for the data
+Dieser Schritt identifiziert die möglichen Werte für die Daten
 
-Data types control the way the data is stored in the database - to make it as efficient as possible
+Datentypen steuern die Art und Weise, wie die Daten in der Datenbank gespeichert werden - um sie so effizient wie möglich zu machen
 
-A few example data types:
+Ein paar Beispieldatentypen:
 
-* String (text):
-  - Fixed length (up to 255 characters)
-  - Variable length (up to 255 characters)
-  - Text (over 255 characters)
+* String (Text):
+  - Feste Länge (bis zu 255 Zeichen)
+  - Variable Länge (bis zu 255 Zeichen)
+  - Text (über 255 Zeichen)
 
-* Numeric:
-  - Integers - whole numbers
-  - Decimal - not whole numbers
-  - Date and time
+* Numerisch:
+  - Integer - ganze Zahlen
+  - Decimal - Dezimalzahlen
+  - Datum und Uhrzeit
 
-(Exact data types can vary depending on the database used)
+(Exakte Datentypen können je nach verwendeter Datenbank variieren)
 
-In our example scenario we might use the following data types:
+In unserem Beispielszenario können wir folgende Datentypen verwenden:
 
- - **ID**: integer
- - **name**: variable length text
- - **handle**: variable length text
- - **question**: variable length text
- - **answer**: variable length text
- - **categories**: text
- - **date_added**: date and time
-
-
-## Data normalisation
-
-To normalise data is to remove the duplication of information, so each piece of information should be stored only once
-
-Once we have removed repetition of data we have removed the possibility of inconsistencies
-
-This ensures that the 'integrity' of the data is maintained.
-
-*What this means:*
-
-Any repetitive data should be stored in a separate database table
-
-To normalise data also means to ungroup items of data, to separate them so each cell contains only a single item of data
-
-*What this means:*
-
-Any cells containing multiple items of data should be stored in a separate database table
+ - **ID**: Integer
+ - **name**: variable Länge
+ - **handle**: variable Länge
+ - **question**: variable Länge
+ - **answer**: variable Länge
+ - **categories**: Text
+ - **date_added**: Datum und Uhrzeit
 
 
-***Further reading:***
+## Datennormalisierung
+
+Um Daten zu normalisieren, werden sich wiederholenden Informationen entfernt, so dass jede Information nur einmal gespeichert wird
+
+Sobald wir die sich wiederholenden Daten entfernt haben, haben wir auch mögliche Inkonsistenzen entfernt
+
+Damit wird sichergestellt, dass die "Integrität" der Daten beibehalten wird.
+
+*Was bedeutet das:*
+
+Alle sich wiederholenden Daten sollten in einer separaten Datenbanktabelle gespeichert werden
+
+Die Normalisierung von Daten bedeutet auch, Datengruppen aufzulösen, um sie zu trennen, damit jede Zelle nur ein einziges Datenelement enthält
+
+*Was bedeutet das:*
+
+Alle Zellen, die mehrere Daten enthalten, sollten in einer separaten Datenbanktabelle gespeichert werden
+
+
+***Weitere Informationen:***
 
  - [http://phlonx.com/resources/nf3/](http://phlonx.com/resources/nf3/)
  - [http://en.wikipedia.org/wiki/Database_normalization](http://en.wikipedia.org/wiki/Database_normalization)
@@ -139,145 +139,145 @@ Any cells containing multiple items of data should be stored in a separate datab
  - [http://support.microsoft.com/kb/100139](http://support.microsoft.com/kb/100139)
 
 
-### Limiting normalisation
+### Begrenzung der Normalisierung
 
-In a fully normalised database, there should be no duplication of information.
+In einer vollständig normalisierten Datenbank sollte es keine Vervielfältigung von Informationen geben.
 
-However this can sometimes fragment or over-complicate the data, and unnecessarily separate items of information which then need to be brought together in order to answer queries.
+Allerdings kann dies manchmal die Daten zersplittern oder überkomplizieren und zu unnötig getrennten Informationen führen, die dann zusammengeführt werden müssen, um Abfragen zu beantworten.
 
-The database designer may sometimes prefer to have a database which is not strictly normalised so as to simplify the system and/or improve query performance.
+Der Datenbankdesigner kann manchmal eine Datenbank haben, die nicht streng normiert ist, um das System zu vereinfachen und / oder die Abfrageleistung zu verbessern.
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://www.keithjbrown.co.uk/vworks/mysql/mysql_p7.php](http://www.keithjbrown.co.uk/vworks/mysql/mysql_p7.php)
  - [http://www.codinghorror.com/blog/2008/07/maybe-normalizing-isnt-normal.html](http://www.codinghorror.com/blog/2008/07/maybe-normalizing-isnt-normal.html)
 
 
-### Primary keys
+### Primärschlüssel
 
-In every table, we must identify (or create) a unique ID (known as a primary key)
+In jeder Tabelle müssen wir eine eindeutige ID identifizieren (oder erstellen) (als Primärschlüssel bekannt)
 
-A primary key has three requirements:
+Ein Primärschlüssel hat drei Anforderungen:
 
-1. It must always have a value (it cannot be left blank)
-2. Its value must never change
-3. It must be unique
+1. Er muss immer einen Wert haben (es kann nicht leer sein)
+2. Sein Wert darf sich nie ändern
+3. Er muss eindeutig sein
 
-A primary key must be a unique value which enables us to identify a single row of data, and so access all other data related to it
+Ein Primärschlüssel muss einen eindeutigen Wert haben, der es uns ermöglicht, eine einzelne Datenzeile zu identifizieren und somit auf alle anderen Daten zuzugreifen
 
-If none of the items of data are unique, they cannot act as a primary key
+Wenn keine der Datenelemente eindeutig sind, können sie nicht als Primärschlüssel fungieren
 
-The simplest primary key is an integer that gets incremented for each new row
+Der einfachste Primärschlüssel ist eine Ganzzahl, die für jede neue Zeile inkrementiert wird
 
-Sometimes we will want to reference the primary key from one table in another table in order to identify a relationship between the two. If we do this, in the second table it is known as a *foreign key*
-
-
-### Entities and Attributes
-
-For any scenario where you want to use a database, you need to identify the Entities and Attributes
-
-#### Entities
-
-Should be representations of real-world objects - events, persons, places, things
-
-e.g. projects, tasks, books, authors, publishers, products, ingredients...
-
-Each entity should have its own table in the database
-
-Not an easy science to correctly identify entities, it is dependant on the scenario and often subjective
-
-Once we have identified the entities, we can create a database table for each
+Manchmal wollen wir den Primärschlüssel aus einer Tabelle in einer anderen Tabelle verweisen, um eine Beziehung zwischen den beiden zu identifizieren. Wenn wir dies tun, ist er in der zweiten Tabelle als *Fremdschlüssel* bekannt
 
 
-#### Attributes
+### Entitäten und Attribute
 
-Pieces of information which characterise and describe these entities
+Für jedes Szenario, in dem Sie eine Datenbank verwenden möchten, müssen Sie die Entitäten und Attribute identifizieren
 
-These become the fields/columns for each entity table in the database
+#### Entitäten
 
-Need to identify the name of the attribute - e.g. 'name', 'answer', 'category'
+Sollten Darstellungen von realen Gegenständen sein - Ereignisse, Personen, Orte, Dinge
 
-Need to identify the attribute 'type' - e.g. text, integer, date, etc
+z.B. Projekte, Aufgaben, Bücher, Autoren, Verlage, Produkte, Zutaten ...
 
-Need to decide whether the attribute is optional - can it be empty?
+Jede Entität sollte eine eigene Tabelle in der Datenbank haben
 
-Can the attribute uniquely identify the entity?
+Keine leichte Wissenschaft, um die Entitäten richtig zu identifizieren, sie ist abhängig vom Szenario und oft subjektiv
+
+Sobald wir die Entitäten identifiziert haben, können wir für jede eine Datenbanktabelle erstellen
 
 
-### Example database tables
+#### Attribute
 
-Here are three of our example tables:
+Stücke von Informationen, die diese Entitäten charakterisieren und beschreiben
 
-***Questions table***
+Diese werden die Felder/Spalten für jede Entitätstabelle in der Datenbank
+
+Es ist notwendig, den Namen des Attributs zu identifizieren - z.B. 'name', 'antwort', 'kategorie'
+
+Es ist notwendig, das Attribut 'type' zu identifizieren - z.B. Text, Integer, Datum, etc
+
+Es ist notwendig zu entscheiden, ob das Attribut optional ist - kann es leer sein?
+
+Kann das Attribut die Entität eindeutig identifizieren?
+
+
+### Beispiel-Datenbanktabellen
+
+Hier sind drei unserer Beispieltabellen:
+
+***Fragentabelle***
 
 | id | question          | date_added          |
 |----|-------------------|---------------------|
 | 1  | Favourite Cheese? | 2013-03-21 18:34:23 |
 | 2  | Favourite Prince? | 2013-03-21 18:34:23 |
 
-***Users table***
+***Benutzertabelle***
 
 | id |  handle        | name |
 |----|----------------|------|
 | 1  | thegingerbloke | Pete |
 
 
-***Categories table***
+***Kategorientabelle***
 
 | id | category |
 |----|----------|
 | 1  | Funny    |
 
 
-### Relationships
+### Beziehungen
 
-It is important to identify the relationships between tables
+Es ist wichtig, die Beziehungen zwischen den Tabellen zu identifizieren
 
-There are three types of relationship:
+Es gibt drei Arten von Beziehung:
 
-1. One-to-one (1:1)
-2. One-to-many (1:N)
-3. Many-to-many (N:M)
+1. Eins-zu-Eins (1:1)
+2. Eins-zu-Viele (1:N)
+3. Viele-zu-Viele (N:M)
 
 
-#### One-to-many (1:N) relationships
+#### Eins-zu-Viele (1:N) Beziehungen
 
-To identify a one-to-many (1:N) relationship, we use primary key to foreign key matching.
+Um eine Eins-zu-Viele-Beziehung (1:N) zu identifizieren, verwenden wir den Primärschlüssel für die Fremdschlüssel-Übereinstimmung.
 
-We store the primary key of the 'one' as a foreign key in each of the 'many' items, establishing the relationship between them.
+Wir speichern den Primärschlüssel des "Eins" als Fremdschlüssel in jedem der "vielen" Elemente, die die Beziehung zwischen ihnen herstellen.
 
-Matching keys in this way allows related information to be brought together from different tables when the database is queried.
+Auf diese Weise können mit zusammenpassenden Schlüsseln verwandte Informationen aus verschiedenen Tabellen zusammengeführt werden, wenn die Datenbank abgefragt wird.
 
-In our example, questions:answers is a one-to-many relationship, for each question there are multiple answers, but each answer is only for one question
+In unserem Beispiel, Fragen:Antworten ist eine Eins-zu-Viele-Beziehung, gibt es für jede Frage mehrere Antworten, aber jede Antwort ist nur für eine Frage
 
-Instead of adding the question for each answer, we'll store question details in the *questions* table
+Anstatt die Frage für jede Antwort hinzuzufügen, werden wir Fragen in der *Fragen*-Tabelle hinterlegen
 
-We'll add a new field to the answers table called question_id - here we'll put in the unique primary key from the question table as a foreign key in the answer table
+Wir fügen ein neues Feld zur Antworttabelle namens question_id hinzu - hier werden wir den eindeutigen Primärschlüssel aus der Fragetabelle als Fremdschlüssel in der Antworttabelle setzen
 
-Now the question details need only be stored once. If the question details were to change, we only need to update a single record in the question table and it would apply for all answers
+Nun müssen die Fragendetails nur einmal gespeichert werden. Wenn sich die Fragedetails ändern würden, müssen wir nur einen einzigen Datensatz in der Fragetabelle aktualisieren und es würde für alle Antworten gelten
 
-In a similar manner, users:answers is also a one-to-many relationship. Each user can submit many answers, yet each answer can only be from a single user.
+In ähnlicher Weise ist Benutzer:Antworten auch eine Eins-zu-Viele-Beziehung. Jeder Benutzer kann viele Antworten einreichen, aber jede Antwort kann nur von einem einzelnen Benutzer sein.
 
-Here is our example *answers* table, including the use of foreign keys to tie our one-to-many relationships
+Hier ist unsere Beispiel *Antworten*tabelle, einschließlich der Verwendung von Fremdschlüsseln, um unsere Eins-zu-Viele-Beziehungen zu binden
 
-***Answers table***
+***Antwortentabelle***
 
 | id | question_id | user_id | answer | tweet_id    | date_added          |
 |----|-------------|---------|--------|-------------|---------------------|
 | 1  | 1           | 1       | Edam   | 23741876128 | 2013-03-21 18:34:23 |
 
 
-#### Many-to-many (N:M) relationships
+#### Viele-zu-Viele (N:M) Beziehungen
 
-For a many-to-many (M:N) relationship, on both sides of the relationship there can be multiple entities in each table that are inter-related
+Für eine Viele-zu-Viele (M:N) Beziehung, gibt es auf beiden Seiten der Beziehung mehrere Entitäten in jeder Tabelle, die miteinander verknüpft sind
 
-For example, one answer may have several categories; one category may be applied to several answers.
+Zum Beispiel kann eine Antwort mehrere Kategorien haben; eine Kategorie kann auf mehrere Antworten angewendet werden.
 
-To record this relationship we need to create a separate database table containing two foreign keys, which relate to the primary keys for each of the two relevant entities.
+Um diese Beziehung aufzuzeichnen, müssen wir eine separate Datenbanktabelle mit zwei Fremdschlüsseln erstellen, die sich auf die Primärschlüssel für jede der beiden relevanten Entitäten beziehen.
 
-Here is our *answers to categories* join table
+Hier sind unsere *Antworten auf Kategorien* (join) Tabelle
 
-***Answers to Categories (join) table***
+***Antworten auf Kategorien (join) Tabelle***
 
 | id | answer_id | category_id |
 |----|-----------|-------------|
@@ -287,66 +287,66 @@ Here is our *answers to categories* join table
 
 ## SQL
 
-We have designed our database
+Wir haben unsere Datenbank entworfen
 
-We need to know how to create it, populate it and access this data
+Wir müssen wissen, wie man sie erstellt, befüllt und auf diese Daten zugreift
 
-This is where we need SQL
+Hierzu brauchen wir SQL
 
-Structured Query Language (SQL) is the language used by most databases to perform queries and manipulate data
-
-
-### SQL rules
-
-A few SQL rules to bear in mind:
-
-SQL is generally case insensitive...
-
-...except for table and column names, which are usually case sensitive
-
-By convention, SQL commands (e.g. `SELECT`, `UPDATE`) should be written in UPPERCASE
-
-Like in most programming languages, string (text) values should be surrounded by quotes ('single' or "double")
-
-Table and column names can optionally be surrounded by \` backticks - note that these are not the same as 'single quotes'
-
-All commands should terminate with a semi-colon;
+Structured Query Language (SQL) ist die Sprache, die von den meisten Datenbanken verwendet wird, um Abfragen auszuführen und Daten zu manipulieren
 
 
-### Creating a database
+### SQL Regeln
 
-If you were to have to create a new database yourself, you'd use the following command:
+Ein paar SQL-Regeln sind zu beachten:
+
+SQL ist in der Regel unempfindlich ...
+
+... außer für Tabellen- und Spaltennamen, die in der Regel zwischen Groß- / Kleinschreibung unterscheiden
+
+Nach der Konvention sollten SQL-Befehle (z.B. `SELECT`,` UPDATE`) in GROSSBUCHSTABEN geschrieben werden
+
+Wie in den meisten Programmiersprachen sollten String (Text) Werte von Anführungszeichen ('single' oder "double") umgeben sein
+
+Tabellen- und Spaltennamen können wahlweise von \`Backticks umgeben sein - beachten Sie, dass diese nicht die gleichen sind wie 'einfache Anführungszeichen'
+
+Alle Befehle sollten mit einem Semikolon enden;
+
+
+### Erstellen einer Datenbank
+
+Wenn Sie selbst eine neue Datenbank erstellen müssen, würden Sie den folgenden Befehl verwenden:
 
 ```
 CREATE DATABASE `dbname`;
 ```
 
-To see a list of all available databases you would enter:
+Um eine Liste aller verfügbaren Datenbanken zu sehen, würden Sie den folgenden Befehl verwenden:
 
 ```
 SHOW databases;
 ```
 
-To select a database you would enter:
+Um eine Datenbank auszuwählen:
 
 ```
 USE `dbname`;
 ```
 
-To delete a database you would enter:
+Um eine Datenbank zu löschen:
 
 ```
 DROP `dbname`;
 ```
 
-***THERE IS NO UNDO***
+***ES GIBT KEINE RÜCKGÄNGIG-FUNKTION!***
 
 
-### Creating database tables
+### Erstellen von Datenbanktabellen
 
-We have already planned the structure for our database tables, now we need to turn these into SQL
+Wir haben bereits die Struktur für unsere Datenbanktabellen geplant, jetzt müssen wir diese in SQL umwandeln
 
-To create a table, use the CREATE TABLE command using the following syntax:
+Um eine Tabelle zu erstellen, verwenden Sie den Befehl CREATE TABLE mit der folgenden Syntax:
 
 ```
 CREATE TABLE `table_name` (
@@ -354,7 +354,7 @@ CREATE TABLE `table_name` (
 );
 ```
 
-Example syntax for our answers table:
+Beispiel-Syntax für unsere Antworten-Tabelle:
 
 ```
 CREATE TABLE `answers` (
@@ -367,68 +367,68 @@ CREATE TABLE `answers` (
 );
 ```
 
-Taking the example of the column called `id`:
+Nehmen wir das Beispiel der Spalte `id`:
 
 ```
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 ```
 
- - It will contain an integer (INT)
- - This column is not allowed to be left blank (NOT NULL)
- - This column is to act as a unique identifier for entries in this table, so all values in this column must be unique (PRIMARY KEY).
- - If we don't specify a value when adding a new entry, pick a value that is one more than the highest value in the table so far (AUTO_INCREMENT)
+  - Es enthält eine Ganzzahl (INT)
+  - Diese Spalte darf nicht leer sein (NOT NULL)
+  - Diese Spalte soll als eindeutige Kennung für Einträge in dieser Tabelle dienen, also müssen alle Werte in dieser Spalte eindeutig sein (PRIMARY KEY).
+  - Wenn wir beim Hinzufügen eines neuen Eintrags keinen Wert angeben, wird der nächst höhere Wert als der bisher höchste Wert in der Tabelle ausgewählt (AUTO_INCREMENT)
 
-Within a database, you can request to see what tables exist:
+Innerhalb einer Datenbank können Sie anfragen, welche Tabellen vorhanden sind:
 
 ```
 SHOW TABLES;
 ```
 
-You can also request to see the structure of a specific table:
+Sie können auch die Struktur einer bestimmten Tabelle anfordern:
 
 ```
 DESCRIBE `tablename`;
 ```
 
-It is possible to update the structure of an existing database table using the ALTER command
+Es ist möglich, die Struktur einer vorhandenen Datenbanktabelle mit dem Befehl ALTER zu aktualisieren
 
-To add a column:
+So fügen Sie eine Spalte hinzu:
 
 ```
 ALTER TABLE  `tablename` ADD `columnname` TEXT NOT NULL;
 ```
 
-To update the name or attributes of a column:
+So aktualisieren Sie den Namen oder die Attribute einer Spalte:
 
 ```
 ALTER TABLE  `tablename` CHANGE  `oldcolumnname` `newcolumnname`
 VARCHAR(255);
 ```
 
-To remove a column:
+Um eine Spalte zu entfernen:
 
 ```
 ALTER TABLE `tablename` DROP `columnname`;
 ```
 
-To empty a table use the TRUNCATE command:
+Um eine Tabelle zu leeren, verwenden Sie den Befehl TRUNCATE:
 
 ```
 TRUNCATE TABLE `tablename`;
 ```
 
-To delete a table use the DROP command:
+Um eine Tabelle zu löschen, verwenden Sie den Befehl DROP:
 
 ```
 DROP TABLE `tablename`;
 ```
 
-***THERE IS NO UNDO***
+***ES GIBT KEINE RÜCKGÄNGIG-FUNKTION!***
 
 
-### Example database tables
+### Beispieldatenbanktabellen
 
-The following commands will create our example database tables:
+Die folgenden Befehle werden unsere Beispieltabellen erstellen:
 
 ```
 CREATE TABLE `questions` (
@@ -465,44 +465,44 @@ CREATE TABLE `categories_answers` (
 ```
 
 
-### Populating a database
+### Eine Datenbank mit Daten füllen
 
-Our database and tables are now ready to go
+Unsere Datenbank und Tabellen sind nun erstellt
 
-We need to know how to populate them with data, and then retrieve this data
+Wir müssen wissen, wie man sie mit Daten befüllt und dann diese Daten abruft
 
 #### CRUD
 
-Data-related tasks broadly fall into one of four categories:
+Datenbezogene Aufgaben fallen weitgehend in eine von vier Kategorien:
 
- - Create (new data in a database)
- - Request/Read (data from a database)
- - Update (update existing data in a database)
- - Delete (data from a database)
+  - Erstellen (neue Daten in einer Datenbank erstellen)
+  - Anforderung / Lesen (Daten aus einer Datenbank lesen)
+  - Aktualisierung (vorhandene Daten in einer Datenbank aktualisieren)
+  - Löschen (Daten aus einer Datenbank löschen)
+  
+SQL erlaubt uns genau das zu tun:
 
-SQL allows us to do just that:
-
- - Create = INSERT
- - Request =SELECT
- - Update = UPDATE
- - Delete = DELETE
+ - Erstellen = INSERT
+ - Lesen =SELECT
+ - Aktualisierung = UPDATE
+ - Löschen = DELETE
 
 
 #### INSERT
 
-To add data to the tables we've just created, we use an INSERT command:
+Um Daten zu den Tabellen hinzuzufügen, die wir gerade erstellt haben, verwenden wir einen INSERT-Befehl:
 
 ```
 INSERT INTO `table_name` SET `columnName1` = 'value1', `columnName2` = 'value2';
 ```
 
-(or)
+(oder)
 
 ```
 INSERT INTO `table_name` (`columnName1`, `columnName2`) VALUES ('value1', 'value2');
 ```
 
-The second version allows us to insert multiple rows (separated by commas) in a single SQL statement
+Die zweite Version ermöglicht es uns, mehrere Zeilen (getrennt durch Kommas) in einer einzigen SQL-Anweisung einzufügen
 
 ```
 INSERT INTO
@@ -518,29 +518,29 @@ VALUES
 
 #### UPDATE
 
-To update data in a table we use an UPDATE command:
+Um Daten in einer Tabelle zu aktualisieren, verwenden wir einen UPDATE-Befehl:
 
 ```
 UPDATE `table_name` SET `columnName1` = 'value1' WHERE `columnName2` = 'value2';
 ```
 
-Note the use of the WHERE clause - without this all items in the table would be updated!
+Beachten Sie die Verwendung der WHERE-Klausel - ohne diese werden alle Elemente in der Tabelle aktualisiert!
 
 
 #### DELETE
 
-To delete data from a table we use a DELETE command:
+Um Daten aus einer Tabelle zu löschen, verwenden wir einen DELETE-Befehl:
 
 ```
 DELETE FROM `table_name` WHERE `columnName` = 'value';
 ```
 
-Note the use of the WHERE clause - without this all items in the table would be deleted!
+Beachten Sie die Verwendung der WHERE-Klausel - ohne diese werden alle Elemente in der Tabelle gelöscht!
 
-***THERE IS NO UNDO***
+***ES GIBT KEINE RÜCKGÄNGIG-FUNKTION!***
 
 
-#### Populating our example database tables
+#### Befüllen unserer Beispiel-Datenbanktabellen
 
 ```
 INSERT INTO `categories` (`id`, `category`) VALUES
@@ -589,29 +589,29 @@ INSERT INTO `users` (`id`, `handle`, `name`) VALUES
 ```
 
 
-### Querying a database
+### Eine Datenbank abfragen
 
-To read data from a table (or multiple tables) we use a SELECT command
+Um Daten aus einer Tabelle (oder mehreren Tabellen) zu lesen, verwenden wir einen SELECT-Befehl
 
-The simplest SELECT command will return everything in a database table:
+Der einfachste SELECT-Befehl gibt alles in einer Datenbanktabelle zurück:
 
 ```
 SELECT * FROM `table`;
 ```
 
-Rather than returning everything, it is possible to specify just the field names (columns) you want:
+Anstatt alles zurückzugeben, können Sie nur die gewünschten Feldnamen (Spalten) angeben:
 
 ```
 SELECT `field` FROM `table`;
 ```
 
-Multiple fieldnames are separated by commas:
+Mehrere Feldnamen werden durch Kommas getrennt:
 
 ```
 SELECT `field1`, `field2`, `field3` FROM `table`;
 ```
 
-Rather than returning all results, we can add optional parameters to filter our request using WHERE:
+Anstatt alle Ergebnisse zurückzugeben, können wir optionale Parameter hinzufügen, um unsere Anfrage mit WHERE zu filtern:
 
 ```
 SELECT * FROM `table` WHERE `field` = 'value';
@@ -621,36 +621,36 @@ SELECT * FROM `table` WHERE `field` = 'value';
 SELECT `field1`, `field2`, `field3` FROM `table` WHERE `field1` > value;
 ```
 
-We can order our results using ORDER BY:
+Wir können unsere Ergebnisse mit ORDER BY sortieren:
 
 ```
 SELECT * FROM `table` ORDER BY `id`;
 ```
 
-We can change the order using ASC or DESC:
+Wir können die Sortierung mit ASC oder DESC ändern:
 
 ```
 SELECT * FROM `table` WHERE `field` > 100 ORDER BY `time` ASC;
 ```
 
-We can limit the number of results returned using LIMIT:
+Wir können die Anzahl der zurückgegebenen Ergebnisse mit LIMIT begrenzen:
 
 ```
 SELECT * FROM `table` ORDER BY `time` LIMIT 2;
 ```
 
-This will return the latest two records in the specified table
+Dadurch werden die letzten beiden Datensätze in der angegebenen Tabelle zurückgegeben
 
-We can specify an offset to start the LIMIT from:
+Wir können einen Offset angeben, um den LIMIT zu starten von:
 
 ```
 SELECT * FROM `table` ORDER BY `time` LIMIT 2, 2;
 ```
 
-This will return two records, starting from record 3
-(This is useful for pagination of results)
+Dies wird zwei Datensätze zurückgeben, beginnend mit Satz 3
+(Dies ist nützlich für die Paginierung der Ergebnisse)
 
-We can combine conditions using AND and/or OR:
+Wir können Bedingungen mit AND und / oder OR kombinieren:
 
 ```
 SELECT
@@ -665,17 +665,17 @@ ORDER BY
     `time` ASC
 ```
 
-#### Joining multiple tables
+#### Mehrere Tabellen joinen
 
-All of the SELECT examples so far have been on only a single table
+Alle SELECT-Beispiele waren bisher nur auf eine einzige Tabelle
 
-When we normalised the data, we specifically moved content into separate tables
+Wenn wir die Daten normalisiert haben, haben wir den Inhalt gezielt in separate Tabellen verschoben
 
-Now we need to know how to recombine it
+Jetzt müssen wir wissen, wie man es rekombiniert
 
-We need to add clauses to match the primary keys and foreign keys
+Wir müssen Klauseln hinzufügen, die mit den Primärschlüsseln und Fremdschlüsseln übereinstimmen
 
-***Answers table***
+***Antwortentabelle***
 
 | id | user_id | answer                                        | date_added          |
 |----|---------|---------------------------------------------- |---------------------|
@@ -686,7 +686,7 @@ We need to add clauses to match the primary keys and foreign keys
 | 5  | 2       | ullamco laboris nisi ut aliquip ex ea commodo | 2013-03-21 22:31:25 |
 
 
-***Users table***
+***Benutzertabelle***
 
 | id | handle         | name |
 |----|----------------|------|
@@ -695,7 +695,7 @@ We need to add clauses to match the primary keys and foreign keys
 | 3  | dangerous      | Mike |
 
 
-**SELECT with a join**
+**SELECT mit einem Join**
 
 ```
 SELECT
@@ -717,7 +717,7 @@ ON
 | 5  | 2       | ullamco laboris nisi ut aliquip ex ea commodo   | 2013-03-21 22:31:25 | something       | Nick |
 
 
-We can then add clauses, as before:
+Wir können dann Bedingungen hinzufügen, wie vorher:
 
 ```
 SELECT
@@ -738,11 +738,11 @@ WHERE
 | 2  | 1       | quidquid Latine dictum sit altum videtur        | 2013-03-21 19:32:17 | thegingerbloke  | Pete |
 
 
-#### SELECT without joins
+#### SELECT ohne Joins
 
-We could also recombine our data without explicitly using a JOIN
+Wir könnten unsere Daten auch ohne explizite Verwendung eines JOIN rekombinieren
 
-Technically this is the same as an inner join, but the syntax is slightly different...
+Technisch ist das genauso wie ein innerer Join, aber die Syntax ist etwas anders ...
 
 ```
 SELECT
@@ -753,15 +753,15 @@ WHERE
   `answers`.`user_id` = `users`.`id`
 ```
 
-#### Multiple tables in a query
+#### Mehrere Tabellen in einer Abfrage
 
-We have learnt how to query across multiple tables, by matching primary and foreign keys
+Wir haben gelernt, wie man über mehrere Tabellen abfragt, indem wir primäre und Fremdschlüssel anpassen
 
-When we query across multiple tables, the attributes from each table are flattened into a single table
+Wenn wir über mehrere Tabellen abfragen, werden die Attribute aus jeder Tabelle in eine einzelne Tabelle abgeflacht
 
-There may be times when there are fields that we want to retrieve that have identical column names in more than one table (for example 'id')
+Es kann Zeiten geben, in denen es Felder gibt, die wir abrufen wollen, die identische Spaltennamen in mehr als einer Tabelle haben (zB 'id')
 
-If we try to do this, it will only retrieve one of the named columns - the other won't be present in the results
+Wenn wir versuchen, dies zu tun, wird es nur eine der genannten Spalten abrufen - die anderen werden nicht in den Ergebnissen vorhanden sein
 
 ```
 SELECT
@@ -776,7 +776,7 @@ WHERE
   `questions`.`id` = `answers`.`question_id`
 ```
 
-To resolve this we use AS in our SQL to alias the field names to something else, to make them unique
+Um dies zu beheben, verwenden wir AS in unserem SQL, um die Feldnamen auf etwas anderes zu verweisen und um sie einzigartig zu machen
 
 ```
 SELECT
@@ -791,7 +791,7 @@ WHERE
   `questions`.`id` = `answers`.`question_id`
 ```
 
-***Further reading:***
+***Weitere Informationen:***
 
  - [http://codular.com/sql-introduction](http://codular.com/sql-introduction)
  - [http://codular.com/mysql-joins](http://codular.com/mysql-joins)
@@ -800,22 +800,22 @@ WHERE
  - [http://www.coderecipes.net/sql-join-inner-join-left-join.aspx](http://www.coderecipes.net/sql-join-inner-join-left-join.aspx)
 
 
-#### Retrieving Random Results With MySQL
+#### Abrufen von zufälligen Ergebnissen mit MySQL
 
-You can select a random entry from a MySQL table using the SQL `RAND()` command
+Sie können einen zufälligen Eintrag aus einer MySQL-Tabelle mit dem SQL `RAND ()` Befehl auswählen
 
-Add `ORDER BY RAND() LIMIT 0,1` to the end of a query:
+Fügen Sie `ORDER BY RAND() LIMIT 0,1` ans Ende Ihrer Abfrage:
 
 ```
 SELECT * FROM `questions` ORDER BY RAND() LIMIT 0,1
 ```
 
-Could be useful for selecting a random question to feature on a page
+Kann für die Auswahl einer zufälligen Frage auf einer Seite nützlich sein
 
 
-#### Grouping results
+#### Ergebnisse gruppieren
 
-If you wanted to select a list of all answers for each question, you could perform the following query:
+Wenn Sie für jede Frage eine Liste aller Antworten auswählen möchten, können Sie die folgende Abfrage ausführen:
 
 ```
 SELECT
@@ -828,7 +828,7 @@ WHERE
   `questions`.`id` = `answers`.`question_id`
 ```
 
-This will produce the following results:
+Dies führt zu folgenden Ergebnissen:
 
 | question         | answer        |
 |------------------|---------------|
@@ -837,9 +837,9 @@ This will produce the following results:
 | Favourite Prince | TAFKAP        |
 | Favourite Cheese | Melted cheese |
 
-This will repeat the question each time for each answer
+Dies wiederholt die Frage jedes Mal für jede Antwort
 
-To group the answers together in a single column:
+Um die Antworten in einer einzigen Spalte zusammenzufassen:
 
 ```
 SELECT
@@ -853,7 +853,7 @@ WHERE
 GROUP BY `questions`.`id`
 ```
 
-This will produce the following results:
+Dies führt zu folgenden Ergebnissen:
 
 | question         | answer              |
 |------------------|---------------------|
@@ -861,40 +861,40 @@ This will produce the following results:
 | Favourite Prince | Fresh, TAFKAP       |
 
 
-If you want to perform complex queries on your database, it is also worth investigating different types of database joins and sub-queries
+Wenn Sie komplexe Abfragen in Ihrer Datenbank durchführen möchten, lohnt es sich auch, verschiedene Arten von Datenbank-Joins und Unterabfragen zu untersuchen
 
 
-#### Formatting A Date With MySQL
+#### Formatieren eines Datums mit MySQL
 
-We've been storing dates in MySQL using the 'date', 'time' and 'datetime' data types
+Wir haben Daten in MySQL unter Verwendung der Datentypen 'date', 'time' und 'datetime' gespeichert
 
-When these are retrieved from MySQL:
+Wenn diese von MySQL abgerufen werden ...
 
 ```
 SELECT `date_added` FROM `answers`;
 ```
 
-The output is in the format: "2012-02-27 15:20:29"
+... ist die Ausgabe im Format: "2012-02-27 15:20:29"
 
-If you want to format this you can use DATE_FORMAT
+Wenn Sie das Ausgabeformat ändern möchten, benutzen Sie DATE_FORMAT
 
 ```
 SELECT DATE_FORMAT(`date_added`, '%e/%c/%y, %k:%i' AS `date_added_formatted` FROM `answers`;
 ```
 
-***Further information:***
+***Weitere Informationen:***
 
  - [http://dev.mysql.com/doc/refman/5.0/en/date-and-time-functions.html#function_date-format](http://dev.mysql.com/doc/refman/5.0/en/date-and-time-functions.html#function_date-format)
 
 
-## Practice
+## Übungsaufgabe
 
-Try to write the SQL queries that would satisfy the following requests:
+Versuchen Sie SQL-Abfragen zu schreiben, die die folgenden Anforderungen erfüllen:
 
- - Select all questions
- - Select all answers for user 1
- - Select all answers ordered by date answered
- - Select all answers for question 1, including the username of the person who answered
- - Select all answers from category 1
- - Select all answers from the category 'funny'
- - Select all answers for question 1, including the username of the person who answered and its category
+  - Alle Fragen auswählen
+  - Alle Antworten für Benutzer 1 auswählen
+  - Alle Antworten auswählen, sortiert nach dem Datum der Beantwortung
+  - Alle Antworten für Frage 1 auswählen, einschließlich des Benutzernamens der Person, die beantwortet hat
+  - Alle Antworten aus Kategorie 1 auswählen
+  - Alle Antworten aus der Kategorie 'funny' auswählen
+  - Alle Antworten für Frage 1 auswählen, einschließlich des Benutzernamens der Person, die beantwortet hat, und ihrer Kategorie

@@ -1,9 +1,9 @@
-# Training notes
+# Übungsnotizen
 
-A few notes prepared while writing training courses...
+Ein paar Notizen vorbereitet beim Schreiben von Schulungen ...
 
  - [HTML & CSS](html-css.md)
  - [JavaScript](javascript.md)
- - [Databases](databases.md)
+ - [Datenbanken](databases.md)
  - [PHP](php.md)
  - [UX](ux.md)

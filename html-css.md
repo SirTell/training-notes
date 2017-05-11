@@ -1,310 +1,309 @@
 # HTML & CSS notes
 
-A few notes prepared while writing training courses...
+Ein paar Notizen vorbereitet beim Schreiben von Schulungen ...
 
 
-## The World-wide web
+## Das world-wide Web
 
-The internet (as a collection of networked computers) existed for decades before the creation of the world-wide web
+Das Internet (als eine Sammlung von vernetzten Computern) existierte seit Jahrzehnten vor der Erstellung des weltweiten Internets.
 
-The methods of communication between these computers wasn't as simple (for the average person) as it is today
+Die Methoden der Kommunikation zwischen den Computern war nicht so einfach (für die durchschnittliche Person), wie es heute ist.
 
-In 1990, Tim Berners-Lee, a British engineer working at CERN (European Organisation for Nuclear Research, in Switzerland) combined several key communication protocols known collectively as the 'World-Wide Web'
+Im Jahr 1990 vereint Tim Berners-Lee, ein britischer Ingenieur, der am CERN arbeitet (Europäische Organisation für Kernforschung, in der Schweiz) mehrere wichtige Kommunikationsprotokolle, die gemeinsam als "World Wide Web" bekannt sind.
 
-> "A web of hypertext documents to be viewed by browsers using a clientâ€“server architecture"
-
-
-### Components of the World-Wide Web
-
-The key components of the 'World-Wide Web'
-
- - HTML - a markup language used to give structure to information
- - URLs - used to uniquely identify documents
- - Hyperlinks (hypertext) - to move between documents
- - Web browsers - a simple Graphical User Interface (GUI) to view these documents
- - Web servers - a way to provide requested documents
-
-These technologies have revolutionised our consumption of information
+> "Ein Web von Hypertext-Dokumenten, die von Browsern mit einer Client-Server-Architektur betrachtet werden sollen."
 
 
-### The World-Wide Web Consortium (W3C)
+### Komponenten des World Wide Web
 
-An organisation set up by Tim Berners-Lee in 1994
+Die Schlüsselkomponenten des 'World Wide Web'
 
-They are responsible for developing "non-proprietary, interoperable technologies" for the World Wide Web
+ - HTML - eine Auszeichnungssprache, die verwendet wird, um Struktur zu Informationen zu geben
+ - URLs - wird verwendet, um Dokumente eindeutig zu identifizieren
+ - Hyperlinks (Hypertext) - um zwischen Dokumenten zu wechseln
+ - Web-Browser - eine einfache grafische Benutzeroberfläche (GUI), um diese Dokumente anzuzeigen
+ - Web-Server - eine Möglichkeit, angeforderte Dokumente zur Verfügung zu stellen
 
-They attempt to make the web universally accessible, regardless of ability, language, or culture
-
-They do this by creating standards for web technologies, such as HTML, CSS and XML
-
-
-### Web browsers
-
-Many different options
-
-These days, they're all fairly similar, and compete on adding new features
-
-Most browsers update themselves, quite often
-
-It wasn't always this way - *Internet Explorer 6...*
+Diese Technologien haben unseren Konsum von Informationen revolutioniert!
 
 
-### Browser technologies
+### Das World-Wide Web Consortium (W3C)
 
-3 main languages:
+Eine Organisation, die 1994 von Tim Berners-Lee gegründet wurde.
 
- - Content - HTML
- - Styling - CSS
- - Interaction - JavaScript
+Sie sind verantwortlich für die Entwicklung von "nicht-proprietären, interoperablen Technologien" für das World Wide Web.
+
+Sie versuchen, das Internet universell zugänglich zu machen, unabhängig von der Fähigkeit, Sprache oder Kultur.
+
+Sie tun dies durch die Schaffung von Standards für Web-Technologien, wie HTML, CSS und XML.
 
 
-### Why you should learn to write code by hand
+### Web-Browser
 
- - Gain complete control over your site
- - Stop your site being a 'black box' that just works
- - With a bit of practice, it's the quickest way to make things
- - It's easier to debug if something isn't working
- - Easy to make quick fixes from anywhere
+Viele verschiedene Optionen
+
+In diesen Tagen sind sie alle ziemlich ähnlich, und konkurrieren durch das Hinzufügen neuer Features
+
+Die meisten Browser aktualisieren sich oft
+
+Das war nicht immer so - * Internet Explorer 6 ... *
+
+
+### Browsertechnologien
+
+3 Hauptsprachen:
+
+  - Inhalt - HTML
+  - Styling - CSS
+  - Interaktion - JavaScript
+  
+
+### Warum Sie lernen sollten, Code von Hand zu schreiben
+
+  - Gewinnen Sie die vollständige Kontrolle über Ihre Website
+  - Verhindern Sie, dass Ihre Website eine "Black Box" ist, die einfach nur funktioniert
+  - Mit ein bisschen Übung ist es der schnellste Weg, um Dinge zu machen
+  - Es ist einfacher zu debuggen, wenn etwas nicht funktioniert
+  - Einfache, schnelle Fixes kann man von überall zu machen
 
 
 ## HTML
 
-Describes the structure of content - used to give structure to information
+Beschreibt die Struktur des Inhalts - verwendet, um Struktur zu Informationen zu geben
 
-It is a universal language - provided you have a web browser that is capable of reading HTML, you can use any operating system or device to view it
-
-
-### Giving structure with code
-
-We "mark up" a document to give it structure, by describing the meaning of its parts
-
-HTML is a type of "markup" language
+Es ist eine universelle Sprache - vorausgesetzt, Sie haben einen Web-Browser, der in der Lage ist, HTML zu verstehen, dann können Sie jedes Betriebssystem oder Gerät verwenden, um es darzustellen.
 
 
-### How would we mark up a book?
+### Struktur mit Code eingeben
 
-Take the following example of a book:
+Wir "beschreiben" ein Dokument, um ihm Struktur zu geben, indem wir die Bedeutung seiner Teile beschreiben
 
-> "The Pineapple: King of Fruits" by Francesca Beauman. Published by Chatto & Windus in 2005.
-
-Or
-
-> In 2005, Francesca Beauman wrote "The Pineapple: King of Fruits" and published with Chatto & Windus.
-
-Humans can understand this informtion, but to a computer it needs putting into a formal structure:
-
- - *Title*: The Pineapple: King of Fruits
- - *Author*: Francesca Beauman
- - *Date*: 2005
- - *Publisher*: Chatto & Windus
- - *Description*: This enchanting, juicy historyâ€¦
+HTML ist eine Art "Beschreibungs"-Sprache
 
 
-In a mock markup language, this becomes:
+### Wie würden wir ein Buch markieren?
+
+Nehmen Sie das folgende Beispiel eines Buches:
+
+> "Die Ananas: König der Früchte" von Francesca Beauman. Veröffentlicht von Chatto & Windus im Jahr 2005.
+
+Oder
+
+> Im Jahr 2005 schrieb Francesca Beauman "The Pineapple: King of Fruits" und veröffentlichte mit Chatto & Windus.
+
+Menschen können diese Information verstehen, aber für einen Computer, muss man sie in eine formale Struktur bringen:
+
+  - * Titel *: Die Ananas: König der Früchte
+  - * Autor *: Francesca Beauman
+  - * Datum *: 2005
+  - * Herausgeber *: Chatto & Windus
+  - * Beschreibung *: Diese bezaubernde, saftige Geschichte
+
+
+In einer Mock-Markup-Sprache wird dies:
 
 ```
 <book>
-    <title>Pineapple: King of the fruits</title>
+    <title>Die Ananas: König der Früchte</title>
     <author>Francesca Beauman</author>
     <date>2005</date>
     <publisher>Chatto & Windus</publisher>
-    <description>This enchanting, juicy historyâ€¦</description>
+    <description>Diese bezaubernde, saftige Geschichte</description>
 </book>
 ```
 
 ### Hyper-Text Markup Language (HTML)
 
-HTML is a collection of simple `<tags>`
+HTML ist eine Sammlung von einfachen `<tags>`
 
-You only need to know a few to get started:
+Sie müssen nur ein paar wissen, um loszulegen:
 
- - `<h1>`Headings`</h1>` (there are 6 heading levels, from `<h1>` to `<h6>`)
- - `<p>`Paragraphs`</p>`
- - `<em>`Emphasis`</em>`
- - `<strong>`Strong importance`</strong>`
- - Images: `<img src="cat.jpg" alt="My cat">`
+ - `<h1>`Titel`</h1>` (es gibt sechs Levels an Titeln, von `<h1>` bis `<h6>`)
+ - `<p>`Abschnitte`</p>`
+ - `<em>`Hervorhebungen`</em>`
+ - `<strong>`Wichtige Informationen`</strong>`
+ - Bilder: `<img src="katze.jpg" alt="Meine Katze">`
  - `<a href="http://google.com">Links</a>`
 
 
-### HTML rules
+### HTML Regeln
 
-There are a few simple rules:
+Es gibt ein paar einfache Regeln:
 
 
-#### Opening & closing tags
+#### Öffnen und Schliessen von Tags
 
-Tags wrap around the content they describe:
-
-```
-<tag>content</tag>
-```
-
-***WRONG***
+Tags verpacken den Inhalt, den sie beschreiben:
 
 ```
-<p>In Xanadu did Kubla Khan
-<p>A stately pleasure-dome decree
+<tag>Inhalt</tag>
 ```
 
-***WRONG***
+***FALSCH***
 
 ```
-<p>In Xanadu did Kubla Khan</div>
+<p>In Xanadu hat Kubla Khan
+<p>Ein stattliches Vergnügungs-Dom-Dekret
 ```
 
-***RIGHT***
+***FALSCH***
 
 ```
-<p>In Xanadu did Kubla Khan</p>
+<p>In Xanadu hat Kubla Khan</div>
 ```
 
-Some tags are 'self-closing', because they don't wrap around content:
+***RICHTIG***
 
 ```
-<img src="filename.jpg" alt="Image description">
+<p>In Xanadu hat Kubla Khan</p>
 ```
 
-
-#### Nesting tags
-
-Tags should be properly nested
-
-***WRONG***
+Einige Tags sind selbstschliessend, weil sie sich nicht um den Inhalt wickeln:
 
 ```
-<p>In <strong>Xanadu did Kubla Khan</p>
-```
-
-***WRONG***
-
-```
-<p>In <strong>Xanadu</p> did Kubla Khan</strong>
-```
-
-***RIGHT***
-
-```
-<p>In <strong>Xanadu</strong> did Kubla Khan</p>
+<img src="bild.jpg" alt="Bild-Beschreibung, falls Bilder im Browser nicht dargestellt werden" title="Bild-Beschreibung als Tooltip"/>
 ```
 
 
-#### Case
+#### Tags verschachteln
 
-Tags should match case (just use lower-case)
+Tags sollten richtig verschachtelt sein
 
-Note that this isn't a strict rule like the previous two, but should still be adhered to
-
-***WRONG***
+***FALSCH***
 
 ```
-<STRONG>In Xanadu did Kubla Khan</strong>
+<p>In <strong>Xanadu hat Kubla Khan</p>
 ```
 
-***WRONG***
+***FALSCH***
 
 ```
-<STRONG>In Xanadu did Kubla Khan</STRONG>
+<p>In <strong>Xanadu</p> hat Kubla Khan</strong>
 ```
 
-***RIGHT***
+***RICHTIG***
 
 ```
-<strong>In Xanadu did Kubla Khan</strong>
+<p>In <strong>Xanadu</strong> hat Kubla Khan</p>
 ```
 
 
-### Attributes
+#### Gross-/Kleinschreibung
 
-Extra information for a tag can be given with attributes in the opening tag
+Tags sollte die gleiche Schreibweise haben (am Besten nur Kleinbuchstaben verwenden)
+
+Beachten Sie, dass dies keine strenge Regel ist, wie die vorherigen zwei, jedoch sollte sie immer eingehalten werden.
+
+***FALSCH***
 
 ```
-<a href="http://google.com">Go to Google</a>
-<a href="http://bing.com" title="A search engine">Bing is here</a>
-<img src="cat.jpg" alt="My cat">
+<STRONG>In Xanadu hat Kubla Khan</strong>
+```
+
+***FALSCH***
+
+```
+<STRONG>In Xanadu hat Kubla Khan</STRONG>
+```
+
+***RICHTIG***
+
+```
+<strong>In Xanadu hat Kubla Khan</strong>
 ```
 
 
-### Classes and IDs
+### Attribute
 
-Sometimes you'll want to add styling or interactivity to only certain parts of a page
+Zusätzliche Informationen für ein Tag können mit Attributen im Eröffnungs-Tag angegeben werden
 
-For example, you might want to make a paragraph look bigger
+```
+<a href="http://google.com">Mit Google suchen</a>
+<a href="http://bing.com" title="Eine Suchmaschine">Mit Bing suchen</a>
+<img src="katze.jpg" alt="Meine Katze" title="Meine Katze"/>
+```
 
-We can target specific HTML elements through their `id` or `class` attributes
+
+### Klassen und IDs
+
+Manchmal möchten Sie Styling oder Interaktivität nur zu bestimmten Teilen einer Seite hinzufügen
+
+Zum Beispiel möchten Sie vielleicht einen Absatz grösser aussehen lassen
+
+Wir können spezifische HTML-Elemente durch ihre `id` oder` class` Attribute ansprechen
 
 ```
 <p id="intro">Lorem ipsum dolor sit amet</p>
-<p class="example">Lorem ipsum dolor sit amet</p>
+<p class="beispiel">Lorem ipsum dolor sit amet</p>
 ```
 
 #### IDs
 
-When do you add an ID?
+Wann fügen Sie eine ID hinzu?
 
-A type of element that occurs only once on the page
+Ein Element, das nur einmal auf der Seite auftritt
 
-e.g. a page header, footer, navigation and main content area
+z.B. Eine Seitenüberschrift, Fusszeile, Navigation und Hauptinhaltsbereich
 
 ```
 <nav id="site-navigation">
-    â€¦
+    ...
 </nav>
 ```
 
-#### Classes
+#### Klassen
 
-When do you add a class?
+Wann fügen Sie eine Klasse hinzu?
 
-On elements that may be repeated throughout a page
+Bei Elementen, die auf einer Seite wiederholt auftauchen können
 
 ```
 <article class="news">
-    â€¦
+    ...
 </article>
 ```
 
 
-#### Using classes and IDs
+#### Klassen und IDs benutzen
 
-When naming classes and IDs, don't use spaces - hyphens and underscores are fine
+Bei der Benennung von Klassen und IDs, verwenden Sie keine Leerzeichen. Bindestriche und Unterstriche sind in Ordnung.
 
-Any element can have more than one class (separated by spaces)
+Jedes Element kann mehr als eine Klasse haben (durch Leerzeichen getrennt)
 
-An element can only have one ID
+Ein Element kann nur eine ID haben
 
-Each ID should only be used once on each page
-
-
-### Marking up with HTML
-
-HTML has a limited number of tags, as it was originally designed for long, linear technical documents
-
-It is now used for many things - there aren't enough tags for every possible scenario
-
-How do you decide which HTML tag to use?
-
-Tags are semantic - they have different meanings
-
-There is no right or wrong answer
-
-View the source code for websites you visit
+Jede ID darf nur einmal auf jeder Seite verwendet werden
 
 
-### Example
+### Mit HTML beschreiben
 
-An example HTML page:
+HTML hat eine begrenzte Anzahl von Tags, weil es ursprünglich für lange, lineare technische Dokumente entworfen wurde
+
+Es wird jetzt für viele Dinge verwendet, aber es gibt nicht genug Tags für jedes mögliche Szenario
+
+Wie entscheiden Sie, welches HTML-Tag zu verwenden ist?
+
+Tags sind semantisch - sie haben unterschiedliche Bedeutungen
+
+Es gibt keine richtige oder falsche Antwort
+
+Sehen Sie sich den Quellcode anderer Websites an, die Sie besuchen
+
+### Beispiel
+
+Eine Beispiel HTML-Seite:
 
 ```
 <html>
     <head>
-        <title>My web page about biscuits</title>
+        <title>Meine Website über Kekse</title>
     </head>
     <body>
-        <h1>Best Biscuits</h1>
-        <p id="intro">This is a list of the best biscuits</p>
-        <ul class="biscuits">
-            <li>Chocolate Hobnob</li>
-            <li class="ginger">Ginger Nut</li>
+        <h1>Beste Kekse</h1>
+        <p id="intro">Dies ist eine Liste der besten Kekse</p>
+        <ul class="kekse">
+            <li>Schokoladenkekse</li>
+            <li class="ingwer">Ingwer-Nuss-Kekse</li>
         </ul>
     </body>
 </html>
@@ -312,39 +311,39 @@ An example HTML page:
 
 #### `<head>`
 
-Contains metadata about the page
+Enthält Metadaten über die Seite
 
-Where you add the page title, description, and any other relevant information
+Wo Sie den Seitentitel, die Beschreibung und alle anderen relevanten Informationen hinzufügen
 
-Not rendered into the page itself
+Wird nicht auf der Seite selbst dargestellt
 
 
 #### `<body>`
 
-Contains the page content
+Enthält den Seiteninhalt
 
-Anything you put here will be rendered by the browser
-
-
-### Validation
-
-#### What is it?
-
-Checking the validity of the code (have you followed the rules?)
-
-Make sure sites adhere to the W3C standards
+Alles, was Sie hier eintragen, wird vom Browser gerendert
 
 
-#### Why bother?
+### Validierung
 
-It will eliminate 90% of simple rendering bugs immediately
+#### Was ist das?
 
-Accessibility - With compliant code, any browsing device can render it
+Überprüfen Sie die Gültigkeit des Codes (haben Sie die Regeln befolgt?)
+
+Stellen Sie sicher, dass sich die Webseiten an den W3C-Standard halten
+
+
+#### Warum die Mühe?
+
+Es wird 90% der einfachen Rendering Bugs sofort zu beseitigen
+
+Zugänglichkeit - Mit kompatiblen Code kann jedes Browsing-Gerät es rendern
 
  - [http://validator.w3.org/](http://validator.w3.org/)
 
 
-***Further information:***
+***Weitere Informationen:***
 
  - [http://www.htmldog.com/](http://www.htmldog.com/)
  - [https://www.codecademy.com/tracks/web](https://www.codecademy.com/tracks/web)
@@ -353,43 +352,43 @@ Accessibility - With compliant code, any browsing device can render it
 
 ## CSS
 
-CSS makes pages pretty
+CSS macht Seiten hübsch
 
- - HTML lets us add content - text, images and video
- - CSS adds style - layout, colours, fonts
+ - HTML lässt uns Inhalte hinzufügen - Text, Bilder und Videos
+ - CSS fügt Stil hinzu - Layout, Farben, Schriftarten
 
-All aspects of design and layout are covered by CSS
+Alle Aspekte von Design und Layout werden von CSS abgedeckt
 
- - Layout
- - Colour
- - Typography
- - Background images
- - Borders
- - Shadows
- - Animation
+  - Layout
+  - Farbe
+  - Typografie
+  - Hintergrundbilder
+  - Grenzen
+  - Schatten
+  - Animation
 
 
-### Adding CSS
+### CSS hinzufügen
 
-Assuming we want to style the following HTML page:
+Angenommen, wir wollen die folgende HTML-Seite gestalten:
 
 ```
 <html>
     <head>
-        <title>My web page about biscuits</title>
+        <title>Meine Website über Kekse</title>
     </head>
     <body>
-        <h1>Best Biscuits</h1>
-        <p id="intro">This is a list of the best biscuits</p>
-        <ul class="biscuits">
-            <li>Chocolate Hobnob</li>
-            <li class="ginger">Ginger Nut</li>
+        <h1>Beste Kekse</h1>
+        <p id="intro">Dies ist eine Liste der besten Kekse</p>
+        <ul class="kekse">
+            <li>Schokoladenkekse</li>
+            <li class="ingwer">Ingwer-Nuss-Kekse</li>
         </ul>
     </body>
 </html>
 ```
 
-#### Styling by tag name
+#### Styling nach Tag-Namen
 
 ```
 h1 {
@@ -398,7 +397,7 @@ h1 {
 ```
 
 
-#### Styling by ID
+#### Styling über die ID
 
 ```
 #intro {
@@ -407,16 +406,16 @@ h1 {
 ```
 
 
-#### Styling by Class
+#### Styling über die Klasse
 
 ```
-.ginger {
+.ingwer {
     color: orange;
 }
 ```
 
 
-#### Styling multiple elements
+#### Styling mehrerer Elemente
 
 ```
 li {
@@ -425,18 +424,18 @@ li {
 ```
 
 
-#### Styling things inside of other things
+#### Styling von Dingen in anderen Dingen
 
 ```
-.biscuits li {
+.kekse li {
     background: green;
 }
 ```
 
 
-#### Grouping styles
+#### Stile gruppieren
 
-Instead of separate styles for everything:
+Statt getrennter Stile für alles:
 
 ```
 p {
@@ -447,7 +446,7 @@ h1 {
 }
 ```
 
-You can combine styles:
+Können Sie die Stile kombinieren:
 
 ```
 p, h1 {
@@ -455,17 +454,17 @@ p, h1 {
 }
 ```
 
-(This will apply to all `<p>` and `<h1>` elements)
+(Dies wirkt sich auf alle `<p>` und `<h1>` Elemente aus)
 
 
-### Applying CSS
+### CSS anwenden
 
-#### CSS inline (in an HTML Page)
+#### CSS Inline (in einer HTML-Seite; nicht empfohlen!)
 
 ```
 <html>
     <head>
-        <title>My Page</title>
+        <title>Meine Seite</title>
         <style>
             h1 {
                 background-color: purple;
@@ -474,24 +473,24 @@ p, h1 {
         </style>
     </head>
     <body>
-        <h1>Hello World</h1>
+        <h1>Hallo Welt</h1>
     </body>
 </html>
 ```
 
 
-#### CSS in a separate file
+#### CSS in einer separaten Datei (so wird's gemacht!)
 
 index.html
 
 ```
 <html>
     <head>
-        <title>My Page</title>
+        <title>Meine Seite</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Hello World</h1>
+        <h1>Hallo Welt</h1>
     </body>
 </html>
 ```
@@ -504,39 +503,39 @@ h1 {
 }
 ```
 
-***Further information:***
+***Weitere Informationen:***
 
  - [http://www.htmldog.com/](http://www.htmldog.com/)
  - [https://www.codecademy.com/tracks/web](https://www.codecademy.com/tracks/web)
  - [http://learn.shayhowe.com/html-css/](http://learn.shayhowe.com/html-css/)
 
 
-## Page layout with CSS
+## Seitenlayout mit CSS
 
-### Block and Inline Elements
+### Block- und Inline-Elemente
 
-It's important to know the difference between the two
-
-
-### Block Elements:
-
-`<h1>`-`<h6>`, `<p>`, `<ul>`, `<ol>`, `<li>`, `<div>`, `<table>`, `<form>`, etc
-
- - sit on their own line
- - fill 100% of page width
+Es ist wichtig, den Unterschied zwischen den beiden zu kennen
 
 
-###Â Inline elements
+### Block-Elemente:
 
-`<a>`, `<em>`, `<strong>`, `<span>`, etc
+`<h1>`-`<h6>`, `<p>`, `<ul>`, `<ol>`, `<li>`, `<div>`, `<table>`, `<form>`, etc.
 
- - Will sit next to one another on the same line
- - Don't always automatically receive all CSS styles (padding/margin/width/height etc) - this can be confusing!
- - Putting block-level elements within an inline element (such as a link) can lead to unexpected results
+ - haben ihre eigene Zeile
+ - nehmen 100% der Seitenbreite ein, falls nicht anders definiert
 
-Easy to alter with CSS - `display: block` or `display: inline`
 
-See:
+### Inline-Elemente
+
+`<a>`, `<em>`, `<strong>`, `<span>`, etc.
+
+  - sitzen nebeneinander auf der gleichen Linie
+  - bekommen nicht immer automatisch alle CSS-Styles (padding / margin / width / height etc.) - das kann verwirrend sein!
+  - das Einfügen von Block-Elementen innerhalb eines Inline-Elements (wie zB ein Link) kann zu unerwarteten Ergebnissen führen
+  
+Einfach mit CSS anpassen - `display: block` oder `display: inline`
+
+Siehe:
 
  - [http://www.quirksmode.org/css/display.html](http://www.quirksmode.org/css/display.html)
  - [http://learnlayout.com/inline-block.html](http://learnlayout.com/inline-block.html)
@@ -544,16 +543,16 @@ See:
 
 ### Layout
 
-The main CSS properties we use for layout are `display`, `float` and `position`
+Die wichtigsten CSS-Eigenschaften, die wir für das Layout verwenden, sind `display`, `float` und `position`
 
-A great tutorial:
+Ein grossartiges Tutorial:
 
  - [http://learnlayout.com/](http://learnlayout.com/)
 
 
-### Positioning
+### Positionierung
 
-By default, all HTML elements have a CSS position attribute of `static`
+Standardmässig haben alle HTML-Elemente ein CSS-Positionsattribut von `static`
 
 ```
 <div id="main">...</div>
@@ -565,13 +564,13 @@ By default, all HTML elements have a CSS position attribute of `static`
 #main,
 #sidebar,
 #footer {
-  position: static; /* this is the default value */
+  position: static; /* dies ist der Standardwert */
 }
 ```
 
-These block HTML elements will be on their own line
+Diese Block-HTML-Elemente werden auf ihrer eigenen Zeile sein
 
-Changing the CSS position attribute allows you to set top/bottom/left/right values - relative to the `<body>`, or a parent container that has `position: relative` applied:
+Durch das Ändern des CSS-Positionsattributs können Sie die oberen / unteren / linken / rechten Werte einstellen - relativ zum `<body>`, oder einen übergeordneten Container der die Definition `position: relative` besitzt:
 
 ```
 #main {
@@ -589,17 +588,17 @@ Changing the CSS position attribute allows you to set top/bottom/left/right valu
 }
 ```
 
-A page laid out using `position: absolute` has its limits
+Eine Seite, die mit `position: absolute` ausgelegt ist, hat ihre Grenzen
 
- - 'fixed' heights of content
- - layout doesn't adapt to the content
+  - "feste" Höhen des Inhalts
+  - das Layout passt sich nicht dem Inhalt an
 
-`position` is useful, but not for main page layout
+`Position` ist nützlich, aber nicht für das Hauptseitenlayout
 
 
 ### Floats
 
-HTML elements can have a float set with CSS - `float: left;` or `float: right;`
+HTML-Elemente können mit CSS als schwebend definiert werden - `float: left;` oder `float: right;`
 
 ```
 #main {
@@ -615,26 +614,25 @@ HTML elements can have a float set with CSS - `float: left;` or `float: right;`
 }
 ```
 
-A floated element is shifted to the left or right of its container element as far as possible
+Ein schwebendes Element wird so weit wie möglich nach links oder rechts von seinem Containerelement verschoben
 
-If we float another element in the same direction, it will be shifted until its edge reaches the edge of the first floating element
+Wenn wir ein anderes Element in die gleiche Richtung schweben, wird es verschoben, bis sein Rand den Rand des ersten schwimmenden Elements erreicht
 
-Unfloated content flows and wraps around floated elements
+Nicht-schwebender Inhalt fliesst um schwebende Elemente herum
 
-Floats are better that positioning for layout - unlike absolutely positioned elements, floated elements remain in the document flow, so can expand with content
+Schwimmende Elemente sind besser, als die starre Positionierung für Layout - im Gegensatz zu absolut positionierten Elementen, beliben schwebende Elemente im Dokumentenfluss und erlauben es den Inhalt auf einfacher Weise zu erweitern
 
-You should (almost) always set widths on floated elements, although elements with inherent widths (e.g. images) don't need a width set
+Sie sollten (fast) immer eine Breite bei schwebenden Elementen setzen, obwohl Elemente mit inhärenten Breiten (z.B. Bilder) keine Breite benötigen
 
+#### Floats steuern
 
-#### Controlling floats
-
-If we want to control how many floated elements appear on a line, we can wrap a div element around the floated content, and set a width:
+Wenn wir steuern wollen, wie viele Floating-Elemente auf einer Linie erscheinen, können wir ein div-Element um den floatenen Inhalt wickeln und eine Breite setzen:
 
 ```
 <div id="block-container">
-  <div class="block">block 1</div>
+  <div class="block">Block 1</div>
   ...
-  <div class="block">block 10</div>
+  <div class="block">Block 10</div>
 </div>
 ```
 
@@ -649,15 +647,15 @@ If we want to control how many floated elements appear on a line, we can wrap a 
 }
 ```
 
-#### Two main uses for floats:
+#### Zwei Hauptanwendungen für Floats:
 
- - page layout
- - layout of elements within a block
+ - Seitenlayout
+ - Layout von Elementen innerhalb eines Blocks
 
 
-#### float: centre?
+#### float: center?
 
-You can't float an element to the centre - there are other techniques for that
+Sie können kein Element im Mittelpunkt schweben lassen - dafür gibt es noch andere Techniken
 
 ```
 body {
@@ -667,38 +665,38 @@ body {
 ```
 
 
-## Responsive websites
+## Responsive Webseiten
 
-We can no longer assume that most people primarily use a desktop or laptop computer to browse the internet
+Wir können nicht mehr davon ausgehen, dass die meisten Menschen in erster Linie einen Desktop- oder Laptop-Computer verwenden, um das Internet zu durchsuchen
 
-People use a variety of internet browsers and operating systems
+Die Menschen nutzen eine Vielzahl von Internet-Browsern und Betriebssystemen
 
-Nowadays most people have at least one other device that they use to browse the internet
+Heutzutage haben die meisten Leute mindestens ein anderes Gerät, das sie benutzen, um das Internet zu durchsuchen
 
-These devices are increasingly being used in place of 'traditional' browsers
+Diese Geräte werden zunehmend anstelle von "traditionellen" Browsern eingesetzt
 
-We should ensure that our websites work across all commonly used desktop browsers
+Wir müssen sicherstellen, dass unsere Webseiten über alle gängigen Browser hinweg arbeiten
 
-We should take non-desktop browsers/devices into consideration when building a website
+Bei der Erstellung einer Website müssen wir neben Desktop-Browsern auch Mobile-Browser/-Geräte berücksichtigen
 
-These devices have different display resolutions (or browser dimensions)
+Diese Geräte haben unterschiedliche Anzeigeauflösungen (oder Browser-Dimensionen)
 
-These devices also have different methods of interaction
+Diese Geräte haben auch unterschiedliche Methoden der Interaktion
 
 
-### Media queries
+### Medien-Abfragen
 
-You can specify CSS for different browser resolutions (or dimensions) using CSS `@media` queries.
+Sie können CSS für verschiedene Browserauflösungen (oder Dimensionen) mit CSS `@media` Abfragen angeben.
 
-For a typical website you might create three sets of styles:
+Für eine typische Website können Sie drei Sätze von Stilen erstellen:
 
- - one set of generic page styles, used on every device/browser
- - another set of styles just for low-resolution (mobile) browsers
- - a third set just for higher-resolution (desktop/tablet) browsers
+  - einen Satz generischer Seitenstile, die auf jedem Gerät/Browser verwendet werden
+  - einen weiteren Satz von Stilen für Low-Resolution (mobile) Browser
+  - einen dritten Satz nur für hochauflösende (Desktop/Tablet) Browser
 
-The point at which the design 'snaps' from one layout to the next is commonly known as the 'break point'
+Der Punkt, an dem das Design von einem Layout zum nächsten wechselt, wird allgemein als "Bruchpunkt" bezeichnet,
 
-These media queries can appear inline in the CSS:
+Diese Medien-Abfragen können im CSS inline erscheinen:
 
 ```
 @media (max-width: 480px) {
@@ -710,44 +708,44 @@ These media queries can appear inline in the CSS:
 }
 ```
 
-Styles put within the `@media` query will only be used if the specified conditions are true.
+Styles, die in die `@media`-Abfrage geschrieben werden, werden nur verwendet, wenn die angegebenen Bedingungen wahr sind.
 
-Using `@media` queries to create different layouts for different resolutions (or browser dimensions) is generally known as responsive web design
+Die Verwendung von `@media` Abfragen, um verschiedene Layouts für verschiedene Auflösungen (oder Browser-Dimensionen) zu erstellen, ist allgemein als Responsive Webdesign bekannt
 
-Content layout should adapt to fit different browser sizes
+Das Layout der Inhalte sollte sich anpassen, um für verschiedene Browser-Grössen zu passen
 
 
-### Meta viewport
+### Meta Viewport
 
-You can control how a page renders in a (modern) mobile browser using a `<meta>` viewport declaration:
+Sie können steuern, wie eine Seite in einem (modernen) mobilen Browser mit einer `<meta>` Viewport-Deklaration rendert:
 
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 
-### Mobile first
+### Mobile zuerst
 
-It is possible to make an existing site more responsive by adding additional styles (within an `@media` query) for mobile devices
+Es ist möglich, eine bestehende Website responsive zu machen, indem Sie zusätzliche Stile (innerhalb einer `@media` Abfrage) für mobile Geräte hinzufügen
 
-Bandwidth issues for desktop browsers are less relevant nowadays with broadband, but is still a concern for mobile browsers
+Bandbreitenprobleme für Desktop-Browser sind heutzutage aufgrund von Breitbandleitungen weniger relevant, sind teils aber immer noch ein Anliegen für mobile Browser
 
-Using `@media` queries means a mobile must download an entire desktop site, and then extra styles
+Die Benutzung von `@media` Abfragen bedeutet, dass ein Mobiltelefon eine ganze Desktop-Seite herunterladen muss plus die zusätzlichen Styles
 
-It may make more sense to first create a basic design for mobile, and then add extra layout styles for desktop browsers
+Es kann sinnvoller sein, zuerst ein grundlegendes Design für mobile zu erstellen und dann zusätzliche Layout-Stile für Desktop-Browser hinzuzufügen
 
-This approach has become known as mobile-first
+Dieser Ansatz ist bekannt als mobile-first
 
-This approach is device-inclusive
+Dieser Ansatz ist geräteintegrativ
 
-The default set of styles sent to every browser/device should be for the most basic page layout
+Der Standard-Satz von Stilen, die an jeden Browser und jedes Gerät gesendet werden, sollte für das grundlegendste Seitenlayout sein
 
-In this capacity, a lack of `@media` query support should be seen as your first `@media` query
+In dieser Eigenschaft sollte ein Mangel an Ünterstütztung von `@media` Abfragen als Ihre erste `@media` Abfrage gesehen werden
 
-i.e. old browsers or devices don't support `@media` queries, so these devices receive the default mobile version
+D.h. alte Browser oder Geräte unterstützen keine `@media` Abfragen, so dass diese Geräte die Standard-Mobile-Version erhalten
 
 
-***Further information:***
+***Weitere Informationen:***
 
  - [http://blog.cloudfour.com/responsive-design-for-apps-part-1/](http://blog.cloudfour.com/responsive-design-for-apps-part-1/)
  - [http://www.webdesignerdepot.com/2011/09/the-ultimate-responsive-web-design-roundup/](http://www.webdesignerdepot.com/2011/09/the-ultimate-responsive-web-design-roundup/)
@@ -759,75 +757,74 @@ i.e. old browsers or devices don't support `@media` queries, so these devices re
 
 
 
-## Web Standards
+## Web-Standards
 
-### What are web standards?
+### Was sind Web-Standards?
 
-An 'agreed' specification for HTML, CSS and JavaScript
+Eine "vereinbarte" Spezifikation für HTML, CSS und JavaScript
 
- - How we should write code
- - How web browsers should read and render code
+  - Wie sollten wir Code schreiben
+  - Wie Web-Browser lesen und rendern Code
 
-Web standards allow web developers to focus on their code
+Web-Standards erlauben Web-Entwickler, sich auf ihren Code zu konzentrieren
 
-If the code is valid, the page should render in a web browser as expected
+Wenn der Code gültig ist, sollte die Seite in einem Webbrowser wie erwartet rendern
 
-A good example comes from the history of the `<img>` element:
-
- - [A long digression into how standards are made](http://diveintohtml5.info/past.html#history-of-the-img-element)
-
-
-#### A short summary of web standards
-
- - Use valid, semantic HTML for content
- - Use CSS for layout
- - Use JavaScript for behaviour
+Ein gutes Beispiel kommt aus der Geschichte des `<img>` Elementes:
+ - [Eine lange Abschweifung, wie Standards gemacht werden](http://diveintohtml5.info/past.html#history-of-the-img-element)
 
 
-### Web standards and accessibility
+#### Eine kurze Zusammenfassung der Web-Standards
 
-Web standards define rules for accessibility
+  - Verwenden Sie gültiges, semantisches HTML für Inhalt
+  - Verwenden Sie CSS für das Layout
+  - Verwenden Sie JavaScript um das Verhalten der Webseite zu steuern
 
-> "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect."
+
+### Web-Standards und Zugänglichkeit
+
+Web-Standards definieren Regeln für die Zugänglichkeit
+
+> "Die Macht des Internets liegt in seiner Universalität. Der Zugang für jedermann unabhängig von Behinderung ist ein wesentlicher Aspekt."
 >
-> â€” [W3C Web Content Accessibility Guidelines](http://www.w3.org/TR/WCAG20/)
+> [W3C Web Content Accessibility Guidelines](http://www.w3.org/TR/WCAG20/)
 
 
-### Why are web standards important?
+### Warum sind Web-Standards wichtig?
 
-Tim Berners-Lee created HTML as a language to help represent information in a consistent manner
+Tim Berners-Lee schuf HTML als Sprache, um die Informationen in einer konsistenten Weise darzustellen
 
-If everyone can agree on a shared vocabulary, then a web browser should be able to interpret what I have created and display it to you in a predictable way
+Wenn jeder sich auf ein gemeinsames Vokabular einigen kann, dann sollte ein Webbrowser in der Lage sein zu interpretieren, was ich erstellt habe und es Ihnen in einer vorhersagbaren Weise zeigen
 
-This was overseen by the W3C, who defined standards that should be followed by all
+Dies wurde von der W3C beaufsichtigt, die Standards definiert, die von allen befolgt werden sollten
 
-This was a good plan in theory - until the web became more popular than anyone could have imagined
+In der Theorie war das ein guter Plan - bis das Web populärer wurde, als man es sich vorstellen konnte
 
-In the early days of the web, competing web browsers were created, and in an attempt to win market share, numerous new features were introduced that weren't available in rival browsers. New elements, new ways to lay out and interact with web pages
+In den frühen Tagen des Internets wurden konkurrierende Webbrowser erstellt und in einem Versuch, Marktanteile zu gewinnen, wurden zahlreiche neue Features eingeführt, die in rivalisierenden Browsern nicht verfügbar waren. Neue Elemente, neue Wege zur Auslegung und Interaktion mit Webseiten
 
-On the one hand, this led to a great deal of innovation. Which, in theory, is a good thing. But in practice... it led to fragmentation in how browsers rendered HTML
+Dies führte einerseits zu einer Vielzahl von Innovationen. Das ist in der Theorie eine gute Sache. Aber in der Praxis ... es führte zu Fragmentierung, wie Browser HTML gerendert haben
 
-This fragmentation caused a great deal of problems for developers, and web users alike
+Diese Fragmentierung verursachte grosse Probleme für Entwickler und Webbenutzer gleichermassen
 
-To create a website that worked everywhere often meant creating the same thing twice, in two different ways. Or, more commonly, building a website and optimising it just for a single browser
+Um eine Website zu schaffen, die überall arbeitete, musste man oft die gleiche Sache zweimal, auf zwei verschiedene Arten machen. Oder häufiger den Aufbau einer Website und die Optimierung nur für einen einzigen Browser entwickeln
 
-Browser manufacturers wanted to implement new functionality, web developers wanted to be able to do that weren't possible in a browser, because of a lack of agreement for how to implement them
+Browser-Hersteller wollten neue Funktionalitäten implementieren, die Web-Entwickler nutzen wollten, was jedoch in einem Browser nicht möglich war, weil man sich nicht einigen konnte, wie man es implementiert
 
-Groups of developers formed collectives such as the Web Standards Project (WaSP) to convince rival browser manufacturers to embrace the common standards set out by the W3C, for the benefit of all
+Gruppen von Entwicklern bildeten Kollektive wie das Web Standards Project (WaSP), um konkurrierende Browser-Hersteller zu überzeugen, die gemeinsamen Standards des W3C zum Nutzen aller zu benutzen
 
-It took a number of years for their message to be heard, but eventually the major browser manufacturers realised the approach would benefit them too
+Es dauerte eine Reihe von Jahren bis ihre Botschaft erhört wurde, aber schliesslich haben die grossen Browser-Hersteller irgendwann realisiert, dass der Ansatz auch ihnen zugute kommen würde
 
 
-### Web standards today
+### Web-Standards heute
 
-Web standards are still relevant today - we have a range of desktop and mobile browsers
+Web-Standards sind heute relevanter denn je - wir haben eine Reihe von Desktop- und mobilen Browsern
 
-To ensure these browsers operate in a consistent manner they must continue to follow a mutually agreed set of design principles and rules
+Um sicherzustellen, dass diese Browser in einer konsistenten Weise arbeiten, müssen sie weiterhin einen gegenseitig vereinbarten Satz von Designprinzipien und Regeln befolgen
 
-To get anything built efficiently, developers need consensus. We need to know that what we build will work
+Um alles effizient zu machen, brauchen Entwickler einen Konsens. Wir müssen wissen, dass das, was wir bauen, funktionieren wird
 
-The difference today is, with web standards, we have some reassurance that this is indeed the case
+Der Unterschied heute ist, mit Web-Standards, haben wir einige Sicherheit, dass dies in der Tat der Fall ist
 
-The browser manufacturers themselves are now actively involved in the process of defining the new standards for HTML, CSS and JavaScript
+Die Browser-Hersteller selbst sind nun aktiv am Prozess der Definition der neuen Standards für HTML, CSS und JavaScript beteiligt
 
-They (mostly) follow agreed standards and conventions when creating these innovations, meaning innovative features can be reliably implemented to create an experience that works in any browser
+Sie folgen in der Regel vereinbarten Standards und Konventionen bei der Erstellung dieser Innovationen, d.h. innovative Funktionen können zuverlässig implementiert werden, um eine Erfahrung zu schaffen, die in jedem Browser funktioniert

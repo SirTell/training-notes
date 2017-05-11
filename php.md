@@ -1,84 +1,84 @@
-# PHP notes
+# PHP Notizen
 
-A few notes prepared while writing training courses...
-
-
-## Overview
-
-### Server-side processing
-
-When you visit (or request) a URL in your browser, there's a lot going on behind the scenes to render the page you see
-
-There are several steps to the rendering process, before the page you see is generated
-
-Various different technologies and languages serve specific roles in this process
-
-The rendering process can be split into two distinct categories, those on the client-side and those on the server-side
-
- - *Servers* are computers used to store data and host/generate web pages
- - *Clients* are computers distributed around the network that use the services provided by servers - typically a user's machine
-
-For example, a web browser is a program on a user's computer that requests data from a web server.
-
- - *Server-side processing* - takes place on the server
- - *Client-side processing* - takes place on your own machine
+Ein paar Notizen vorbereitet beim Schreiben von Schulungen ...
 
 
-### Programming & Markup
+## Übersicht
 
-A markup language (e.g. HTML) is static - it is used to dictate the appearance and format of the displayed information
+### Server-seitige Verarbeitung
 
-A programming language (e.g. PHP, JavaScript) is dynamic - it is used to perform specific tasks/actions such as filtering or manipulating data
+Wenn Sie eine URL in Ihrem Browser besuchen (oder anfordern), passiert viel hinter den Kulissen, damit Sie die Seite sehen
+
+Es gibt mehrere Schritte zum Rendering-Prozess, bevor die Seite, die Sie sehen, generiert wird
+
+Verschiedene Technologien und Sprachen erfüllen dabei spezifische Rollen
+
+Der Rendering-Prozess kann in zwei verschiedene Kategorien aufgeteilt werden, die auf der Client-Seite und die auf der Server-Seite
+
+  - *Server* sind Computer, die zum Speichern von Daten und zum Hosten / Erstellen von Webseiten verwendet werden
+  - *Clients* sind Computer, die um das Netzwerk verteilt sind und die Dienste nutzen, die von Servern bereitgestellt werden - in der Regel eine Maschine des Benutzers
+
+Beispielsweise ist ein Webbrowser ein Programm auf dem Computer eines Benutzers, der Daten von einem Webserver anfordert.
+
+  - *Server-seitige Verarbeitung* - findet auf dem Server statt
+  - *Client-seitige Verarbeitung* - erfolgt auf eigene Maschine
+
+
+### Programmierung & Markup
+
+Eine Markup-Sprache (z. B. HTML) ist statisch - sie wird verwendet, um das Aussehen und das Format der angezeigten Informationen zu diktieren
+
+Eine Programmiersprache (z. B. PHP, JavaScript) ist dynamisch - sie wird verwendet, um bestimmte Aufgaben / Aktionen wie das Filtern oder Manipulieren von Daten auszuführen
 
 
 ### PHP
 
-PHP is just one of many languages that can be used for server-side programming
+PHP ist nur eine von vielen Sprachen, die Sie für die serverseitige Programmierung verwendet werden können
 
-It is widely available on web servers
+Es ist weit verbreitet auf Webservern
 
-There are plenty of books and online documentation to aid your learning
+Es gibt viele Bücher und Online-Dokumentation, um Ihr Lernen zu unterstützen
 
-Lots of third-party resources - PHP scripts written by others freely available online
+Viele Drittanbieter-Ressourcen - PHP-Skripte von anderen frei online verfügbar geschrieben
 
-In use on numerous big websites
-
-
-### Getting started
-
-PHP needs to be run (parsed) by a web server
-
-If you open a PHP file in a web browser directly, you'll see the unprocessed code
-
-You need to run PHP scripts through a web server (typically Apache), the server will process the code and output the results
-
-Luckily, installation is easy. These can be installed separately, or together using something like WAMP, MAMP etc
-
-Apache is a continually running process on the server - think of it as a computer program that you never close
-
-Most web servers run a version of Linux. There are a number of advantages to Linux servers (over for example Windows-based servers). The most important one is that it's free!
+Im Einsatz auf zahlreichen grossen Webseiten
 
 
-### Advantages of server-side processing
+### Anfangen
 
-Imagine having a website made up of static HTML pages
+PHP muss von einem Webserver ausgeführt (geparst) werden
 
- - To edit any information you need HTML skills
- - To update the page structure, you need to do it in every file
- - You can't re-use the data anywhere else
- - You can't manipulate the data, e.g. To extract just the page titles as a list of links
+Wenn Sie eine PHP-Datei in einem Webbrowser direkt öffnen, sehen Sie den unverarbeiteten Code
 
-It makes sense to separate out data and logic from the presentation
+Sie müssen PHP-Skripte über einen Webserver (typischerweise Apache) ausführen, der Server verarbeitet den Code und gibt die Ergebnisse aus
 
- - Easier to manage any one aspect without having to touch the others
- - Separation of concerns
- - Data can be re-used elsewhere
- - Only have to have one 'template' file that contains how the content will be rendered
- - Data can be edited using a simple form - no HTML knowledge required
+Zum Glück ist die Installation einfach. Diese kann separat installiert werden, oder zusammen mit so etwas wie WAMP, MAMP etc.
 
-A few more reasons why server-side processing is useful:
+Apache ist ein kontinuierlich laufender Prozess auf dem Server - denken Sie an ein Computerprogramm, das Sie niemals beenden
 
- - Automate monotonous tasks: e.g. adding a date entry select from 1900 to 201x:
+Die meisten Web-Server benutzen eine Version von Linux. Es gibt eine Reihe von Vorteilen für Linux-Server (gegenüber z.B. Windows-basierten Servern). Das wichtigste ist, dass es kostenlos ist!
+
+
+### Vorteile der serverseitigen Verarbeitung
+
+Stellen Sie sich vor, eine Website zu haben, die sich aus statischen HTML-Seiten zusammensetzt
+
+  - Um alle Informationen zu bearbeiten, benötigen Sie HTML-Kenntnisse
+  - Um die Seitenstruktur zu aktualisieren, muss man jede Datei anpassen
+  - Sie können die Daten nicht anderswo wiederverwenden
+  - Man kann die Daten nicht manipulieren, z.B. um nur die Seitentitel als Links zu extrahieren
+
+Es ist sinnvoll, Daten und Logik aus der Präsentation zu trennen
+
+  - Dadurch ist es einfacher einen einzelnen Aspekt zu verändern, ohne die anderen zu berühren
+  - Trennung von Angelegenheiten
+  - Daten können an anderer Stelle wiederverwendet werden
+  - Nur eine 'Vorlage' Datei haben, die enthält, wie der Inhalt gerendert wird
+  - Daten können mit einem einfachen Formular editiert werden - kein HTML-Kenntnisse erforderlich
+
+Noch ein paar Gründe, warum die serverseitige Verarbeitung sinnvoll ist:
+
+  - Automatisieren von monotonen Aufgaben: z.B. Hinzufügen eines Datumseintrags von 1900 bis 201x:
 
 ```
 <option>1900<option>
@@ -86,69 +86,69 @@ A few more reasons why server-side processing is useful:
 <option>1902<option>
 ```
 
- - No way to automatically put today's date in to a web page
- - No way to automate tasks or generate content
- - File includes - the earliest form of server-side scripting (e.g. storing repetitive content in a separate file so you only need to write it once)
- - Display specific content only if certain conditions are met
- - Process the information entered into an HTML form
- - It can send emails
- - It can read and write files on the web server
- - It can read web pages (sometimes known as screen or data scraping)
- - It can interact with other web services through APIs
+  - Möglichkeit, das heutige Datum automatisch auf eine Webseite zu setzen
+  - Möglichkeit, Aufgaben zu automatisieren oder Inhalte zu erzeugen
+  - Datei Includes - die früheste Form des serverseitigen Skripts (z.B. das Speichern von sich wiederholenden Inhalten in einer separaten Datei, so dass Sie nur einmal schreiben müssen)
+  - Anzeige spezifischer Inhalte nur, wenn bestimmte Bedingungen erfüllt sind
+  - Verarbeiten Sie die in einem HTML-Formular eingegebenen Informationen
+  - Man kann E-Mails senden
+  - Man kann Dateien auf dem Webserver lesen und schreiben
+  - Man kann Webseiten lesen (manchmal auch als Screen- oder Data-Scraping bekannt)
+  - Man kann mit anderen Webdiensten über APIs interagieren
 
-etc... hopefully by now you've been convinced by the advantages of using a server-side language
+Etc ... hoffentlich sind Sie jetzt von den Vorteilen der Verwendung einer serverseitigen Sprache überzeugt
 
 
-## Fundamentals
+## Grundlagen
 
-### Getting started
+### Anfangen
 
-PHP code is identified by being placed within specific script tags:
+PHP-Code wird identifiziert, indem er in bestimmte Skript-Tags gesetzt wird:
 
 ```
 <?php
 
-  // PHP code goes here
+  // PHP hier zwischen
 
 ?>
 ```
 
-How to start using PHP:
+So starten Sie PHP:
 
- - Create a new file
- - Give it a file extension of .php (e.g. index.php)
- - (Or, change an existing file from .html to .php)
- - Write some PHP code within the tags <?php and ?>
- - View the public URL in a browser
+  - Erstellen Sie eine neue Datei
+  - Geben Sie ihm eine Dateierweiterung von .php (z. B. index.php)
+  - (Oder ändern eine vorhandene Datei von .html zu .php)
+  - Schreiben Sie einen PHP-Code innerhalb der Tags <?php und ?>
+  - Öffentliche URL in einem Browser anzeigen
 
-PHP code can be freely interspersed with normal HTML.
+PHP-Code kann frei mit normalem HTML durchsetzt werden.
 
-The PHP interpreter on the server reads the instructions and generates HTML that is sent to the browser
+Der PHP-Interpreter auf dem Server liest die Anweisungen und erzeugt HTML, das an den Browser gesendet wird
 
-A static HTML file might look like this:
+Eine statische HTML-Datei könnte wie folgt aussehen:
 
 ```
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The day today</title>
+    <title>Der heutige Tag</title>
   </head>
   <body>
-    <h1>What day is it today?</h1>
+    <h1>Welcher Tag ist heute?</h1>
   </body>
 </html>
 ```
 
-Add some PHP:
+Fügen Sie PHP hinzu:
 
 ```
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The day today</title>
+    <title>Der heutige Tag</title>
   </head>
   <body>
-    <h1>What day is it today?</h1>
+    <h1>Welcher Tag ist heute?</h1>
     <p>
     <?php
       echo date("l");
@@ -158,31 +158,31 @@ Add some PHP:
 </html>
 ```
 
-The server will interpret this PHP and generate:
+Der Server interpretiert das PHP und generiert:
 
 ```
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The day today</title>
+    <title>Der heutige Tag</title>
   </head>
   <body>
-    <h1>What day is it today?</h1>
+    <h1>Welcher Tag ist heute?</h1>
     <p>
-      Friday
+      Freitag
     </p>
   </body>
 </html>
 ```
 
-Some rules to note immediately:
+Einige Regeln, um sofort zu beachten:
 
- - When ending a PHP command, ensure you use a semi-colon to avoid an error (more on this later)
- - The `echo` command is used to insert content into the HTML page.
- - PHP is case sensitive
+  - Wenn Sie einen PHP-Befehl beenden, stellen Sie sicher, dass Sie ein Semikolon verwenden, um einen Fehler zu vermeiden (mehr dazu später)
+  - Der Befehl `echo` wird verwendet, um Inhalte in die HTML-Seite einzufügen.
+  - PHP unterscheidet bei Variablen- und Konstantennamen zwischen Gross-/Kleinschreibung
 
 
-### Variables
+### Variablen
 
 ```
 $x = 4;
@@ -192,11 +192,13 @@ echo $z;
 // $z === 14
 ```
 
-Using `=` to assign values to a variable
+Benutzen Sie `=` um einer Variablen einen Wert zuzuweisen
 
-Using `+` to add two variables together
+Benutzen Sie `+` um zwei Zahlenwerte zu addieren
 
-Using `===` to check the value of a variable
+Benutzen Sie `==` um zwei Werte von Variablen miteinander zu vergleichen (`0` ist in diesem Fall identisch mit `false`)
+
+Benutzen Sie `===` um zwei Werte von Variablen miteinander zu vergleichen und den Wert `0` dabei nicht als `false` interpretieren zu lassen
 
 ```
 $word1 = "hello";
@@ -211,7 +213,7 @@ echo $sentence;
 $sentence2 = $word1 . " " . $word2;
 // $sentence2 === "hello world"
 ```
-Using `.` to concatenate strings and variables
+Benutzen Sie `.` um Strings und Variablen aneinander zu hängen
 
 ```
 $x = 3;
@@ -225,31 +227,31 @@ $z = $x . $y;
 echo $z;
 // $z === "35"
 ```
-Note the difference in using `.` or `+` to concatenate or add variables
+Beachten Sie die Unterschieden zwischen `.` und `+`
 
 
-#### What is a variable?
+#### Was ist eine Variable?
 
-A variable is a container, or a reference to something we want the computer to remember (we say to store in memory)
+Eine Variable ist ein Container oder ein Verweis auf etwas, das wir speichern wollen
 
-In the cases we've just seen, it is a number or a string of text
+In den Fällen, die wir gerade gesehen haben, ist es eine Zahl oder eine Zeichenfolge (String)
 
-We can assign a value to a variable, and can change or read its value at any time
+Wir können einer Variablen einen Wert zuordnen und können jederzeit ihren Wert ändern oder ablesen
 
-In PHP, all variable names start with the $ symbol.
+In PHP beginnen alle Variablennamen mit dem Symbol $.
 
-What you call the variable isn't important!
+Wie man die Variable benennt, ist nicht wichtig!
 
-Variable names are case sensitive, and can't contain spaces or hyphens.
+Bei Variablennamen wird zwischen Gross-/Kleinschreibung unterschieden. Zudem dürfen Sie keine Leerzeichen oder Bindestriche enthalten.
 
-To use mulitple words in a variable name, the convention is either to `$use_underscores_to_seperate`, or `$camelCaseVariableNames`
-(try to stick to one convention or the other)
+Um mehrere Wörter in einem Variablennamen zu verwenden, ist die Konvention entweder zu `$use_underscores_to_seperate` oder` $camelCaseVariableNames`
+(Versuchen Sie, bei einer Konvention zu bleiben)
 
-Be careful when re-using variable names, using the same one twice will overwrite the old value stored in the variable
+Seien Sie vorsichtig bei der Wiederverwendung von Variablennamen, der in der Variablen gespeicherte alte Wert wird dann überschrieben
 
-PHP will create a new variable (place in its memory) for any name it doesnâ€™t recognize as a previously used variable
+PHP wird eine neue Variable (Platz in seinem Speicher) für jeden Namen erstellen, den es nicht als vorher verwendete Variable erkennt
 
-Variables can be used to store different types of data:
+Variablen können verwendet werden, um verschiedene Arten von Daten zu speichern:
 
  - Integer: `$num = 4;`
  - Float: `$number = 3.14;`
@@ -257,13 +259,13 @@ Variables can be used to store different types of data:
  - Boolean: `$something = true;` // or `false`
 
 
-### Quotes
+### Anführungszeichen
 
-Use quotes (single or double) to surround standard text
+Verwenden Sie Anführungszeichen (einzeln oder doppelt), um Standardtext zu umgeben
 
-Quote marks around strings of text differentiates these strings from program commands like functions - more on this later
+Anführungszeichen um Strings von Text unterscheidet diese Strings aus Programmbefehlen wie Funktionen - mehr dazu später
 
-There is a difference between using single-quotes and double-quotes: when a variable name appears in text surrounded by double quotes, its current value is automatically put into the string
+Es gibt einen Unterschied zwischen der Verwendung von Single-Quotes und Double-Quotes: Wenn ein Variablenname in Text erscheint, der von doppelten Anführungszeichen umgeben ist, wird sein aktueller Wert automatisch in den String gesetzt
 
 ```
 $name = "Pete";
@@ -272,59 +274,62 @@ echo "Hello $name";
 ```
 
 
-### Comments
+### Kommentare
 
-Single-line comments which begin with two forward slashes (`//`) or an octothorpe - hash/pound - sign (`#`).
+Einzeilenkommentare fangen mit `//` oder `#` an.
 
 ```
-// one-line comment
-# another one-line comment
+// Einzeilenkommentar
+# Ein weiterer Kommentar
 ```
 
-Text to the right of these is ignored by the interpreter, until we start a new line.
+Text rechts davon wird vom Interpreter ignoriert, bis wir eine neue Zeile starten.
 
-Multiline comments use `/*` and `*/` (just like JavaScript and CSS)
+Mehrzeilenkommentare benutzen `/*` und `*/` (genau wie bei JavaScript und CSS)
 
 ```
 /*
-  Multi-line
-  comment
+  Mehrzeilen-
+  kommentar
 */
 ```
 
 
-### Operators
+### Operatoren
 
-These are used in PHP to check or assign a value to variables
+Diese werden in PHP verwendet, um Variablen zu überprüfen oder zuzuordnen
 
-We've seen a few examples already, the rest will come in useful as we continue to learn
+Wir haben schon ein paar Beispiele gesehen, der Rest wird nützlich sein, wenn wir weiter lernen
 
- - `=` asign a value to a variable
- - `.` concatenate two values
- - `+` add two values
-
-
-#### Comparison operators
-
- - `===` check if something is identical to something else
- - `!==` check if something is not identical to something else
-
-(We tend to use three === more often than two, it also checks the 'type' of the variable and is therefore more precise and so less likely to lead to unexpected errors)
-
- - `>` check if something is greater than something else
- - `<` check if something is less than something else
- - `>=` check if something is greater than or equal to something else
- - `<=` check if something is less than or equal to something else
+ - `=` einen Wert einer Variable zuweisen
+ - `.` zwei Werte miteinander verbinden
+ - `+` zwei Werte miteinander addieren
 
 
-#### Maths operators
+#### Vergleichs-Operatoren
 
- - `+` add
- - `-` subtract
- - `*` multiply
- - `/` divide
+ - `==` prüfen, ob etwas identisch zu etwas anderem ist (nicht Typen-sicher)
+ - `!=` prüfen, ob etwas nicht identisch zu etwas anderem ist (nicht Typen-sicher)
+ - `===` prüfen, ob etwas identisch zu etwas anderem ist (Typen-sicher)
+ - `!==` prüfen, ob etwas nicht identisch zu etwas anderem ist (Typen-sicher)
 
-You can use parentheses to control the order an equation is calculated:
+(Wir neigen dazu, drei === häufiger als zwei zu verwenden, da es auch den "Typ" der Variablen prüft und daher genauer ist)
+
+ - `>` prüfen, ob etwas grösser ist
+ - `<` prüfen, ob etwas kleiner ist
+ - `>=` prüfen, ob etwas grösser oder gleich ist
+ - `<=` prüfen, ob etwas kleiner oder gleich ist
+
+
+#### Mathematische Operatoren
+
+ - `+` addieren
+ - `-` subtrahieren
+ - `*` multiplizieren
+ - `/` dividieren
+
+Die in der Mathematik gültige Punkt-vor-Strich-Regel kennt PHP nicht und wird daher nicht berücksichtigt.
+Verwenden Sie stattdessen Klammern, um die Reihenfolge zu steuern, wie eine Gleichung berechnet wird:
 
 ```
 $total = (($x * $y) + $z) / 3.14
@@ -333,17 +338,17 @@ $total = (($x * $y) + $z) / 3.14
 
 ### Arrays
 
-We use arrays when we want to store a collection of related bits of data
+Wir verwenden Arrays, wenn wir eine Sammlung von verwandten Datenbits speichern möchten
 
 ```
-$planet = "Mercury";
+$planet = "Merucury";
 $anotherPlanet = "Venus";
 $planet3 = "Earth";
 ...
 $planetEight = "Neptune";
 ```
 
-This is 'related' information, so we should store it together
+Dies ist "verwandte" Informationen, also sollten wir sie zusammen speichern
 
 ```
 $planets = array(
@@ -358,28 +363,28 @@ $planets = array(
 );
 ```
 
-We can access an item within an array by referring to its 'index'
+Wir können auf ein Item innerhalb eines Arrays zugreifen, indem wir auf seinen 'Index' referenzieren
 
 ```
 echo $planets[2]; // === "Earth"
 ```
 
-Each item within an array behaves like a variable
+Jedes Item innerhalb eines Arrays verhält sich wie eine Variable
 
-Individual array elements are accessed by following the arrayâ€™s variable name with an index enclosed in square brackets `$stuff[2]`
+Auf einzelne Array-Elemente wird zugegriffen, indem man den Array-Variablennamen mit einem Index versieht, der in eckigen Klammern `$stuff[2]` eingeschlossen ist
 
-Note that indexes start at 0 not 1!
+Beachten Sie, dass Indizes bei 0 und nicht bei 1 beginnen!
 
-The function `count()` returns the total number of elements in the array:
+Die Funktion `count()` gibt die Gesamtzahl der Elemente im Array zurück:
 
 ```
 echo count($planets); // === 8
 ```
 
 
-#### Associative Arrays
+#### Assoziative Arrays
 
-These are arrays with non-numeric indexes
+Dies sind Arrays mit nicht-numerischen Indizes
 
 ```
 $earth = array(
@@ -388,35 +393,35 @@ $earth = array(
 );
 ```
 
-This means we can refer to an item in the array via its name rather than a numeric index
+Dies bedeutet, dass wir auf ein Item im Array über seinen Namen und nicht auf einen numerischen Index verweisen können
 
 ```
 echo $earth["radius"]; // === 6371
 ```
 
-Associative arrays are often used when we want to store more complex collections of data
+Assoziative Arrays werden oft verwendet, wenn wir komplexere Datensammlungen speichern möchten
 
-The value to the left of the `=>` operator is the index, the value to the right is the item's value
-
-
-#### Why we use Arrays
-
-Arrays are a handy way to store and use information
-
-When we access data from submitted forms, we often use arrays
-
-When we access data from databases, we often use arrays
+Der Wert links vom Operator `=>` ist der Index, der Wert rechts ist der Wert des Elements
 
 
-### File includes
+#### Warum verwenden wir Arrays
 
-It can be useful to split different parts of a web page up into a number of includable files
+Arrays sind eine praktische Möglichkeit, Informationen zu speichern und zu nutzen
 
-For example, on a typical website the header and footer will be consistent across all pages
+Wenn wir auf Daten von eingereichten Formularen zugreifen, verwenden wir oft Arrays
 
-Having these stored in a single importable file means they would only have to be updated in one place in order to update the entire site
+Wenn wir auf Daten aus Datenbanken zugreifen, verwenden wir oft Arrays
 
-A static HTML file might look like this:
+
+### Datei Includes
+
+Es kann sinnvoll sein, verschiedene Teile einer Website in eine Anzahl von enthaltenen Dateien aufzuteilen
+
+Zum Beispiel, auf einer typischen Website werden Kopf- und Fusszeile über alle Seiten konsistent sein
+
+Nachdem diese in einer einzigen importierbaren Datei gespeichert wurden, müssen sie nur an einem Ort aktualisiert werden, um die gesamte Website zu aktualisieren
+
+Eine statische HTML-Datei könnte wie folgt aussehen:
 
 ```
 <!DOCTYPE html>
@@ -430,7 +435,7 @@ A static HTML file might look like this:
 </html>
 ```
 
-Our header.php include file might look like this:
+Unsere header.php Include Datei könnte so aussehen:
 
 ```
 <!DOCTYPE html>
@@ -441,14 +446,14 @@ Our header.php include file might look like this:
   <body>
 ```
 
-Our footer.php include file might look like this:
+Unsere footer.php Include Datei könnte so aussehen:
 
 ```
   </body>
 </html>
 ```
 
-This simplifies all of the pages in the site:
+Das vereinfacht alle Seiten unserer Website:
 
 ```
 <?php include_once "header.php"; ?>
@@ -458,61 +463,57 @@ This simplifies all of the pages in the site:
 <?php include_once "footer.php"; ?>
 ```
 
-To import files into the page, use one of the following PHP functions:
+Um Dateien zu importieren, benutzen Sie eine der folgenden PHP Funktionen:
 
  - `include`
  - `include_once`
  - `require`
  - `require_once`
 
-`include_once` and `require_once` are used when importing specific functionality you'd only need once in a site, for example database connection details
+`include_once` und `require_once` werden benutzt, um spezifische Funktinalität zu importieren, die man nur einmal auf der Seite benötigt. Beispielsweise die Details zur Datenbankverbindung
 
-`include` and `require` can be used multiple times in a single page, and so are handy when importing repeated functionality (e.g. a 'back-to-top' link) throughout a page
+`include` und `require` können mehrfach in einer einzelnen Seite verwendet werden und sind daher praktisch, wenn es darum geht wiederholte Funktionalität zu importieren (z.B. eine 'Zurück-zum-Anfang' Link)
 
-When trying to import a file with `include` or `include_once`, if the file doesn't exist the server issues a warning and continues.
+Wenn Sie versuchen, eine Datei mit `include` oder` include_once` zu importieren, und die Datei existiert nicht, gibt der Server eine Warnung aus und fährt fort.
 
-When trying to import a file with `require` or `require_once`, if the file doesn't exist the server issues an error and stops.
+Beim Versuch, eine Datei mit `require` oder` require_once` zu importieren, wenn die Datei nicht existiert, gibt der Server einen Fehler aus und stoppt.
 
-(You'll learn to use one of the four options, depending on the requirements of the include)
+(Sie werden lernen, eine der vier Optionen zu verwenden, je nach den Anforderungen des Include)
 
 
-### Control Structures
+### Logikstrukturen
 
-PHP can be used to perform a specific action only when certain conditions are met
+PHP kann nur dann verwendet werden, wenn bestimmte Bedingungen erfüllt sind
 
-The main types of conditional logic structures are:
+Die Haupttypen der bedingten Logikstrukturen sind:
 
- - if/else
- - for
- - foreach
+  - if/else
+  - for
+  - foreach
 
-(Again, these are common in most programming languages, not just PHP)
+(Nochmal, diese sind in den meisten Programmiersprachen üblich, nicht nur in PHP)
 
 
 #### if/else
 
-Use different logic based on whether a statement is true or false
+Verwenden Sie eine andere Logik, je nachdem, ob eine Anweisung wahr oder falsch ist
 
 ```
 $today = date("l");
 
 if ($today === "Friday") {
-
   echo "Hooray, it's Friday!";
-
 } else {
-
   echo "Is it Friday yet?";
-
 }
 ```
 
-To use more than one condition you can use:
+Um mehr als eine Bedingung zu verwenden, benutzen Sie:
 
- - `||` (which means OR)
- - `&&` (which means AND)
+ - `||` (oder)
+ - `&&` (und)
 
-We can combine multiple possible if/else with statements "else if"
+Wir können mehrere if/else statments mit "else if" verbinden
 
 ```
 $today = date("l");
@@ -520,8 +521,7 @@ $hour = date("G");
 
 if ($today === "Friday" && $hour >= 17) {
   echo "Beer o'clock!";
-} else if ($today === "Saturday" || $today === "Sunday"
- || $hour < 9 || $hour >= 17) {
+} else if ($today === "Saturday" || $today === "Sunday" || $hour < 9 || $hour >= 17) {
   echo "Time to relax";
 } else {
   echo "Get back to work!";
@@ -529,19 +529,17 @@ if ($today === "Friday" && $hour >= 17) {
 ```
 
 
-#### for loops
+#### for Schleifen
 
-Allow us to repeat logic until a condition is met:
+Erlauben uns eine Logik zu wiederholen, bis eine Bedingung erfüllt ist:
 
 ```
-for ($counter=1900; $counter <= date("Y"); $counter++) {
-
-  echo "<option>".$counter."</option>";
-
+for ($counter = 1900; $counter <= date("Y"); $counter++) {
+  echo "<option>" . $counter . "</option>";
 }
 ```
 
-The result:
+Das Ergebnis:
 
 ```
 <option>1900<option>
@@ -551,9 +549,9 @@ The result:
 ```
 
 
-#### foreach loops
+#### foreach Schleifen
 
-Used for iterating (looping) through arrays
+Werden benutzt, um durch Arrays zu laufen
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune");
@@ -562,7 +560,7 @@ foreach ($planets as $key => $planet) {
 }
 ```
 
-The result:
+Das Ergebnis:
 
 ```
 <p>Planet 0 = Mercury</p>
@@ -571,100 +569,100 @@ The result:
 <p>Planet 7 = Neptune</p>
 ```
 
-Starts with the array to iterate through, followed by the keyword `as`, followed by two variables â€” the first is assigned the index of the element and the second is assigned the value of that indexâ€™s element.
+Beginnt mit dem zu durchlaufenden Array, gefolgt vom Schlüsselwort `as`, gefolgt von zwei Variablen: die erste bezieht sich auf den Index jeden Elements, die zweie auf den entsprechenden Wert.
 
-(If only one variable is listed after `as`, it is assigned the value of the array element.)
+(Wenn nur eine Variable nach dem `as` steht, bezieht es sich immer auf den Wert.)
 
-In our example, the `foreach` instruction moves through the array `$planets`, assigning each element in turn to the variable `$planet`
+In unserem Beispiel läuft die `foreach` Anweisung durch das Array `$planets` und schreibt pro Lauf ein Element in die Variable `$planet`
 
 
-### Forms
+### Formulare
 
-Here's a basic HTML form:
+Hier ist ein einfaches HTML Formular:
 
 ```
 <form action="" method="post">
   <fieldset>
     <legend>What is your name?</legend>
-
     <label for="name">Your name</label>
     <input id="name" name="name" type="text" />
-
     <input type="submit" value="Submit" />
   </fieldset>
 </form>
 ```
 
-There are two important attributes on a form: `action` and `method`:
+Es gibt zwei wichtige Attribute in einem Formular: `action` und `method`:
 
 
 #### Action
 
-The action attribute for an HTML form element refers to the URL that the form should send its data to when submitted.
+Das Action-Attribut in einem HTML-Formularelement bezieht sich auf die URL, an die das Formular bei der Übermittlung seine Daten senden soll.
 
-The action attribute can be left blank, in which case the form will send data to the current URL.
+Das Action-Attribut kann leer gelassen werden. In diesem Fall sendet das Formular Daten an die aktuelle URL.
 
-Alternatively, form data can be sent to a different script/URL when the form is submitted.
+Alternativ können Formulardaten bei der Übermittlung des Formulars an ein anderes Skript / URL gesendet werden.
 
 
 #### Method
 
-The method attribute has two possible options, GET and POST
+Das Method-Attribut kann eine dieser beiden Optionen haben, GET und POST
 
-When using a form to GET or POST values, PHP automatically turns the form data into variables, setting it to the value which was entered by the user.
+Bei der Verwendung eines Formulars zu GET- oder POST-Werten verwandelt PHP automatisch die Formulardaten in Variablen und setzt sie auf den Wert, der vom Benutzer eingegeben wurde.
 
-Depending on whether the form action is set to GET or POST, the values will be available as `$_GET['field-name']` or `$_POST['field-name']`
+Je nachdem, ob die Formularaktion auf GET oder POST gesetzt ist, stehen die Werte zur Verfügung als `$_GET['field-name']` oder `$_POST['field-name']`
 
-Whether you use GET or POST depends on which is more suitable for the current situation.
+Ob Sie GET oder POST verwenden, hängt davon ab, was für die aktuelle Situation besser geeignet ist.
+
+Um PHP-seitig sowhl GET, als auch POST abzufangen ohne doppelt Code schreiben zu müssen, können Sie `$_REQUEST['field-name']` verwenden.
 
 
-#### GET (appends the values to the URL)
-
-PROs:
-
- - useful for URL hacking (the values in the URL are the input names and values separated by ?, & and =)
- - useful for bookmarking or adding links
-
-CONs:
-
- - Insecure, so shouldn't be used for sensitive data (such as passwords)
- - Can only handle a limited amount of data
- - Can only be used for simple form data
-
-#### POST (doesn't append the values to the URL)
+#### GET (hängt die Werte an die URL)
 
 PROs:
 
- - Can be used to post images
- - Can handle more data than a GET request
- - Posted content is hidden from the user, so can contain passwords etc
+ - nützlich zum URL hacken (die Werte in der URL sind als Namen und Werte mit ?, & und = von einander getrennt)
+ - nützlich um direkt Links als Lesezeichen zu speichern
 
 CONs:
 
- - Can't be bookmarked or linked to directly
- - Can't be updated via the URL
+ - Unsicher und sollte nicht für sensible Daten (bspw. Passwörter) verwendet werden
+ - Kann nur eine begrenzte Menge an Daten enhalten
+ - Kann nur einfache Formulardaten enthalten
 
-When the form is submitted, we can access the values that have been entered via PHP
+#### POST (hängt keine Werte an die URL)
+
+PROs:
+
+ - Kann Dateien verarbeiten
+ - Kann mehr Daten als GET verarbeiten
+ - Der gepostete Inhalt ist vor dem Benutzer unsichtbar und somit für die Verarbeitung von Passwörtern brauchbar
+
+CONs:
+
+ - Kann nicht direkt als Lesezeichen gespeichert werden
+ - Kann nicht über die URL verändert werden
+
+Wenn das Formular abgeschickt wurde, können wir auf die über PHP eingegebenen Werte zugreifen
 
 
-### Errors
+### Fehler
 
-Unlike with HTML, when the server encounters a PHP error it is likely to stop, resulting in no page being generated
+Anders als bei HTML, wenn der Server auf einen PHP-Fehler trifft, wird er wahrscheinlich stoppen, was dazu führt, dass keine Seite generiert wird
 
-The error messages should be helpful, showing on which line the error occurred, and hopefully a message indicating what went wrong. These messages are often cryptic!
+Die Fehlermeldungen sollten hilfreich sein, um zu zeigen, auf welcher Zeile der Fehler aufgetreten ist, und hoffentlich eine Nachricht, die anzeigt, was schief gelaufen ist. Diese Nachrichten sind oft kryptisch!
 
-Errors with PHP are far more common than with HTML/CSS:
+Fehler mit PHP sind weit häufiger als bei HTML / CSS:
 
- - Syntax errors
- - Missing semi-colons at the end of a line
- - Not enough (or too many) quotes, parentheses, curly brackets or other punctuation
+  - Syntaxfehler
+  - Fehlende Semikolons am Ende einer Zeile
+  - Nicht genug (oder zu viele) Zitate, Klammern, geschweifte Klammern oder andere Interpunktion
 
 
 ## Arrays
 
-### Working with arrays
+### Mit Arrays arbeiten
 
-With simple variables like strings and numbers, we can `echo` their value at any point to see what they currently contain:
+Mit einfachen Variablen wie Strings und Zahlen, können wir mit `echo` ihren Wert an jedem Punkt ausgeben:
 
 ```
 $planets = 5;
@@ -678,14 +676,14 @@ echo $sentence;
 // "There are 8 planets"
 ```
 
-If you try to echo an array, you'll get... `Array`
+Wenn Sie das mit einem Array versuchen, bekommen Sie ... `Array`
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter");
 echo $planets; // Array
 ```
 
-We have seen that to loop through every item in an array, you can use `foreach`:
+Benutzen Sie stattdessen `foreach`:
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter");
@@ -694,18 +692,19 @@ foreach ($planets as $planet) {
 }
 ```
 
-Which results in:
+Das Ergbnis sieht dann so aus:
 
 ```
 <p>Mercury</p>
 <p>Venus</p>
+...
 ```
 
-This is fine when you know the structure of the array, but this isn't always the case
+Das ist gut, wenn man die Struktur des Arrays kennt, aber das ist nicht immer der Fall
 
-If you have an array of data that you don't know the structure of, PHP provides an easy way to preview its contents
+Wenn Sie eine Reihe von Daten haben, die Sie nicht kennen, bietet PHP eine einfache Möglichkeit, die Inhalte zu sehen
 
-To preview the contents of an array, you can use the `print_r()` function
+Um die Inhalte eines Arrays zu betrachten, können Sie die Funktion `print_r ()` verwenden
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter");
@@ -713,9 +712,9 @@ print_r($planets);
 Array ( [0] => "Mercury" [1] => "Venus" [2] => "Earth" [3] => "Mars" [4] => "Jupiter" )
 ```
 
-This works, but it can be difficult to read
+Das funktioniert zwar, ist aber schwer zu lesen
 
-When using `print_r()` it usually helps to echo this with HTML `<pre>` tags surrounding it:
+Wenn Sie `print_r()` benutzen, ist es ratsam, es mit HTTML `<pre>` Tags einzufassen:
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter");
@@ -724,7 +723,7 @@ print_r($planets);
 echo "</pre>";
 ```
 
-Which results in:
+Das Ergbnis sieht so aus:
 
 ```
 Array (
@@ -736,7 +735,7 @@ Array (
 )
 ```
 
-`print_r()` works well with associative arrays too:
+`print_r()` funktioniert auch mit assoziativen Arrays:
 
 ```
 $earth = array(
@@ -749,7 +748,7 @@ print_r($earth);
 echo "</pre>";
 ```
 
-Which results in:
+Das Ergbnis lautet:
 
 ```
 Array (
@@ -758,31 +757,31 @@ Array (
 )
 ```
 
-`print_r()` isn't useful for a final product - you wouldn't want to display information in this way
+`print_r ()` ist nicht für ein Endprodukt nützlich - Sie möchten keine Informationen auf diese Weise anzeigen
 
-But during development it's a handy way to check the current value of an array variable
-
-
-### Why arrays are useful
-
-Arrays are a useful way to use/manipulate/filter information
-
-Later we won't be creating these arrays manually
-
-Instead we'll be retrieving data from external sources - e.g. from a database
-
-We won't know what the content of the array is, but we will have an idea of its structure
-
-When we recieve this data, we need to put it into a format that we can manipulate with PHP
-
-We will be learning how to extract information from a database and turn it into an array
-
-If you learn how to use arrays, then you'll know how to use data from various sources, such as a database or an API call from another website
+Aber während der Entwicklung ist es eine praktische Möglichkeit, den aktuellen Wert eines Arrays zu überprüfen
 
 
-### Multi-dimensional arrays
+### Warum Arrays sind nützlich
 
-Arrays can contain a mixture of different types of content:
+Arrays sind eine nützliche Möglichkeit, Informationen zu verwenden / zu manipulieren / zu filtern
+
+Später werden wir diese Arrays nicht manuell erstellen
+
+Stattdessen werden wir Daten aus externen Quellen abrufen - z.B. Aus einer Datenbank
+
+Wir werden nicht wissen, was der Inhalt des Arrays ist, aber eine Vorstellung von seiner Struktur haben
+
+Wenn wir diese Daten erhalten, müssen wir sie in ein Format setzen, das wir mit PHP manipulieren können
+
+Wir werden lernen, wie man Informationen aus einer Datenbank extrahiert und sie zu einem Array macht
+
+Wenn Sie lernen, wie Sie Arrays verwenden, dann wissen Sie, wie Sie Daten aus verschiedenen Quellen, wie z.B. eine Datenbank oder einen API-Anruf von einer anderen Website, verwenden
+
+
+### Multi-dimensionale Arrays
+
+Arrays können eine Mischung aus verschiedenen Arten von Inhalten enthalten:
 
 ```
 $things = array(1, 5, "hello", 3.14);
@@ -796,7 +795,7 @@ hello = string
 3.14 = double
 ```
 
-Using our planetary examples from before, imagine that we would want to store information about each planet as an array
+Mit unseren Planetenbeispielen von vorhin, stellen wir uns vor, dass wir Informationen über jeden Planeten als Array speichern möchten
 
 ```
 $mercury => array(
@@ -812,15 +811,15 @@ $venus => array(
 );
 ```
 
-The previous example allows us to store information about each planet
+Das vorherige Beispiel erlaubt uns, Informationen über jeden Planeten zu speichern
 
-But it doesn't provide an easy way to group together all the planets
+Aber es gibt keinen einfachen Weg, um alle Planeten zusammenzufassen
 
-The reason for using arrays is to group together content
+Der Grund für die Verwendung von Arrays besteht darin, Inhalte zusammenzufassen
 
-We want to put each of these planetary arrays into a single array
+Wir wollen jede dieser Planetenarrays in ein einziges Array setzen
 
-We can instead contain these in a single array that contains other arrays:
+Wir können stattdessen diese in einem einzigen Array enthalten, das andere Arrays enthält:
 
 ```
 $planets = array(
@@ -839,17 +838,17 @@ $planets = array(
 );
 ```
 
-We call arrays that contain other arrays *multi-dimensional arrays*
+Arrays, die andere Arrays enthalten, heissen *multi-dimensionale Arrays*
 
-We can access values from within the arrays in the same way as before:
+Wir können auf die Werte aus den Arrays auf die gleiche Weise wie zuvor zugreifen:
 
 ```
 foreach ($planets as $planetName => $planetData) {
-  echo "<p>". $planetName . " size = " . $planetData["size"] . "</p>";
+  echo "<p>" . $planetName . " size = " . $planetData["size"] . "</p>";
 }
 ```
 
-This results in:
+Das Ergebnis lautet:
 
 ```
 <p>mercury size = 0.3</p>
@@ -857,42 +856,42 @@ This results in:
 <p>earth size = 1</p>
 ```
 
-The ability to create multi-dimensional arrays is useful as it allows us to use a more complex information structure
+Die Fähigkeit, mehrdimensionale Arrays zu erstellen, ist nützlich, da es uns erlaubt, eine komplexere Informationsstruktur zu verwenden
 
-In most real-world examples, the data you'll be using will be more complex than a simple row of information
+In den meisten real-world Beispiele werden die Daten, die Sie verwenden werden, komplexer als eine einfache Reihe von Informationen
 
-While we're working this out, the `print_r()` function we saw earlier will allow us to preview all of the values in the array
+Während wir das ausarbeiten, erlaubt uns die `print_r()` Funktion, die wir vorhin gesehen haben, eine Vorschau aller Werte im Array
 
 
-#### Nested foreach loops
+#### Verschachtelte foreach Schleifen
 
-One way to access all information within a multi-dimensional array is to use a `foreach` loop within another `foreach` loop
+Eine Möglichkeit, auf alle Informationen innerhalb eines mehrdimensionalen Arrays zuzugreifen, besteht darin, eine "foreach"-Schleife innerhalb einer anderen "foreach"-Schleife zu verwenden
 
 ```
 foreach ($planets as $planetName => $planetData) {
-  echo "<h2>".$planetName."</h2>";
+  echo "<h2>" . $planetName . "</h2>";
 
   foreach($planetData as $attribute => $value) {
-    echo "<p><strong>".$attribute."</strong>: <em>".$value."</em></p>";
+    echo "<p><strong>" . $attribute . "</strong>: <em>" . $value . "</em></p>";
   }
 }
 ```
 
-We can manipulate the information in different ways, use different parts in different situations
+Wir können die Informationen auf unterschiedliche Weise manipulieren, verschiedene Teile in verschiedenen Situationen verwenden
 
-For example, we may not want to display all of the detailed information for every item in one long page
+Zum Beispiel können wir nicht alle detaillierten Informationen für jedes Element in einer langen Seite anzeigen
 
-We may just want to summarise each item initially, then if one is selected display the detailed information only for this item
+Wir können einfach nur jedes Element zusammenfassen, dann, wenn man es auswählt, zeigen Sie die detaillierten Informationen nur für diesen Artikel an
 
-Let's just output the name of each planet for now:
+Lassen Sie uns gerade den Namen jedes Planeten ausgeben:
 
 ```
 foreach($planets as $planetName => $planetData) {
-  echo '<li><a href="?planet='.$planetName.'">'.$planetName.'</a></li>';
+  echo '<li><a href="?planet=' . $planetName . '">' . $planetName . '</a></li>';
 }
 ```
 
-This results in links being generated:
+Dadurch werden folgende Links generiert:
 
 ```
 <li><a href="?planet=mercury">mercury</a></li>
@@ -900,18 +899,18 @@ This results in links being generated:
 <li><a href="?planet=earth">earth</a></li>
 ```
 
-Next we'll learn how to use these links to display planet-specific data
+Als nächstes lernen wir, wie man diese Links benutzt, um planetenspezifische Daten anzuzeigen
 
 
-### Superglobal variables
+### Superglobale Variables
 
-Superglobal variables are special variables that are automatically created by PHP.
+Superglobale Variablen sind spezielle Variablen, die automatisch von PHP erstellt werden.
 
-They are associative arrays that contain values acquired from user input or the server
+Es handelt sich um assoziative Arrays, die Werte enthalten, die von der Benutzereingabe oder dem Server erfasst wurden
 
-They are called superglobal because they are accessible in any variable scope (more on this later)
+Sie heissen superglobal, weil sie in jedem variablen Bereich zugänglich sind (mehr dazu später)
 
-The important superglobal arrays:
+Die wichtigsten superglobalen Arrays:
 
  - `$_SERVER`
  - `$_GET`
@@ -919,51 +918,51 @@ The important superglobal arrays:
  - `$_COOKIE`
  - `$_SESSION`
 
-We have already seen two examples of these: `$_GET` and `$_POST`. These arrays are automatically populated when you submit a form
+Wir haben bereits zwei Beispiele für `$_GET` und `$_POST` gesehen. Diese Arrays werden automatisch befüllt, wenn ein Formular abgeschickt wird
 
-The 'name' attribute of each form input element is used in these arrays
+Das 'name' Attribut eines jeden Formularelements wird in diesen Arrays benutzt
 
-e.g. if you have a form element:
+z.B. wenn Sie folgendes Formularelement haben:
 
 ```
 <input type="text" name="firstname" id="firstname" />
 ```
 
-When the form is submitted, this will be available as either `$_GET['firstname']` or `$_POST['firstname']`
+Wenn Sie das Formular abschicken, ist entweder `$_GET['firstname']` oder `$_POST['firstname']` verfügbar
 
-The main way to populate the `$_POST` superglobal variable is to post a form.
+Die `$_POST` superglobale Variable wird in der Regel über ein Formular befüllt.
 
-`$_GET` parameters can also be populated by forms, but this isn't the only way to add values
+`$_GET` Parameter können das zwar auch über Formulare, aber das ist nicht der einzige Weg
 
-We can create links that populate the `$_GET` array
+Wir können das auch über Links erreichen
 
-To pass variables via the URL, add parameters to the end of a URL
+Um eine Variable über eine URL zu befüllen, fügen Sie den Parameter einfach ans Ende der URL
 
-At the end of a standard URL add a `?` followed by a variable as a key/value pair, separated by an `=`
+Am Ende der standard URL fügen Sie ein `?`, gefolgt von der Variable und deren Wert, jeweils getrennt mit einem `=`
 
 ```
 <a href="index.php?index=value">
 <a href="index.php?name=pete">
 ```
 
-To add multiple variables via the URL, separate them with an `&`
+Um mehrere Variablen einer URL hinzuzufügen, trennen Sie sie mit `&`
 
-Don't forget when you add an `&` in your HTML you should add `&amp;` or it won't validate
+Denken Sie daran, das `&` in ihrem HTML als `&amp;` zu notieren, sonst schlägt die Validierung fehl.
 
 ```
 <a href="file.php?key=value&amp;lorem=ipsum&amp;foo=bar">
 <a href="file.php?name=pete&amp;colour=orange">
 ```
 
-This is a useful way to pass simple variables around between different pages
+Dies ist ein nützlicher Weg, um einfache Variablen zwischen verschiedenen Seiten zu übergeben
 
-Back to our planets example, so far we have a list of links, one for each planet name
+Zurück zu unseren Planeten Beispiel, so weit haben wir eine Liste von Links, eine für jeden Planetennamen
 
-These links append the selected planet name to the URL
+Diese Links geben den ausgewählten Planetnamen an die URL an
 
-When a planet link has been clicked, `$_GET['planet']` will have a value
+Wenn ein Planetenlink geklickt wurde, hat `$_GET['Planet']` einen Wert
 
-We can use this, combined with a simple if/else statement checking whether the variable has been set, to detect whether to display the overview list or detail view
+Wir können dies verwenden, kombiniert mit einer einfachen if / else-Anweisung, um festzustellen, ob die Übersichtsliste oder Detailansicht angezeigt werden soll
 
 
 ```
@@ -973,19 +972,16 @@ We can use this, combined with a simple if/else statement checking whether the v
 
   // has a planet been selected?
   if (!empty($_GET['planet'])) {
-
     // save the variable (quicker to not reference the GET array each time!)
     $planet = $_GET['planet'];
 ?>
   <p>You have selected planet <strong><?php echo $planet; ?></strong>. Here are its details:</p>
   <ul>
 <?php
-
     // loop through each of the planet's attributes
     foreach ($planets[$planet] as $key => $value) {
       echo '<li><strong>'.$key.'</strong>: <em>'.$value.'</em></li>';
     }
-
 ?>
   </ul>
 <?php
@@ -994,7 +990,6 @@ We can use this, combined with a simple if/else statement checking whether the v
     <p>Select a planet to see its details...</p>
     <ul>
 <?php
-
     foreach($planets as $planetName => $planetData) {
       echo '<li><a href="?planet='.$planetName.'">'.$planetName.'</a></li>';
     }
@@ -1008,66 +1003,66 @@ We can use this, combined with a simple if/else statement checking whether the v
 
 ### $_SERVER
 
-This contains useful information related to the server
+Hier finden Sie nützliche Informationen zum Server
 
-For example, you can detect the URL of the current page, the file we're currently using, or the user's browser
+Beispielsweise können Sie die URL der aktuellen Seite, die aktuell verwendete Datei oder den Browser des Benutzers erkennen
 
-you can use `print_r()` to see all the possible values of the `$_SERVER` array
+Sie können `print_r ()` verwenden, um alle möglichen Werte des `$_SERVER` Arrays zu sehen
 
 
-## State, sessions and cookies
+## State, Sessions und Cookies
 
-One important point to note: variables aren't automatically stored or remembered when you move between pages
+Ein wichtiger Punkt zu beachten: Variablen werden nicht automatisch gespeichert oder gespeichert, wenn Sie zwischen den Seiten wechseln
 
-The `$_POST` array will only be populated on a page after a form submit has occurred
+Das `$_POST`-Array wird nur auf einer Seite gefüllt, nachdem ein Formular übergeben wurde
 
-The `$_GET` array will only be populated if a form submit has occurred on the previous page, or if parameters are appended to the URL
+Das `$_GET`-Array wird nur dann gefüllt, wenn auf der vorherigen Seite ein Formular übergeben wurde oder wenn Parameter an die URL angehängt werden
 
-In order to save variables between page refreshes, we have to use an alternative technique
+Um Variablen zwischen Seitenaktualisierungen zu speichern, müssen wir eine alternative Technik verwenden
 
-HTTP is a "stateless protocol"
+HTTP ist ein "stateless Protokoll"
 
-This means that every server request is independent - every time you finish requesting a page, the server forgets about you
+Dies bedeutet, dass jede Serveranforderung unabhängig ist - jedes Mal, wenn Sie eine Seite anfordern, vergisst der Server diese am Schluss
 
-It doesn't maintain a connection between client and server, there is no way of identifying a sequence of requests as coming from the same user
+PHP pflegt keine Verbindung zwischen Client und Server, es gibt keine Möglichkeit, eine Sequenz von Anfragen zu identifizieren, die von demselben Benutzer kommen
 
-In order to remain logged in to a site, you need a way to establish credentials across multiple requests
+Um in einer Website angemeldet zu bleiben, benötigen Sie einen Weg, um über mehrere Anfragen Credentials zu ermitteln
 
-It is possible to transfer information by appending a value to the URL
+Es ist möglich, Informationen zu übermitteln, indem ein Wert an die URL angehängt wird
 
-It can also be added as a hidden fields in a form
+Es kann auch als versteckte Felder in einer Form hinzugefügt werden
 
-In both cases, however, the information is potentially visible at the client end, either in the location bar of the browser or in the source html of the constructed page
+In beiden Fällen ist die Information jedoch am Client-Ende potenziell sichtbar, entweder in der Adressleiste des Browsers oder im Quellcode der konstruierten Seite
 
-A better technique is needed!
+Eine bessere Technik ist nötig!
 
 
 ### Cookies
 
-Cookies are small pieces of data passed between browser and server as part of the http message header rather than in the document body
+Cookies sind kleine Daten, die zwischen Browser und Server als Teil des http-Nachrichten-Headers statt im Dokumentenkörper übergeben werden
 
-They are saved as a file on the client machine
+Sie werden als Datei auf dem Client-Rechner gespeichert
 
-They can be saved for a single browser session (until you close the browser), or for any specified period of time
+Sie können für eine einzelne Browser-Sitzung gespeichert werden (bis Sie den Browser schliessen) oder für einen bestimmten Zeitraum
 
-They can be read and written by PHP and JavaScript
+Sie können gelesen und geschrieben werden von PHP und JavaScript
 
-If any cookies exist for the site in question, they are available to the `$_COOKIE` superglobal variable
+Wenn irgendwelche Cookies für die jeweilige Website vorhanden sind, stehen sie in der `$_COOKIE` superglobalen Variable zur Verfügung
 
-(JavaScript can access the same cookies by referencing the `document.cookie` object)
+(Javascript kann auf dieselben Cookies zugreifen, indem auf das `document.cookie`-Objekt verwiesen wird)
 
-Cookies are created in PHP using the built-in function `setcookie()`
+Cookies werden in PHP mit der eingebauten Funktion `setcookie()` erstellt
 
-If, for example, we wished to hold a supplied username throughout a single browser session, we would use the following commands:
+Wenn wir zum Beispiel während einer einzigen Browser-Sitzung einen mitgelieferten Benutzernamen abgeben wollten, würden wir folgende Befehle verwenden:
 
 ```
 $username = $_GET['username'];
 setcookie('username', $username);
 ```
 
-This would then be accessible as `$_COOKIE['username']` no matter how many times a user refreshed the page, until the browser was closed.
+Dies wäre dann als `$_COOKIE ['username']` zugänglich, egal wie oft ein Benutzer die Seite aktualisiert hat, bis der Browser geschlossen wurde.
 
-It is possible to make a cookie last longer than a browser session - you can set your own expiry date:
+Es ist möglich, einen Cookie länger als eine Browser-Session zu machen - Sie können Ihr eigenes Verfallsdatum festlegen:
 
 ```
 // store the cookie for 30 days from today
@@ -1079,43 +1074,43 @@ setcookie('username', $username, time() + 60*60*24*30)
 setcookie('username', $username, mktime(0,0,0,7,18,2026));
 ```
 
-The third parameter for the `setcookie()` function takes a numeric value that equates to the time that the cookie should expire
+Der dritte Parameter für die `setcookie()` Funktion nimmt einen numerischen Wert ein, der der Zeit entspricht, die das Cookie ablaufen soll
 
-To remove a cookie, just set its date value to a date in the past
+Um ein Cookie zu entfernen, setzen Sie einfach seinen Datumswert auf ein Datum in der Vergangenheit
 
 ```
 setcookie('username', NULL, -1);
 ```
 
-Commands to set or change cookie values involve writing a document header, so they must occur before any other document content is output
+Befehle zum Einstellen oder Ändern von Cookie-Werten beinhalten das Schreiben eines Dokumentenkopfes, so dass sie vor dem Ausgeben eines anderen Dokumentinhalts auftreten müssen
 
-PHP code to set cookies cannot be interspersed with normal HTML, it must be at the top of a page before any HTML is output
+PHP-Code, um Cookies einzustellen, kann nicht mit normalem HTML durchsetzt werden, es muss am Anfang einer Seite sein, bevor irgendein HTML ausgegeben wird
 
-(Even a single space at the beginning of a PHP file before the `<?php` tag is enough to produce an error.)
+(Sogar ein einziges Zeichen am Anfang einer PHP-Datei vor dem `<?php`-Tag reicht aus, um einen Fehler zu erzeugen.)
 
 PROs
 
- - Cookies make it easier to remember data without having to send it back and forth all the time
+ - Cookies machen es einfacher, sich an Daten zu erinnern, ohne es immer wieder hin und her zu senden
 
 CONs
 
- - Browsers can be set to refuse cookies, limit their lifespan or warn of their arrival
- - Users can view, edit and delete cookies
+ - Browser können eingestellt werden, um Cookies zu verweigern, ihre Lebensdauer zu begrenzen oder ihre Ankunft zu warnen
+ - Benutzer können Cookies ansehen, bearbeiten und löschen
 
-You can use cookies, but don't rely on them...
+Sie können Cookies verwenden, aber nicht auf sie verlassen...
 
 
 ### Sessions
 
-Sessions are an alternative to cookies
+Sessions sind eine Alternative zu Cookies
 
-PHP allows you to define the start of a uniquely-identified session, and associate with it any number of variables which are accessible to any script executed during that session.
+PHP ermöglicht es Ihnen, den Beginn einer eindeutig identifizierten Sitzung zu definieren und mit ihr eine beliebige Anzahl von Variablen zu verknüpfen, die für jedes Skript, das während dieser Sitzung ausgeführt wird, zugänglich sind.
 
-A session is initialised by calling the PHP function `session_start()`
+Eine Sitzung wird durch Aufruf der PHP-Funktion `session_start()` initialisiert
 
-This must be placed before any HTML has been outputted
+Dies muss platziert werden, bevor ein HTML ausgegeben wurde
 
-Put this at the very start of a php file:
+Setzen Sie dies am Anfang einer PHP-Datei:
 
 ```
 <?php
@@ -1126,9 +1121,9 @@ Put this at the very start of a php file:
 ?>
 ```
 
-Once a session has been started, we can reference variables using the `$_SESSION` superglobal array
+Sobald eine Sitzung gestartet wurde, können wir mit dem superglobalen `$_SESSION` Array auf Variablen verweisen
 
-Session variables can be assigned to or retrieved from the `$_SESSION` associative array at any time
+Session-Variablen können jederzeit dem assoziativen Array `$_SESSION` zugeordnet oder abgerufen werden
 
 ```
 // start the session - must always happen at the top of the page
@@ -1141,36 +1136,36 @@ $_SESSION['username'] = $_POST['username'];
 echo $_SESSION['username'];
 ```
 
-Once you set a session variable, it will exist until you remove it or end the browser session
+Sobald Sie eine Session-Variable gesetzt haben, bleibt sie bestehen, bis Sie sie entfernen oder die Browser-Sitzung beenden
 
-To remove a session variable, use `unset()`
+Um eine Sitzungsvariable zu entfernen, verwenden Sie `unset()`
 
 ```
 unset($_SESSION['username']);
 ```
 
-Use sessions rather than cookies:
+Benutzen Sie Sessions anstatt Cookies:
 
- - Session values are stored in temporary files at the server end rather than in the client
- - Therefore sessions are far more secure and reliable than cookies
-
-
-## PHP and MySQL
-
-***(It may be worth reading the database notes before continuing)***
+ - Session-Werte werden in temporären Dateien am Server-Ende und nicht im Client gespeichert
+ - Deshalb sind Sessions weit sicherer und zuverlässiger als Cookies
 
 
-### Connecting to a MySQL Database with PHP
+## PHP und MySQL
 
-To connect to a MySQL database with PHP we use a _class_ called `mysqli`
+***(Es könnte hilfreich sein, die Datenbank Notizen zu lesen, bevor Sie fortfahren)***
 
-The line of PHP code we need to do this is:
+
+### Mit PHP zu einer MySQL Datenbank verbinden
+
+Um eine Verbindung zu einer MySQL-Datenbank mit PHP herzustellen, verwenden wir eine _Klasse_ namens `mysqli`
+
+Folgende Zeile PHP-Codes macht genau das:
 
 ```
 $db = new mysqli("host", "username", "password", "database");
 ```
 
-We can create a simple PHP script to test to see if we can connect to the database correctly:
+Wir können ein einfaches PHP-Skript erstellen, um zu testen, ob wir eine korrekte Verbindung zur Datenbank herstellen können:
 
 ```
 // connect
@@ -1180,42 +1175,41 @@ $db = new mysqli("server","u","p","db");
 if ($db->connect_error) {
   echo "Connect failed: " . $db->connect_error;
   exit();
-
-// no error!
 } else {
+  // no error!
   echo "Database connected!";
 }
 ```
 
-An explanation of the database connection code:
+Erläuterung des Datenbankverbindungscodes:
 
- - We're storing the database connection in a variable called `$db` (We'll use this variable again later when we query the database)
- - We test to see if there was an error connecting (for example because of incorrect credentials) by seeing if `$db->connect_error` has a value
- - If there was an error connecting then we display it
- - Otherwise the database connection was successful!
+  - Wir speichern die Datenbankverbindung in einer Variablen namens `$db` (Wir werden diese Variable später nochmals verwenden, wenn wir die Datenbank abfragen)
+  - Wir testen, ob es einen Fehler gibt (z.B. wegen falscher Anmeldeinformationen), indem man schaut, ob `$db->connect_error` einen Wert hat
+  - Wenn es einen Fehler gibt, dann zeigen wir ihn
+  - Ansonsten war die Datenbankverbindung erfolgreich!
 
-Note that from now on in these examples it is assumed that the database connection is active
+Beachten Sie, dass von nun an in diesen Beispielen davon ausgegangen wird, dass die Datenbankverbindung aktiv ist
 
-It is often a good idea to keep connection details in a separate file for convenience
+Es ist oft eine gute Idee, die Verbindungsdetails in einer separaten Datei zu halten
 
-This file can be imported at the start of every page, using `require_once`
+Diese Datei kann zu Beginn jeder Seite mit `require_once` importiert werden
 
-This approach means you only need to update the content for these in one place
+Dieser Ansatz bedeutet, dass Sie nur den Inhalt für diese an einem Ort aktualisieren müssen
 
-(A good practice to get in to!)
+(Eine gute Praxis, um zu starten!)
 
 
-### Executing SQL queries with PHP
+### SQL Abfragen mit PHP ausführen
 
-Once we have established a connection to the database, we can query it with SQL
+Sobald wir eine Verbindung zur Datenbank aufgebaut haben, können wir sie mit SQL abfragen
 
-A basic SQL example is to select everything from the answers table:
+Ein grundlegendes SQL-Beispiel ist, alles aus der Antworttabelle auszuwählen:
 
 ```
 SELECT * FROM `answers`
 ```
 
-This should return the following content:
+Dies sollte den folgenden Inhalt zurückgeben:
 
 
 | id | question_id | user_id | answer    | tweet_id    | date_added          |
@@ -1225,30 +1219,30 @@ This should return the following content:
 | 3  | 1           | 2       | Melted    | 23723849723 | 2013-03-22 09:02:12 |
 
 
-When we get it into PHP, this data will be represented as an associative array, like those we have seen previously
+Wenn wir es in PHP bekommen, werden diese Daten als assoziatives Array dargestellt, wie wir es früher gesehen haben
 
-To execute this with PHP, first we add our SQL query to a variable:
+Um dies mit PHP auszuführen, fügen wir zuerst unsere SQL-Abfrage einer Variablen hinzu:
 
 ```
 $query = "SELECT * FROM `answers`";
 ```
 
-Then we execute the query...
+Dann führen wir die Abfrage aus ...
 
 ```
 $result = $db->query($query);
 ```
 
-...and fetch the results
+... und holen das Ergebnis
 
 ```
 $row = $result->fetch_assoc();
 ```
 
-This will return us the relevant data in an associative array, stored in the variable `$row`
+Dies wird uns die relevanten Daten in einem assoziativen Array zurückgeben, das in der Variablen `$row` gespeichert ist
 
 
-Here is the example code
+Hier ein Beispiel
 
 ```
 // include connection settings
@@ -1269,19 +1263,19 @@ while ($row = $result->fetch_assoc()) {
 ```
 
 
-### while() loops
+### while() Schleifen
 
-We want to turn each row in the table into a simple PHP associative array
+Wir wollen jede Zeile in der Tabelle in ein einfaches PHP assoziatives Array umwandeln
 
-We're going to deal with each result individually, looping through them one by one
+Wir werden mit jedem Ergebnis einzeln umgehen, indem wir sie eines nach dem anderen durchschleifen
 
-We will use a `while()` loop, which is similar in many ways to the `foreach()` loops that we've seen previously
+Wir werden eine `while()` Schleife verwenden, die in vielerlei Hinsicht den `foreach()` Schleifen ähnelt, die wir bisher gesehen haben
 
-The while loop will set the variable `$row` to an array containing the values of the current row in the table
+Die while-Schleife setzt die Variable `$row` auf ein Array, das die Werte der aktuellen Zeile in der Tabelle enthält
 
-The `$row` array keys will be the table column names
+Die `$row`-Array-Schlüssel sind die Tabellenspaltennamen
 
-The first time the while loop is run, the following values are present
+Wenn das erste Mal die while-Schleife ausgeführt wird, sind die folgenden Werte vorhanden
 
 ```
 echo $row['id'];            // 1
@@ -1289,27 +1283,27 @@ echo $row['answer'];        // 'Edam'
 echo $row['date_added'];    // '2013-03-19 18:34:23'
 ```
 
-When the script reaches the end of the while loop - the closing `}` - it will go back to the start of the while loop, but this time the value of `$row` will be set to the next row in the table
+Wenn das Skript das Ende der while-Schleife erreicht - das schliessende `}` - geht es zurück zum Anfang der while-Schleife, aber dieses Mal wird der Wert von `$row` auf die nächste Zeile in der Tabelle gesetzt
 
-This will continue until it has run through every row that has been returned by the SQL query
+Dies wird fortgesetzt, bis es jede Zeile durchlaufen hat, die von der SQL-Abfrage zurückgegeben wurde
 
 
-### Multiple SQL Queries
+### Mehrere SQL Abfragen
 
-It's easy to change the SQL query to update the data we'll receive
+Es ist einfach, die SQL-Abfrage zu ändern, um die Daten zu aktualisieren, die wir erhalten werden
 
-In the next example I've just changed the query from the `answers` to `questions` table to get different results
+Im nächsten Beispiel habe ich gerade die Abfrage von der `answers`- auf die `questions`-Tabelle geändert, um unterschiedliche Ergebnisse zu erhalten
 
 ```
 $question_query = "SELECT * FROM `questions`";
 ```
 
 
-### SQL Errors
+### SQL Fehler
 
-It is a good idea to wrap an if/else conditional statement around the query
+Es ist eine gute Idee, eine if / else bedingte Anweisung um die Abfrage zu wickeln
 
-This will help to identify any errors with the SQL query
+Dies wird dazu beitragen, Fehler mit der SQL-Abfrage zu identifizieren
 
 ```
 // get a list of all content from an unknown table
@@ -1330,27 +1324,27 @@ if ($result = $db->query($query)) {
 
 ### CRUD
 
-We have SELECT SQL queries working with PHP
+Wir haben jetzt funktionierende SELECT SQL-Abfragen mit PHP
 
-We'll come back to these again in a little while
+Wir kommen später wieder darauf zurück
 
-Let's get the other CRUD commands working
+Lassen Sie uns die anderen CRUD-Befehle anschauen
 
  - Create = `INSERT`
  - Request = `SELECT`
  - Update = `UPDATE`
  - Delete = `DELETE`
 
-We can also write PHP scripts to create, update and delete data with SQL
+Wir können auch PHP-Skripte schreiben, um Daten mit SQL zu erstellen, zu aktualisieren und zu löschen
 
-These examples use a value called `affected_rows` to test how many rows (if any) they have changed in the database
+Diese Beispiele verwenden einen Wert namens `affected_rows`, um zu testen, wie viele Zeilen (falls vorhanden) in der Datenbank geändert wurden
 
-To check that they have changed the data, we could go back and look at one of the `SELECT` examples again
+Um zu überprüfen, ob sie die Daten geändert haben, könnten wir zurückgehen und uns eines der `SELECT` Beispiele wieder anschauen
 
 
 #### INSERT
 
-This SQL command will add a new entry to the `questions` table:
+Dieser SQL-Befehl fügt einen neuen Eintrag zur Tabelle `questions` hinzu:
 
 ```
 INSERT INTO
@@ -1359,7 +1353,7 @@ VALUES
   (3, 'Favourite Fish', 2013-03-25 18:34:13);
 ```
 
-This can be executed by a PHP script in a similar way to the SELECT commands we saw earlier
+Dies kann durch ein PHP-Skript in ähnlicher Weise wie die SELECT-Befehle ausgeführt werden, die wir früher gesehen haben
 
 ```
 // add new question
@@ -1381,13 +1375,13 @@ if ($result) {
 
 #### UPDATE
 
-This SQL command will update the question field of the entry we just added to the `questions` table:
+Dieser SQL-Befehl aktualisiert das Fragefeld des Eintrags, den wir gerade der Tabelle `questions` hinzugefügt haben:
 
 ```
 UPDATE `questions` SET `question` = 'Favourite Fruit' WHERE `id` = 3;
 ```
 
-This can be executed by a PHP script in the same way as the INSERT command
+Dies kann durch ein PHP-Skript auf die gleiche Weise wie der INSERT-Befehl ausgeführt werden
 
 ```
 // update question
@@ -1396,26 +1390,24 @@ $query = "UPDATE `questions` SET `question` = 'Favourite Fruit' WHERE `id` = 3";
 // perform the query
 $result = $db->query($query);
 if ($result) {
-
-  // output a count of how many rows were changed
-  echo "SQL successful, affected rows: " . $db->affected_rows;
-
-// there was an SQL error
+	// output a count of how many rows were changed
+	echo "SQL successful, affected rows: " . $db->affected_rows;
 } else {
-    echo "SQL Error: " . $db->error;
+	// there was an SQL error
+	echo "SQL Error: " . $db->error;
 }
 ```
 
 
 #### DELETE
 
-This SQL command will delete the question we just added to the `questions` table:
+Dieser SQL-Befehl löscht die Frage, die wir gerade der Tabelle `questions` hinzugefügt haben:
 
 ```
 DELETE FROM `questions` WHERE `id` = 3;
 ```
 
-This can be executed by a PHP script in the same way as the INSERT and UPDATE commands
+Dies kann durch ein PHP-Skript auf die gleiche Weise wie die INSERT- und UPDATE-Befehle ausgeführt werden
 
 ```
 // delete question
@@ -1435,17 +1427,17 @@ if ($result) {
 ```
 
 
-### Displaying results
+### Ergebnisse anzeigen
 
-At this point we have basic SELECT SQL queries working with PHP
+An diesem Punkt haben wir grundlegende SELECT SQL Abfragen, die mit PHP arbeiten
 
-For now we're just using `print_r()` to test that we have data in a variable, in a similar way to the examples we saw earlier
+Jetzt verwenden wir `print_r()` um zu testen, dass wir Daten in einer Variablen haben, ähnlich wie die Beispiele, die wir früher gesehen haben
 
-This is fine while developing to test that we're receiving data, but you don't want to display content in this way for a live site
+Dies ist während der Entwicklung in Ordnung, aber Sie wollen nicht auf diese Weise Daten auf einer produktiven Website anzeigen
 
-We need to learn how to take the SQL query results array we recieve, and display it properly with HTML
+Wir müssen lernen, wie man das SQL-Abfrage-Ergebnis-Array, das wir erhalten, nehmen und es richtig mit HTML anzeigen
 
-Using a while loop to access each row individually:
+Mit einer while-Schleife können Sie jede Zeile einzeln aufrufen:
 
 ```
 // query the database
@@ -1460,11 +1452,11 @@ while ($row = $result->fetch_assoc()) {
 }
 ```
 
-The while loop will set the variable `$row` to an array containing the values of the current row in the table
+Die while-Schleife setzt die Variable `$row` auf ein Array, das die Werte der aktuellen Zeile in der Tabelle enthält
 
-The `$row` array keys will be the table column names
+Die `$row`-Array-Schlüssel sind die Tabellenspaltennamen
 
-The first time the while loop is run, the following values are present
+Wenn das erste Mal die while-Schleife ausgeführt wird, sind die folgenden Werte vorhanden
 
 ```
 echo $row['id'];            // 1
@@ -1472,7 +1464,7 @@ echo $row['answer'];        // 'Edam'
 echo $row['date_added'];    // '2013-03-19 18:34:23'
 ```
 
-To add these to the HTML:
+Um diese dem HTML hinzuzufügen:
 
 ```
 // query the database
@@ -1491,11 +1483,11 @@ while ($row = $result->fetch_assoc()) {
 }
 ```
 
-### Counting results
+### Ergebnisse zählen
 
-You may only want to display results if there are any to display
+Sie werden nur Ergebnisse anzeigen wollen, wenn es welche gibt
 
-To do this you can use `num_rows` to count the number of rows that have been returned
+Um dies zu tun, können Sie `num_rows` verwenden, um die Anzahl der zurückgegebenen Zeilen zu zählen
 
 
 ```
@@ -1503,53 +1495,49 @@ $result = $db->query($query);
 
 // check we have a result
 if ($result->num_rows > 0) {
-
   // do something
   echo "There were " . $result->num_rows . " results";
 
 // if there are no results
 } else {
-
   // do something else
   echo "Sorry, there were no results";
-
 }
 ```
 
 
-### Adjusting queries based on user input
+### Anpassen von Abfragen basierend auf Benutzereingaben
 
-Up to this point we have seen fixed SQL queries
+Bis zu diesem Punkt haben wir feste SQL-Abfragen gesehen
 
-We can use PHP to adjust our SQL queries dynamically by using variables, rather than hard-coding values
+Wir können PHP verwenden, um unsere SQL-Abfragen dynamisch anzupassen, indem wir Variablen verwenden, anstatt harte Codierungswerte
 
-For example, we could use an HTML form to allow a user to enter a value, then search our database for this
+Zum Beispiel könnten wir ein HTML-Formular verwenden, um einem Benutzer zu erlauben, einen Wert einzugeben, der dann in unserer Datenbank gesucht wird
 
 ```
 $query = "SELECT * FROM `answers` WHERE `answer` LIKE '%" . $_GET['suggestion'] . "%''";
 ```
+(Randnotiz: dieses Beispiel erlaubt SQL Injection!)
 
 
-#### Dynamic CRUD queries
+#### Dynamische CRUD Abfragen
 
-We saw earlier some basic examples of other CRUD commands, used to INSERT, UPDATE and DELETE data from the database
+Wir haben früher einige grundlegende Beispiele für andere CRUD-Befehle gesehen, die für INSERT, UPDATE und DELETE Daten aus der Datenbank verwendet wurden
 
-We can combine these with HTML forms to make this more dynamic
+Wir können diese mit HTML-Formularen kombinieren, um diese dynamischer zu machen
 
 ```
 <form method="post" action="">
   <fieldset>
     <legend>Add question</legend>
-
     <label for="question">Question</label>
     <input id="question" name="question" type="text" value="" />
-
     <input type="submit" value="Submit" />
   </fieldset>
 </form>
 ```
 
-This form can be used to add new questions:
+Dieses Formular kann verwendet werden, um neue Fragen hinzuzufügen:
 
 ```
 // check if form has been posted
@@ -1561,11 +1549,11 @@ $query = "INSERT INTO `questions` (`question`, `date_added`) VALUES ('".$_POST['
 $result = $db->query($query);
 ```
 
-There is a problem with this insert form - it doesn't check for existing data before adding a new row to the database
+Es gibt ein Problem mit diesem Einfügungsformular - es prüft nicht auf vorhandene Daten vor dem Hinzufügen einer neuen Zeile zur Datenbank
 
-Before adding a new question, it should first check to see if the question code already exists
+Vor dem Hinzufügen einer neuen Frage sollte zunächst geprüft werden, ob der Fragecode bereits vorhanden ist
 
-(This same technique may come in handy when you are thinking about adding users to your website - you shouldn't have two users with the same username)
+(Dieselbe Technik kann praktisch sein, wenn man darüber nachdenkt, Benutzer zu Ihrer Website hinzuzufügen - Sie sollten nicht zwei Benutzer mit demselben Benutzernamen haben)
 
 ```
 // only add to the database if the form has been submitted
@@ -1581,72 +1569,65 @@ if (!empty($_POST) && !empty($_POST['question'])) {
 
   // if question exists already, don't add a new one
   if ($data['count'] > 0) {
-
     echo "<p>This question exists already, please add a different one</p>";
-
   // no question, so add it
   } else {
-
     // insert SQL query
     $query = "INSERT INTO `questions` (`question`, `date_added`) VALUES ('".$question."', NOW())";
-
     // perform the query
     $result = $db->query($query);
-
     // check the query was successful
     if ($result) {
-
       // output a count of how many rows were changed
       echo "<p>SQL successful, affected rows: " . $db->affected_rows . "</p>";
-
-    // there was an SQL error
     } else {
-        echo "SQL Error: " . $db->error;
+      // there was an SQL error
+      echo "SQL Error: " . $db->error;
     }
   }
 }
 ```
 
 
-#### Updating and deleting
+#### Updaten und löschen
 
-When updating or deleting data, it often makes sense to turn this into a two-step process
+Beim Aktualisieren oder Löschen von Daten ist es oft sinnvoll, dies zu einem zweistufigen Prozess zu machen
 
-Firstly, the user should be able to select the item to update or delete
+Erstens sollte der Benutzer in der Lage sein, das zu aktualisierende oder zu löschende Element auszuwählen
 
-Once an item has been selected for updating, we pre-fill the values of a form to make it easier to update
+Sobald ein Artikel für die Aktualisierung ausgewählt wurde, füllen wir die Werte eines Formulars vor, um es einfacher zu aktualisieren
 
-Once an item has been selected for deleting, we offer the user a final chance to change their mind. (Remember there is no undo!)
-
-
-## Misc. tips
-
-Many of these topics are independent from one another, some may be more relevant or interesting than others...
+Sobald ein Artikel zum Löschen ausgewählt wurde, bieten wir dem Benutzer eine endgültige Chance, sich zu entscheiden. (Denken Sie daran, es gibt keine Rückgängig-Funktion!)
 
 
-### Site architecture
+## Verschiedene Tipps
 
-When creating a website, it is important to decide on the site structure (or architecture)
-
- - What sections (or pages) will the website have?
- - Will there be sub-sections?
- - Can any user access every part of the site, or do you have to be logged-in in order to access certain aspects?
+Viele dieser Themen sind unabhängig voneinander, manche können relevanter oder interessanter sein als andere ...
 
 
-An example page list:
+### Seitenarchitektur
 
- - Home page
- - Item details page
- - User login page
- - User registration page
- - Add an item page
- - (etc)
+Bei der Erstellung einer Website ist es wichtig, über die Website-Struktur (oder Architektur) zu entscheiden,
 
-Once you've decided on the site architecture you can put the file structure together in a logical manner
+  - Welche Abschnitte (oder Seiten) wird die Website haben?
+  - Gibt es Unterabschnitte?
+  - Kann jeder Benutzer auf jeden Teil der Website zugreifen, oder müssen Sie angemeldet sein, um auf bestimmte Aspekte zuzugreifen?
 
-You could create a PHP file for every page in the site
 
-You could either have these all in the same folder, and name them differently:
+Eine Beispielseitenliste:
+
+  - Startseite
+  - Artikeldetailsseite
+  - Benutzeranmeldeseite
+  - Benutzerregistrierungsseite
+  - Hinzufügen einer Artikelseite
+  - (etc)
+
+Sobald Sie sich für die Website-Architektur entschieden haben, können Sie die Dateistruktur in einer logischen Weise zusammenfügen
+
+Sie können eine PHP-Datei für jede Seite in der Website erstellen
+
+Sie könnten diese alle im selben Ordner haben und sie anders benennen:
 
  - index.php
  - details.php
@@ -1654,7 +1635,7 @@ You could either have these all in the same folder, and name them differently:
  - register.php
  - add.php
 
-Or you could call them all index.php and put them into directories:
+Oder Sie könnten sie alle index.php nennen und in verschiedene Verzeichnisse legen:
 
  - /index.php
  - /details/index.php
@@ -1662,7 +1643,7 @@ Or you could call them all index.php and put them into directories:
  - /register/index.php
  - /add/index.php
 
-The advantage of the second approach is that you don't need to reference the file name, which makes your URLs look cleaner
+Der Vorteil des zweiten Ansatzes ist, dass Sie nicht auf den Dateinamen verweisen müssen, was Ihre URLs sauberer macht
 
  - http://url.com/details.php
  - http://url.com/register.php
@@ -1672,34 +1653,34 @@ vs.
  - http://url.com/details/
  - http://url.com/register/
 
-(subjective opinion!)
+(subjektive Meinung!)
 
-Consider creating an includes (or assets) directory for any files that aren't displayed directly in a browser
+Erwägen Sie das Erstellen eines Include- (oder Assets-) Verzeichnisses für alle Dateien, die nicht direkt in einem Browser angezeigt werden
 
-Examples of files that could go into this directory are:
+Beispiele für Dateien, die in dieses Verzeichnis gehen könnten, sind:
 
- - a CSS file
- - a folder to contain images
- - a JavaScript file (or a folder containing JavaScript files)
- - PHP include files
-    - database connection include file
-    - header and footer include files
+ - eine CSS-Datei
+ - ein Ordner, der Bilder enthält
+ - eine JavaScript-Datei (oder einen Ordner mit JavaScript-Dateien)
+ - PHP Include-Dateien
+   - Datenbankverbindung
+   - header und footer
 
-Consider separating functionality into files:
+Betrachten Sie die Trennung von Funktionalität in Dateien:
 
- - You may find yourself adding the same functionality in numerous files
- - Any time you repeat the same code, remember there is probably a more efficient way to do it
+ - Achten Sie darauf die gleiche Funktionalität nicht in mehrere Dateien hinzuzufügen
+ - Jedes Mal, wenn Sie Code wiederholen, gibt es eine effizientere Möglichkeit, es zu tun
 
-Consider putting this code into a separate file and including it every time you need it (as we have done with the db connection, header, footer)
+Erwägen Sie, diesen Code in eine separate Datei zu setzen und ihn jedes Mal einzubinden, wenn Sie ihn brauchen (wie wir es mit der Datenbank-Verbindung gemacht haben, Header, Footer)
 
- - You could put your session-handling logic into one file that you include at the top of every page
- - You could put your database calls into a separate file to keep them together
- - Additionally, you could then use functions to reference each one as and when you need it (We'll look at functions a little later on)
+ - Sie können Ihre Session-Handling-Logik in eine Datei auslagern, die Sie am Anfang jeder Seite laden
+ - Sie können Ihre Datenbankanrufe in eine separate Datei stellen
+ - Darüber hinaus können Sie Funktionen verwenden, und darauf zu verweisen, wann immer sie benötigt werden (wir werden die Funktionen ein wenig später betrachten)
 
 
-### Header include files and page titles
+### Header Include Daten und Seitentitel
 
-We've seen examples of header and footer include files:
+Wir haben Beispiele von Header und Footer Include-Dateien gesehen:
 
 ```
 <?php require_once "header.php"; ?>
@@ -1709,9 +1690,9 @@ We've seen examples of header and footer include files:
 <?php require_once "footer.php"; ?>
 ```
 
-In the previous example, the same title was used for every page
+Im vorherigen Beispiel wurde für jede Seite der gleiche Titel verwendet
 
-To set a different page title for each page, you could set a variable above the header include:
+Um einen anderen Seitentitel für jede Seite festzulegen, können Sie eine Variable über dem Header einstellen:
 
 ```
 <?php
@@ -1720,48 +1701,48 @@ To set a different page title for each page, you could set a variable above the 
 ?>
 ```
 
-The `$title` variable would then be available to echo in the header.php file, meaning you could output a different title on every page
+Die `$title` Variable ist dann verfügbar und kann mit echo in der header.php Datei ausgegeben werden, so dass man auf jeder Seite einen anderen Seitentitel hat
 
 
-### Functions
+### Funktionen
 
-Functions are a way to group together a set of commands so that we can re-use them whenever we need to
+Funktionen sind eine Möglichkeit, eine Reihe von Befehlen zusammenzufassen, damit wir sie wieder verwenden können, wann immer wir müssen
 
-Functions are useful because you can write them once, then use them wherever and whenever you need
+Funktionen sind nützlich, weil man sie einmal schreiben kann, dann benutzt man sie wo immer und wann immer man es benötigt
 
-There are two types of function:
+Es gibt zwei Arten von Funktion:
 
- - Those that are native (built-in) to the language already
- - Functions that we write ourselves - or alternatively 'third-party' functions that someone else has written that we can include and use
-
-
-#### Native functions
-
-There are lots of built-in functions in PHP which allow us to easily perform a specific task. For example:
-
- - `date()` - Get the current date/time
- - `mail()` - Send an email
- - `scandir()` - List all files and folders in a specific directory on the web server
-
-There is a comprehensive list at [php.net](http://php.net) - using the search box is a good place to start
+  - Die, die in der Sprache bereits eingebaut sind
+  - Funktionen, die wir selbst schreiben - oder alternativ `Drittanbieter`-Funktionen, die jemand anderes geschrieben hat, die wir einschliessen und verwenden können
 
 
-#### Third-party functions
+#### Native Funktionen
 
-Third-party functions are useful when you want to do something that has probably be done many times before
+Es gibt viele eingebaute Funktionen in PHP, die uns erlauben, leicht eine bestimmte Aufgabe durchzuführen. Beispielsweise:
 
-Often you can find that someone else has created a solution and put their example online
+  - `date()` - Holen Sie sich das aktuelle Datum / Uhrzeit
+  - `mail()` - Senden Sie eine E-Mail
+  - `scandir()` - Auflisten aller Dateien und Ordner in einem bestimmten Verzeichnis auf dem Webserver
 
-Websites like stack overflow, are good places to look for these
-
-Code libraries and frameworks often contain a number of useful functions - more on that later...
+Es gibt eine umfassende Liste bei [php.net] (http://php.net) - Das Suchfeld dort ist ein guter Ort zu starten
 
 
-#### Writing functions
+#### Drittanbieterfunktionen
 
-Creating our own functions is a useful way to reduce code repetition
+Drittanbieter-Funktionen sind nützlich, wenn Sie etwas tun wollen, das wahrscheinlich schon oft getan wurde
 
-If you find yourself writing the same code several times, it could be made more efficient by creating a function
+Oft können Sie feststellen, dass jemand anderes eine Lösung erstellt hat und ihr Beispiel online gestellt hat
+
+Websites wie Stack Overflow, sind gute Orte, um danach zu suchen
+
+Code-Bibliotheken und Frameworks enthalten oft eine Reihe nützlicher Funktionen - mehr dazu später ...
+
+
+#### Funktionen schreiben
+
+Das Erstellen eigener Funktionen ist ein nützlicher Weg, um die Codewiederholung zu reduzieren
+
+Wenn Sie selbst mehrmals denselben Code schreiben, könnte es durch die Erstellung einer Funktion effizienter gemacht werden
 
 ```
 function doSomething() {
@@ -1769,9 +1750,9 @@ function doSomething() {
 }
 ```
 
-As you build a website, you may start to notice situations where a function could help
+Wie Sie eine Website bauen, können Situationen auftreten, in denen eine Funktion helfen könnte
 
-How you define a function:
+So definieren Sie eine Funktion:
 
 ```
 function name() {
@@ -1779,13 +1760,13 @@ function name() {
 }
 ```
 
-Then, to call this function at any time:
+Dann, um die Funktion aufzurufen:
 
 ```
 name();
 ```
 
-Here's a function to output a link we may use lots of times
+Hier ist eine Funktion die einen häufig verwendeten Link ausgibt
 
 ```
 // output a back to top HTML link
@@ -1796,22 +1777,22 @@ function backToTop() {
 }
 ```
 
-To use this function:
+Um diese Funktion zu verwenden:
 
 ```
 backToTop();
 ```
 
-Every time you call it, a back to top link will be output
+Jedesmal, wenn die Funktion aufgerufen wird, gibt sie einen Link aus, der zurück zum Anfang der Seite führt
 
 
-#### Function parameters
+#### Funktionsparameter
 
-To pass variables into a function, you pass them through as arguments (or parameters)
+Um Variablen einer Funktion zu übergeben, geben Sie sie als Argumente (oder Parameter) an
 
-You reference the names of these variables between the parentheses when you define the function
+Sie verweisen auf die Namen dieser Variablen zwischen den Klammern, wenn Sie die Funktion definieren
 
-You then use the same variable name within the function declaration
+Sie verwenden dann denselben Variablennamen innerhalb der Funktionsdeklaration
 
 ```
 function square($num) {
@@ -1822,7 +1803,7 @@ square(3); // === 9
 square(5); // === 25
 ```
 
-To return a value from a function use the `return` keyword:
+Um einen Wert von der Funktion zurück zu geben benutzen Sie das Schlüsselwort `return`:
 
 ```
 function square($num) {
@@ -1833,75 +1814,75 @@ $threeSquared = square(3); // === 9
 $fiveSquared  = square(5); // === 25
 ```
 
-These are simple examples to show how to create and use functions
+Dies sind einfache Beispiele für die Erstellung und Nutzung von Funktionen
 
-In the real world you are likely to use more complex functions
+In der realen Welt werden Sie wahrscheinlich komplexere Funktionen nutzen
 
-You could use functions to move some of the code you're writing into separate files
+Sie können Funktionen verwenden, um einen Teil des Codes zu verschieben, den Sie in separate Dateien schreiben
 
-For example, you could create a function that checks whether the current user is logged in. Something like this could be used at the top of every page of a website to determine whether to show content for a logged-in user or a member of the public
+Beispielsweise können Sie eine Funktion erstellen, die prüft, ob der aktuelle Benutzer angemeldet ist. Etwas wie dieses könnte am Anfang jeder Seite einer Website verwendet werden, um festzustellen, ob Inhalte für einen angemeldeten Benutzer oder ein Mitglied der Öffentlichkeit angezeigt werden
 
-***Further information:***
+***Weitere Informationen:***
 
  - [http://www.brandonsavage.net/how-to-write-a-function-in-php/](http://www.brandonsavage.net/how-to-write-a-function-in-php/)
  - [http://webhole.net/2010/03/14/php-functions-tutorial/](http://webhole.net/2010/03/14/php-functions-tutorial/)
  - [http://www.tuxradar.com/practicalphp/4/15/0](http://www.tuxradar.com/practicalphp/4/15/0)
 
-#### Variable scope
+#### Variablen Scope
 
-When using functions, any variables that are defined outside of the function are not available within it
+Bei der Verwendung von Funktionen sind keine Variablen, die ausserhalb der Funktion definiert sind, verfügbar
 
-Conversely any variable created within the function is not available outside it
+Umgekehrt ist eine innerhalb der Funktion angelegte Variable ausserhalb nicht vorhanden
 
-This is known as scope, and is very useful!
+Dies ist bekannt als Scope und ist sehr nützlich!
 
-There are some exceptions to this; as mentioned earlier, superglobal variables are accessible everywhere (globally)
+Es gibt einige Ausnahmen dazu; Wie bereits erwähnt, sind superglobal Variablen überall zugänglich (global)
 
  - [Variable Scope documentation](http://www.elated.com/articles/php-variable-scope-all-you-need-to-know/)
 
 
-### Formatting data
+### Daten formatieren
 
-In most of the examples we've seen so far, we've output data directly from the database to the page:
+In den meisten der bisher gesehenen Beispiele haben wir die Daten direkt aus der Datenbank auf die Seite ausgegeben:
 
 ```
 echo $something;
 ```
 
-Sometimes you may want to format this information before outputting it on the page
+Manchmal können Sie diese Informationen formatieren, bevor Sie sie auf der Seite ausgeben
 
-We have already seen a few basic examples of this:
+Wir haben schon einige grundlegende Beispiele dafür gesehen:
 
-Concatenating strings - when outputting a name we've combined strings like so:
+Verknüpfen von Strings - bei der Ausgabe eines Namens haben wir Strings wie folgt kombiniert:
 
 ```
 echo "<p>" . $firstname . " " . $surname . "</p>";
 ```
 
-Date functions - to output today's date:
+DDatumsfunktionen - zur Ausgabe des heutigen Datums:
 
 ```
 echo date_format("d/m/y");
 ```
 
-#### Changing case
+#### Gross-/Kleinschreibung ändern
 
-There are further options we could use to manipulate strings of text:
+Es gibt weitere Möglichkeiten, die wir verwenden könnten, um Textfolgen zu manipulieren:
 
-To change the case of a text string we can use `strtolower()` or `strtoupper()`
+Um die Gross-/Kleinschreibung eines Textstrings zu ändern, können wir `strtolower()` oder `strtoupper()` verwenden
 
 ```
 $firstname = "Pete";
 $surname = "Goodman";
 
-echo "<p>" . strtolower($firstname) . " " .strtoupper($surname) . "</p>";
+echo "<p>" . strtolower($firstname) . " " . strtoupper($surname) . "</p>";
 
 // <p>pete GOODMAN</p>
 ```
 
-#### Limiting characters
+#### Zeichen beschränken
 
-To limit text to a certain number of characters we can use `substr()`:
+Um Text auf eine bestimmte Anzahl von Zeichen zu beschränken, können wir `substr()` verwenden:
 
 ```
 $text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
@@ -1912,12 +1893,12 @@ $text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo
 echo "<p>" . substr($text, 0, 140) . "</p>";
 ```
 
-(Could be useful if for example you want to output a limited summary of a review)
+(Könnte nützlich sein, wenn Sie beispielsweise eine begrenzte Zusammenfassung einer Überprüfung ausgeben möchten)
 
 
-#### Replacing characters
+#### Zeichen ersetzen
 
-To replace some text with some other text you can use `str_replace()`
+Um einen Text mit einem anderen Text zu ersetzen, können Sie `str_replace()` verwenden
 
 ```
 $original = "hello world";
@@ -1930,16 +1911,16 @@ $replaced = str_replace("world", "universe", $original);
 echo $replaced; // hello universe
 ```
 
-There are lots more examples of string functions on the PHP website:
+Es gibt noch viele Beispiele für String-Funktionen auf der PHP-Website:
 
  - [http://www.php.net/manual/en/ref.strings.php](http://www.php.net/manual/en/ref.strings.php)
 
 
-#### Formatting numbers
+#### Zahlen formatieren
 
-There are also lots of functions we could use to manipulate numbers:
+Es gibt auch viele Funktionen, die wir verwenden können, um Zahlen zu manipulieren:
 
-You could use `round()`, `floor()` and `ceil()` to round up or down a number with a decimal point, into a whole number
+Sie können `round()`, `floor()` und `ceil()` verwenden, um eine Zahl mit einem Dezimalpunkt auf eine ganze Zahl auf- oder abzurunden
 
 ```
 $lower = 3.254;
@@ -1952,16 +1933,16 @@ echo floor($upper); // === 3
 echo ceil($lower);  // === 4
 echo ceil($upper);  // === 4
 ```
-Could be useful for calculating an average rating for an item, site statistics, etc
+Könnte nützlich sein für die Berechnung einer durchschnittlichen Bewertung für ein Element, Website-Statistiken, etc
 
 
-#### Generating random numbers
+#### Zufallszahlen generieren
 
-You can generate a random whole number with `rand()`
+Sie können eine zufällige ganze Zahl mit `rand()` erzeugen
 
-`rand(1,10)` will generate a random whole number between 1 and 10 (inclusive)
+Mit `rand(1,10)` wird eine zufällige ganze Zahl zwischen 1 und 10 (einschliesslich) generiert
 
-Could be used to display a random item from an array
+Könnte verwendet werden, um ein zufälliges Element aus einem Array anzuzeigen
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune");
@@ -1969,125 +1950,125 @@ $rand = rand(0, count($planets) - 1);
 echo $planet[$rand];
 ```
 
-There are lots more examples of number functions on the PHP website:
+Es gibt noch viele Beispiele für Nummernfunktionen auf der PHP-Website:
 
  - [http://www.php.net/manual/en/book.math.php](http://www.php.net/manual/en/book.math.php)
 
 
-### Sorting arrays
+### Arrays sortieren
 
-The examples we saw earlier show how we can manipulate simple variables - numbers and strings
+Die Beispiele, die wir früher gesehen haben, zeigen, wie wir einfache Variablen - Zahlen und Strings - manipulieren können
 
-We can also sort and filter arrays
+Wir können auch Arrays sortieren und filtern
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune");
 ```
 
-This is a standard PHP array, we already know how to access an individual item:
+Dies ist ein Standard-PHP-Array, wir wissen bereits, wie man auf eine einzelne Position zugreifen kann:
 
 ```
 echo $planets[2]; // === "Earth"
 ```
 
-To pick a random entry from an array we can use `array_rand()`
+Um einen zufälligen Eintrag aus einem Array auszuwählen, können wir `array_rand()` verwenden
 
 ```
 $rand = array_rand($planets);
 echo $planets[$rand];
 ```
 
-`count($array)` will give you the number of items in the array
+`count($array)` gibt die Anzahl der Artikel im Array zurück
 
 ```
 echo count($planets); // === 8
 ```
 
-`shuffle($array)` will shuffle (randomise) the array
+`shuffle($array)` wird das Array (zufällig) mischen
 
 ```
 shuffle($planets);
 print_r($planets);
 ```
 
-`array_reverse($array)` will...reverse an array
+`array_reverse($array)` wird ein Array umkehren
 
 ```
 $reversedPlanets = array_reverse($planets);
 print_r($reversedPlanets);
 ```
 
-`array_unique()` will remove any duplicates
+`array_unique()` wird alle Duplikate aus einem Array entfernen
 
-We can add to or remove from the array:
+Wir können in eine Array hinzufügen oder aus einem Array entfernen:
 
- - `array_pop()` to retrieve and remove the last value
- - `array_shift()` to put a value at the start of an array
- - `array_push()` to put a value at the end of an array
- - `array_unshift()` to retrieve and remove the first value from an array
+  - `array_pop()` um den letzten Wert abzurufen und zu entfernen
+  - `array_shift()`, um einen Wert an den Anfang eines Arrays zu setzen
+  - `array_push()`, um einen Wert ans Ende eines Arrays zu setzen
+  - `array_unshift()` um den ersten Wert aus einem Array abzurufen und zu entfernen
 
-There are lots more examples of array functions on the PHP website:
+Es gibt noch viele Beispiele für Array-Funktionen auf der PHP-Website:
 
  - [http://www.php.net/manual/en/ref.array.php](http://www.php.net/manual/en/ref.array.php)
 
 
-### Using PHP or MySQL to sort data
+### PHP oder MySQL benutzen, um Daten zu sortieren
 
-When choosing between sorting data with PHP or MySQL, it is more efficient to do as much as possible in the original SQL query
+Bei der Auswahl zwischen der Sortierung von Daten mit PHP oder MySQL, ist es effizienter, so viel wie möglich in der ursprünglichen SQL-Abfrage zu tun
 
-For example, you could `SELECT * FROM questions`, then loop through all the results in PHP to decide whether to output the current question
+Zum Beispiel könnten Sie `SELECT * FROM Fragen` ausführen, dann alle Ergebnisse in PHP durchlaufen, um zu entscheiden, ob die aktuelle Frage ausgegeben werden soll
 
-But it is more efficient to filter in the SQL query...
+Aber es ist effizienter, in der SQL-Abfrage zu filtern ...
 
-...unless you are going to re-use the data elsewhere
+... es sei denn, Sie haben vor die anderen Daten anderweitig wiederzuverwenden
 
 
-### File uploading
+### Dateien hochladen
 
-#### Client-side code
+#### Client-seitiger Code
 
-We can use HTML forms to upload files to the server
+Wir können HTML-Formulare verwenden, um Dateien auf den Server hochzuladen
 
-We've already seen the standard structure of an HTML form
+Wir haben die Standardstruktur eines HTML-Formulars schon gesehen
 
-In order to enable a form to upload data, add an extra attribute:
+Um ein Formular zum Hochladen von Daten zu aktivieren, fügen Sie ein zusätzliches Attribut hinzu:
 
 ```
 <form method="post" action="" enctype="multipart/form-data">
 ```
 
-Then in the form we add a new `<input>` element with a `type` attribute of `file`
+Dann in dem Formular fügen wir ein neues `<input>` Element mit einem `type` Attribut von` file` hinzu
 
 ```
 <input name="upload" id="upload" type="file" />
 ```
 
-This is all we have to do on the client-side to enable a file to be uploaded
+Das ist alles, was wir auf der Client-Seite tun müssen, um eine Datei hochzuladen
 
-The rest of the work required to upload a file takes place on the server-side
+Der Rest der Arbeit, die zum Hochladen einer Datei erforderlich ist, erfolgt auf der Serverseite
 
 
-#### Server-side code
+#### Server-seitiger Code
 
-We need to identify when a file has been uploaded
+Wir müssen identifizieren, wann eine Datei hochgeladen wurde
 
-PHP puts the uploaded file data into a superglobal variable called `$_FILES`
+PHP stellt die hochgeladenen Datei-Daten in einer superglobalen Variable namens `$_FILES` bereit
 
-The uploaded file will be identified by the name of its HTML element
+Die hochgeladene Datei wird durch den Namen ihres HTML-Elements identifiziert
 
-In the case of the form we have just seen, it will be available as `$_FILES['upload']`
+Im Falle der Form, die wir gerade gesehen haben, wird es als `$_FILES ['upload']` verfügbar sein
 
-`$_FILES['upload']` will be an array with five key values:
+`$_FILES['upload']` wird ein Array mit fünf Schlüsselwerten sein:
 
- - `name` is the original filename
- - `type` specifies its mime-type
- - `tmp_name` shows the full pathname of where the temporary file on the server is stored
- - `error` indicates success or failure (0 = false, so no errors)
- - `size` shows the file size, in bytes.
+  - `name` ist der ursprüngliche Dateiname
+  - `type` gibt seinen Mime-Typ an
+  - `tmp_name` zeigt den vollständigen Pfadnamen an, wo die temporäre Datei auf dem Server gespeichert ist
+  - `Fehler` bedeutet Erfolg oder Misserfolg (0 = falsch, also keine Fehler)
+  - `size` zeigt die Dateigrösse in Bytes an.
 
-These values are available at `$_FILES['upload']['name']` etc
+Diese Werte sind unter `$_FILES['upload']['name']` etc
 
-To upload a file to the web server:
+So laden Sie eine Datei auf den Webserver hoch:
 
 ```
 // set directory to upload to
@@ -2110,39 +2091,39 @@ if (move_uploaded_file($tempFile, $uploadedFile)) {
 }
 ```
 
-Be aware of security issues when allowing people to upload files to your server!
+Seien Sie sich der Sicherheitsprobleme bewusst, wenn Sie Personen das Hochladen von Dateien auf Ihren Server erlauben!
 
-***Further information:***
+***Weitere Informationen:***
 
  - [http://uk3.php.net/manual/en/features.file-upload.post-method.php](http://uk3.php.net/manual/en/features.file-upload.post-method.php)
  - [http://www.zymic.com/tutorials/php/creating-a-file-upload-form-with-php/](http://www.zymic.com/tutorials/php/creating-a-file-upload-form-with-php/)
 
 
-### Displaying images from a database
+### Bilder aus einer Datenbank anzeigen
 
-You don't need to store images in your database in order to display images in your website
+Sie müssen keine Bilder in Ihrer Datenbank speichern, um Bilder in Ihrer Website anzuzeigen
 
-You could just store the name of an image file
+Sie können auch nur den Namen einer Bilddatei speichern
 
-We've just seen how to upload a file
+Wir haben gerade gesehen, wie man eine Datei hochlädt
 
-As you upload a file you could store its file name in the database
+Beim Hochladen einer Datei können Sie den Dateinamen in der Datenbank speichern
 
-For example, when outputting data from the database, use the filename field as the `src` attribute for an image:
+Wenn Sie zum Beispiel Daten aus der Datenbank ausgeben, verwenden Sie das Dateiname-Feld als `src`-Attribut für ein Bild:
 
 ```
-<img src="images/'.$row['filename'].'" alt="'.$row['description'].'" />
+<img src="images/' . $row['filename'] . '" alt="' . $row['description'] . '" />
 ```
 
-### Sending emails
+### E-Mails senden
 
-To send an email you can use PHP's `mail()` function
+Um eine E-Mail zu senden, können Sie PHPs `mail()` Funktion benutzen
 
 ```
 mail('to', 'subject', 'message', 'headers');
 ```
 
-An example:
+Ein Beispiel:
 
 ```
 // set up mail settings
@@ -2165,84 +2146,84 @@ if (mail($to, $subject, $message, $headers)) {
 }
 ```
 
-This doesn't always work - many server doesn't support emails
+Das funktioniert nicht immer - viele Server unterstützen keine E-Mails
 
-The `mail()` function is sometimes disabled by web server administrators (for good reason)
+Die `mail()` Funktion wird manchmal von Webserver Administratoren deaktiviert (aus gutem Grund)
 
-Don't over-use it or you'll get into trouble with your web hosts
+Verwenden Sie es nicht exzessiv oder Sie werden in Schwierigkeiten mit Ihrem Web-Hoster bekommen
 
-Your message may be identified as spam because it hasn't come from a recognised email server
+Ihre Nachricht kann als Spam identifiziert werden, da sie nicht von einem anerkannten E-Mail-Server stammt
 
-You could use a third-party library, but these are often complex to set up
+Sie könnten eine Drittanbieter-Bibliothek verwenden, aber diese sind oft komplex einzurichten
 
 
-### Search
+### Suchen
 
-To add a simple search field/page you can use an HTML form
+Um ein einfaches Suchfeld / eine Seite hinzuzufügen, können Sie ein HTML-Formular verwenden
 
-Identify the columns that you would like to search
+Identifizieren Sie die Spalten, die Sie suchen möchten
 
-Use an SQL command such as:
+Verwenden Sie einen SQL-Befehl wie:
 
 ```
 $query = "SELECT * FROM `answers` WHERE `answer` LIKE '%".$search_term."%'";
 ```
 
-This will return a list of all items in the database that match the query parameter
+Dadurch wird eine Liste aller Elemente in der Datenbank zurückgegeben, die mit dem Abfrageparameter übereinstimmen
 
 
-#### Displaying active search query
+#### Aktive Suchanfrage anzeigen
 
-We saw the `str_replace()` function earlier
+Wir haben die `str_replace()` Funktion vorhin gesehen
 
-We could use it to find the term that has been searched for, and making it bold
+Wir können sie benutzen, um den Begriff zu finden, der gesucht wurde, und ihn fett darstellen
 
 ```
 // make searched term bold
-$answer = str_replace($search_term, "<strong>".$search_term."</strong>", $row['answer']);
+$answer = str_replace($search_term, "<strong>" . $search_term . "</strong>", $row['answer']);
 ```
 
 
-### Third-party libraries
+### Drittanbieter Bibliotheken
 
-"Why re-invent the wheel"
+"Warum das Rad neu erfinden"
 
-You may require a specific bit of functionality for your website
+Sie benötigen möglicherweise eine bestimmte Funktionalität für Ihre Website
 
-Often someone else has come across the problem you currently face, has solved it, and has released their solution free and open sourced
+Oft ist jemand anderes auf das Problem gestossen, das Sie derzeit haben, hat es gelöst und hat seine Lösung frei und offen gelegt
 
-There are plenty of third-party scripts, plug-ins, libraries and frameworks you could use
+Es gibt viele Drittanbieter-Scripts, Plug-Ins, Bibliotheken und Frameworks, die Sie verwenden können
 
-These range in size from small specific pieces of functionality up to blogs, shopping carts, and CMSs
+Diese reichen in der Grösse von kleinen spezifischen Stücken von Funktionalität bis hin zu Blogs, Einkaufswagen und CMSs
 
-Some are free and open source, others require payment
+Einige sind frei und Open Source, andere nur gegen Bezahlung verfügbar
 
-Websites like GitHub and Stack Overflow are great places to search for these scripts
-
-
-## Security
-
-Generally, visitors to your website will be nice people...
-
-...but some people are not so nice.
-
-They will try to find and exploit security flaws in your website
-
- - Sanitise input variables
- - Protect against SQL injection
- - Protect passwords
-
-Remove any unwanted or potentially harmful content before processing the information
-
- - Content output to the browser
- - Content added by a user into a form
- - Parameters used to create SQL queries
- - Content saved to a database
+Websites wie GitHub und Stack Overflow sind tolle Orte, um nach diesen Skripten zu suchen
 
 
-### Displaying content
+## Sicherheit
 
-When displaying content from a database we could improve our security:
+Im Allgemeinen sind Besucher auf Ihrer Website nette Leute ...
+
+... aber manche Leute sind nicht so nett.
+
+Sie werden versuchen, Sicherheitsfehler in Ihrer Website zu finden und zu nutzen
+
+  - Eingabewerte absichern
+  - Schutz gegen SQL-Injektion
+  - Passwörter schützen
+
+Entfernen Sie vor der Verarbeitung der Informationen unerwünschte oder potenziell schädliche Inhalte
+
+  - Content-Ausgabe an den Browser
+  - Inhalt, der von einem Benutzer in ein Formular hinzugefügt wird
+  - Parameter zum Erstellen von SQL-Abfragen
+  - Inhalt der in einer Datenbank gespeichert wird
+
+
+### Inhalte anzeigen
+
+Bei der Anzeige von Inhalten aus einer Datenbank könnten wir unsere Sicherheit verbessern:
 
 ```
 // get a list of all questions in the database
@@ -2256,58 +2237,54 @@ while ($row = $result->fetch_assoc()) {
   $question = $row['question'];
 
   // output content to page
-  echo '
-    <li><strong>'.$question.'</strong></li>
-  ';
+  echo '<li><strong>' . $question . '</strong></li>';
 }
 ```
 
-### Storing content
+### Inhalte speichern
 
-When entering content into the database we could improve our security:
+Bei der Eingabe von Inhalten in die Datenbank könnten wir unsere Sicherheit verbessern:
 
 ```
 // THIS IS THE POINT WHERE WE SHOULD FILTER INPUTS!
 $answer = $_POST['answer'];
 
 // create SQL query to insert new answer
-$query = "
-  INSERT INTO `answers` (`answer`)
-  VALUES ('".$answer."')";
+$query = "INSERT INTO `answers` (`answer`) VALUES ('" . $answer . "')";
 
 // execute query
 $result = $db->query($query);
 ```
 
-### Escaping content
+### Inhalte escapen
 
-Essentially, the website is taking input from a user, storing it in a database, and then outputting it for display
+Im Wesentlichen nimmt die Website die Eingabe von einem Benutzer ein, speichert sie in einer Datenbank und gibt sie dann zur Anzeige aus
 
-If we don't sanitise the content before we output it:
+Wenn wir den Inhalt nicht absichern, bevor wir ihn ausgeben:
 
- - Someone adding HTML to their content could affect the layout of our page
- - Someone adding SQL, PHP or JavaScript to their content could be far more malicious...
+  - Jemand, der HTML zu ihrem Inhalt hinzufügt, könnte das Layout unserer Seite beeinflussen
+  - Jemand, der SQL, PHP oder JavaScript zu ihrem Inhalt hinzufügt, könnte viel bösartiger sein ...
 
 
-#### Test case
+#### Testfall
 
-The following examples will use a simple test case
+Die folgenden Beispiele verwenden einen einfachen Testfall
 
-We will try adding the following piece of JavaScript into a form:
+Wir werden versuchen, das folgende Stück JavaScript in ein Formular einzufügen:
 
 ```
 <script>alert('hacked');</script>
 ```
 
-You need to stop people being able to enter this code into a form and save it to your database
+Sie müssen verhindern, dass Leute in der Lage sind, diesen oder ähnlichen Code in ein Formular einzugeben und in einer Datenbank zu speichern
 
-If you don't escape this content before displaying it, the JavaScript will be executed and create an alert message box
+Wenn Sie diesen Inhalt nicht escapen, bevor Sie ihn anzeigen, wird das JavaScript ausgeführt und ein Warnmeldungsfeld erstellt
 
-(This JavaScript is harmless, but if someone can enter JavaScript they could easily use `window.location.href` to redirect a user to another site)
+(Dieses JavaScript ist harmlos, aber wenn jemand JavaScript eingeben kann, kann man bspw. leicht `window.location.href` verwenden, um einen Benutzer auf eine andere Website umzuleiten)
 
-There are multiple options to sanitise content before outputting it onto a page
+Es gibt mehrere Möglichkeiten, Inhalte zu reinigen, bevor sie auf eine Seite ausgegeben werden
 
-(Which one you choose often depends on how strict you want to be)
+(Welches Sie wählen hängt oft davon ab, wie streng Sie es handhaben wollen)
 
  - `htmlspecialchars();`
  - `htmlentities();`
@@ -2316,7 +2293,7 @@ There are multiple options to sanitise content before outputting it onto a page
 
 #### htmlspecialchars();
 
-converts `' " & < >` into their HTML entity format
+konvertiert `' " & < >` in ihr HTML Equivalent
 
  - `'` = `&apos;`
  - `"` = `&quot;`
@@ -2324,7 +2301,7 @@ converts `' " & < >` into their HTML entity format
  - `<` = `&lt;`
  - `>` = `&gt;`
 
-Using `htmlspecialchars();` makes the text safe to output
+Mit `htmlspecialchars();` macht man den Text sicher für die Ausgabe
 
 ```
 $content = "<script>alert('hacked');</script>";
@@ -2339,13 +2316,13 @@ echo $escaped;
 
 #### htmlentities();
 
-Converts all (applicable) characters into their HTML entity format
+Konvertiert alle (anwendbaren) Zeichen in ihr HTML-Entity-Format
 
-In this example, the output will be the same as in the last example
+In diesem Beispiel ist die Ausgabe die gleiche wie im letzten Beispiel
 
-This function will also convert additional characters, such as turning Ã© into &eacute;
+Diese Funktion wird auch zusätzliche Zeichen umwandeln, wie z.B. Ã© in &eacute;
 
-Using `htmlentities();` makes the text safe to output
+Mit `htmlentities();` macht man den Text sicher für die Ausgabe
 
 ```
 $content = "<script>alert('hacked');</script>";
@@ -2360,11 +2337,11 @@ echo $escaped;
 
 #### strip_tags();
 
-Removes all HTML, JavaScript and PHP tags
+Entfernt alle HTML-, JavaScript- und PHP-Tags
 
-This function does not validate the HTML, so partial or broken tags can result in the removal of more content than expected
+Diese Funktion validiert das HTML nicht, so dass teilweise oder defekte Tags dazu führen können, dass mehr Inhalt als erwartet entfernt wird
 
-Using `strip_tags();` makes the text safe to output
+Mit `strip_tags();` macht man den Text sicher für die Ausgabe
 
 ```
 $content = "<script>alert('hacked');</script>";
@@ -2376,49 +2353,49 @@ echo $escaped;
 // alert('hacked');
 ```
 
-*In summary:*
+*Zusammenfassend:*
 
-We should pass any content through one of these functions before outputting it
+Wir sollten alle Inhalte über eine dieser Funktionen verteilen, bevor wir sie ausgeben
 
-The choice of function is dependent on how strict you need to be with content
-
-
-### Filtering form inputs
-
-You may want to run one of these functions before you process the form input, so you don't store the malicious code in your database
-
-This ensures that no malicious code will be stored or executed by our website
-
-Consider all data invalid unless it can be proven valid
-
-We need to validate and sanitise all user input before doing anything with this data
+Die Wahl der Funktion hängt davon ab, wie streng Sie es handhaben wollen
 
 
-### SQL injection
+### Formulareingaben filtern
 
-When allowing users to enter values that will be used in an SQL statement, we also need a way to ensure that our SQL statements can be protected
+Sie können eine dieser Funktionen ausführen, bevor Sie die Formulareingabe verarbeiten, damit Sie den schädlichen Code nicht in Ihrer Datenbank speichern
 
-SQL injection is not always malicious, it could be accidental:
+Damit wird sichergestellt, dass kein bösartiger Code von unserer Website gespeichert oder ausgeführt wird
+
+Betrachten Sie alle Daten ungültig, es sei denn, es wurde als gültig bewiesen
+
+Wir müssen alle Benutzereingaben validieren und bereinigen, bevor wir mit diesen Daten etwas tun
+
+
+### SQL Injection
+
+Wenn Sie Benutzern erlauben, Werte einzugeben, die in einer SQL-Anweisung verwendet werden, benötigen wir auch einen Weg, um sicherzustellen, dass unsere SQL-Anweisungen geschützt werden können
+
+SQL-Injektion ist nicht immer bösartig, es könnte zufällig sein:
 
 ```
 $sql = "SELECT * FROM `users` WHERE `surname` = '$_GET['name']'";
 ```
 
-Someone enters a value with an apostrophe, turning this SQL into:
+Jemand gibt einen Wert mit einem Apostroph ein und verwandelt dieses SQL in:
 
 ```
 $sql = "SELECT * FROM `users` WHERE `surname` = 'O'Connor'";
 ```
 
-(The extra apostrophe makes the query syntactically invalid...)
+(Der extra Apostroph macht die Abfrage syntaktisch ungültig ...)
 
-#### What is a typical SQL injection?
+#### Was ist eine typische SQL Injection?
 
-*Extra apostrophes*
+*Extra Apostrophe*
 
-Statements that will always equate to true - e.g. adding `OR 1 = 1` to the end of a `WHERE` query
+Aussagen, die immer wahr sind - z.B. `OR 1 = 1` ans Ende einer `WHERE` Abfrage anfügen
 
-see also:
+Siehe auch:
 
  - `' OR 1=1--`
  - `" OR 1=1--`
@@ -2427,83 +2404,83 @@ see also:
  - `" OR "a"="a`
  - `') OR ('a'='a`
 
-Think about a basic log-in script:
+Denken Sie an ein einfaches Login Script:
 
 ```
 SELECT `username`, `password` FROM `users` WHERE `username` = '$_POST['u']' AND `password` = '$_POST['p']';
 ```
 
-When we execute this SQL query, if > 0 records are returned, we assume the user credentials are valid, and log them in
+Wenn wir diese SQL-Abfrage ausführen, wenn > 0 Datensätze zurückgegeben werden, gehen wir davon aus, dass die Benutzeranmeldeinformationen gültig sind und melden den Benutzer an
 
 ```
 SELECT `username`, `password` FROM `users` WHERE `username` = 'xx' AND `password` = '' OR 1 = 1;
 ```
 
-1 = 1 will always be true, so will return > 0 records
+1 = 1 ist immer wahr, folglich werden > 0 Einträge zurückgegeben
 
-We need a way to filter (or sanitise) all user input, so we don't run into these issues
+Wir brauchen einen Weg, um alle Benutzereingaben zu filtern (oder zu bereinigen), so dass wir nicht in diese Probleme laufen
 
-To avoid SQL injection, we can use `mysqli_real_escape_string()` on all user inputs
+Um SQL-Injektion zu vermeiden, können wir `mysqli_real_escape_string()` an allen Benutzereingaben verwenden
 
 ```
 $escaped_text = mysqli_real_escape_string($db, $text);
 ```
 
-this function takes two parameters:
+Diese Funktion erwartet zwei Parameter:
 
- - `$db` = the mysqli database connection variable (you must have already connected to the MySQL database)
- - `$text` = text to escape
+ - `$db` = Die mysqli Datenbankverbindungsvariable (Sie müssen breits mit der MySQL Datenbank verbunden sein)
+ - `$text` = Text zum escapen
 
-Example usage:
+Beispiel:
 
 ```
 $username = mysqli_real_escape_string($db, $_POST['username']);
 ```
 
-This should be used on EVERY user input field
+Dies sollte mit JEDEM Benutzereingabefeld verwendet werden
 
 
-### Prepared statements
+### Prepared Statements
 
-Prepared statements are an alternative way to write SQL queries
+Prepared statements sind ein alternativer Weg SQL Abfragen zu schreiben
 
-They have a slightly different syntax to the SQL queries we've seen previously
+Sie haben eine etwas andere Syntax zu den SQL-Abfragen, die wir bisher gesehen haben
 
-They are a more secure way of writing SQL queries, as they entirely separate the query structure from the query parameters
+Sie sind eine sicherere Art, SQL-Abfragen zu schreiben, da sie die Abfragestruktur vollständig von den Abfrageparametern trennen
 
-When declaring query parameters, first use a question mark symbol - ? - in your query, in place of a variable
+Bei der Deklaration von Abfrageparametern verwenden Sie zunächst ein Fragezeichen -?- in Ihrer Abfrage anstelle einer Variablen
 
 ```
 $query = $db->prepare("INSERT INTO `users` (`username`, `password`, `name`) VALUES (?, ?, ?)")
 ```
 
-Then bind the variables that you want to use in your query:
+Dann binden Sie die Variablen, die Sie in Ihrer Abfrage verwenden möchten:
 
 ```
 $query->bind_param('sss', $lorem, $ipsum, $dolor);
 $query->execute();
 ```
 
-The first parameter should identify the 'type' of each variable:
+Der erste Parameter sollte den Typ jeder Variablen identifizieren:
 
- - `s` = string
- - `i` = integer - whole number
- - `d` = double/float - number with a decimal point
+ - `s` = String
+ - `i` = Integer - ganze Zahl
+ - `d` = Double/Float - Zahlen mit Dezimalpunkt
 
-Instead of mixing parameters with the main query statement, parameters are passed through separately before you query the database
+Anstatt Parameter mit der Hauptabfrageanweisung zu mischen, werden die Parameter separat weitergegeben, bevor Sie die Datenbank abfragen
 
-The order of parameters should match the order you want to use them
+Die Reihenfolge der Parameter sollte mit der Reihenfolge übereinstimmen, die Sie verwenden möchten
 
-Prepared statements can be mixed with the filtering functions we saw earlier for extra security
+Vorbereitete Aussagen können mit den Filterfunktionen gemischt werden, die wir früher für zusätzliche Sicherheit gesehen haben
 
 
-***Further information:***
+***Weitere Informationen:***
 
  - [Documentation](http://php.net/manual/en/mysqli.quickstart.prepared-statements.php)
  - [bind_param documentation](http://uk3.php.net/manual/en/mysqli-stmt.bind-param.php)
 
 
-#### 'Classic' SQL SELECT statement
+#### Klassisches SQL SELECT Statement
 
 ```
 $sql = 'SELECT `id`, `username` FROM `users` WHERE `username` = "'.$username.'" AND `password` = "'.$password.'"';
@@ -2512,7 +2489,7 @@ $result = $db->query($sql);
 ```
 
 
-#### 'Prepared' SQL SELECT statement
+#### Prepared SQL SELECT Statement
 
 ```
 // prepare the query
@@ -2541,7 +2518,7 @@ if ($query = $db->prepare("SELECT `id`, `username` FROM `users` WHERE `username`
 ```
 
 
-#### 'Classic' SQL INSERT statement
+#### Klassisches SQL INSERT Statement
 
 ```
 $sql = 'INSERT INTO `users` (`username`,`password`, `name`) VALUES ("'.$username.'","'.$password.'","'.$name.'")';
@@ -2550,7 +2527,7 @@ $result = $db->query($sql);
 ```
 
 
-#### 'Prepared' SQL INSERT statement...
+#### Prepared SQL INSERT Statement...
 
 ```
 // prepare the query
@@ -2574,45 +2551,45 @@ if ($query = $db->prepare("INSERT INTO `users` (`username`, `password`, `name`) 
 ```
 
 
-### Storing passwords
+### Passwörter speichern
 
-Don't store passwords in plain text!
+Speichern Sie keine Passwörter als Plaintext!
 
- - It's sensitive information
- - If someone gains access to your database, they gain access to all the passwords you've stored
- - Consider that for a lot of internet users, no matter how many times you tell them not to, they'll use the same password across sites
- - We need to find a way to make the passwords we store useless to anyone who can access them
+ - Passwörter sind sensible Informationen
+ - Wenn jemand Zugriff auf Ihre Datenbank erhält, erhalten sie Zugriff auf alle Passwörter, die Sie gespeichert haben
+ - Beachten Sie, dass eine Menge von Internet-Nutzer, egal wie oft Sie ihnen sagen, es nicht zu tun, sie das gleiche Passwort über mehrere Websites verwenden
+ - Wir müssen einen Weg finden, um die Passwörter sicher zu speichern, so dass jemand Fremdes nichts mit den Daten anfangen kann
 
-We need a way to encrypt passwords
+Wir müssen Passwörter verschlüsseln
 
 #### Hashing
 
-The most common method of encrypting passwords is known as hashing
+Die häufigste Methode zur Verschlüsselung von Passwörtern ist als Hashing bekannt
 
-Hashing turns passwords into long random strings of text
+Hashing wandelt Passwörter in lange zufällige Zeichenfolgen
 
-For example, the word 'password' run through the `SHA-1` hashing algorithm is `5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8`
+Zum Beispiel ist das Wort 'Passwort' durch den `SHA-1` Hash-Algorithmus '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8`
 
-It is a one-way process (easy to encrypt, difficult to decrypt)
+Es ist ein Einweg-Prozess (einfach zu verschlüsseln, nicht zu entschlüsseln)
 
-This means it is difficult to recover the original text from a hashed password
+Dies bedeutet, dass es schwierig ist, den ursprünglichen Text aus einem Hash-Passwort wiederherzustellen
 
-You can easily generate a hash for any string of text
+Sie können ganz einfach einen Hash für jede Zeichenfolge generieren
 
-It is highly unlikely that any two strings of text will generate an identical hash
+Es ist höchst unwahrscheinlich, dass zwei Zeichenfolgen einen identischen Hash erzeugen werden
 
-If someone were to access your database and steal your list of password hashes, they can't (easily) use these to reveal the actual passwords
+Wenn jemand auf Ihre Datenbank zugreifen und Ihre Liste der Passwort Hashes stehlen kann, können sie mit den gestohlenen Informationen nichts anfangen.
 
 
-#### Hashing algorithms
+#### Hashing Algorithmen
 
-There are lots of different hashing algorithms available
+Es gibt viele verschiedene Hash-Algorithmen zur Verfügung
 
-These will all take a string and convert it to a hash of a certain length (and complexity)
+Diese nehmen alle einen String und wandeln ihn in einen Hash von einer gewissen Länge (und Komplexität)
 
-They perform the same task in different ways, using different algorithms to calculate the hash
+Sie führen die gleiche Aufgabe auf unterschiedliche Weise, mit verschiedenen Algorithmen aus, um den Hash zu berechnen
 
-To create a hash with PHP we can choose one of the many different hashing functions
+Um einen Hash mit PHP zu erstellen, können wir eine der vielen verschiedenen Hashing-Funktionen wählen
 
 ```
 $string = 'password';
@@ -2621,22 +2598,21 @@ echo "MD5 hash: ". md5($string);
 echo "SHA-1 hash: ". sha1($string);
 ```
 
-Using these algorithms, any password generated with a string will always produce the same result
+Mit diesen Algorithmen wird jedes mit einem String generierte Passwort immer das gleiche Ergebnis erzeugen
 
-`sha1("password")` will always be 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
+`sha1("password")` wird immer `5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8` sein
 
-So we can store a hashed value rather than the actual password
-
-
-#### A log-in scenario
-
-  - Store the hash of someone's password, rather than the password itself
-  - When someone tries to log in, encrypt the submitted password using the same method
-  - Check this against the stored encrypted version
-  - (Instead of comparing the submitted plaintext password to the stored plaintext password)
+So können wir einen Hash-Wert und nicht das eigentliche Passwort speichern
 
 
-#### How to generate and store a hash in your PHP/MySQL website
+#### Ein Login Szenario
+
+  - Speichern Sie den Hash von einem Passwort, anstatt das Passwort selbst
+  - Wenn jemand versucht, sich einzuloggen, verschlüsseln Sie das übermittelte Passwort mit der gleichen Methode
+  - Überprüfen Sie dies gegen die gespeicherte verschlüsselte Version
+  - (anstatt das vorgelegte Klartext-Passwort mit dem gespeicherten Klartext-Passwort zu vergleichen)
+
+#### Wie man einen Hash in einer PHP / MySQL-Website erzeugt und speichert
 
 ```
 // Hash the password
@@ -2649,7 +2625,7 @@ $sql = 'INSERT INTO user (username, password) VALUES ("'.$_POST['username'].'", 
 $result = $db->query($sql);
 ```
 
-#### How to check a hash when logging in to your PHP/MySQL website
+#### So überprüfen Sie einen Hash bei der Anmeldung auf Ihrer PHP / MySQL-Website
 
 ```
 $passwordHash = sha1($_POST['password']);
@@ -2667,54 +2643,54 @@ if ($result->numRows() < 1) {
 
 ### Salts
 
-This level of encryption is a start, but it's not secure enough for password storage
+Diese Verschlüsselungsstufe ist ein Start, aber es ist nicht sicher genug für die Passwortspeicherung
 
-If someone gains access to your database, they will be able to see your password hashes
+Wenn jemand Zugang zu Ihrer Datenbank erhält, können sie Ihre Passwort Hashes sehen
 
-A common technique employed to try to decrypt the original plain text passwords from their hashes is called cracking, or 'brute forcing'
+Eine gängige Technik, die verwendet wird, um zu versuchen, die ursprünglichen Klartext-Passwörter aus ihren Hashes zu entschlüsseln, heisst Cracking oder "Brute-Forcing"
 
-Someone who has access to your hashed passwords can generate their own hashes for common passwords
+Jemand, der Zugriff auf Ihre Hash-Passwörter hat, kann eigene Hashes für gemeinsame Passwörter erzeugen
 
-The hashes generated are compared with those in your database
+Die erzeugten Hashes werden mit denen in Ihrer Datenbank verglichen
 
-Any matches will reveal the password for the user in question
+Alle Übereinstimmungen zeigen das Passwort für den jeweiligen Benutzer an
 
-Modern computers can generate MD5 and SHA-1 hashes very quickly - thousands every second
+Moderne Computer können MD5 und SHA-1 Hashes sehr schnell erzeugen - Tausende jede Sekunde
 
-Hashes can be generated for every word in an entire dictionary
+Hashes können für jedes Wort in einem ganzen Wörterbuch generiert werden
 
-You can suggest users set up strong passwords, which would provide a reasonable level of protection against such attacks...but you cannot guarantee that your users will actually do this!
+Sie können vorschlagen, dass Benutzer starke Passwörter einrichten, die ein angemessenes Mass an Schutz gegen solche Angriffe bieten würden ... aber Sie können nicht garantieren, dass Ihre Benutzer das tatsächlich tun werden!
 
 
-#### Password hashing with a salt
+#### Passwort Hashing mit Salt
 
-Before generating a hash, we should add a 'salt' to the password
+Bevor wir einen Hash erzeugen, sollten wir dem Passwort ein "Salt" hinzufügen
 
-A salt is a random string of characters of a set length
+Ein Salz ist eine zufällige Zeichenfolge einer Satzlänge
 
-Every time we add a user, we should generate a unique salt for them
+Jedes Mal, wenn wir einen Benutzer hinzufügen, sollten wir für sie ein einzigartiges Salt erzeugen
 
-We then use both the salt and the password to create a unique password
+Wir verwenden dann sowohl das Salt als auch das Passwort, um ein einzigartiges Passwort zu erstellen
 
-This provides an additional level of security and protects against brute force attacks
+Dies bietet ein zusätzliches Mass an Sicherheit und schützt vor Brute-Force-Angriffen
 
  - [This article explains how to use them](http://phpsec.org/articles/2005/password-hashing.html)
 
 
-### File Uploads
+### Datei Uploads
 
-Previously we have seen a basic example of a file upload script
+Bisher haben wir ein grundlegendes Beispiel für ein Datei-Upload-Skript gesehen
 
-It doesn't currently run any form of validation the file that's being uploaded
+Es läuft derzeit keine Form der Validierung der Datei, die hochgeladen wird
 
-This could be improved!
+Das könnte verbessert werden!
 
-When allowing users to upload files, there are a couple of precautions you could take:
+Wenn es Benutzern erlaubt, Dateien hochzuladen, gibt es ein paar Vorsichtsmassnahmen, die Sie ergreifen könnten:
 
- - limit the allowed file types
- - limit the allowed file size
+  - Begrenzt die erlaubten Dateitypen
+  - Begrenzt die zulässige Dateigrösse
 
-Otherwise, if a malicious user knows that you have a PHP server, and you allow them to upload a PHP file, they could write and upload a script that would allow them access to your server
+Andernfalls, wenn ein bösartiger Benutzer weiss, dass Sie einen PHP-Server haben und Sie erlauben ihnen, eine PHP-Datei hochzuladen, können sie ein Script schreiben und hochladen, das ihnen den Zugriff auf Ihren Server ermöglicht
 
 ```
 // Set allowed file types
@@ -2731,18 +2707,18 @@ if (in_array($_FILES['upload']['type'], $allowedMimeTypes)) {
 }
 ```
 
-This is just a basic form of file detection, and can easily be fooled, but it does demonstrate the need to add security around file uploads
+Dies ist nur eine grundlegende Form der Datei-Erkennung, und kann leicht überlistet werden, aber es zeigt die Notwendigkeit, Sicherheit zu Datei-Uploads hinzufügen
 
 
-### File includes
+### Datei Includes
 
-If you ever use a submitted variable as part of a file name or path, first use `basepath()` to filter it
+Wenn Sie jemals eine übergebene Variable als Teil eines Dateinamens oder Pfades verwenden, verwenden Sie zuerst `basepath()`, um sie zu filtern
 
 ```
 $filePath = basepath("/path/to/file.php"); // file.php
 ```
 
-This means malicious users are unable to trigger a remote file inclusion:
+Dies bedeutet, dass böswillige Benutzer eine Remote-Datei nicht aufrufen können:
 
 ```
 $fileInclude = basepath("http://malicious.url/file.php");
@@ -2750,15 +2726,15 @@ $fileInclude = basepath("http://malicious.url/file.php");
 ```
 
 
-### Miscellaneous tips
+### Verschiedene Tips
 
-Don't differentiate between invalid usernames and passwords in error messages - If someone is trying to maliciously access an account, you shouldn't let them know that they've identified a valid username but the password is wrong
+Unterschieden Sie nicht zwischen ungültigen Benutzernamen und Passwörtern in Fehlermeldungen - Wenn jemand versucht, bösartig auf ein Konto zuzugreifen, sollten Sie ihn nicht wissen lassen, dass er einen gültigen Benutzernamen identifiziert haben, aber das Passwort ist falsch
 
-Limit the number of times someone can log in incorrectly - After a few attempts from the same IP address, consider blocking it, at least temporarily
+Begrenzen Sie die Anzahl der Zeiten, in denen sich jemand falsch anmelden kann - Nach ein paar Versuchen von der gleichen IP-Adresse, sollten Sie es zumindest zeitweilig blockieren
 
-Turn off PHP error reporting for a live site - It's useful for debugging during development, but you don't want end users to see this information
+Deaktivieren Sie die PHP-Fehlerberichterstattung für eine Live-Site - es ist nützlich für das Debugging während der Entwicklung, aber Sie möchten nicht, dass die Endbenutzer diese Informationen sehen
 
-***Further information:***
+***Weitere Informationen:***
 
  - [http://phpsecurity.org/](http://phpsecurity.org/)
  - [http://www.addedbytes.com/writing-secure-php/](http://www.addedbytes.com/writing-secure-php/)
@@ -2775,19 +2751,19 @@ Turn off PHP error reporting for a live site - It's useful for debugging during 
  - [http://shiflett.org/articles/file-uploads](http://shiflett.org/articles/file-uploads)
 
 
-## XML And JSON
+## XML und JSON
 
-We have seen how easy it was to import files when generating an HTML page, using the PHP functions `include` and `require`
+Wir haben gesehen, wie einfach es war, Dateien beim Erstellen einer HTML-Seite zu importieren, mit den PHP-Funktionen `include` und` require`
 
-We used the example of a generic header and footer include for a website
+Wir haben das Beispiel für eine generische Kopf- und Fusszeile für eine Website verwendet
 
-We can also use this for repetitive content, information you only really want to store once
+Wir können dies auch für repetitive Inhalte verwenden, Informationen, die Sie nur einmal speichern möchten
 
-### File includes - HTML
+### Datei Includes - HTML
 
-Let's say we're creating a form, in which we want to import a list of countries as a select dropdown list
+Nehmen wir an, wir erstellen ein Formular, in dem wir eine Liste von Ländern als ausgewählte Dropdown-Liste importieren möchten
 
-If it were a static HTML page:
+Wenn es eine statische HTML-Seite wäre:
 
 ```
 <html>
@@ -2804,7 +2780,7 @@ If it were a static HTML page:
 </html>
 ```
 
-We could just include a file containing the HTML at the relevant point:
+Wir könnten nur eine Datei mit dem HTML an der entsprechenden Stelle einbinden:
 
 ```
 <html>
@@ -2818,25 +2794,25 @@ We could just include a file containing the HTML at the relevant point:
 </html>
 ```
 
-This is one way to store information, as ready-made HTML
+Dies ist eine Möglichkeit, Informationen zu speichern, als fertiges HTML
 
-But there are some issues:
+Aber es gibt einige Probleme:
 
- - It's not a true separation of data from its display
- - You can't re-use this information in other ways
- - (Each country name is surrounded by an <option> element so couldn't be used in any other way)
- - There are more efficient ways of doing this - we could use PHP to transform it dynamically
+  - Es ist keine echte Trennung der Daten von der Anzeige
+  - Sie können diese Informationen nicht auf andere Weise wiederverwenden
+  - (Jeder Ländername wird von einem `<option>`-Element umgeben, also kann es nicht anders verwendet werden)
+  - Es gibt effizientere Möglichkeiten, dies zu tun - wir könnten PHP verwenden, um es dynamisch zu verändern
 
 
-Looking at the structure of the original countries HTML, there is a new line (or row) for each item of data
+Betrachtet man die Struktur der ursprünglichen HTML Datei, gibt es eine neue Zeile für jedes Datenelement
 
-On each line there is the country name with an `<option>` element surrounding it
+Auf jeder Zeile gibt es den Landnamen mit einem `<option>` Element, das es umgibt
 
-If we had just a list of country names, we could recreate this programatically using PHP
+Wenn wir nur eine Liste von Ländernamen hätten, könnten wir diese programmgesteuert mit PHP neu erstellen
 
-Now rather than just inserting the file into the page, we'll need to read and process it with PHP
+Nun, anstatt nur die Datei in die Seite einzufügen, müssen wir sie mit PHP lesen und verarbeiten
 
-To read the file we use the built-in PHP functions `file()` and `file_get_contents()`
+Um die Datei zu lesen, verwenden wir die eingebauten PHP-Funktionen `file()` und `file_get_contents()`
 
 ```
 <html>
@@ -2855,49 +2831,49 @@ To read the file we use the built-in PHP functions `file()` and `file_get_conten
 </html>
 ```
 
-We're now using 'raw' data that could be used elsewhere in different contexts
+Wir verwenden jetzt "rohe" Daten, die anderswo in unterschiedlichen Kontexten verwendet werden könnten
 
-We aren't restricted to doing this just from a local file on our server
+Wir sind nicht darauf beschränkt, dies nur aus einer lokalen Datei auf unserem Server zu laden
 
-We could use `file()` and `file_get_contents()` to retrieve data from any URL*
+Wir könnten `file()` und `file_get_contents()` verwenden, um Daten von jeder URL abzurufen*
 
 
-### file() and file_get_contents()
+### file() und file_get_contents()
 
-There is a difference between these two functions.
+Es gibt einen Unterschied zwischen diesen beiden Funktionen.
 
-Which one you use depends on what it is you need to do:
+Welches Sie verwenden, hängt davon ab, was Sie tun müssen:
 
 
 #### file()
 
-reads the contents of a file, and will put each new line into an array
+Liest den Inhalt einer Datei und setzt jede neue Zeile in ein Array
 
-useful when reading in the contents of a file or web page containing listed content
+Nützlich beim Lesen im Inhalt einer Datei oder Webseite mit aufgelisteten Inhalten
 
-(we're all array experts by now!)
+(Wir sind jetzt alle Array-Experten!)
 
 
 #### file_get_contents()
 
-reads the contents of a file and put this all into a string
+Liest den Inhalt einer Datei und setzt das alles in einen String
 
-useful when reading in the contents of a file or web page containing prose, code (or anything that isn't listed content)
+Nützlich beim Lesen des Inhalts einer Datei oder Web-Seite mit Prosa, Code (oder etwas, das nicht aufgelistetem Inhalt entspricht)
 
 
-#### Security
+#### Sicherheit
 
-(remember that asterisk?)
+(Erinnern Sie sich an das Sternchen?)
 
-We can't use `file()` or `file_get_contents()` on many servers to access remote files
+Wir können `file()` oder `file_get_contents()` auf vielen Servern nicht verwenden, um auf entfernte Dateien zuzugreifen
 
-(they work fine for local files)
+(Sie funktionieren gut für lokale Dateien)
 
-This is due to security issues - "code injection vulnerabilities"
+Dies liegt an Sicherheitsfragen - "Code Injection Vulnerabilities"
 
-There is an alternative way to import remote files from other servers, to work around the security concern
+Es gibt eine alternative Möglichkeit, Remote-Dateien von anderen Servern zu importieren, um diese Sicherheitsbeschränkung zu umgehen
 
-Put this in a separate file (e.g. 'curl.php'), use require_once at the top of the file if you need to use it
+Setzen Sie dies in einer separaten Datei (z.B. 'curl.php'), verwenden Sie require_once am Anfang der Datei, wenn Sie es verwenden müssen
 
 ```
 function file_get_contents_curl($url) {
@@ -2917,24 +2893,24 @@ function file_curl($url) {
   return split("\n", file_get_contents_curl($url));
 }
 ```
-We are now using 'raw' data that could be used in other contexts
+Wir verwenden jetzt "rohe" Daten, die in anderen Kontexten verwendet werden könnten
 
-We could also manipulate the data before outputting it
+Wir könnten die Daten auch vor der Ausgabe manipulieren
 
-PHP has lots of different functions to manipulate or sort arrays
+PHP hat viele verschiedene Funktionen um Daten zu manipulieren oder zu sortieren
 
 
-### Structured Data
+### Strukturierte Daten
 
-The information we have just seen is not structured
+Die Informationen, die wir gerade gesehen haben, sind nicht strukturiert
 
-This method is fine for simple single-value information, not so good for complex data
+Diese Methode eignet sich gut für einfache Einzelwert-Informationen, nicht so gut für komplexe Daten
 
-We have seen how to use arrays to manipulate or loop through structured information
+Wir haben gesehen, wie man Arrays benutzt, um strukturierte Informationen zu manipulieren oder zu durchzuschleifen
 
-What we need is a way to store complex information, so we can turn it into arrays
+Was wir brauchen, ist eine Möglichkeit, komplexe Informationen zu speichern, damit wir sie in Arrays verwandeln können
 
-There are a few options:
+Es gibt ein paar Optionen:
 
  - CSV
  - XML
@@ -2943,9 +2919,9 @@ There are a few options:
 
 ### CSV
 
-Comma-separated values are another way to store information, often as plain-text static files
+Komma-getrennte Werte sind eine weitere Möglichkeit, Informationen zu speichern, oft als statische Textdateien
 
-Uses a similar storage technique as the last example, but this time different items of data are separated with commas (or another agreed delimiter such as a tab)
+Verwendet eine ähnliche Speichertechnik wie das letzte Beispiel, aber dieses Mal werden verschiedene Datenelemente mit Kommas (oder einem anderen vereinbarten Trennzeichen wie einem Tab) getrennt,
 
 ```
 England, Europe, English
@@ -2953,7 +2929,7 @@ Switzerland, Europe, German Italian and French
 Brazil, South America, Portuguese
 ```
 
-This information can then be processed:
+Diese Informationen können dann verarbeitet werden:
 
 ```
 <?php
@@ -2978,21 +2954,21 @@ foreach ($countries as $country) {
 ?>
 ```
 
-We now have a way to store multiple pieces of data for each item
+Wir haben jetzt einen Weg, um mehrere Stücke von Daten für jeden Artikel zu speichern
 
-This system is used widely (e.g. Excel files can be imported/exported as .csv)
+Dieses System ist weit verbreitet (z.B. können Excel-Dateien als .csv importiert / exportiert werden)
 
-Still not got much structure - assuming 'flat' information, one row for each item
+Immer noch nicht viel Struktur - unter der Annahme "flacher" Informationen, eine Zeile für jeden Artikel
 
-We turned information into an array, so we can access the data...
+Wir haben Informationen in ein Array geschaltet, damit wir auf die Daten zugreifen können ...
 
-...but each value in the array is indexed by number, based on where it occurs in the row
+... aber jeder Wert im Array wird durch die Zahl indiziert, je nachdem, wo er in der Zeile auftritt
 
-We don't actually know what that data represents
+Wir wissen eigentlich nicht, was diese Daten repräsentieren
 
-We're relying on standard formatting. What if there was an extra tab or comma in one row?
+Wir setzen auf Standardformatierung. Was wäre, wenn es einen zusätzlichen Tab oder Komma in einer Reihe gibt?
 
-Better systems exist for storing complex data
+Bessere Systeme existieren für die Speicherung komplexer Daten
 
 
 ### XML
@@ -3001,66 +2977,66 @@ _eXtensible Markup Language_
 
 "data interchange format"
 
-Similar to HTML, in that it uses elements and attributes to surround information
+Ähnlich wie bei HTML, indem es Elemente und Attribute verwendet, um Informationen zu umgeben
 
-It's an open standard defined by the W3C
+Es ist ein offener Standard, der vom W3C definiert ist
 
-This is important, it means everyone agrees on how to use it
+Das ist wichtig, es bedeutet, dass jeder einverstanden ist, wie man es benutzt
 
-I should be able to expect XML data from an external source to obey the rules
+Man sollte erwarten können, dass XML-Daten von einer externen Quelle diese Regeln befolgen
 
-(But! You can't assume it always will...)
+(In der Praxis ist das leider nicht immer so)
 
-The syntax rules are simple and easy to adhere to
+Die Syntaxregeln sind einfach und einfach zu befolgen
 
-It is self-documenting, the element names describe the content
+Es ist selbstdokumentierend, die Elementnamen beschreiben den Inhalt
 
-It allows us to store complex information
+Es erlaubt uns, komplexe Informationen zu speichern
 
-It allows two systems written in different technologies to exchange data
+Es erlaubt zwei Systeme, die in verschiedenen Technologien geschrieben sind, Daten auszutauschen
 
 
-#### XML syntax rules
+#### XML Syntax Regeln
 
-Most tags must have matching opening and closing tags
+Die meisten Tags müssen übereinstimmende Öffnungs- und Schluss-Tags haben
 
 ```
 <tag>O Rose thou art sick.</tag>
 <selfclosing lorem="ipsum" />
 ```
 
-Tags should be 'properly nested'
+Tags sollten ordentlich verschachtelt sein
 
 ```
 <tag>O <another>Rose</another> thou art sick.</tag>
 ```
 
-Tags should match case (just use lower-case)
+Tags sollten immer in Kleinbuchstaben geschrieben werden
 
 ```
 <tag>O Rose thou art sick.</tag>
 ```
 
 
-#### Aside: XML, HTML and XHTML
+#### Nebebei: XML, HTML and XHTML
 
-HTML looks a lot like XML...
+HTML sieht aus wie XML ...
 
-But HTML is not strictly an XML format:
+Aber HTML ist kein XML Format:
 
- - Don't need to close tags
- - Case-insensitive opening and closing tags
+ - Tags müssen nicht geschlossen werden
+ - Gross-/Kleinschreibung bei öffnenden und schliessenden Tags
 
-XHTML was an attempt to map XML rules onto HTML
+XHTML war der Versuch die XML Regeln auf HTML anzuwenden
 
-With HTML5 you can pick and choose whether you support XML or not
+Mit HTML5 können Sie wählen, ob Sie XML benutzen wollen oder nicht
 
 
-#### Using XML with PHP
+#### XML mit PHP benutzen
 
-As with the plain-text and CSV examples earlier, we can use PHP to parse XML files too
+Wie bei den Plaintext- und CSV-Beispielen vorhin, können wir PHP auch verwenden, um XML-Dateien zu analysieren
 
-We can load an XML file in to PHP using the `simplexml_load_file()` function
+Wir können eine XML-Datei in PHP mit der Funktion `simplexml_load_file()` laden
 
 
 ```
@@ -3079,71 +3055,71 @@ foreach ($countries as $country) {
 }
 ```
 
-There is one important difference with the syntax for accessing the data we've loaded from an XML file
+Es gibt einen wichtigen Unterschied mit der Syntax für den Zugriff auf die Daten, die wir aus einer XML-Datei geladen haben
 
-The XML is loaded as an object rather than an associative array
+Das XML wird als Objekt und nicht als assoziatives Array geladen
 
-Objects in PHP are beyond the scope of this document, but in this situation we use them in a similar way to an array
+Objekte in PHP gehen über den Rahmen dieses Dokuments hinaus, aber in dieser Situation verwenden wir sie in ähnlicher Weise wie ein Array
 
-The key difference is how we access the data
+Der entscheidende Unterschied ist, wie wir auf die Daten zugreifen
 
-Array syntax:
+Array Syntax:
 
 ```
 $array['property'] // == value;
 ```
 
-Object syntax:
+Object Syntax:
 
 ```
 $object->property // == value;
 ```
 
-For example to access the English language name we must use:
+Um z.B. den Namen der englischen Sprachen zu wählen, müssen wir folgendes schreiben:
 
 ```
 $country->names->english
 ```
 
-Whereas the more familiar array syntax would have been:
+Die entsprechende Array Syntax lautet:
 
 ```
 $country['names']['english']
 ```
 
-These are a huge number of standards using the syntax of XML
+Es gibt eine riesige Anzahl von Standards mit der Syntax von XML
 
-Each of these has an agreed list of elements and structure
+Jeder von ihnen hat eine vereinbarte Liste von Elementen und Strukturen
 
-Some examples:
+Einige Beispiele:
 
- - SVG for vector image data
- - KML for map data
- - RSS for syndicating web content
- - epub for ebooks
- - (etc...)
+  - SVG für Vektorbilddaten
+  - KML für Kartendaten
+  - RSS zur Syndizierung von Webinhalten
+  - epub für eBooks
+  - (etc...)
 
 
 ### JSON
 
-JSON is used for similar reasons to XML - to share complex information between systems
+JSON wird aus ähnlichen Gründen wie XML verwendet - um komplexe Informationen zwischen Systemen zu teilen
 
-It uses JavaScript syntax (as opposed to XML syntax) to store data
+Es verwendet JavaScript-Syntax (im Gegensatz zur XML-Syntax), um Daten zu speichern
 
-JSON has a big advantage over XML - it is (usually) less dense (it requires less code) to describe data
+JSON hat einen grossen Vorteil gegenüber XML - es ist (meist) weniger dicht (es erfordert weniger Code), um Daten zu beschreiben
 
-This is important: when sharing vast quantities of data across a network you want it to be efficient
+Das ist wichtig: Beim Teilen von riesigen Datenmengen über ein Netzwerk wollen Sie, dass es effizient ist
 
-The smaller the file size (the fewer the characters) the better
+Je kleiner die Dateigrösse (je weniger Zeichen) desto besser
 
-For users of the data, it often doesn't particularly matter if it is stored in XML or JSON format
+Für Benutzer der Daten ist es oft nicht besonders wichtig, ob es im XML- oder JSON-Format gespeichert ist
 
 
-#### Using JSON with PHP
+#### JSON mit PHP benutzen
 
-As with the XML example, we can use PHP to parse JSON files
+Wie beim XML-Beispiel können wir PHP verwenden, um JSON-Dateien zu analysieren
 
-We load a JSON file into PHP using `file_get_contents()`, then turn it into a PHP array using the `json_decode()` function
+Wir laden eine JSON-Datei in PHP mit `file_get_contents()`, dann wandeln wir es in ein PHP-Array mit der `json_decode()` Funktion
 
 ```
 // load the JSON file into a variable as a string
@@ -3164,40 +3140,40 @@ foreach ($countryData["countries"] as $country) {
 ```
 
 
-### Why are XML and JSON important
+### Warum sind XML und JSON wichtig
 
-Useful way to store (or represent) complex data
+Nützliche Möglichkeit, komplexe Daten zu speichern (oder zu repräsentieren)
 
-Useful way for different services to exchange data
+Nützliche Möglichkeit für verschiedene Dienste zum Austausch von Daten
 
-We can read and manipulate the data with PHP
-
-
-### Static files and generated content
-
-You don't necessarily have to store data in static files
-
-To keep the data up-to-date you have to manually update the files
-
-Also means you need access to the web server, and the technical skills to do this
-
-You can generate XML/JSON to represent data that has been requested
-
-Many websites now offer XML/JSON feeds
+Wir können die Daten mit PHP lesen und manipulieren
 
 
-### Data feeds and APIs
+### Statische Dateien und generierte Inhalte
 
-Rather than storing data yourself, you can use third-party services to store and manage your data
+Sie müssen nicht unbedingt Daten in statischen Dateien speichern
 
-_Why store photos when you can use flickr, why store short pieces of data when you can use twitter_
+Um die Daten aktuell zu halten, müssen Sie die Dateien manuell aktualisieren
 
-These companies won't give direct access to their databases to anyone
+Bedeutet auch, dass man Zugriff auf den Webserver hat und die technischen Fähigkeiten, um dies zu tun
 
-They supply alternative ways to access their information - data feeds and APIs
+Sie können XML / JSON erzeugen, um Daten darzustellen, die angefordert wurden
 
-Data feeds generally allow us access to data, usually in XML/JSON format
+Viele Webseiten bieten jetzt XML / JSON-Feeds an
 
-APIs are usually more complex as they often also allow us to manipulate data, so we can update content without having to visit the site itself
 
-We could consider using third-party services to replace a local database, or to provide supplementary information about a selected item from our website
+### Daten-Feeds und APIs
+
+Anstatt Daten selbst zu speichern, können Sie Drittanbieterdienste verwenden, um Ihre Daten zu speichern und zu verwalten
+
+_Warum Fotos speichern, wenn Sie flickr verwenden können, warum speichern Sie kurze Stücke von Daten, wenn Sie twitter verwenden können_
+
+Diese Unternehmen geben keinen direkten Zugang zu ihren Datenbanken für jedermann
+
+Sie bieten alternative Möglichkeiten, auf ihre Informationen zuzugreifen - Daten-Feeds und APIs
+
+Daten-Feeds erlauben uns generell den Zugriff auf Daten, meist im XML / JSON-Format
+
+APIs sind in der Regel komplexer, da sie uns oft auch erlauben, Daten zu manipulieren, so können wir Inhalte aktualisieren, ohne die Website selbst zu besuchen
+
+Wir könnten erwägen, Drittanbieterdienste zu verwenden, um eine lokale Datenbank zu ersetzen oder um ergänzende Informationen über ein ausgewähltes Element von unserer Website zu erhalten
