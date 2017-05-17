@@ -18,7 +18,7 @@ Im Jahr 1990 vereint Tim Berners-Lee, ein britischer Ingenieur, der am CERN arbe
 
 Die Schlüsselkomponenten des 'World Wide Web'
 
- - HTML - eine Auszeichnungssprache, die verwendet wird, um Struktur zu Informationen zu geben
+ - HTML - eine Markup-Sprache, die verwendet wird, um Informationen Struktur zu geben
  - URLs - wird verwendet, um Dokumente eindeutig zu identifizieren
  - Hyperlinks (Hypertext) - um zwischen Dokumenten zu wechseln
  - Web-Browser - eine einfache grafische Benutzeroberfläche (GUI), um diese Dokumente anzuzeigen
@@ -31,11 +31,11 @@ Diese Technologien haben unseren Konsum von Informationen revolutioniert!
 
 Eine Organisation, die 1994 von Tim Berners-Lee gegründet wurde.
 
-Sie sind verantwortlich für die Entwicklung von "nicht-proprietären, interoperablen Technologien" für das World Wide Web.
+Sie ist verantwortlich für die Entwicklung von "nicht-proprietären, interoperablen Technologien" für das World Wide Web.
 
-Sie versuchen, das Internet universell zugänglich zu machen, unabhängig von der Fähigkeit, Sprache oder Kultur.
+Sie versucht, das Internet universell zugänglich zu machen, unabhängig von der Fähigkeit, Sprache oder Kultur.
 
-Sie tun dies durch die Schaffung von Standards für Web-Technologien, wie HTML, CSS und XML.
+Sie tut dies durch die Schaffung von Standards für Web-Technologien, wie HTML, CSS und XML.
 
 
 ### Web-Browser
@@ -46,7 +46,7 @@ In diesen Tagen sind sie alle ziemlich ähnlich, und konkurrieren durch das Hinzu
 
 Die meisten Browser aktualisieren sich oft
 
-Das war nicht immer so - * Internet Explorer 6 ... *
+Das war nicht immer so - *Internet Explorer 6 ...*
 
 
 ### Browsertechnologien
@@ -81,7 +81,7 @@ Wir "beschreiben" ein Dokument, um ihm Struktur zu geben, indem wir die Bedeutun
 HTML ist eine Art "Beschreibungs"-Sprache
 
 
-### Wie würden wir ein Buch markieren?
+### Wie würden wir ein Buch beschreiben?
 
 Nehmen Sie das folgende Beispiel eines Buches:
 
@@ -190,7 +190,7 @@ Tags sollten richtig verschachtelt sein
 
 #### Gross-/Kleinschreibung
 
-Tags sollte die gleiche Schreibweise haben (am Besten nur Kleinbuchstaben verwenden)
+Tags sollten die gleiche Schreibweise haben (am Besten nur Kleinbuchstaben verwenden)
 
 Beachten Sie, dass dies keine strenge Regel ist, wie die vorherigen zwei, jedoch sollte sie immer eingehalten werden.
 
@@ -215,7 +215,7 @@ Beachten Sie, dass dies keine strenge Regel ist, wie die vorherigen zwei, jedoch
 
 ### Attribute
 
-Zusätzliche Informationen für ein Tag können mit Attributen im Eröffnungs-Tag angegeben werden
+Zusätzliche Informationen für einen Tag können mit Attributen im Eröffnungs-Tag angegeben werden
 
 ```
 <a href="http://google.com">Mit Google suchen</a>
@@ -593,12 +593,12 @@ Eine Seite, die mit `position: absolute` ausgelegt ist, hat ihre Grenzen
   - "feste" Höhen des Inhalts
   - das Layout passt sich nicht dem Inhalt an
 
-`Position` ist nützlich, aber nicht für das Hauptseitenlayout
+`position` ist nützlich, aber nicht für das Hauptseitenlayout
 
 
 ### Floats
 
-HTML-Elemente können mit CSS als schwebend definiert werden - `float: left;` oder `float: right;`
+HTML-Elemente können mit CSS als schwimmend definiert werden - `float: left;` oder `float: right;`
 
 ```
 #main {
@@ -614,15 +614,15 @@ HTML-Elemente können mit CSS als schwebend definiert werden - `float: left;` ode
 }
 ```
 
-Ein schwebendes Element wird so weit wie möglich nach links oder rechts von seinem Containerelement verschoben
+Ein schwimmendes Element wird so weit wie möglich nach links oder rechts von seinem Containerelement verschoben
 
-Wenn wir ein anderes Element in die gleiche Richtung schweben, wird es verschoben, bis sein Rand den Rand des ersten schwimmenden Elements erreicht
+Wenn wir ein anderes Element in die gleiche Richtung schwimmen lassen, wird es verschoben, bis sein Rand den Rand des ersten schwimmenden Elements erreicht
 
-Nicht-schwebender Inhalt fliesst um schwebende Elemente herum
+Nicht-schwimmender Inhalt fliesst um schwimmende Elemente herum
 
-Schwimmende Elemente sind besser, als die starre Positionierung für Layout - im Gegensatz zu absolut positionierten Elementen, beliben schwebende Elemente im Dokumentenfluss und erlauben es den Inhalt auf einfacher Weise zu erweitern
+Schwimmende Elemente sind besser, als die starre Positionierung für Layout - im Gegensatz zu absolut positionierten Elementen, beliben schwimmende Elemente im Dokumentenfluss und erlauben es den Inhalt auf einfacher Weise zu erweitern
 
-Sie sollten (fast) immer eine Breite bei schwebenden Elementen setzen, obwohl Elemente mit inhärenten Breiten (z.B. Bilder) keine Breite benötigen
+Sie sollten (fast) immer eine Breite bei schwimmenden Elementen setzen, obwohl Elemente mit inhärenten Breiten (z.B. Bilder) keine Breite benötigen
 
 #### Floats steuern
 
@@ -655,7 +655,7 @@ Wenn wir steuern wollen, wie viele Floating-Elemente auf einer Linie erscheinen,
 
 #### float: center?
 
-Sie können kein Element im Mittelpunkt schweben lassen - dafür gibt es noch andere Techniken
+Sie können kein Element im Mittelpunkt schwimmen lassen - dafür gibt es noch andere Techniken
 
 ```
 body {
@@ -710,7 +710,7 @@ Diese Medien-Abfragen können im CSS inline erscheinen:
 
 Styles, die in die `@media`-Abfrage geschrieben werden, werden nur verwendet, wenn die angegebenen Bedingungen wahr sind.
 
-Die Verwendung von `@media` Abfragen, um verschiedene Layouts für verschiedene Auflösungen (oder Browser-Dimensionen) zu erstellen, ist allgemein als Responsive Webdesign bekannt
+Die Verwendung von `@media` Abfragen, um verschiedene Layouts für verschiedene Auflösungen (oder Browser-Dimensionen) zu erstellen, ist allgemein als Responsive Design bekannt
 
 Das Layout der Inhalte sollte sich anpassen, um für verschiedene Browser-Grössen zu passen
 
@@ -728,7 +728,7 @@ Sie können steuern, wie eine Seite in einem (modernen) mobilen Browser mit einer
 
 Es ist möglich, eine bestehende Website responsive zu machen, indem Sie zusätzliche Stile (innerhalb einer `@media` Abfrage) für mobile Geräte hinzufügen
 
-Bandbreitenprobleme für Desktop-Browser sind heutzutage aufgrund von Breitbandleitungen weniger relevant, sind teils aber immer noch ein Anliegen für mobile Browser
+Bandbreitenprobleme für Desktop-Browser sind heutzutage aufgrund von Breitbandleitungen weniger relevant, teils aber immer noch ein Anliegen für mobile Browser
 
 Die Benutzung von `@media` Abfragen bedeutet, dass ein Mobiltelefon eine ganze Desktop-Seite herunterladen muss plus die zusätzlichen Styles
 
@@ -764,9 +764,9 @@ D.h. alte Browser oder Geräte unterstützen keine `@media` Abfragen, so dass dies
 Eine "vereinbarte" Spezifikation für HTML, CSS und JavaScript
 
   - Wie sollten wir Code schreiben
-  - Wie Web-Browser lesen und rendern Code
+  - Wie Web-Browser Code lesen und rendern
 
-Web-Standards erlauben Web-Entwickler, sich auf ihren Code zu konzentrieren
+Web-Standards erlauben Web-Entwicklern, sich auf ihren Code zu konzentrieren
 
 Wenn der Code gültig ist, sollte die Seite in einem Webbrowser wie erwartet rendern
 
