@@ -39,7 +39,7 @@ Es ist weit verbreitet auf Webservern
 
 Es gibt viele Bücher und Online-Dokumentation, um Ihr Lernen zu unterstützen
 
-Viele Drittanbieter-Ressourcen - PHP-Skripte von anderen frei online verfügbar geschrieben
+Viele Drittanbieter-Ressourcen: PHP-Skripte, von anderen geschrieben, sind online frei verfügbar
 
 Im Einsatz auf zahlreichen grossen Webseiten
 
@@ -52,7 +52,7 @@ Wenn Sie eine PHP-Datei in einem Webbrowser direkt öffnen, sehen Sie den unverar
 
 Sie müssen PHP-Skripte über einen Webserver (typischerweise Apache) ausführen, der Server verarbeitet den Code und gibt die Ergebnisse aus
 
-Zum Glück ist die Installation einfach. Diese kann separat installiert werden, oder zusammen mit so etwas wie WAMP, MAMP etc.
+Zum Glück ist die Installation einfach. Diese kann separat installiert werden, oder zusammen mit so etwas wie WAMP, MAMP, XAMPP, etc.
 
 Apache ist ein kontinuierlich laufender Prozess auf dem Server - denken Sie an ein Computerprogramm, das Sie niemals beenden
 
@@ -73,8 +73,8 @@ Es ist sinnvoll, Daten und Logik aus der Präsentation zu trennen
   - Dadurch ist es einfacher einen einzelnen Aspekt zu verändern, ohne die anderen zu berühren
   - Trennung von Angelegenheiten
   - Daten können an anderer Stelle wiederverwendet werden
-  - Nur eine 'Vorlage' Datei haben, die enthält, wie der Inhalt gerendert wird
-  - Daten können mit einem einfachen Formular editiert werden - kein HTML-Kenntnisse erforderlich
+  - Nur eine 'Template' Datei haben, die enthält, wie der Inhalt gerendert wird
+  - Daten können mit einem einfachen Formular editiert werden - keine HTML-Kenntnisse erforderlich
 
 Noch ein paar Gründe, warum die serverseitige Verarbeitung sinnvoll ist:
 
@@ -113,15 +113,15 @@ PHP-Code wird identifiziert, indem er in bestimmte Skript-Tags gesetzt wird:
 ?>
 ```
 
-So starten Sie PHP:
+So starten Sie mit PHP:
 
   - Erstellen Sie eine neue Datei
-  - Geben Sie ihm eine Dateierweiterung von .php (z. B. index.php)
+  - Geben Sie ihr eine Dateierweiterung von .php (z. B. index.php)
   - (Oder ändern eine vorhandene Datei von .html zu .php)
-  - Schreiben Sie einen PHP-Code innerhalb der Tags <?php und ?>
-  - Öffentliche URL in einem Browser anzeigen
+  - Schreiben Sie PHP-Code innerhalb der Tags <?php und ?>
+  - Rufen Sie die öffentliche URL Ihres Skripts in einem Browser auf
 
-PHP-Code kann frei mit normalem HTML durchsetzt werden.
+PHP-Code kann frei mit normalem HTML durchsetzt werden. In der Regel sollte man das aber - wann immer möglich und sinnvoll - unterlassen.
 
 Der PHP-Interpreter auf dem Server liest die Anweisungen und erzeugt HTML, das an den Browser gesendet wird
 
@@ -175,7 +175,7 @@ Der Server interpretiert das PHP und generiert:
 </html>
 ```
 
-Einige Regeln, um sofort zu beachten:
+Es gibt einige Regeln zu beachten:
 
   - Wenn Sie einen PHP-Befehl beenden, stellen Sie sicher, dass Sie ein Semikolon verwenden, um einen Fehler zu vermeiden (mehr dazu später)
   - Der Befehl `echo` wird verwendet, um Inhalte in die HTML-Seite einzufügen.
@@ -213,7 +213,7 @@ echo $sentence;
 $sentence2 = $word1 . " " . $word2;
 // $sentence2 === "hello world"
 ```
-Benutzen Sie `.` um Strings und Variablen aneinander zu hängen
+Benutzen Sie `.` um Strings und/oder Variablen aneinander zu hängen
 
 ```
 $x = 3;
@@ -470,9 +470,9 @@ Um Dateien zu importieren, benutzen Sie eine der folgenden PHP Funktionen:
  - `require`
  - `require_once`
 
-`include_once` und `require_once` werden benutzt, um spezifische Funktinalität zu importieren, die man nur einmal auf der Seite benötigt. Beispielsweise die Details zur Datenbankverbindung
+`include_once` und `require_once` werden benutzt, um spezifische Funktionalität zu importieren, die man nur einmal auf der Seite benötigt. Beispielsweise die Details zur Datenbankverbindung
 
-`include` und `require` können mehrfach in einer einzelnen Seite verwendet werden und sind daher praktisch, wenn es darum geht wiederholte Funktionalität zu importieren (z.B. eine 'Zurück-zum-Anfang' Link)
+`include` und `require` können mehrfach in einer einzelnen Seite verwendet werden und sind daher praktisch, wenn es darum geht, wiederholte Funktionalität zu importieren (z.B. eine 'Zurück-zum-Anfang' Link)
 
 Wenn Sie versuchen, eine Datei mit `include` oder` include_once` zu importieren, und die Datei existiert nicht, gibt der Server eine Warnung aus und fährt fort.
 
@@ -483,7 +483,7 @@ Beim Versuch, eine Datei mit `require` oder` require_once` zu importieren, wenn 
 
 ### Logikstrukturen
 
-PHP kann nur dann verwendet werden, wenn bestimmte Bedingungen erfüllt sind
+Prüfen, ob bestimmte Bedingungen erfüllt sind
 
 Die Haupttypen der bedingten Logikstrukturen sind:
 
@@ -499,7 +499,7 @@ Die Haupttypen der bedingten Logikstrukturen sind:
 Verwenden Sie eine andere Logik, je nachdem, ob eine Anweisung wahr oder falsch ist
 
 ```
-$today = date("l");
+$today = date("l"); // Liefert den aktuellen Wochentag zurück
 
 if ($today === "Friday") {
   echo "Hooray, it's Friday!";
@@ -508,7 +508,7 @@ if ($today === "Friday") {
 }
 ```
 
-Um mehr als eine Bedingung zu verwenden, benutzen Sie:
+Um mehr als eine Bedingung zu prüfen, benutzen Sie:
 
  - `||` (oder)
  - `&&` (und)
@@ -517,7 +517,7 @@ Wir können mehrere if/else statments mit "else if" verbinden
 
 ```
 $today = date("l");
-$hour = date("G");
+$hour = date("G"); // Liefert die Stunde im 24-Stunden-Format, ohne führende Null zurück
 
 if ($today === "Friday" && $hour >= 17) {
   echo "Beer o'clock!";
@@ -571,7 +571,7 @@ Das Ergebnis:
 
 Beginnt mit dem zu durchlaufenden Array, gefolgt vom Schlüsselwort `as`, gefolgt von zwei Variablen: die erste bezieht sich auf den Index jeden Elements, die zweie auf den entsprechenden Wert.
 
-(Wenn nur eine Variable nach dem `as` steht, bezieht es sich immer auf den Wert.)
+(Wenn nur eine Variable nach dem `as` steht, bezieht die sich immer auf den Wert.)
 
 In unserem Beispiel läuft die `foreach` Anweisung durch das Array `$planets` und schreibt pro Lauf ein Element in die Variable `$planet`
 
@@ -607,13 +607,13 @@ Alternativ können Formulardaten bei der Übermittlung des Formulars an ein andere
 
 Das Method-Attribut kann eine dieser beiden Optionen haben, GET und POST
 
-Bei der Verwendung eines Formulars zu GET- oder POST-Werten verwandelt PHP automatisch die Formulardaten in Variablen und setzt sie auf den Wert, der vom Benutzer eingegeben wurde.
+Bei der Verwendung eines Formulars mit GET oder POST verwandelt PHP automatisch die Formulardaten in Variablen und setzt sie auf den Wert, der vom Benutzer eingegeben wurde.
 
 Je nachdem, ob die Formularaktion auf GET oder POST gesetzt ist, stehen die Werte zur Verfügung als `$_GET['field-name']` oder `$_POST['field-name']`
 
 Ob Sie GET oder POST verwenden, hängt davon ab, was für die aktuelle Situation besser geeignet ist.
 
-Um PHP-seitig sowhl GET, als auch POST abzufangen ohne doppelt Code schreiben zu müssen, können Sie `$_REQUEST['field-name']` verwenden.
+Um PHP-seitig sowohl GET, als auch POST abzufangen, ohne doppelt Code schreiben zu müssen, können Sie `$_REQUEST['field-name']` verwenden.
 
 
 #### GET (hängt die Werte an die URL)
@@ -676,7 +676,7 @@ echo $sentence;
 // "There are 8 planets"
 ```
 
-Wenn Sie das mit einem Array versuchen, bekommen Sie ... `Array`
+Wenn Sie das mit einem Array versuchen, bekommen Sie ... `Array` und eine Fehlermeldung im Log angezeigt.
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter");
@@ -704,7 +704,7 @@ Das ist gut, wenn man die Struktur des Arrays kennt, aber das ist nicht immer de
 
 Wenn Sie eine Reihe von Daten haben, die Sie nicht kennen, bietet PHP eine einfache Möglichkeit, die Inhalte zu sehen
 
-Um die Inhalte eines Arrays zu betrachten, können Sie die Funktion `print_r ()` verwenden
+Um die Inhalte eines Arrays zu betrachten, können Sie die Funktion `print_r()` verwenden
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter");
@@ -714,7 +714,7 @@ Array ( [0] => "Mercury" [1] => "Venus" [2] => "Earth" [3] => "Mars" [4] => "Jup
 
 Das funktioniert zwar, ist aber schwer zu lesen
 
-Wenn Sie `print_r()` benutzen, ist es ratsam, es mit HTTML `<pre>` Tags einzufassen:
+Wenn Sie `print_r()` benutzen, ist es ratsam, es mit HTML `<pre>` Tags einzufassen:
 
 ```
 $planets = array("Mercury", "Venus", "Earth", "Mars", "Jupiter");
@@ -757,9 +757,11 @@ Array (
 )
 ```
 
-`print_r ()` ist nicht für ein Endprodukt nützlich - Sie möchten keine Informationen auf diese Weise anzeigen
+`print_r()` ist nicht für ein Endprodukt nützlich - Sie möchten keine Informationen auf diese Weise anzeigen
 
 Aber während der Entwicklung ist es eine praktische Möglichkeit, den aktuellen Wert eines Arrays zu überprüfen
+
+Wenn Sie eine Ausgabe im Log präferieren, können Sie auch `error_log(print_r($array, true), 0)` verwenden
 
 
 ### Warum Arrays sind nützlich
@@ -768,7 +770,7 @@ Arrays sind eine nützliche Möglichkeit, Informationen zu verwenden / zu manipuli
 
 Später werden wir diese Arrays nicht manuell erstellen
 
-Stattdessen werden wir Daten aus externen Quellen abrufen - z.B. Aus einer Datenbank
+Stattdessen werden wir Daten aus externen Quellen abrufen - z.B. aus einer Datenbank
 
 Wir werden nicht wissen, was der Inhalt des Arrays ist, aber eine Vorstellung von seiner Struktur haben
 
@@ -960,7 +962,7 @@ Zurück zu unseren Planeten Beispiel, so weit haben wir eine Liste von Links, ein
 
 Diese Links geben den ausgewählten Planetnamen an die URL an
 
-Wenn ein Planetenlink geklickt wurde, hat `$_GET['Planet']` einen Wert
+Wenn ein Planetenlink geklickt wurde, hat `$_GET['planet']` einen Wert
 
 Wir können dies verwenden, kombiniert mit einer einfachen if / else-Anweisung, um festzustellen, ob die Übersichtsliste oder Detailansicht angezeigt werden soll
 
@@ -1007,7 +1009,7 @@ Hier finden Sie nützliche Informationen zum Server
 
 Beispielsweise können Sie die URL der aktuellen Seite, die aktuell verwendete Datei oder den Browser des Benutzers erkennen
 
-Sie können `print_r ()` verwenden, um alle möglichen Werte des `$_SERVER` Arrays zu sehen
+Sie können `print_r()` verwenden, um alle möglichen Werte des `$_SERVER` Arrays zu sehen
 
 
 ## State, Sessions und Cookies
@@ -1074,9 +1076,9 @@ setcookie('username', $username, time() + 60*60*24*30)
 setcookie('username', $username, mktime(0,0,0,7,18,2026));
 ```
 
-Der dritte Parameter für die `setcookie()` Funktion nimmt einen numerischen Wert ein, der der Zeit entspricht, die das Cookie ablaufen soll
+Der dritte Parameter für die `setcookie()` Funktion nimmt einen numerischen Wert ein, der der Zeit entspricht, wann der Cookie ablaufen soll
 
-Um ein Cookie zu entfernen, setzen Sie einfach seinen Datumswert auf ein Datum in der Vergangenheit
+Um einen Cookie zu entfernen, setzen Sie einfach seinen Datumswert auf ein Datum in der Vergangenheit
 
 ```
 setcookie('username', NULL, -1);
@@ -1097,7 +1099,7 @@ CONs
  - Browser können eingestellt werden, um Cookies zu verweigern, ihre Lebensdauer zu begrenzen oder ihre Ankunft zu warnen
  - Benutzer können Cookies ansehen, bearbeiten und löschen
 
-Sie können Cookies verwenden, aber nicht auf sie verlassen...
+Sie können Cookies verwenden, aber sich nicht auf sie verlassen...
 
 
 ### Sessions
@@ -1146,7 +1148,7 @@ unset($_SESSION['username']);
 
 Benutzen Sie Sessions anstatt Cookies:
 
- - Session-Werte werden in temporären Dateien am Server-Ende und nicht im Client gespeichert
+ - Session-Werte werden in temporären Dateien am Server und nicht am Client gespeichert
  - Deshalb sind Sessions weit sicherer und zuverlässiger als Cookies
 
 
@@ -1159,7 +1161,7 @@ Benutzen Sie Sessions anstatt Cookies:
 
 Um eine Verbindung zu einer MySQL-Datenbank mit PHP herzustellen, verwenden wir eine _Klasse_ namens `mysqli`
 
-Folgende Zeile PHP-Codes macht genau das:
+Folgende Zeile PHP-Code macht genau das:
 
 ```
 $db = new mysqli("host", "username", "password", "database");
@@ -1169,7 +1171,7 @@ Wir können ein einfaches PHP-Skript erstellen, um zu testen, ob wir eine korrekt
 
 ```
 // connect
-$db = new mysqli("server","u","p","db");
+$db = new mysqli("host", "username", "password", "database");
 
 // check if there was an error
 if ($db->connect_error) {
@@ -1183,7 +1185,7 @@ if ($db->connect_error) {
 
 Erläuterung des Datenbankverbindungscodes:
 
-  - Wir speichern die Datenbankverbindung in einer Variablen namens `$db` (Wir werden diese Variable später nochmals verwenden, wenn wir die Datenbank abfragen)
+  - Wir speichern die Datenbankverbindung in einer Variable namens `$db` (Wir werden diese Variable später nochmals verwenden, wenn wir die Datenbank abfragen)
   - Wir testen, ob es einen Fehler gibt (z.B. wegen falscher Anmeldeinformationen), indem man schaut, ob `$db->connect_error` einen Wert hat
   - Wenn es einen Fehler gibt, dann zeigen wir ihn
   - Ansonsten war die Datenbankverbindung erfolgreich!
@@ -1375,7 +1377,7 @@ if ($result) {
 
 #### UPDATE
 
-Dieser SQL-Befehl aktualisiert das Fragefeld des Eintrags, den wir gerade der Tabelle `questions` hinzugefügt haben:
+Dieser SQL-Befehl aktualisiert das Feld `question` des Eintrags, den wir gerade der Tabelle `questions` hinzugefügt haben:
 
 ```
 UPDATE `questions` SET `question` = 'Favourite Fruit' WHERE `id` = 3;
@@ -1541,7 +1543,7 @@ Dieses Formular kann verwendet werden, um neue Fragen hinzuzufügen:
 
 ```
 // check if form has been posted
-if (!empty($_POST) && !empty($_POST['question'])) {
+if (isset($_POST['question']) && !empty($_POST['question'])) {
 
 // create insert SQL query
 $query = "INSERT INTO `questions` (`question`, `date_added`) VALUES ('".$_POST['question']."', NOW())";
@@ -1557,7 +1559,7 @@ Vor dem Hinzufügen einer neuen Frage sollte zunächst geprüft werden, ob der Frag
 
 ```
 // only add to the database if the form has been submitted
-if (!empty($_POST) && !empty($_POST['question'])) {
+if (isset($_POST['question']) && !empty($_POST['question'])) {
 
   // save a reference to the question
   $question = $_POST['question'];
@@ -1674,8 +1676,8 @@ Betrachten Sie die Trennung von Funktionalität in Dateien:
 Erwägen Sie, diesen Code in eine separate Datei zu setzen und ihn jedes Mal einzubinden, wenn Sie ihn brauchen (wie wir es mit der Datenbank-Verbindung gemacht haben, Header, Footer)
 
  - Sie können Ihre Session-Handling-Logik in eine Datei auslagern, die Sie am Anfang jeder Seite laden
- - Sie können Ihre Datenbankanrufe in eine separate Datei stellen
- - Darüber hinaus können Sie Funktionen verwenden, und darauf zu verweisen, wann immer sie benötigt werden (wir werden die Funktionen ein wenig später betrachten)
+ - Sie können Ihre Datenbankaufrufe in eine separate Datei stellen
+ - Darüber hinaus können Sie Funktionen verwenden und darauf verweisen, wann immer sie benötigt werden (wir werden die Funktionen ein wenig später betrachten)
 
 
 ### Header Include Daten und Seitentitel
@@ -1708,7 +1710,7 @@ Die `$title` Variable ist dann verfügbar und kann mit echo in der header.php Dat
 
 Funktionen sind eine Möglichkeit, eine Reihe von Befehlen zusammenzufassen, damit wir sie wieder verwenden können, wann immer wir müssen
 
-Funktionen sind nützlich, weil man sie einmal schreiben kann, dann benutzt man sie wo immer und wann immer man es benötigt
+Funktionen sind nützlich, weil man sie einmal schreiben kann, dann benutzt man sie wo immer und wann immer man sie benötigt
 
 Es gibt zwei Arten von Funktion:
 
@@ -1720,8 +1722,8 @@ Es gibt zwei Arten von Funktion:
 
 Es gibt viele eingebaute Funktionen in PHP, die uns erlauben, leicht eine bestimmte Aufgabe durchzuführen. Beispielsweise:
 
-  - `date()` - Holen Sie sich das aktuelle Datum / Uhrzeit
-  - `mail()` - Senden Sie eine E-Mail
+  - `date()` - Holt das aktuelle Datum / Uhrzeit
+  - `mail()` - Sendet eine E-Mail
   - `scandir()` - Auflisten aller Dateien und Ordner in einem bestimmten Verzeichnis auf dem Webserver
 
 Es gibt eine umfassende Liste bei [php.net] (http://php.net) - Das Suchfeld dort ist ein guter Ort zu starten
@@ -1731,7 +1733,7 @@ Es gibt eine umfassende Liste bei [php.net] (http://php.net) - Das Suchfeld dort
 
 Drittanbieter-Funktionen sind nützlich, wenn Sie etwas tun wollen, das wahrscheinlich schon oft getan wurde
 
-Oft können Sie feststellen, dass jemand anderes eine Lösung erstellt hat und ihr Beispiel online gestellt hat
+Oft können Sie feststellen, dass jemand anderes eine Lösung erstellt und sein Beispiel online gestellt hat
 
 Websites wie Stack Overflow, sind gute Orte, um danach zu suchen
 
@@ -1750,7 +1752,7 @@ function doSomething() {
 }
 ```
 
-Wie Sie eine Website bauen, können Situationen auftreten, in denen eine Funktion helfen könnte
+Wenn Sie eine Website bauen, können Situationen auftreten, in denen eine Funktion helfen könnte
 
 So definieren Sie eine Funktion:
 
@@ -1859,7 +1861,7 @@ Verknüpfen von Strings - bei der Ausgabe eines Namens haben wir Strings wie folg
 echo "<p>" . $firstname . " " . $surname . "</p>";
 ```
 
-DDatumsfunktionen - zur Ausgabe des heutigen Datums:
+Datumsfunktionen - zur Ausgabe des heutigen Datums:
 
 ```
 echo date_format("d/m/y");
@@ -2258,7 +2260,7 @@ $result = $db->query($query);
 
 ### Inhalte escapen
 
-Im Wesentlichen nimmt die Website die Eingabe von einem Benutzer ein, speichert sie in einer Datenbank und gibt sie dann zur Anzeige aus
+Im Wesentlichen nimmt die Website die Eingabe von einem Benutzer, speichert sie in einer Datenbank und gibt sie dann zur Anzeige aus
 
 Wenn wir den Inhalt nicht absichern, bevor wir ihn ausgeben:
 
@@ -2410,7 +2412,7 @@ Denken Sie an ein einfaches Login Script:
 SELECT `username`, `password` FROM `users` WHERE `username` = '$_POST['u']' AND `password` = '$_POST['p']';
 ```
 
-Wenn wir diese SQL-Abfrage ausführen, wenn > 0 Datensätze zurückgegeben werden, gehen wir davon aus, dass die Benutzeranmeldeinformationen gültig sind und melden den Benutzer an
+Wenn wir diese SQL-Abfrage ausführen und > 0 Datensätze zurückgegeben werden, gehen wir davon aus, dass die Benutzeranmeldeinformationen gültig sind und melden den Benutzer an
 
 ```
 SELECT `username`, `password` FROM `users` WHERE `username` = 'xx' AND `password` = '' OR 1 = 1;
@@ -2437,12 +2439,12 @@ Beispiel:
 $username = mysqli_real_escape_string($db, $_POST['username']);
 ```
 
-Dies sollte mit JEDEM Benutzereingabefeld verwendet werden
+Dies sollte mit JEDEM Benutzereingabefeld gemacht werden
 
 
 ### Prepared Statements
 
-Prepared statements sind ein alternativer Weg SQL Abfragen zu schreiben
+Prepared Statements sind ein alternativer Weg, SQL Abfragen zu schreiben
 
 Sie haben eine etwas andere Syntax zu den SQL-Abfragen, die wir bisher gesehen haben
 
@@ -2557,7 +2559,7 @@ Speichern Sie keine Passwörter als Plaintext!
 
  - Passwörter sind sensible Informationen
  - Wenn jemand Zugriff auf Ihre Datenbank erhält, erhalten sie Zugriff auf alle Passwörter, die Sie gespeichert haben
- - Beachten Sie, dass eine Menge von Internet-Nutzer, egal wie oft Sie ihnen sagen, es nicht zu tun, sie das gleiche Passwort über mehrere Websites verwenden
+ - Beachten Sie, dass eine Menge von Internet-Nutzern, egal wie oft Sie ihnen sagen, es nicht zu tun, das gleiche Passwort über mehrere Websites verwenden
  - Wir müssen einen Weg finden, um die Passwörter sicher zu speichern, so dass jemand Fremdes nichts mit den Daten anfangen kann
 
 Wir müssen Passwörter verschlüsseln
@@ -2604,6 +2606,8 @@ Mit diesen Algorithmen wird jedes mit einem String generierte Passwort immer das
 
 So können wir einen Hash-Wert und nicht das eigentliche Passwort speichern
 
+Diese Methode eignet sich nicht, um Passwörter zu managen, da eine Entschlüsselung nicht möglich ist.
+
 
 #### Ein Login Szenario
 
@@ -2643,7 +2647,7 @@ if ($result->numRows() < 1) {
 
 ### Salts
 
-Diese Verschlüsselungsstufe ist ein Start, aber es ist nicht sicher genug für die Passwortspeicherung
+Diese Verschlüsselungsstufe ist ein Anfang, aber es ist nicht sicher genug für die Passwortspeicherung
 
 Wenn jemand Zugang zu Ihrer Datenbank erhält, können sie Ihre Passwort Hashes sehen
 
@@ -2666,7 +2670,7 @@ Sie können vorschlagen, dass Benutzer starke Passwörter einrichten, die ein ange
 
 Bevor wir einen Hash erzeugen, sollten wir dem Passwort ein "Salt" hinzufügen
 
-Ein Salz ist eine zufällige Zeichenfolge einer Satzlänge
+Ein Salt ist eine zufällige Zeichenfolge einer Satzlänge
 
 Jedes Mal, wenn wir einen Benutzer hinzufügen, sollten wir für sie ein einzigartiges Salt erzeugen
 
@@ -2728,7 +2732,7 @@ $fileInclude = basepath("http://malicious.url/file.php");
 
 ### Verschiedene Tips
 
-Unterschieden Sie nicht zwischen ungültigen Benutzernamen und Passwörtern in Fehlermeldungen - Wenn jemand versucht, bösartig auf ein Konto zuzugreifen, sollten Sie ihn nicht wissen lassen, dass er einen gültigen Benutzernamen identifiziert haben, aber das Passwort ist falsch
+Unterscheiden Sie nicht zwischen ungültigen Benutzernamen und Passwörtern in Fehlermeldungen - Wenn jemand versucht, bösartig auf ein Konto zuzugreifen, sollten Sie ihn nicht wissen lassen, dass er einen gültigen Benutzernamen identifiziert haben, aber das Passwort ist falsch
 
 Begrenzen Sie die Anzahl der Zeiten, in denen sich jemand falsch anmelden kann - Nach ein paar Versuchen von der gleichen IP-Adresse, sollten Sie es zumindest zeitweilig blockieren
 
@@ -2780,7 +2784,7 @@ Wenn es eine statische HTML-Seite wäre:
 </html>
 ```
 
-Wir könnten nur eine Datei mit dem HTML an der entsprechenden Stelle einbinden:
+Wir könnten nun eine Datei mit dem HTML an der entsprechenden Stelle einbinden:
 
 ```
 <html>
@@ -2906,7 +2910,7 @@ Die Informationen, die wir gerade gesehen haben, sind nicht strukturiert
 
 Diese Methode eignet sich gut für einfache Einzelwert-Informationen, nicht so gut für komplexe Daten
 
-Wir haben gesehen, wie man Arrays benutzt, um strukturierte Informationen zu manipulieren oder zu durchzuschleifen
+Wir haben gesehen, wie man Arrays benutzt, um strukturierte Informationen zu manipulieren oder durchzuschleifen
 
 Was wir brauchen, ist eine Möglichkeit, komplexe Informationen zu speichern, damit wir sie in Arrays verwandeln können
 
@@ -3159,7 +3163,7 @@ Bedeutet auch, dass man Zugriff auf den Webserver hat und die technischen Fähigk
 
 Sie können XML / JSON erzeugen, um Daten darzustellen, die angefordert wurden
 
-Viele Webseiten bieten jetzt XML / JSON-Feeds an
+Viele Webseiten bieten XML / JSON-Feeds an
 
 
 ### Daten-Feeds und APIs
