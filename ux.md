@@ -2,7 +2,7 @@
 
 Ein paar Notizen vorbereitet beim Schreiben von Schulungen ...
 
-## Was ist UX?
+## Was ist UX (User eXperience)?
 
 Ein typisches Projekt kann als eine Kooperation zwischen Unternehmern, Nutzern und Designern/Entwicklern gesehen werden
 
@@ -10,7 +10,7 @@ Typischerweise wurden in der Vergangenheit Benutzer nicht konsultiert
 
 UX richtet den Fokus des Projekts auf den Benutzer. Für die Benutzer designen, das Problem aus ihrer Perspektive zu verstehen
 
-Der Job der UX ist, sicherzustellen, dass Menschen ihre Ziele erreichen können, wenn sie zu einem Produkt kommen
+Der Job der UX ist, sicherzustellen, dass Menschen ihre Ziele erreichen können, wenn sie ein Produkt benutzen
 
 
 ## Elemente der UX
@@ -91,10 +91,10 @@ Es gibt fünf Schlüsselbereiche der Usability zu beachten:
   - Das ist eine Vereinfachung des Prozesses
   - Nicht jedes Projekt wird genau diese Phasen durchlaufen
   - Phasen können gleichzeitig stattfinden
-  - viele Phasen finden icht in dieser Reihenfolge statt
+  - viele Phasen finden nicht in dieser Reihenfolge statt
   - Budget und Zeit bestimmen oft den Prozess
 
-Es hilft, einen Prozess zu schlank und beweglich zu halten (Lean and Agile):
+Es hilft, einen Prozess schlank und beweglich zu halten (Lean and Agile):
 
   - Entscheide Sie, was Sie lernen wollen
   - Bauen (eine Art zu lernen, was Sie lernen müssen) und messen
@@ -126,13 +126,13 @@ Es hilft ihnen auf ihre Weise auszudrücken, was sie benötigen
 
 Das ausgewählte Format kann dabei helfen, Prioritäten hervorzuheben
 
-Dies ist oft alles, was man hat, wenn man entscheidest, ob man ein Projekt machen soll
+Dies ist oft alles, was man hat, wenn man entscheidet, ob man ein Projekt machen soll
 
 Auch wenn man eine Website für sich selbst baut, und man denkt, man weiss, was man will, sollte man es kurz schriftlich definieren
 
 Es kommt auf die Ausarbeitung der wichtigsten Anforderungen für eine Website an
 
-Für einen schlanken Ansatz hilft es zu entscheiden, was in Ihr Minimum Viable Produkt (MVP) passt
+Für einen schlanken Ansatz hilft es zu entscheiden, was in Ihr Minimum Viable Product (MVP) passt
 
 
 ### Erfassung von Anforderungen
@@ -163,7 +163,7 @@ Als **Benutzer** muss ich in der Lage sein, folgendes zu tun:
 
  - Die Informationen finden, wegen denen ich auf der Webseite bin
  - Registrieren/Anmelden
- - Inhalte personalieren
+ - Inhalte personalisieren
  - Produkte bestellen
  - Inhalte mit anderen teilen
 
@@ -194,7 +194,7 @@ Es ist sinnvoll, ein Dokument zu erstellen, das folgende Punkte beantwortet:
   - Dokumentiert die Ziele der Website - die Anforderungen, die besprochen wurden
   - Beschreibt die zu erledigende Arbeit und was am Ende zu liefern ist
   - Zeitplan und Budget umreissen
-  - Umreissen, wer für was verantwortlich ist (solle etwas von uns oder vom Kunden kommen)
+  - Umreissen, wer für was verantwortlich ist (soll etwas von uns oder vom Kunden kommen)
   - Annahmen und Fragen auflisten
 
 ***Weitere Informationen:***
@@ -270,7 +270,7 @@ Abzudeckende Stakeholder Fragen:
 Schauen Sie sich ähnliche Webseiten und Dienste an
 
  - Was machen sie gut?
- - Worauf können wir aufbauen? Wwas können wir verbessern?
+ - Worauf können wir aufbauen? Was können wir verbessern?
  - Welche Idee können wir 'ausleihen'?
 
 Wir suchen nach einem Alleinstellungsmerkmal
@@ -316,7 +316,7 @@ Sie können entscheiden, welche Techniken auf der Grundlage von Budget, Zeitplan,
 
 ### Analytik-Überprüfung
 
-Wenn der Client eine bestehende Website hat, kann die Überprüfung seiner Analytik aufschlussreich sein
+Wenn der Client eine bestehende Website hat, kann die Überprüfung seiner Web-Statistik aufschlussreich sein
 
 Es kann helfen, zu identifizieren, wo sie die Anforderungen erfüllen (oder nicht erfüllen), die Sie identifiziert haben
 
@@ -338,7 +338,7 @@ Viele verschiedene Bereiche sind zu überprüfen:
 
 ### User Personas
 
-User Personas sind kurze Beschreibungen von fiktiven Charakteren, die die potenziellen Nutzer der Website repräsentieren
+User Personas sind kurze Beschreibungen von fiktiven Charakteren, die die potenziellen Nutzer der Website repräsentieren (Alice und Bob)
 
 Sie sollten auf Publikumforschung basieren, modelliert durch Gruppierung von Ergebnissen ähnlichen Typs
 
@@ -381,13 +381,13 @@ User Personas
 
 ### User Stories
 
-Eine User Story ist ein Satz, der eine erforderliche Funktionalität in der Sprache des Benutzers einkapselt
+Eine User Story ist ein Satz, der eine erforderliche Funktionalität in der Sprache des Benutzers formuliert
 
 Früher haben wir festgestellt, dass es notwendig ist, alle Anforderungen an die Website zu erfassen
 
-Jeder Anforderung der Webseite könnte in einzelne Benutzerberichte umstrukturiert werden
+Jeder Anforderung der Webseite könnte in einzelne User Stories umstrukturiert werden
 
-Jede Geschichte kann der am besten geeigneten User Persona zugeschrieben werden
+Jede Story kann der am besten geeigneten User Persona zugeschrieben werden
 
 > Wir müssen eine E-Commerce-Lösung hinzufügen
 
@@ -395,7 +395,7 @@ Jede Geschichte kann der am besten geeigneten User Persona zugeschrieben werden
 
 > Als Jack kann ich ein Ticket kaufen, damit ich zum Gig gehen kann
 
-Das Erstellen von User Stories macht den Benutzer in den Mittelpunkt der Erfahrung
+Das Erstellen von User Stories bringt den Benutzer in den Mittelpunkt der Erfahrung
 
 Dies ist ein guter Weg, um Anforderungen zu priorisieren
 
@@ -508,7 +508,7 @@ Planen Sie die Platzierung von Inhalten auf jeder Seite
 
 Organisieren Sie die Bedeutung jedes Elements innerhalb einer Seite - die Informationshierarchie
 
-Entscheiden Sie, was wir den Benutzer als erstes, zweites, drittes, etc. wahrnehmen lassen wollen, auf der Grundlage seiner Prominenz innerhalb der Seite zu erleben.
+Entscheiden Sie, was wir den Benutzer als erstes, zweites, drittes, etc. wahrnehmen lassen wollen, auf der Grundlage der Prominenz innerhalb der Seite.
 
 Erstellen Sie Ideen, so ist es einfach, Dinge zu bewegen
 
@@ -572,12 +572,12 @@ Es kann helfen, Informationen in einer Weise zu präsentieren, die einfach, attra
 
 Bei der Erstellung eines neuen Designs ist es wichtig zu beachten:
 
-  - Usability * (ist es einfach zu bedienen?) *
-  - Funktionalität * (Kann ich alles machen, was ich will?) *
-  - Effektiv * (Ist die Information in einer nützlichen Weise dargestellt?) *
-  - Effizienz * (Kann man navigieren und Informationen zu finden?) *
-  - Ästhetisch * (sieht es gut aus?) *
-  - Zusammenhängend * (Haben alle Seiten der Website gemeinsame Design / Layout-Elemente?) *
+  - Usability *(ist es einfach zu bedienen?)*
+  - Funktionalität *(Kann ich alles machen, was ich will?)*
+  - Effektiv *(Ist die Information in einer nützlichen Weise dargestellt?)*
+  - Effizienz *(Kann man navigieren und Informationen zu finden?)*
+  - Ästhetisch *(sieht es gut aus?)*
+  - Zusammenhängend *(Haben alle Seiten der Website gemeinsame Design- / Layout-Elemente?)*
 
 *Gutes Design bedeutet Gleichgewicht*
 
@@ -624,7 +624,7 @@ Viele grosse Unternehmen und Organisationen produzieren ihre eigenen Markenricht
 > Skype
 > [http://issuu.com/bondo/docs/skype_brand_book_-_look](http://issuu.com/bondo/docs/skype_brand_book_-_look)
 
-> "Verhaltensregeln. Sie würden keine blaue und eine orange Socke tragen. Nehmen Sie sich einen Moment Zeit, um darüber nachzudenken, wie Sie das Skype-Logo benutzen."
+> "Verhaltensregeln. Sie würden nicht eeine blaue und eine orange Socke tragen. Nehmen Sie sich einen Moment Zeit, um darüber nachzudenken, wie Sie das Skype-Logo benutzen."
 >
 > Skype
 > [http://issuu.com/bondo/docs/skype_brand_book_-_look](http://issuu.com/bondo/docs/skype_brand_book_-_look)
@@ -647,9 +647,9 @@ Konsistenz und Vorhersagbarkeit im Design erlauben den Menschen, sich sicher und
 
 Es reduziert kognitive Belastung für Besucher, so dass sie sich auf den Inhalt einer Website konzentrieren können
 
-Ein konsequentes und vorhersagbares Layout zu haben bedeutet, dass, wenn etwas nicht dem vordefinierten Muster folgt, es sich herausstellen wird
+Ein konsequentes und vorhersagbares Layout zu haben bedeutet, dass, wenn etwas nicht dem vordefinierten Muster folgt, es sich hervorheben wird
 
-Dies ist besonders nützlich, wenn es einen bestimmten Teil der Seite gibt, die Sie hervorheben möchten
+Dies ist besonders nützlich, wenn es einen bestimmten Teil der Seite gibt, den Sie hervorheben möchten
 
 Der beste Weg, um ein konsistentes und vorhersagbares Layout zu schaffen, ist mit einem Raster
 
@@ -663,21 +663,21 @@ Raster beschränken ein Design und sorgen für Ordnung und Struktur der Informatio
 Es gibt zwei Teile zu jedem Raster:
 
   - Spalten
-  - Rillen
+  - Zeilen
 
 ##### Spalten
 
 Spalten repräsentieren jedes grössere Rasterstück.
 
-Beim Anbringen von Sachen an ein Raster sind sie an einer oder mehreren Säulen befestigt (die dann Rillen enthalten).
+Beim Anbringen von Sachen an ein Raster sind sie an einer oder mehreren Säulen befestigt (die dann Zeilen enthalten).
 
-##### Rillen
+##### Zeilen
 
-Rillen sind der Platz zwischen den Spalten
+Zeilen sind der Platz zwischen den Spalten
 
-Inahlt ist nie nach den Rillen ausgerichtet
+Inahlt ist nie nach den Zeilen ausgerichtet
 
-Jede Rille hat die gleiche Breite
+Jede Zeile hat die gleiche Breite
 
 ##### Komposition
 
@@ -704,7 +704,7 @@ Leerraum hilft Menschen, zwischen verschiedenen Teilen einer Seite zu unterschei
 
 "Weniger ist mehr" ist ein gutes Designprinzip
 
-Fügen Sie nicht zu viel Inhalt in eine Seite, es kann überwältigend sein - halten Sie es einfach und übersichtlich
+Fügen Sie nicht zu viel Inhalt in eine Seite, es kann den Benutzer überfordern - halten Sie es einfach und übersichtlich
 ([http://www.lingscars.com/](http://www.lingscars.com/))
 
 
@@ -820,7 +820,7 @@ Farbtheorie:
 > "Achten Sie immer darauf, dass zwischen dem Text und der Hintergrundfarbe genügend Kontrast besteht"
 > - BBC GEL
 
-> "Unsere Farben geben uns unsere Persönlichkeit. Wir sind hell, kühn, bunt und zuversichtlich. Die Farben sind einfach laut und klar"
+> "Unsere Farben geben uns unsere Persönlichkeit. Wir sind hell, kühn, bunt und zuversichtlich. Die Farben sind einfach, laut und klar"
 > - Skype
 
 
@@ -832,7 +832,7 @@ Farbtheorie:
 
 ### Design Inspiration
 
-Schau auf andere Webseiten um sich inspirieren zu lassen
+Schauen Sie auf andere Webseiten, um sich inspirieren zu lassen
 
  - [http://mediaqueri.es/](http://mediaqueri.es/)
  - [http://dribbble.com/](http://dribbble.com/)
@@ -877,7 +877,7 @@ Folglich können wir die Anforderungen der Menschen nicht ausschliesslich am Gerä
 
 Wir sollten sicherstellen, dass unsere Webseiten über alle gängigen Desktop-Browser hinweg arbeiten
 
-Bei der Erstellung einer Website sollten wir nicht-Desktop-Browser / -Geräte berücksichtigen
+Bei der Erstellung einer Website sollten wir mobile Geräte berücksichtigen
 
 Diese Geräte haben unterschiedliche Anzeigeauflösungen (oder Browser-Dimensionen)
 
@@ -904,7 +904,7 @@ Die Schaffung von Experimenten
 Usability-Tests
 Lassen Sie uns testen, ob unsere Ideen funktionieren
 
-> Es brauchte 5.127 Prototypen für James Dyson, um Zyklon-Technologie genau richtig für seine Staubsauger zu entwickeln
+> Es brauchte 5.127 Prototypen für James Dyson, um die Zyklon-Technologie genau richtig für seine Staubsauger zu entwickeln
 
 Prototypen sind typischerweise interaktive (klickbare) Wireframes / Designs
 
@@ -930,12 +930,12 @@ Stattdessen können wir einen schnellen Prototyp erstellen, um unsere Ideen zu va
 
 Der Aufbau einer Website ist komplex und zeitintensiv.
 
-Die falsche Sache zu bauen ist eine Verschwendung von Zeit und Geld.
+Die falsche Sache zu bauen, ist eine Verschwendung von Zeit und Geld.
 
   - Ideen demonstrieren
-  - Testen Sie komplexe interaktive Lösungen
+  - Komplexe interaktive Lösungen testen
   - Schnelles Feedback erhalten
-  - Ideen verfeinern iterativ
+  - Ideen iterativ verfeinern
   - Effizienz - schneller Update-Prozess
 
 
