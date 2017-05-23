@@ -11,9 +11,9 @@ Beim Aufbau von Webanwendungen verwenden wir oft eine Datenbank zum Speichern vo
 
 Wir möchten unsere Anwendungs-*Daten* trennen von:
 
-  - Anwendung *Logik* (z.B. Ruby, Python)
+  - *Logik* (z.B. Ruby, Python, PHP, ...)
   - *Präsentation* (z.B. HTML-Vorlagen)
-  
+
 
 ### Vorteile
 
@@ -35,7 +35,7 @@ Eine Datenbank ist nur eine Sammlung von einer oder mehreren Tabellen von Daten
   - Die Daten werden in einer Tabelle in **Zeilen gespeichert**
   - Jede einzelne Spalte innerhalb einer Zeile heißt **Zelle**
 
-Datenbankfeldnamen enthalten normalerweise keine Leerzeichen. In der Regel wird vorschlagen, sie alle in Kleinbuchstaben zu schreiben und mit Unterstrichen Wörter zu trennen
+Datenbankfeldnamen enthalten normalerweise keine Leerzeichen. In der Regel wird vorschlagen, sie alle in Kleinbuchstaben zu schreiben und Wörter mit Unterstrichen zu trennen
 
 | id | spalte_1    | spalte_2 |
 | ---|-------------|----------|
@@ -46,7 +46,7 @@ Datenbankfeldnamen enthalten normalerweise keine Leerzeichen. In der Regel wird 
 
 ## Ein Beispielszenario
 
-Die folgenden Hinweise basieren auf dem Entwerfen einer Datenbank, um ein Beispielszenario zu treffen:
+Die folgenden Hinweise basieren auf dem Entwerfen einer Datenbank für ein Beispielszenario:
 
 *Entwerfen Sie eine Datenbank für eine Webanwendung, die eine tägliche Frage tweetet und die __@replies__ sammelt. Diese Tweets werden in eine oder mehrere Kategorien eingeteilt*
 
@@ -59,11 +59,11 @@ Wir können unsere Datenbank entwerfen, indem wir ein paar einfachen Schritten fo
 2. Wählen Sie einen Datentypen für jede dieser Informationen aus
 3. Normalisieren Sie die Daten
 
-Diese Notizen werden dann erklären, wie:
+Diese Notizen werden dann erklären, wie Sie Ihre Datenbank:
 
-1. Erstellen Sie Ihre Datenbank
-2. Füllen Sie Ihre Datenbank
-3. Fragen Sie Ihre Datenbank ab
+1. Erstellen
+2. Füllen
+3. Abfragen
 
 
 ## Daten speichern
@@ -114,7 +114,7 @@ In unserem Beispielszenario können wir folgende Datentypen verwenden:
 
 ## Datennormalisierung
 
-Um Daten zu normalisieren, werden sich wiederholenden Informationen entfernt, so dass jede Information nur einmal gespeichert wird
+Um Daten zu normalisieren, werden sich wiederholende Informationen entfernt, so dass jede Information nur einmal gespeichert wird
 
 Sobald wir die sich wiederholenden Daten entfernt haben, haben wir auch mögliche Inkonsistenzen entfernt
 
@@ -159,7 +159,7 @@ In jeder Tabelle müssen wir eine eindeutige ID identifizieren (oder erstellen) (
 
 Ein Primärschlüssel hat drei Anforderungen:
 
-1. Er muss immer einen Wert haben (es kann nicht leer sein)
+1. Er muss immer einen Wert haben (er kann nicht leer sein)
 2. Sein Wert darf sich nie ändern
 3. Er muss eindeutig sein
 
@@ -169,7 +169,7 @@ Wenn keine der Datenelemente eindeutig sind, können sie nicht als Primärschlüsse
 
 Der einfachste Primärschlüssel ist eine Ganzzahl, die für jede neue Zeile inkrementiert wird
 
-Manchmal wollen wir den Primärschlüssel aus einer Tabelle in einer anderen Tabelle verweisen, um eine Beziehung zwischen den beiden zu identifizieren. Wenn wir dies tun, ist er in der zweiten Tabelle als *Fremdschlüssel* bekannt
+Manchmal wollen wir den Primärschlüssel aus einer Tabelle in einer anderen Tabelle eintragen, um eine Beziehung zwischen den beiden herzustellen. Wenn wir dies tun, ist er in der zweiten Tabelle als *Fremdschlüssel* bekannt
 
 
 ### Entitäten und Attribute
@@ -252,9 +252,9 @@ In unserem Beispiel, Fragen:Antworten ist eine Eins-zu-Viele-Beziehung, gibt es 
 
 Anstatt die Frage für jede Antwort hinzuzufügen, werden wir Fragen in der *Fragen*-Tabelle hinterlegen
 
-Wir fügen ein neues Feld zur Antworttabelle namens question_id hinzu - hier werden wir den eindeutigen Primärschlüssel aus der Fragetabelle als Fremdschlüssel in der Antworttabelle setzen
+Wir fügen ein neues Feld zur Antworttabelle namens *question_id* hinzu - hier werden wir den eindeutigen Primärschlüssel aus der Fragetabelle als Fremdschlüssel in der Antworttabelle setzen
 
-Nun müssen die Fragendetails nur einmal gespeichert werden. Wenn sich die Fragedetails ändern würden, müssen wir nur einen einzigen Datensatz in der Fragetabelle aktualisieren und es würde für alle Antworten gelten
+Nun müssen die Fragendetails nur einmal gespeichert werden. Wenn sich die Fragedetails ändern, müssen wir nur einen einzigen Datensatz in der Fragetabelle aktualisieren und es würde für alle Antworten gelten
 
 In ähnlicher Weise ist Benutzer:Antworten auch eine Eins-zu-Viele-Beziehung. Jeder Benutzer kann viele Antworten einreichen, aber jede Antwort kann nur von einem einzelnen Benutzer sein.
 
@@ -275,7 +275,7 @@ Zum Beispiel kann eine Antwort mehrere Kategorien haben; eine Kategorie kann auf
 
 Um diese Beziehung aufzuzeichnen, müssen wir eine separate Datenbanktabelle mit zwei Fremdschlüsseln erstellen, die sich auf die Primärschlüssel für jede der beiden relevanten Entitäten beziehen.
 
-Hier sind unsere *Antworten auf Kategorien* (join) Tabelle
+Hier ist unsere *Antworten auf Kategorien* (join) Tabelle
 
 ***Antworten auf Kategorien (join) Tabelle***
 
@@ -306,7 +306,7 @@ SQL ist in der Regel unempfindlich ...
 
 Nach der Konvention sollten SQL-Befehle (z.B. `SELECT`,` UPDATE`) in GROSSBUCHSTABEN geschrieben werden
 
-Wie in den meisten Programmiersprachen sollten String (Text) Werte von Anführungszeichen ('single' oder "double") umgeben sein
+Wie in den meisten Programmiersprachen sollten Strings (Text) von Anführungszeichen ('single' oder "double") umgeben sein
 
 Tabellen- und Spaltennamen können wahlweise von \`Backticks umgeben sein - beachten Sie, dass diese nicht die gleichen sind wie 'einfache Anführungszeichen'
 
@@ -367,18 +367,18 @@ CREATE TABLE `answers` (
 );
 ```
 
-Nehmen wir das Beispiel der Spalte `id`:
+Nehmen wir als Beispiel die Spalte `id`:
 
 ```
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 ```
 
-  - Es enthält eine Ganzzahl (INT)
+  - Sie enthält eine Ganzzahl (INT)
   - Diese Spalte darf nicht leer sein (NOT NULL)
   - Diese Spalte soll als eindeutige Kennung für Einträge in dieser Tabelle dienen, also müssen alle Werte in dieser Spalte eindeutig sein (PRIMARY KEY).
   - Wenn wir beim Hinzufügen eines neuen Eintrags keinen Wert angeben, wird der nächst höhere Wert als der bisher höchste Wert in der Tabelle ausgewählt (AUTO_INCREMENT)
 
-Innerhalb einer Datenbank können Sie anfragen, welche Tabellen vorhanden sind:
+Innerhalb einer Datenbank können Sie abfragen, welche Tabellen vorhanden sind:
 
 ```
 SHOW TABLES;
@@ -476,15 +476,15 @@ Wir müssen wissen, wie man sie mit Daten befüllt und dann diese Daten abruft
 Datenbezogene Aufgaben fallen weitgehend in eine von vier Kategorien:
 
   - Erstellen (neue Daten in einer Datenbank erstellen)
-  - Anforderung / Lesen (Daten aus einer Datenbank lesen)
-  - Aktualisierung (vorhandene Daten in einer Datenbank aktualisieren)
+  - Anfordern / Lesen (Daten aus einer Datenbank lesen)
+  - Aktualisieren (vorhandene Daten in einer Datenbank aktualisieren)
   - Löschen (Daten aus einer Datenbank löschen)
   
 SQL erlaubt uns genau das zu tun:
 
  - Erstellen = INSERT
  - Lesen =SELECT
- - Aktualisierung = UPDATE
+ - Aktualisieren = UPDATE
  - Löschen = DELETE
 
 
@@ -611,7 +611,7 @@ Mehrere Feldnamen werden durch Kommas getrennt:
 SELECT `field1`, `field2`, `field3` FROM `table`;
 ```
 
-Anstatt alle Ergebnisse zurückzugeben, können wir optionale Parameter hinzufügen, um unsere Anfrage mit WHERE zu filtern:
+Anstatt alle Ergebnisse zurückzugeben, können wir optionale Parameter hinzufügen, um unsere Abfrage mit WHERE zu filtern:
 
 ```
 SELECT * FROM `table` WHERE `field` = 'value';
@@ -650,7 +650,7 @@ SELECT * FROM `table` ORDER BY `time` LIMIT 2, 2;
 Dies wird zwei Datensätze zurückgeben, beginnend mit Satz 3
 (Dies ist nützlich für die Paginierung der Ergebnisse)
 
-Wir können Bedingungen mit AND und / oder OR kombinieren:
+Wir können Bedingungen mit AND und/oder OR kombinieren:
 
 ```
 SELECT
@@ -665,13 +665,16 @@ ORDER BY
     `time` ASC
 ```
 
+Dabei die Reihenfolge mit Klammern festlegen, falls AND und OR gemeinsam in einer Abfrage verwendet werden.
+
+
 #### Mehrere Tabellen joinen
 
 Alle SELECT-Beispiele waren bisher nur auf eine einzige Tabelle
 
 Wenn wir die Daten normalisiert haben, haben wir den Inhalt gezielt in separate Tabellen verschoben
 
-Jetzt müssen wir wissen, wie man es rekombiniert
+Jetzt müssen wir wissen, wie man sie mit einander verknüpft.
 
 Wir müssen Klauseln hinzufügen, die mit den Primärschlüsseln und Fremdschlüsseln übereinstimmen
 
@@ -755,13 +758,15 @@ WHERE
 
 #### Mehrere Tabellen in einer Abfrage
 
-Wir haben gelernt, wie man über mehrere Tabellen abfragt, indem wir primäre und Fremdschlüssel anpassen
+Wir haben gelernt, wie man über mehrere Tabellen abfragt, indem wir Primär- und Fremdschlüssel anpassen
 
 Wenn wir über mehrere Tabellen abfragen, werden die Attribute aus jeder Tabelle in eine einzelne Tabelle abgeflacht
 
-Es kann Zeiten geben, in denen es Felder gibt, die wir abrufen wollen, die identische Spaltennamen in mehr als einer Tabelle haben (zB 'id')
+Es kann Zeiten geben, in denen es Felder gibt, die wir abrufen wollen, die identische Spaltennamen in mehr als einer Tabelle haben (z.B. 'id')
 
-Wenn wir versuchen, dies zu tun, wird es nur eine der genannten Spalten abrufen - die anderen werden nicht in den Ergebnissen vorhanden sein
+Wenn wir versuchen, dies zu tun, wird nur eine der genannten Spalten abgerufen - die anderen werden nicht in den Ergebnissen vorhanden sein.
+
+Bei PostgreSQL schlägt eine solche Abfrage fehl, da das Ergebnis nicht eindeutig wäre.
 
 ```
 SELECT
