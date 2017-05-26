@@ -9,9 +9,9 @@ Diese Anmerkungen nehmen eine geringe Menge an Vorkenntnissen der Programmierung
 
 ### Variablen
 
-Eine Analogie, die oft verwendet wird, um eine Variable zu beschreiben, ist *ein Container, in den man etwas einsetzen kann*.
+Eine Analogie, die oft verwendet wird, um eine Variable zu beschreiben, ist *ein Container, in den man etwas hinein tun kann*.
 
-Der Name, den Sie einer Variable geben, ist das Etikett, das Sie auf den Container gelegt haben. Sie wissen also, wie man es später wieder findet. Variablen können verwendet werden, um alles zu speichern - Zahlen, Text oder andere Arten von Informationen:
+Der Name, den Sie einer Variable geben, ist das Etikett, das Sie auf den Container geklebt haben. Sie wissen also, wie man ihn später wieder findet. Variablen können verwendet werden, um alles zu speichern - Zahlen, Text oder andere Arten von Informationen:
 
 ```
 var nearestStar = "Alpha Centauri";
@@ -56,15 +56,15 @@ Erstellen eines Arrays:
 
 ```
 var planets = [
-    "Mercury",
-    "Venus",
-    "Earth",
-    "Mars",
-    "Jupiter",
-    "Saturn",
-    "Uranus",
-    "Neptune"
-];
+	    "Mercury",
+	    "Venus",
+	    "Earth",
+	    "Mars",
+	    "Jupiter",
+	    "Saturn",
+	    "Uranus",
+	    "Neptune"
+	];
 ```
 
 Und auf ein Array zugreifen:
@@ -92,7 +92,7 @@ for (var counter = 0, planetCount = planets.length; counter < planetCount; count
 
 Dieser Code verwendet eine Variable, um die Array-Länge einmal zu cachen, anstatt sie jedes Mal zu überprüfen, wenn wir die Schleife passieren. Dies ist für eine (vernachlässigbare) Geschwindigkeitsverbesserung. Es ist eine von einer Reihe von kleinen Optimierungen, die Entwickler oft empfehlen, um die JavaScript-Leistung zu beschleunigen. Andere werden ggf. diskutiert.
 
-Ein anderer Weg, um durch ein Array zu durchlaufen ist mit `forEach`:
+Ein anderer Weg, um durch ein Array durchzulaufen ist mit `forEach`:
 
 ```
 function enthuse (planet) {
@@ -138,7 +138,7 @@ earth["radius"] // 6371
 earth.radius // 6371
 ```
 
-Wir können Arrays und Objekte ineinander setzen. Dies kann eine nützliche Möglichkeit sein, komplexe Informationen zu organisieren:
+Wir können Arrays und Objekte verschachteln. Dies kann eine nützliche Möglichkeit sein, komplexe Informationen zu organisieren:
 
 ```
 var planets = [
@@ -165,7 +165,7 @@ function describePlanet (planet) {
 planets.forEach(describePlanet);
 ```
 
-JavaScript-Objekte sind die Basis für JSON (*JavaScript Object Notation*). Die wichtige Regel, die man sich erinnern sollte, ist, dass in gültigem JSON alle Schlüssel mit doppelten Anführungszeichen zitiert werden müssen:
+JavaScript-Objekte sind die Basis für JSON (*JavaScript Object Notation*). Die wichtigste Regel, an die man sich erinnern sollte, ist, dass in gültigem JSON alle Schlüssel mit doppelten Anführungszeichen zitiert werden müssen:
 
 ```
 [
@@ -191,7 +191,7 @@ JavaScript-Objekte sind die Basis für JSON (*JavaScript Object Notation*). Die w
 
 ### Funktionen
 
-Funktionen sind eine Reihe von Anweisungen, die jetzt angegeben (oder *definiert*) werden können, aber später verwendet (oder *genannt*) werden. Der Hauptvorteil der Verwendung einer Funktion ist, dass Sie sie nur einmal erstellen müssen, und dann können Sie sie wieder verwenden, so oft Sie sie benötigen.
+Funktionen sind eine Reihe von Anweisungen, die zwar jetzt definiert werden, aber erst später verwendet werden. Der Hauptvorteil der Verwendung einer Funktion ist, dass Sie sie nur einmal erstellen müssen, und sie dann wieder verwenden, so oft Sie sie benötigen.
 
 Funktionen können auf zwei Arten definiert werden. Es gibt subtile, aber wichtige Unterschiede.
 
@@ -217,7 +217,7 @@ Beides kann auf die gleiche Weise verwendet werden:
 var sentence = enthuse("Mercury"); // "I like the planet Mercury"
 ```
 
-Der Hauptunterschied besteht darin, dass deklarierte Funktionen *gehisst werden*, d.h. sie werden vom JavaScript-Interpreter an die Spitze des Blocks verschoben. Deshalb können sie referenziert werden, bevor sie deklariert werden.
+Der Hauptunterschied besteht darin, dass deklarierte Funktionen *gehisst* werden, d.h. sie werden vom JavaScript-Interpreter an die Spitze des Blocks verschoben. Deshalb können sie referenziert werden, bevor sie deklariert werden.
 
 ***Weitere Informationen:***
 
@@ -225,7 +225,7 @@ Der Hauptunterschied besteht darin, dass deklarierte Funktionen *gehisst werden*
  - [http://www.unicodegirl.com/function-statement-versus-function-expression.html](http://www.unicodegirl.com/function-statement-versus-function-expression.html)
 
 
-### if / else Konditionen
+### if / else Bedingungen
 
 if / else-Bedingungen erlauben es uns, bestimmte Funktionalität nur dann auszuführen, wenn bestimmte Bedingungen erfüllt sind.
 
@@ -250,7 +250,7 @@ if (planet === "Earth") {
 
 ## Entwickler Tools
 
-Die meisten Browser haben nützliche Entwickler-Tools eingebaut. Hier sind einige Notizen zu den wichtigsten Tools, die nützlich für JavaScript-Entwicklung sind. Sie sind spezifisch für Panels in der aktuellen Version der Chrome-Entwickler-Tools, obwohl Äquivalente in der Regel in anderen grossen Browsern zur Verfügung stehen.
+Die meisten Browser haben nützliche Entwickler-Tools eingebaut. Hier sind einige Notizen zu den wichtigsten Tools, die nützlich für die JavaScript-Entwicklung sind. Sie sind spezifisch für Panels in der aktuellen Version der Chrome-Entwickler-Tools, obwohl Äquivalente in der Regel in anderen grossen Browsern zur Verfügung stehen.
 
 
 ### Konsolen-Panel
@@ -343,12 +343,12 @@ Wenn Sie einen *Arbeitsbereich* einrichten, können Sie Dateien direkt im Editor 
 
 #### Content-Skripte
 
-Die Registerkarte *Content-Skripte* listet alle Skripts auf, die im aktuellen Browser-Tab von Erweiterungen (und anderen Quellen) und nicht direkt von der Website selbst geladen werden. Zum Beispiel werden hier die Skripts, die von Ihren Browser-Erweiterungen in die aktuelle Seite eingefügt (injected) werden, angezeigt.
+Die Registerkarte *Content-Skripte* listet alle Skripte auf, die im aktuellen Browser-Tab von Erweiterungen (und anderen Quellen) und nicht direkt von der Website selbst geladen werden. Zum Beispiel werden hier die Skripte, die von Ihren Browser-Erweiterungen in die aktuelle Seite eingefügt (injected) werden, angezeigt.
 
 
 #### Snippets
 
-Auf der Registerkarte *Snippets* können Sie eigene benutzerdefinierte Skripts erstellen und speichern, die Sie dann manuell auf einer Seite ausführen können.
+Auf der Registerkarte *Snippets* können Sie eigene benutzerdefinierte Skripte erstellen und speichern, die Sie dann manuell auf einer Seite ausführen können.
 
 Diese sind praktisch, wenn Sie ständig das gleiche Stück Code auf einer Seite laufen lassen wollen, aber den Code nicht im produktiven Code haben möchten.
 
@@ -366,9 +366,9 @@ for (var i = 0; i < headings.length; ++i) {
 
 #### Debugging
 
-Debugging JavaScript ist ein komplexes Thema, das gründlich anderswo im Internet erklärt wird. Die folgenden Anleitungen sind ziemlich umfassend.
+JavaScript debuggen ist ein komplexes Thema, das gründlich anderswo im Internet erklärt wird. Die folgenden Anleitungen sind ziemlich umfassend.
 
-Der beste Weg, um Probleme zu debuggen, besteht darin, den Fehler zu isolieren und zu identifizieren, wie es konsequent repliziert werden kann. Dies macht es leichter, den Fehler zu beseitigen.
+Der beste Weg, um Probleme zu debuggen, besteht darin, den Fehler zu isolieren und zu identifizieren, wie er konsequent repliziert werden kann. Dies macht es leichter, den Fehler zu beseitigen.
 
 ***Weitere Informationen***
 
@@ -448,18 +448,18 @@ Wir können in der Regel alle DOM-Manipulationen, die wir benötigen, mit diesen n
 
 Kurz nach seiner Entstehung wurde JQuery schnell zu einem beliebten Werkzeug, um die vielen Inkonsistenzen zu bewältigen, wie bspw. die falsche Implementierung von JavaScript in verschiedenen Browsers.
 
-Das ist nicht mehr so relevant, denn moderne Browser setzen in der Regel die gleichen Standards ein. Aber JQuery ist immer noch nützlich, und nicht nur für DOM-Interaktionen. Es vereinfacht auch *Ajax* Anrufe, Handling *Events* und Objekt / Array Manipulation unter anderem.
+Das ist nicht mehr so relevant, denn moderne Browser setzen in der Regel die gleichen Standards ein. Aber JQuery ist immer noch nützlich, und nicht nur für DOM-Interaktionen. Es vereinfacht auch Ajax-Anrufe, Event-Handling und Objekt-/Array-Manipulation unter anderem.
 
 Ein grosser Vorteil ist, dass *die meisten* Front-End-Entwickler mit JQuery vertraut sind, und es hilft, die Teams auf einer gemeinsamen Codebasis arbeiten zu lassen.
 
-Die Anwesenheit von JQuery ist in fast jeder Website allgegenwärtig. Als solches ist es sinnvoll, nicht nur zu lernen, wie man es benutzt, sondern auch seine Macken und Mängel.
+JQuery ist in fast jeder Website vorhanden. Daher ist es sinnvoll, nicht nur zu lernen, wie man es benutzt, sondern auch seine Macken und Mängel zu kennen.
 
-Dieser Leitfaden nimmt ein Grundwissen von JQuery an - wie füge es zu einer Webseite hinzu und verwende es, um DOM-Elemente auszuwählen und zu manipulieren.
+Dieser Leitfaden nimmt ein Grundwissen von JQuery an - wie füge ich es zu einer Webseite hinzu und verwende es, um DOM-Elemente auszuwählen und zu manipulieren.
 
 
 ### JQuery Tipps
 
-#### Schreiben Sie nicht alle in *document ready*
+#### Schreiben Sie nicht alles in *document ready*
 
 Die häufigste Verwendung von JQuery ist die Initialisierung von Code, wenn das DOM der Seite geladen hat, mit:
 
@@ -487,7 +487,7 @@ Das ist keine gute Idee, aus mehreren Gründen.
 
 Wenn der gesamte JS-Code der Website an einem einzigen Ort gespeichert ist, kann er schnell schwer zu verwalten sein.
 
-Sofern Sie nicht vorsichtig sind, können Sie in Schwierigkeiten mit dem Scope kommen, wenn keine zwei Variablen den gleichen Namen teilen können. Dies wird später noch näher erörtert.
+Sofern Sie nicht vorsichtig sind, können Sie in Schwierigkeiten mit dem Scope kommen, da keine zwei Variablen den gleichen Namen teilen können. Dies wird später noch näher erörtert.
 
 Ein weiteres Problem ist, dass es die anfängliche Wiedergabe der Website verlangsamen kann, da dieser Code nicht analysiert wird, bis die Seite bereit ist, gerendert zu werden. Es kann Teile des Codes geben, die sofort ausgeführt werden können, anstatt auf das DOM warten zu müssen.
 
@@ -533,7 +533,7 @@ var planetCount = $planetsEl.length;
 
 Dies hilft zu zeigen, welche Variablen auch Zugriff auf JQuerys viele Funktionen haben.
 
-Einige Entwickler mögen diesen Ansatz, andere nicht. Aber es lohnt sich zu überlegen und sich für die eine oder anderen einer Konvention zu entscheiden.
+Einige Entwickler mögen diesen Ansatz, andere nicht. Aber es lohnt, sich zu überlegen und sich für die eine oder anderen einer Konvention zu entscheiden.
 
 ***Weitere Informationen:***
 
@@ -566,7 +566,7 @@ $el.on("click", function (e) {
 
 Nochmal, die DOM Interaktion ist langsam.
 
-Wenn Sie eine Reihe neuer DOM-Elemente erstellen, ist es ein guter Ansatz, um das neue HTML-Markup zu generieren und dann in die Seite in einem einzigen Befehl einzufügen:
+Wenn Sie eine Reihe neuer DOM-Elemente erstellen, ist es ein guter Ansatz, das neue HTML-Markup zu generieren und dann in die Seite mit einem einzigen Befehl einzufügen:
 
 ```
 var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
@@ -653,7 +653,7 @@ Und dann fügen Sie die Klasse mit JavaScript hinzu:
 $(".planets li").addClass("planet");
 ```
 
-Dies hilft bei der Aufrechterhaltung des Grundsatzes der *Trennung von Interessen* - CSS ist verantwortlich für Styling, JavaScript wird für das Verhalten verwendet.
+Dies hilft bei der Aufrechterhaltung des Grundsatzes der *Trennung von Zuständigkeit* - CSS ist verantwortlich für Styling, JavaScript wird für das Verhalten verwendet.
 
 Es ermöglicht auch eine leichtere Prüfung von Stilen, da es möglich ist, die Klasse manuell hinzuzufügen oder zu entfernen, um das Layout zu testen, ohne JavaScript zu ändern.
 
@@ -876,7 +876,7 @@ Dies ändert die Natur von einigen JavaScript-Fehlern, die sonst schweigend ausfa
 
 Zum Beispiel, stellt der Strict-Mode sicher, dass Sie eine Variable mit `var` deklarieren müssen, bevor Sie sie verwenden können.
 
-Es kann auch dazu führen, dass Code (potenziell) schneller läuft (marginal) als nicht-strikter Code.
+Es kann auch dazu führen, dass Code (potenziell) schneller läuft (marginal), als nicht-strikter Code.
 
 ***Weitere Informationen:***
 
@@ -979,7 +979,7 @@ function init () { ... }
 $(document).ready(init);
 ```
 
-Anonyme Funktionen werden häufig verwendet, wenn man *einige Befehle, die für einen bestimmten Zweck verwendet werden sollen,* verkapseln kann, aber es unwahrscheinlich ist, dass dieses Stück Code anderweitig wieder verwendet wird.
+Anonyme Funktionen werden häufig verwendet, wenn man *einige Befehle, die für einen bestimmten Zweck verwendet werden sollen*, verkapseln kann, aber es unwahrscheinlich ist, dass dieses Stück Code anderweitig wieder verwendet wird.
 
 Anonyme Funktionen sind schwer zu debuggen und können nicht wiederverwendet werden. Ein besserer Ansatz ist, sie niemals zu benutzen und stattdessen immer wieder Funktionen zu nennen und zu benennen.
 
@@ -1055,7 +1055,7 @@ Seien Sie sich jedoch bewusst, dass `true` und `false` Werte zu Fehlern führen k
 
 ### Strikte Komparatoren (===)
 
-Strenge Komparatoren überprüfen den * Typ * einer Variablen zusammen mit ihrem Wert.
+Strenge Komparatoren überprüfen den *Typ* einer Variablen zusammen mit ihrem Wert.
 
 Wenn Sie `==` (oder `!=`) verwenden, können Sie Probleme mit dem testen von `null`-Werten, Verwechselung von Zahlen und Strings sowie Verwechselung von `0` mit dem Boolean `false` feststellen.
 
@@ -1119,7 +1119,7 @@ if (isEarth)
 
 #### Tabs vs. Leerzeichen
 
-Entscheiden Sie sich  für Tabs oder Leerzeichen, aber mischen Sie nicht. Zum schnellen Einrücken empfehlen sich Tabs. Also sollten Sie diese auch möglichst verwenden.
+Entscheiden Sie sich für Tabs oder Leerzeichen, aber mischen Sie nicht. Zum schnellen Einrücken empfehlen sich Tabs. Also sollten Sie diese auch möglichst verwenden.
 
 
 #### Anführungszeichen
@@ -1129,7 +1129,7 @@ Entscheiden Sie sich für einfache Anführungszeichen oder für doppelte, aber misc
 
 #### Kommas und Semikolons
 
-Entscheiden Sie sich wo Sie Kommas setzen. am Ende eines Items oder am Anfang eines neuen Items.
+Entscheiden Sie sich, wo Sie Kommas setzen. Am Ende eines Items oder am Anfang eines neuen Items.
 
 ```
 var innerPlanets = [
@@ -1151,7 +1151,7 @@ var outerPlanets = [
 ];
 ```
 
-Benutzen Sie keine zusätzliches Komma am Ende einer Liste, weil das Fehler in älteren Browsern verursachen kann:
+Benutzen Sie kein zusätzliches Komma am Ende einer Liste, weil das Fehler in älteren Browsern verursachen kann:
 
 ```
 // Don't do this
@@ -1194,7 +1194,7 @@ Client-seitige Fehler abzufangen kann fundamental sein, um sicherzustellen, dass
 
 Wenn ein Browser in einem HTML-Dokument ein `<script>`-Tag findet, hört er standardmässig auf, den HTML-Code zu parsen, bis die *script* -Datei heruntergeladen und analysiert wurde.
 
-Aus diesem Grund war die Konvention, dass `<script>` Elemente in HTML-Seiten am unteren Rand der Seite, kurz vor dem Schliessen `</body>` Tags hinzugefügt werden, so dass sie nach dem Rest gelesen werden, wenn das HTML wurde bereits geparst wurde.
+Aus diesem Grund war die Konvention, dass `<script>` Elemente in HTML-Seiten am unteren Rand der Seite, kurz vor dem Schliessen `</body>` Tags hinzugefügt werden, so dass sie nach dem Rest gelesen werden, wenn das HTML bereits geparst wurde.
 
 Es gibt Möglichkeiten, dieses Verhalten zu ändern, indem Sie dem Skript-Tag Attribute wie `async` oder `defer` geben.
 
@@ -1207,7 +1207,7 @@ Es gibt Möglichkeiten, dieses Verhalten zu ändern, indem Sie dem Skript-Tag Attr
 
 #### Async
 
-Asynchrones Skripte halten das Herunterladen des HTML-Dokuments nicht an. Sie werden sobald wie möglich ausgeführt. Während dessen pausieren Sie das Parsen des HTML-Dokuments. Zudem werden sie in der der Reihenfolge ausgeführt, in der das Herunterladen abgeschlossen wurde.
+Asynchrone Skripte halten das Herunterladen des HTML-Dokuments nicht an. Sie werden sobald wie möglich ausgeführt. Während dessen pausieren Sie das Parsen des HTML-Dokuments. Zudem werden sie in der der Reihenfolge ausgeführt, in der das Herunterladen abgeschlossen wurde.
 
 
 #### Defer
@@ -1311,7 +1311,7 @@ Anstatt Funktionalität zu haben, die nicht benutzt wird, wenn JavaScript nicht v
 <p class="js-relative-date">14th June 2015</a>
 ```
 
-Dann mit JavaScript können Sie für diejenigen, die es aktiviert haben, diese Elemente erkennen und die Funktionalität verbessern:
+Mit JavaScript können Sie dann für diejenigen, die es aktiviert haben, diese Elemente erkennen und die Funktionalität verbessern:
 
 ```
 var $relativeDates = $(".js-relative-date");
@@ -1326,7 +1326,7 @@ makeDatesRelative($relativeDates);
 
 ## JavaScript Style-Guide
 
-Es gibt viele Möglichkeiten, JavaScript zu schreiben. Das Festhalten an den Regeln, die in einem _style guide_ (oder _coding standards_ Dokument) angelegt sind, bedeutet, dass Sie Code konsequent über ein Team hinaus schreiben können.
+Es gibt viele Möglichkeiten, JavaScript zu schreiben. Das Festhalten an den Regeln, die in einem _Style Guide_ (oder _Coding Standards_) Dokument angelegt sind, bedeutet, dass Sie Code konsequent über ein Team hinaus schreiben können.
 
 Das Ziel sollte nicht nur sein, die Arbeit zu erledigen, sondern logisch wartbaren Code zu schreiben.
 
@@ -1352,7 +1352,7 @@ Ajax ist der Begriff, der üblicherweise verwendet wird, um die Technik zum Ausfü
 
 Viele JavaScript-Bibliotheken wie JQuery bieten die Möglichkeit, Ajax-Anfragen zu machen.
 
-Ajax kann die HTTP-Methoden *GET* und *POST* verwenden, um mit Servern zu interagieren. Beide *GET* und *POST* können verwendet werden, um Daten zu senden und zu empfangen, aber sie haben ihre Unterschiede, die jedes für verschiedene Szenarien geeignet machen.
+Ajax kann die HTTP-Methoden *GET* und *POST* verwenden, um mit Servern zu interagieren. Beide (*GET* und *POST*) können verwendet werden, um Daten zu senden und zu empfangen, aber es gibt Unterschiede, die das eine oder das andere für verschiedene Szenarien geeignet machen (oder auch nicht).
 
 
 ### GET Requests
@@ -1455,7 +1455,7 @@ Wenn Sie versuchen, auf einen anderen Server über JavaScript zuzugreifen, können
 
 Eine alternative Option ist, *JSONP* anzufordern, wenn der Host-Server es bereitstellt.
 
-Dies umgeht das *same-origin* Sicherheitsproblem, indem der Host-Server die angeforderten Daten in ein JavaScript-Objekt eingewickelt. Dies wird dann in die ursprüngliche Webseite eingebettet.
+Dies umgeht das *same-origin* Sicherheitsproblem, indem der Host-Server die angeforderten Daten in einem JavaScript-Objekt verpackt. Dies wird dann in die ursprüngliche Webseite eingebettet.
 
 Wie immer bietet JQuery eine einfache Möglichkeit, JSONP zu verwenden, was möglicherweise eine einfache Interaktion mit Drittanbieter-APIs ermöglicht.
 
@@ -1474,7 +1474,7 @@ Bei der Erstellung der Ajax-Anfragen wurden drei Funktionen definiert, um sie zu
  - Eine `fail` Funktion, die ausgeführt wird, wenn der Ajax-Request nicht erfolgreich war
  - Eine `always` Funktion, die ausgeführt wird, wenn der Ajax-Request abgeschlossen wurde, unabhängig vom Ergebnis
 
-Eine alternative Methode zum Auslösen einer Funktion, wenn die Ajax-Anforderung abgeschlossen ist, ist ein *Promise* zu verwenden.
+Eine alternative Methode zum Auslösen einer Funktion nach Abschluss einer Ajax-Anforderung ist, ein *Promise* zu verwenden.
 
 Das Erstellen eines *Promise* ist einfach, mit ähnlicher Syntax zu dem, was bereits gezeigt wurde:
 
@@ -1572,7 +1572,7 @@ Von den beiden gibt es Nachteile bei der Verwendung von Intervallen. Insbesonder
 
 ## Events
 
-Eine weitere gebräuchliche Anwendung von Callbacks sind *events*.
+Eine weitere gebräuchliche Anwendung von Callbacks sind *Events*.
 
 Ein Ereignis kann auf folgende Weise gedacht werden:
 
@@ -1590,9 +1590,9 @@ function linkClicked () {
 $(".js-my-link").on("click", linkClicked);
 ```
 
-Es ist möglich, Event-Listener ohne Verwendung von JQuery hinzuzufügen, aber bestimmte ältere Browser verwenden etwas unterschiedliche Syntax, und erspart man sich mit einer Bibliothek, dass man die gleiche Funktion auf zwei leicht unterschiedliche Weisen definieren muss.
+Es ist möglich, Event-Listener ohne Verwendung von JQuery hinzuzufügen, aber bestimmte ältere Browser verwenden etwas unterschiedliche Syntax, und so erspart man sich mit einer Bibliothek, dass man die gleiche Funktion auf zwei leicht unterschiedliche Weisen definieren muss.
 
-Im obigen Beispiel hat das DOM-Element ein `class`-Attribut, das mit `js-`beginnt - wie oben diskutiert wurde, ist dies eine nützliche Konvention, die es uns ermöglicht, zwischen CSS-Klassen zu unterscheiden, die für das Styling verwendet werden und diejenigen, die sind Für JavaScript verwendet.
+Im obigen Beispiel hat das DOM-Element ein `class`-Attribut, das mit `js-`beginnt. Wie oben diskutiert wurde, ist dies eine nützliche Konvention, die es uns ermöglicht, zwischen CSS-Klassen zu unterscheiden, die für das Styling verwendet werden und diejenigen, die sind Für JavaScript verwendet.
 
 Obwohl Ereignisse auf fast jedem HTML-Element platziert werden können, ist es für Zugänglichkeitszwecke vorteilhaft, sie auf `<a>` Elemente zu setzen und Eingabesteuerungen zu bilden, da dies eine einfachere Tastaturnavigation ermöglicht.
 
@@ -2147,7 +2147,7 @@ MyApp.slideshows = function () {
 }
 ```
 
-Zwei Module, die direkt kommunizieren, sind bekannt als *tight coupling* und keine gute Idee. Grundsätzlich sollten Module niemals einander kennen oder sich direkt anrufen. Stattdessen können wir eine alternative Methode verwenden, um diese Kommunikation  auf Ereignisse - *publishing* und *subscribing* - zu ermöglichen. Dies wird oft zu *pub/sub* verkürzt.
+Zwei Module, die direkt kommunizieren, sind bekannt als *tight coupling* und keine gute Idee. Grundsätzlich sollten Module niemals einander kennen oder sich direkt anrufen. Stattdessen können wir eine alternative Methode verwenden, um diese Kommunikation über Ereignisse - *publishing* und *subscribing* - zu ermöglichen. Dies wird oft zu *pub/sub* verkürzt.
 
 Native Events wurden früher behandelt, mit einem Beispiel für die Erkennung, wenn ein Benutzer auf einen Link (oder ein anderes HTML-Element) klickt und eine JavaScript-Funktion auslöst. Auch benutzerdefinierte Events können in ähnlicher Weise erstellt und ausgelöst werden.
 
@@ -2176,7 +2176,7 @@ Es gibt eine Reihe von verschiedenen *pub/sub* JavaScript-Bibliotheken, die dies
 
 ## Plugins und Bibliotheken
 
-Vor vielen Jahren war es ziemlich üblich, eine Datei mit nützlichen wiederverwendbaren Funktionen zu haben, die von Projekt zu Projekt kopiert wurden. Diese *Bibliothek* Datei könnte einige praktische Verknüpfungen liefern und spart Zeit das gleiche Verhalten über mehrere Projekte erneut zu schreiben.
+Vor vielen Jahren war es ziemlich üblich, eine Datei mit nützlichen wiederverwendbaren Funktionen zu haben, die von Projekt zu Projekt kopiert wurden. Diese *Bibliothek* Datei könnte einige praktische Verknüpfungen liefern und Zeit sparen, das gleiche Verhalten über mehrere Projekte erneut zu schreiben.
 
 Open-Source-Bibliotheken wie JQuery haben die Notwendigkeit von massgeschneiderten komplexen Bibliotheken reduziert, um privat von Einzelpersonen gepflegt zu werden.
 
@@ -2207,7 +2207,7 @@ Es gibt noch viel mehr: [http://microjs.com/](http://microjs.com/)
 
 Oft ist der schwierigste Teil eines Projektes, relevante JQuery-Plugins und Bibliotheken, die helfen können, zu finden.
 
-Es gibt keinen einzigen Ort, um die Suche zu starten. Oft ist eine hilfreiche Methode, um an einigen Stellen wie [Stack Overflow] (http://stackoverflow.com) und [Google] (http://google.com) nach einer Lösung zu suchen. Wenn Sie ein paar relevante Artikel und Antworten lesen, können Sie feststellen, dass sie die gleiche Lösung suchen.
+Es gibt keinen einzigen Ort, um die Suche zu starten. Oft ist eine hilfreiche Methode, an Stellen wie [Stack Overflow] (http://stackoverflow.com) und [Google] (http://google.com) nach einer Lösung zu suchen. Wenn Sie ein paar relevante Artikel und Antworten lesen, können Sie feststellen, ob sie die gleiche Lösung suchen.
 
 Die Mehrheit der nützlichen Bibliotheken wird auf [GitHub] (https://github.com/) gespeichert. Dies ist ein günstiger Standort für Entwickler, um Open-Source-Code kostenlos zu speichern und anderen zu ermöglichen, zu ihrer Entwicklung beizutragen.
 
@@ -2247,7 +2247,7 @@ Wenn das JavaScript weiterhin wächst und sich die Komplexität erhöht, kann es an
 
 ### Probleme die Frameworks lösen können
 
-Das grösste Problem mit einer benutzerdefinierten Anwendungsstruktur, die Frameworks zu lösen versuchen, ist die Trennung von verschiedenen Arten von JavaScript-Logik. Die meisten JavaScript-Frameworks erzwingen eine *Trennung von Interessen* - die Isolierung von Code in verschiedene Funktionen, die für verschiedene Zwecke verwendet werden.
+Das grösste Problem mit einer benutzerdefinierten Anwendungsstruktur, die Frameworks zu lösen versuchen, ist die Trennung von verschiedenen Arten von JavaScript-Logik. Die meisten JavaScript-Frameworks erzwingen eine *Trennung von Zuständigkeit* - die Isolierung von Code in verschiedene Funktionen, die für verschiedene Zwecke verwendet werden.
 
 Die wichtigsten Teile von JavaScript, die traditionell getrennt sind, betreffen DOM-Interaktion, Datenmanipulation, Templating und Event-Handling.
 
@@ -2285,7 +2285,7 @@ Es gibt mehrere Vor-und Nachteile, die berücksichtigt werden sollten, wenn eine 
 
   - Die meisten etablierten JavaScript-Frameworks wurden sorgfältig getestet und lassen Sie sich auf den Aufbau Ihrer Anwendung konzentrieren, ohne sich um Fehler in der Architektur zu sorgen.
   - JavaScript-Frameworks sind in der Regel gut dokumentiert, mit aktiven Communities und vielen nützlichen Artikeln und Antworten auf häufig gestellte Fragen auf Websites wie Stack Overflow.
-  - Wenn ein neuer Entwickler Erfahrung mit einem JavaScript-Framework hat, sollten sie schnell produktiv sein, da sie bereits ein Verständnis von der Logik haben.
+  - Wenn ein neuer Entwickler Erfahrung mit einem JavaScript-Framework hat, sollte er schnell produktiv sein, da er bereits ein Verständnis von der Logik habt.
 
 
 #### CONs
@@ -2338,9 +2338,9 @@ Die Zukunft der JavaScript Frameworks mag in einem neuen Konzept namens *Isomorp
 
 Viele Programmiersprachen bieten eine native Möglichkeit, Module zu definieren und zu verwenden. JavaScript derzeit nicht (obwohl eine zukünftige Version von JavaScript diese Fähigkeit beinhalten wird).
 
-Mittlerweile gibt es Werkzeuge, die es Entwicklern ermöglichen, Module jetzt zu verwenden. Diese *Module loader*-Systeme ermöglichen es, komplexe Codebasen in einer einfachen, konsistenten und gut dokumentierten Weise zu organisieren.
+Mittlerweile gibt es Werkzeuge, die es Entwicklern ermöglichen, Module bereits zu verwenden. Diese *Module-Loader*-Systeme ermöglichen es, komplexe Codebasen in einer einfachen, konsistenten und gut dokumentierten Weise zu organisieren.
 
-Es gibt ein paar beliebte Module Loader-Tools. Es gibt auch zwei verschiedene populäre Methoden zur Definition von Modulen, bekannt als *AMD* und *Common.js*.
+Es gibt ein paar beliebte Module-Loader-Tools. Es gibt auch zwei verschiedene populäre Methoden zur Definition von Modulen, bekannt als *AMD* und *Common.js*.
 
  - [RequireJS](http://requirejs.org/) - Einer der allerersten populären Module-Loader, der die *AMD* Methode zum Deklarieren von Modulen verwendet.
  - [Browserify](http://browserify.org/) - Ein Module-Loader der die *Common.js* Moduldeklaration verwendet
@@ -2410,7 +2410,7 @@ Viele dieser Tools werden mit JavaScript erstellt und konfiguriert.
 
 Die meisten Webseiten verlassen sich auf Drittanbieter-Bibliotheken und Frameworks - JQuery ist das offensichtlichste und beliebteste Beispiel.
 
-Man kann es ziemlich schnell herunterladen und direkt in die Codebasis einfügen. Jedoch kann man mit einem *Paket-Manager* die Verwaltung, Installation und Aktualisierung dieser Abhängigkeiten vereinfachen - besonders praktisch bei der Arbeit in ein Team.
+Man kann es ziemlich schnell herunterladen und direkt in die Codebasis einfügen. Jedoch kann man mit einem *Paket-Manager* die Verwaltung, Installation und Aktualisierung dieser Abhängigkeiten vereinfachen - besonders praktisch bei der Arbeit in einem Team.
 
 Es gibt eine Reihe von beliebten Paket-Managern, darunter:
 
@@ -2481,7 +2481,7 @@ Es gibt zwei ganz verschiedene Methoden zur Erzeugung von interaktiven Grafiken 
 
 SVG ist ein XML-basiertes Vektorformat für das Zeichnen von Bildern über das DOM. Die Verwendung von SVGs bedeutet auflösungsunabhängige Grafiken bei niedrigen Dateigrössen.
 
-Es gibt verschiedene Werkzeuge, die dazu beitragen, SVGs mit JavaScript zu arbeiten und zu interagieren:
+Es gibt verschiedene Werkzeuge, die dazu beitragen, SVGs mit JavaScript zu bearbeiten und zu interagieren:
 
  - [SnapSVG](http://snapsvg.io/)
  - [D3](http://d3js.org/)
@@ -2515,7 +2515,7 @@ Es gibt viele weitere: [http://www.softr.li/blog/2012/06/20/which-html5-canvas-j
 
 Zukünftige Versionen von JavaScript - *ES 6 / ES 2015* und darüber hinaus - werden viele der oben genannten Fragen ansprechen. Es wird ein echtes Module-Loader-System, Methoden für die Verwaltung von Scopes und das Erstellen von Templates und vielem mehr geben.
 
-Obwohl es derzeit nicht über alle Browser hinweg implementiert ist, erlauben Tools wie [Traceur] (https://github.com/google/traceur-compiler) und [Babel] (https://babeljs.io/) JavaScript auf diese Weise bereits heute zu schreiben, um dann zurück in die aktuelle Version von JavaScript *verwandelt* zu werden, die Browser versteht.
+Obwohl es derzeit nicht über alle Browser hinweg implementiert ist, erlauben Tools wie [Traceur] (https://github.com/google/traceur-compiler) und [Babel] (https://babeljs.io/) JavaScript auf diese Weise bereits heute zu schreiben, um dann zurück in die aktuelle Version von JavaScript *verwandelt* zu werden, die der Browser versteht.
 
 ***Weitere Informationen***
 
