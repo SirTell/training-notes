@@ -45,7 +45,7 @@ Es gibt fünf Schlüsselbereiche der Usability zu beachten:
 
   - Wie lange dauert es, das Produkt zu benutzen? Es sollte so einfach wie möglich sein
   - Die Leute sind gekommen, um eine bestimmte Aufgabe zu tun. Helfen Sie ihnen, dies zu tun
-  - Teste es:
+  - Testen Sie es:
 	 - Definieren Sie eine Aufgabe und messen Sie, wie lange es dauert, um die Aufgabe zu erledigen
 	 - Vergleichen Sie es mit den Webseiten der Konkurrenz ...
 
